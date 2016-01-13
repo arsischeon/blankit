@@ -1,9 +1,5 @@
 <style>
-.thumbnail{
-	width: 150px;
-	height: 150px;
-	padding: 0;
-}
+
 .preImage {
     display: inline-block;
     margin: 0 40px 0 0;
