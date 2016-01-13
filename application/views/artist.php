@@ -44,6 +44,7 @@
 .myButton:hover {
 	background-color:#687c87;
 	color: white;
+	text-decoration: none;
 }
 .myButton:active {
 	position:relative;
