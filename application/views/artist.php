@@ -64,7 +64,7 @@
 <div class="container">
 	<div class="row">
 		<div id="artistID" class="artist col-md-3 col-xs-12">
-			<img src="https://mir-s3-cdn-cf.behance.net/user/138/ff443554023.55072219ce354.jpg" class="img-circle">
+<!-- 			<img src="https://mir-s3-cdn-cf.behance.net/user/138/ff443554023.55072219ce354.jpg" class="img-circle"> -->
 			<b class="artist-name">아티스트 D</b>
 			<p class="artist-type">그래픽 디자인</p>
 			<a href="#" class="myButton">더 보기</a>
