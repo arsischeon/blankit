@@ -6,6 +6,7 @@
     transform-origin: 0% 100%;
     overflow: hidden;
     -webkit-backface-visibility: hidden;
+    background: grey;
   }
   .image-in-banner{
     transform: rotate(7deg);
@@ -16,7 +17,7 @@
 </style>
 <script>
 $(window).load(function(){
-  var height=300;
+  var height=$(window).height()*0.7;
   var angle=7*Math.PI/180;
   var banner_height=height*Math.cos(angle);
   var banner_width=$(window).width()*Math.cos(angle)+height*Math.sin(angle);
@@ -31,5 +32,11 @@ $(window).load(function(){
 });
 </script>
 <div class="banner">
-  <img class="image-in-banner " src="/source/image/banner1.jpg">
+  <!-- <img class="image-in-banner " src="/source/image/banner1.jpg"> -->
+</div>
+<div class="row">
+<div class="well">
+  <span>few</span>
+
+</div>
 </div>

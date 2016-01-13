@@ -6,7 +6,7 @@
 	margin-left: auto;
 	margin-right: auto;
 }
-#kk:col-xs-12{
+#kk.col-xs-12{
 	display:block;
 	text-align:center;
 }
