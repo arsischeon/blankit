@@ -28,10 +28,10 @@
 	display:inline-block;
 	cursor:pointer;
 	color:#687c87;
-	font-family:Times New Roman;
+	font-family:"Noto Sans", "Noto Sans CJK KR", sans-serif;
 	font-size:17px;
 	font-weight:bold;
-	padding:5px 48px;
+	padding:6px 48px;
 	text-decoration:none;
 }
 .myButton:hover {
