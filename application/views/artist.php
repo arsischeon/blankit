@@ -54,13 +54,14 @@
 .row{
 	display: block;
 }
-.preImages:hover {
-	color: white;
-}
 .thumbnail {
 	margin: 0;
 	width: 100%;
 }
+.thumbnail:hover {
+	color: white;
+}
+
 </style>
 
 <div class="container">
