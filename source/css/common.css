@@ -1,15 +1,28 @@
 #logo{
   margin-top: 3px;
+  pointer-events: auto;
+  cursor: pointer;
 }
 .navbar-default{
+  pointer-events: none;
   background: none;
   border: none;
+  z-index: 9000;
 }
 .navbar-text{
+  pointer-events: auto;
   cursor: pointer;
-  font-weight: 700;
+  font-weight: regular;
+  letter-spacing: 0.8px;
   color: white !important;
 }
 .navbar-text:hover{
   color: #5D787A !important;
+}
+.content-area{
+  z-index:-1;
+  position:absolute;
+  top:0px;
+  left:0px;
+  width: 100%;
 }
