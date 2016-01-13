@@ -59,7 +59,7 @@
 	width: 100%;
 }
 .thumbnail:hover {
-	opacity: 0.3;
+	background-color:rgba(0, 0, 0, 0.3);
 }
 
 </style>
