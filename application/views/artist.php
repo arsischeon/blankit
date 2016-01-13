@@ -57,9 +57,9 @@
 .thumbnail {
 	margin: 0;
 	width: 100%;
+	height: auto;
 }
 .thumbnail:hover {
-	top: 0;
 	background-color:rgba(0, 0, 0, 0.3);
 }
 
