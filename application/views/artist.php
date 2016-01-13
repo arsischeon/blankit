@@ -61,6 +61,7 @@
 }
 .preImages{
 	display: inline-block;
+	
 }
 .preImages:after {
     content:'\A';
