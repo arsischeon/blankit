@@ -40,7 +40,7 @@ $(window).resize(function(){
   slanted_banner_generator();
 });
 </script>
-<div class="banner-wrap hidden-xs ">
+<div class="banner-wrap  ">
 <div class="banner">
   <!-- <img class="image-in-banner" src="/source/image/banner1.jpg"> -->
 </div>
