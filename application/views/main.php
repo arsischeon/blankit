@@ -17,7 +17,7 @@
 </style>
 <script>
 $(window).load(function(){
-  var height=500;
+  var height=$(window).height()*0.7;
   var angle=7*Math.PI/180;
   var banner_height=height*Math.cos(angle);
   var banner_width=$(window).width()*Math.cos(angle)+height*Math.sin(angle);
