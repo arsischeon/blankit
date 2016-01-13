@@ -33,3 +33,9 @@ $(window).load(function(){
 <div class="banner">
   <img class="image-in-banner " src="/source/image/banner1.jpg">
 </div>
+<div class="row">
+<div class="well">
+  <span>few</span>
+
+</div>
+</div>

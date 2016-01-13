@@ -7,7 +7,7 @@
 .img-circle {
 	border-radius:50%;
 }
-#kk:col-xs-12{
+#kk.col-xs-12{
 	display:block;
 	text-align:center;
 }
