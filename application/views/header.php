@@ -4,6 +4,7 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
     <title>Blank.It</title>
     <script src="https://code.jquery.com/jquery-2.2.0.min.js" crossorigin="anonymous" ></script>
@@ -31,4 +32,4 @@
         <p class="navbar-text">store</p>
       </div>
     </nav>
-    <div class="content-area">
+    <div class="content-area container">
