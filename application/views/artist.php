@@ -59,10 +59,10 @@
 	width: 100%;
 	height: auto;
 }
-.thumbnail:after {
+.preImages:after {
 	background:rgba(0, 0, 0, 0.6);
 }
-.thumbnail:hover:after {
+.preImages:hover:after {
 	opacity: 1;
 }
 
