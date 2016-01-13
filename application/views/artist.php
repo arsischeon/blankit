@@ -13,13 +13,14 @@
 }
 </style>
 
-<div class="artist-content">
-	<div class="artist-row">
+<div class="container">
+	<div class="row">
 		<div class="preProfile col-md-3">
 			<img src="https://mir-s3-cdn-cf.behance.net/user/138/ff443554023.55072219ce354.jpg" class="thumbnail img-circle">
 			<p>Artist D</p>
 			<p>Graphic Design</p>
 			<p>그래픽디자인</p>
+			<hr />
 			<button type="button" class="btn btn-default">Default</button>
 		</div>
 		<div class="preImages col-md-9">
@@ -34,5 +35,4 @@
 			</div>
 		</div>
 	</div>
-	<hr />
 </div>
