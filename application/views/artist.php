@@ -19,7 +19,28 @@
 .preProfile{
 	text-align: center;
 }
-
+.myButton {
+	background-color:transparent;
+	-moz-border-radius:42px;
+	-webkit-border-radius:42px;
+	border-radius:42px;
+	border:3px solid #687c87;
+	display:inline-block;
+	cursor:pointer;
+	color:#687c87;
+	font-family:Times New Roman;
+	font-size:17px;
+	font-weight:bold;
+	padding:10px 50px;
+	text-decoration:none;
+}
+.myButton:hover {
+	background-color:transparent;
+}
+.myButton:active {
+	position:relative;
+	top:1px;
+}
 </style>
 
 <div class="container">
@@ -28,7 +49,7 @@
 			<img src="https://mir-s3-cdn-cf.behance.net/user/138/ff443554023.55072219ce354.jpg" class="thumbnail img-circle">
 			<b class="artist-name">아티스트 D</b>
 			<p class="artist-type">그래픽 디자인</p>
-			<button type="button" class="btn btn-default">더 보기</button>
+			<a href="#" class="myButton">더 보기</a>
 		</div>
 		<div class="preImages col-md-3 col-xs-4">
 			<img src="https://mir-s3-cdn-cf.behance.net/projects/202/fab06432280103.Y3JvcCw4NDAsNjU3LDEsMA.jpg" class="thumbnail img img-responsive img-rounded">
