@@ -4,7 +4,7 @@
 	height: 150px;
 	padding: 0;
 }
-.preview {
+.preImage {
     display: inline-block;
     margin: 0 40px 0 0;
 }
