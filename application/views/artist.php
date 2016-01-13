@@ -56,6 +56,10 @@
 .preImages:hover {
 	color: white;
 }
+.thumbnail {
+	margin: 0;
+	width: 100%;
+}
 </style>
 
 <div class="container">
