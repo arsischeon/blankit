@@ -6,7 +6,7 @@
 	margin-left: auto;
 	margin-right: auto;
 }
-#kk.col-xs-12{
+#artistID.col-xs-12{
 	display:block;
 	text-align:center;
 }
@@ -20,7 +20,7 @@
 	font-family:"Noto Sans", "Noto Sans CJK KR", sans-serif;
 	font-size:15px;
 }
-.preProfile{
+.artist{
 	text-align: center;
 }
 .myButton {
@@ -49,16 +49,20 @@
 .row{
 	display: block;
 }
-.thumbnail{
-	margin-button: 8px;
+.profile{
+	margin-bottom: 8px;
 	padding: 0px;
+}
+.thumbnail{
+	width: 100%;
+	height: 100%;
 }
 </style>
 
 <div class="container">
 	<div class="row">
-		<div id="kk" class="preProfile col-md-3 col-xs-12">
-			<img src="https://mir-s3-cdn-cf.behance.net/user/138/ff443554023.55072219ce354.jpg" class="img-circle thumbnail">
+		<div id="artistID" class="artist col-md-3 col-xs-12">
+			<img src="https://mir-s3-cdn-cf.behance.net/user/138/ff443554023.55072219ce354.jpg" class="img-circle profile">
 			<b class="artist-name">아티스트 D</b>
 			<p class="artist-type">그래픽 디자인</p>
 			<a href="#" class="myButton">더 보기</a>
