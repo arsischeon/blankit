@@ -59,8 +59,11 @@
 	width: 100%;
 	height: auto;
 }
-.thumbnail:hover {
-	background-color:rgba(0, 0, 0, 0.3);
+.thumbnail:after {
+	background:rgba(0, 0, 0, 0.6);
+}
+.thumbnail:hover:after {
+	opacity: 1;
 }
 
 </style>
