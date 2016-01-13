@@ -19,7 +19,7 @@
 			<img src="https://mir-s3-cdn-cf.behance.net/user/138/ff443554023.55072219ce354.jpg" class="thumbnail img-circle">
 			<p>Artist D</p>
 			<p>Graphic Design</p>
-			<p>±×·¡ÇÈµğÀÚÀÎ</p>
+			<p>ì•ˆë…•í•˜ì„¸ìš”</p>
 			<hr />
 			<button type="button" class="btn btn-default">Default</button>
 		</div>
