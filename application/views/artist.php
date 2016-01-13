@@ -12,9 +12,13 @@
 }
 .artist-name{
 	text-align: center;
+	font-family:"Noto Sans", "Noto Sans CJK KR", sans-serif;
+	font-size:13px;
 }
 .artist-type{
 	text-align: center;
+	font-family:"Noto Sans", "Noto Sans CJK KR", sans-serif;
+	font-size:13px;
 }
 .preProfile{
 	text-align: center;
@@ -29,7 +33,7 @@
 	cursor:pointer;
 	color:#687c87;
 	font-family:"Noto Sans", "Noto Sans CJK KR", sans-serif;
-	font-size:17px;
+	font-size:16px;
 	font-weight:bold;
 	padding:6px 48px;
 	text-decoration:none;
