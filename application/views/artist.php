@@ -13,12 +13,12 @@
 .artist-name{
 	text-align: center;
 	font-family:"Noto Sans", "Noto Sans CJK KR", sans-serif;
-	font-size:13px;
+	font-size:15px;
 }
 .artist-type{
 	text-align: center;
 	font-family:"Noto Sans", "Noto Sans CJK KR", sans-serif;
-	font-size:13px;
+	font-size:15px;
 }
 .preProfile{
 	text-align: center;
@@ -48,6 +48,11 @@
 }
 .row{
 	display: block;
+}
+.thumbnail{
+	margin-button: 8px;
+	padding: 0px;
+}
 </style>
 
 <div class="container">
