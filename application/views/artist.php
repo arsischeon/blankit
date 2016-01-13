@@ -39,7 +39,8 @@
 	text-decoration:none;
 }
 .myButton:hover {
-	background-color:transparent;
+	background-color:#687c87;
+	color: white;
 }
 .myButton:active {
 	position:relative;
