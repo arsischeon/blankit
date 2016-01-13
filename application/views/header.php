@@ -11,6 +11,7 @@
     <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
     <title>Blank.It</title>
     <script src="https://code.jquery.com/jquery-2.2.0.min.js" crossorigin="anonymous" ></script>
+    <script src="/source/js/common.js" ></script>
     <!-- Bootstrap -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
     <link rel="stylesheet" href="/source/css/common.css">
@@ -21,20 +22,18 @@
       <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
     <![endif]-->
   </head>
-  <body>
+  <body style="  display: none;">
+    <nav class="navbar navbar-default">
+      <div class="container">
+        <div class="navbar-header">
+          <a class="navbar-brand" href="#">
+            <img id="logo" alt="blankit" src="source/image/logo.png">
+          </a>
 
-    <div class="container">
-      <nav class="navbar navbar-default">
-        <div class="container">
-          <div class="navbar-header">
-            <a class="navbar-brand" href="#">
-              <img id="logo" alt="blankit" src="source/image/logo.png">
-            </a>
-
-          </div>
-          <p class="navbar-text">about us</p>
-          <p class="navbar-text">artist</p>
-          <p class="navbar-text">store</p>
         </div>
-      </nav>
-    <div class="content-area ">
+        <p class="navbar-text">about us</p>
+        <p class="navbar-text">artist</p>
+        <p class="navbar-text">store</p>
+      </div>
+    </nav>
+    <div class="container">
