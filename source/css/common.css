@@ -1,4 +1,6 @@
-
+body{
+  overflow-x: hidden;
+}
 #logo{
   margin-top: 3px;
   pointer-events: auto;
@@ -9,6 +11,7 @@
   background: none;
   border: none;
   z-index: 9000;
+  margin-bottom: 0px;
 }
 .navbar-text{
   pointer-events: auto;
@@ -19,11 +22,4 @@
 }
 .navbar-text:hover{
   color: #5D787A !important;
-}
-.content-area{
-  z-index:-1;
-  position:absolute;
-  top:0px;
-  left:0px;
-  width: 100%;
 }
