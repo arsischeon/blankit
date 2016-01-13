@@ -14,14 +14,16 @@
 			<p>그래픽 디자인</p>
 			<p>더보기</p>
 		</div>
-		<div class="artist-preImages col-md-3">
-			<img src="https://mir-s3-cdn-cf.behance.net/projects/202/fab06432280103.Y3JvcCw4NDAsNjU3LDEsMA.jpg" class="thumbnail">
-		</div>
-		<div class="artist-preImage col-md-3">
-			<img src="https://mir-s3-cdn-cf.behance.net/projects/202/fab06432280103.Y3JvcCw4NDAsNjU3LDEsMA.jpg" class="thumbnail">
-		</div>
-		<div class="artist-preImage col-md-3">
-			<img src="https://mir-s3-cdn-cf.behance.net/projects/202/fab06432280103.Y3JvcCw4NDAsNjU3LDEsMA.jpg" class="thumbnail">
+		<div class="artist-preImages col-md-9">
+			<div class="artist-preImage col-md-4">
+				<img src="https://mir-s3-cdn-cf.behance.net/projects/202/fab06432280103.Y3JvcCw4NDAsNjU3LDEsMA.jpg" class="thumbnail">
+			</div>
+			<div class="artist-preImag col-md-4">
+				<img src="https://mir-s3-cdn-cf.behance.net/projects/202/fab06432280103.Y3JvcCw4NDAsNjU3LDEsMA.jpg" class="thumbnail">
+			</div>
+			<div class="artist-preImage col-md-4">
+				<img src="https://mir-s3-cdn-cf.behance.net/projects/202/fab06432280103.Y3JvcCw4NDAsNjU3LDEsMA.jpg" class="thumbnail">
+			</div>
 		</div>
 	</div>
 </div>
