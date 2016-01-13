@@ -17,6 +17,7 @@
 	font-family:"Noto Sans", "Noto Sans CJK KR", sans-serif;
 	font-size:15px;
 	font-weight: bold;
+	margin: 0;
 }
 .artist-type{
 	text-align: center;
