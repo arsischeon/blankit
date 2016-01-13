@@ -31,7 +31,7 @@
 	font-family:Times New Roman;
 	font-size:17px;
 	font-weight:bold;
-	padding:10px 50px;
+	padding:8px 50px;
 	text-decoration:none;
 }
 .myButton:hover {
