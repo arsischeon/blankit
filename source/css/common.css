@@ -1,0 +1,15 @@
+#logo{
+  margin-top: 3px;
+}
+.navbar-default{
+  background: none;
+  border: none;
+}
+.navbar-text{
+  cursor: pointer;
+  font-weight: 700;
+  color: white !important;
+}
+.navbar-text:hover{
+  color: #5D787A !important;
+}
