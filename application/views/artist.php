@@ -59,7 +59,7 @@
 	width: 100%;
 }
 .thumbnail:hover {
-	color: white;
+	opacity: 0.3;
 }
 
 </style>
