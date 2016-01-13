@@ -8,6 +8,9 @@
     display: inline-block;
     margin: 0 40px 0 0;
 }
+.img-circle {
+	border-radius:50%;
+}
 </style>
 
 <div class="artist-content">
