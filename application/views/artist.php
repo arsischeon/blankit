@@ -3,6 +3,8 @@
 	border-radius:50%;
 	width: 100px;
 	height: 100px;
+	margin-bottom: 8px;
+	padding: 0px;
 	margin-left: auto;
 	margin-right: auto;
 }
@@ -49,10 +51,10 @@
 .row{
 	display: block;
 }
-.profile{
+/* .profile{
 	margin-bottom: 8px;
 	padding: 0px;
-}
+} */
 /* .thumbnail{
 	width: 100%;
 	height: 100%;
@@ -62,7 +64,7 @@
 <div class="container">
 	<div class="row">
 		<div id="artistID" class="artist col-md-3 col-xs-12">
-			<img src="https://mir-s3-cdn-cf.behance.net/user/138/ff443554023.55072219ce354.jpg" class="img-circle profile">
+			<img src="https://mir-s3-cdn-cf.behance.net/user/138/ff443554023.55072219ce354.jpg" class="img-circle">
 			<b class="artist-name">아티스트 D</b>
 			<p class="artist-type">그래픽 디자인</p>
 			<a href="#" class="myButton">더 보기</a>
