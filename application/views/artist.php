@@ -53,10 +53,10 @@
 	margin-bottom: 8px;
 	padding: 0px;
 }
-.thumbnail{
+/* .thumbnail{
 	width: 100%;
 	height: 100%;
-}
+} */
 </style>
 
 <div class="container">
