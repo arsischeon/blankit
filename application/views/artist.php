@@ -16,7 +16,7 @@
 	text-align: center;
 	font-family:"Noto Sans", "Noto Sans CJK KR", sans-serif;
 	font-size:15px;
-	font-wieght: bold;
+	font-weight: bold;
 }
 .artist-type{
 	text-align: center;
@@ -52,14 +52,9 @@
 .row{
 	display: block;
 }
-/* .profile{
-	margin-bottom: 8px;
-	padding: 0px;
-} */
-/* .thumbnail{
-	width: 100%;
-	height: 100%;
-} */
+.preImages:hover {
+	color: white;
+}
 </style>
 
 <div class="container">
