@@ -59,7 +59,10 @@
 	width: 100%;
 	height: auto;
 }
-.thumbnail:after {
+.preImages{
+	display: inline-block;
+}
+.preImages:after {
     content:'\A';
     position:absolute;
     width:100%; height:100%;
@@ -69,7 +72,7 @@
     transition: all 0.3s;
     -webkit-transition: all 0.3s;
 }
-.thumbnail:hover:after {
+.preImages:hover:after {
 	opacity: 1;
 }
 
