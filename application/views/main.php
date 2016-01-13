@@ -5,11 +5,13 @@
     transform: rotate(-7deg);
     transform-origin: 0% 100%;
     overflow: hidden;
+    -webkit-backface-visibility: hidden;
   }
   .image-in-banner{
     transform: rotate(7deg);
     width: 100%;
     left:0px;
+    -webkit-backface-visibility: hidden;
   }
 </style>
 <script>
