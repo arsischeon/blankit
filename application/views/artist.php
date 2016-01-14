@@ -79,14 +79,11 @@
 	height:3px;
 } */
 .header {
-	text-align:left;
-    font-weight:bold;
     background:#ebebeb;
     margin-bottom: 60px;
     width: 100%;
     height: 465px;
     position: absolute;
-	overflow-y: hidden;
 	white-space:nowrap;
 }
 </style>
