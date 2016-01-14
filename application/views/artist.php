@@ -51,34 +51,16 @@
 	position:relative;
 	top:1px;
 }	
-/* .thumbnail {
+.thumbnail {
 	margin: 0;
 	width: 100%;
 	height: auto;
 	border-radius: 15px;
-} */
-.thumbnail {
-    position: absolute;
-    margin: auto; 
-    min-height: 100%;
-    min-width: 100%;
-
-    /* For the following settings we set 100%, but it can be higher if needed 
-    See the answer's update */
-    left: -100%;
-    right: -100%;
-    top: -100%;
-    bottom: -100%;
-}
+} 
 .preImages {
-	height: 141px;
-	width: 211px;
-	background-color: black;
-}
-/* .preImages {
 	padding-left: 10px;
 	padding-right: 10px;
-} */
+}
 </style>
 
 </div>
