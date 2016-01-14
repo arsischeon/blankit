@@ -59,18 +59,9 @@
 	width: 100%;
 	height: auto;
 }
-.banner {
-    background:#ebebeb;
-    margin-bottom: 60px;
-    width:100%
-    height: 465px;
-    position: absolute;
-	white-space:nowrap;
-}
-
 </style>
 
-<div class="banner" align="left">this is banner</div>
+<div class="row-md-12" style="background: #F5F6F7; padding-top:30px; padding-bottom:30px;">this is banner</div>
 
 <div class="container">
 	<div class="row">
