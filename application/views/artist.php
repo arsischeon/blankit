@@ -65,9 +65,13 @@
     height: auto;
 }
 .preImages {
+	height: 140px;
+	width: 200px;
+}
+/* .preImages {
 	padding-left: 10px;
 	padding-right: 10px;
-}
+} */
 </style>
 
 </div>
