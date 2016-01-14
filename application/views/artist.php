@@ -51,14 +51,14 @@
 	position:relative;
 	top:1px;
 }
-.row{
+/*.row{
 	display: block;
-}
+}*/
 .thumbnail {
 	margin: 0;
 	width: 100%;
 	height: auto;
-	border-radius: 25px;
+	border-radius: 15px;
 }
 </style>
 
