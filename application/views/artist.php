@@ -60,7 +60,6 @@
 .preImages {
 	padding-left: 10px;
 	padding-right: 10px;
-	height: 180px;
 }
 </style>
 
@@ -78,7 +77,7 @@
 			<p class="artist-type">그래픽 디자인</p>
 			<a href="#" class="myButton">더 보기</a>
 		</div>
-		<div class="preImages col-md-3 col-xs-4">
+		<div class="preImages col-md-3 col-xs-4" style="height: 180px;">
 			<img src="https://mir-s3-cdn-cf.behance.net/projects/202/fab06432280103.Y3JvcCw4NDAsNjU3LDEsMA.jpg" class="thumbnail img img-responsive img-rounded">
 		</div>
 		<div class="preImages col-md-3 col-xs-4">
