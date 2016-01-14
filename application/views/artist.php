@@ -63,7 +63,6 @@
 .preImages {
 	padding-left: 10px;
 	padding-right: 10px;
-	width: 50%
 }
 .preImages:before{
 	padding-top: 56.25%;
