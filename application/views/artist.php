@@ -60,10 +60,11 @@
 	height: auto;
 }
 </style>
-
+<body>
 <div class="row" style="margin-top: 20px;">
 	<div class="row-md-12" style="background: #F5F6F7; padding-top:30px; padding-bottom:30px;">this is banner</div>
 </div>
+</body>
 
 <div class="container" style="margin: 0 auto;">
 	<div class="row">
