@@ -100,7 +100,7 @@ $(function(){
   <div class="row" style="margin-bottom:40px;">
     <div class="col-md-12" style="position:relative; height:25px; border-bottom: 1.5px solid #D3D3D3;">
       <div class="menu">
-        <div class="menu_item"><a href="#">전체</a></div>
+        <div class="menu_item"><a href="/store">전체</a></div>
         <div class="menu_item"><a href="/store/cloth">의류</a></div>
         <div class="menu_item" style="border-bottom:2px solid #96AFB5; color:#96AFB5;"><a href="/store/ecobag">에코백</a></div>
         <div class="menu_item"><a href="/store/pouch">파우치</a></div>
