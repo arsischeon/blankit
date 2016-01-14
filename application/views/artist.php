@@ -65,7 +65,7 @@
 </div>
 
 <div class="row" style="margin-bottom: 40px; position:absolute; left: 0px; top: 0px; width: 100%">
-	<div class="col-md-12" style="background: #F5F6F7; height: 400px;"></div>
+	<div class="col-md-12" style="background: #F5F6F7; height: 400px; width: 100%"></div>
 </div>
 
 <div class="container" style="margin: 440px auto;">
