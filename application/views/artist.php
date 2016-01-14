@@ -67,6 +67,7 @@
 .preImages {
 	height: 140px;
 	width: 200px;
+	background-color: black;
 }
 /* .preImages {
 	padding-left: 10px;
