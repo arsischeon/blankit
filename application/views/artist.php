@@ -54,17 +54,10 @@
 /*.row{
 	display: block;
 }*/
-/* .thumbnail {
+.thumbnail {
 	margin: 0;
 	width: 100%;
 	height: auto;
-	border-radius: 15px;
-} */
-.thumbnail {
-	top: 0;
-	left: 0;
-	bottom: 0;
-	right: 0;
 	border-radius: 15px;
 }
 .preImages {
