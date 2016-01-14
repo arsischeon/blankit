@@ -79,7 +79,12 @@
 	height:3px;
 } */
 .header {
-	background: black url(http://www.electrictoolbox.com/images/rangitoto-3072x200.jpg) center no-repeat;
+	text-align:left;
+    font-weight:bold;
+    background:#ebebeb;
+    margin-bottom: 60px;
+    width: 100%;
+    height: 465px;
 }
 </style>
 
