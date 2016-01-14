@@ -82,9 +82,10 @@
 	text-align:left;
     font-weight:bold;
     background:#ebebeb;
-    margin-bottom: 60px;
-    width: 100%;
     height: 465px;
+    margin: 0 auto;
+    padding-bottom: 60px;
+    width: 100%;
 }
 </style>
 
