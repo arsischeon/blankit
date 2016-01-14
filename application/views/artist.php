@@ -59,9 +59,8 @@
 	width: 100%;
 	height: auto;
 }
-.preImages{
+/* .preImages{
 	display: inline-block;
-	
 }
 .preImages:after {
     content:'\A';
@@ -78,7 +77,7 @@
 }
 .hr {
 	height:3px;
-}
+} */
 </style>
 
 <div class="container">
