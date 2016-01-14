@@ -65,7 +65,7 @@
 	<div class="row-md-12" style="background: #F5F6F7; padding-top:30px; padding-bottom:30px;">this is banner</div>
 </div>
 
-<div class="container">
+<div class="container" style="margin: 0 auto;">
 	<div class="row">
 		<div id="artistID" class="artist col-md-3 col-xs-12">
 			<img src="https://mir-s3-cdn-cf.behance.net/user/138/ff443554023.55072219ce354.jpg" class="img-circle">
