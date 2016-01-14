@@ -54,18 +54,28 @@
 /*.row{
 	display: block;
 }*/
-.thumbnail {
+/* .thumbnail {
 	margin: 0;
 	width: 100%;
 	height: auto;
+	border-radius: 15px;
+} */
+.thumbnail {
+	position:  absolute;
+	top: 0;
+	left: 0;
+	bottom: 0;
+	right: 0;
 	border-radius: 15px;
 }
 .preImages {
 	padding-left: 10px;
 	padding-right: 10px;
+	position: relative;
+	width: 50%
 }
 .preImages:before{
-	padding-top: 56.25%;
+	padding-top: 100%;
 }
 </style>
 
