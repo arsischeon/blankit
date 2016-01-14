@@ -57,12 +57,12 @@
 .thumbnail {
 	margin: 0;
 	width: 100%;
-	height: auto;
+	height: 80%;
 	border-radius: 15px;
 }
 .preImages {
-	padding-left: 6px;
-	padding-right: 6px;
+	padding-left: 10px;
+	padding-right: 10px;
 }
 </style>
 
