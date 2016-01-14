@@ -64,11 +64,11 @@
 
 </div>
 
-<div class="row" style="margin-bottom: 440px; position:absolute; left: 0px; top: 0px; width: 100%">
+<div class="row" style="margin-bottom: 40px; position:absolute; left: 0px; top: 0px; width: 100%">
 	<div class="col-md-12" style="background: #F5F6F7; height: 400px;"></div>
 </div>
 
-<div class="container" style="margin: 0 auto;">
+<div class="container" style="margin: 440px auto;">
 	<div class="row">
 		<div id="artistID" class="artist col-md-3 col-xs-12">
 			<img src="https://mir-s3-cdn-cf.behance.net/user/138/ff443554023.55072219ce354.jpg" class="img-circle">
