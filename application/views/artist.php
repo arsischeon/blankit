@@ -1,8 +1,8 @@
 <style>
 .img-circle {
 	border-radius:50%;
-	width: 100px;
-	height: 100px;
+	width: 80px;
+	height: 80px;
 	margin-bottom: 8px;
 	padding: 0px;
 	margin-left: auto;
@@ -29,9 +29,9 @@
 }
 .myButton {
 	background-color:transparent;
-	-moz-border-radius:42px;
-	-webkit-border-radius:42px;
-	border-radius:42px;
+	-moz-border-radius:20px;
+	-webkit-border-radius:20px;
+	border-radius:20px;
 	border:3px solid #687c87;
 	display:inline-block;
 	cursor:pointer;
@@ -51,28 +51,28 @@
 	position:relative;
 	top:1px;
 }
-.row{
+/*.row{
 	display: block;
-}
+}*/
 .thumbnail {
 	margin: 0;
 	width: 100%;
 	height: auto;
+	border-radius: 15px;
 }
-.banner {
-    background:#ebebeb;
-    margin-bottom: 60px;
-    width:100%
-    height: 465px;
-    position: absolute;
-	white-space:nowrap;
+.preImages {
+	padding-left: 10px;
+	padding-right: 10px;
 }
-
 </style>
 
-<div class="banner" align="left">this is banner</div>
+</div>
 
-<div class="container">
+<div class="row" style="margin-bottom: 40px; position:absolute; left: 0px; top: 0px; width: 200%"> <!-- width 나중에 수정 -->
+	<div class="col-md-12" style="background: #F5F6F7; height: 400px;"></div>
+</div>
+
+<div class="container" style="margin: 440px auto;">
 	<div class="row">
 		<div id="artistID" class="artist col-md-3 col-xs-12">
 			<img src="https://mir-s3-cdn-cf.behance.net/user/138/ff443554023.55072219ce354.jpg" class="img-circle">
