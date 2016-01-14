@@ -14,6 +14,78 @@
     transform: rotate(7deg);
     -webkit-backface-visibility: hidden;
   }
+  .row_title{
+    text-align: center;
+    font-weight: bold;
+    font-size: 13px;
+  }
+  .row_desc{
+    text-align: center;
+    font-weight:normal;
+    font-size: 10px;
+  }
+  .view_more{
+    float: right;
+    border-bottom: 2px solid black;
+    text-align: left;
+    width:100px; //width 를 1px씩 증가시키면서 margin-right도 같이 감소하도록
+    margin-right: -50px;
+  }
+  .col-md-five{
+    width:19.7%;
+    padding: 15px 15px;
+    display: inline-block;
+    /*background: black;
+    height:400px;*/
+  }
+  .box{
+    border: 1.5px solid #868686;
+  }
+  .radius-4{
+    border-radius: 15px;
+  }
+  .status_bar{
+    height:7px;
+    background: linear-gradient(to right, #687C87 70%,#D3D3D3 70% );
+  }
+  .img{
+    width:100%;
+  }
+  .status_percent{
+    font-weight: bold;
+    color: #687C87;
+    font-size: 10px;
+    float:left;
+    margin-left: 10px;
+  }
+  .status_day_word{
+    font-weight: bold;
+    color: #655453;
+    font-size: 10px;
+    float:right;
+    margin-right:10px;
+  }
+  .status_day{
+    font-weight: bold;
+    color: #687C87;
+    font-size: 10px;
+  }
+  .artist_name{
+    margin-bottom:5px;
+    font-size: 10px;
+    font-weight:bold;
+  }
+  .artist_type{
+    margin-bottom:5px;
+    font-size: 10px;
+    font-weight:regular;
+  }
+  .box:hover{
+    background: #96AFB5;
+  }
+  .box:hover p{
+    color: white;
+  }
 </style>
 <script>
 function slanted_banner_generator(){
@@ -26,15 +98,16 @@ function slanted_banner_generator(){
   $(".banner").css("width",banner_width+"px");
   $(".banner").css("height",banner_height+"px");
   $(".banner-wrap").css("height",banner_height-50+"px");
-
 }
 $(function(){
   $(".banner").css("display","none");
   slanted_banner_generator();
   $(".banner").css("display","");
   $(".banner").hover(function(){
-    $(".banner").css("background","red");
+    // $(".banner").css("background","red");
+    //배너에 마우스 오버시 배너 바꾸는 화살표 필요
   });
+
 });
 $(window).resize(function(){
   slanted_banner_generator();
@@ -47,8 +120,138 @@ $(window).resize(function(){
 <div class="banner-roll">
 </div>
 </div>
-<div class="row" style="background:red;">
+<div class="row" style="margin-top:20px;">
   <div class="col-md-12">
-  <span>ve</span>
+  <p class="row_title">STORE</p>
+  <p class="row_desc">이 카테고리를 설명할 수 있는 글이에요</p>
 </div>
+</div>
+<div class="row">
+  <div class="col-md-12">
+    <div class="view_more">view more</div>
+  </div>
+</div>
+<div class="row">
+  <div class="col-md-five">
+    <div class="box radius-4">
+    <div><img src="/source/image/img_placeholder.png" class="img"></div>
+    <div class="status_bar"></div>
+    <div class="artist_hover" style="padding-top:7px;">
+      <span class="status_percent">70%</span>
+      <span class="status_day_word">앞으로 <span class="status_day">7</span>일</span>
+    </div>
+    <div class="artist_hover" style="width: 100%; display: inline-flex;">
+      <div style="width:20%; margin-left: 10px; padding-top: 10px; margin-bottom:15px;">
+        <img src="/source/image/profile_placeholder.png" class="img img-circle">
+      </div>
+      <div style="width:80%; padding-left:10px; padding-top:10px;">
+        <p class="artist_name">아티스트</p>
+        <p class="artist_type">그래픽 디자인</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<div class="col-md-five">
+  <div class="box radius-4">
+  <div><img src="/source/image/img_placeholder.png" class="img"></div>
+  <div class="status_bar"></div>
+  <div style="padding-top:7px;">
+    <span class="status_percent">70%</span>
+    <span class="status_day_word">앞으로 <span class="status_day">7</span>일</span>
+  </div>
+  <div style="width: 100%; display: inline-flex;">
+    <div style="width:20%; margin-left: 10px; padding-top: 10px; margin-bottom:15px;">
+      <img src="/source/image/profile_placeholder.png" class="img img-circle">
+    </div>
+    <div style="width:80%; padding-left:10px; padding-top:10px;">
+      <p class="artist_name">아티스트</p>
+      <p class="artist_type">그래픽 디자인</p>
+    </div>
+  </div>
+</div>
+</div>
+<div class="col-md-five">
+  <div class="box radius-4">
+  <div><img src="/source/image/img_placeholder.png" class="img"></div>
+  <div class="status_bar"></div>
+  <div style="padding-top:7px;">
+    <span class="status_percent">70%</span>
+    <span class="status_day_word">앞으로 <span class="status_day">7</span>일</span>
+  </div>
+  <div style="width: 100%; display: inline-flex;">
+    <div style="width:20%; margin-left: 10px; padding-top: 10px; margin-bottom:15px;">
+      <img src="/source/image/profile_placeholder.png" class="img img-circle">
+    </div>
+    <div style="width:80%; padding-left:10px; padding-top:10px;">
+      <p class="artist_name">아티스트</p>
+      <p class="artist_type">그래픽 디자인</p>
+    </div>
+  </div>
+</div>
+</div>
+<div class="col-md-five">
+  <div class="box radius-4">
+  <div><img src="/source/image/img_placeholder.png" class="img"></div>
+  <div class="status_bar"></div>
+  <div style="padding-top:7px;">
+    <span class="status_percent">70%</span>
+    <span class="status_day_word">앞으로 <span class="status_day">7</span>일</span>
+  </div>
+  <div style="width: 100%; display: inline-flex;">
+    <div style="width:20%; margin-left: 10px; padding-top: 10px; margin-bottom:15px;">
+      <img src="/source/image/profile_placeholder.png" class="img img-circle">
+    </div>
+    <div style="width:80%; padding-left:10px; padding-top:10px;">
+      <p class="artist_name">아티스트</p>
+      <p class="artist_type">그래픽 디자인</p>
+    </div>
+  </div>
+</div>
+</div>
+<div class="col-md-five">
+  <div class="box radius-4">
+  <div><img src="/source/image/img_placeholder.png" class="img"></div>
+  <div class="status_bar"></div>
+  <div style="padding-top:7px;">
+    <span class="status_percent">70%</span>
+    <span class="status_day_word">앞으로 <span class="status_day">7</span>일</span>
+  </div>
+  <div style="width: 100%; display: inline-flex;">
+    <div style="width:20%; margin-left: 10px; padding-top: 10px; margin-bottom:15px;">
+      <img src="/source/image/profile_placeholder.png" class="img img-circle">
+    </div>
+    <div style="width:80%; padding-left:10px; padding-top:10px;">
+      <p class="artist_name">아티스트</p>
+      <p class="artist_type">그래픽 디자인</p>
+    </div>
+  </div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="row" style="margin-top: 20px;">
+  <div class="row-md-12" style="background: #F5F6F7; padding-top:30px; padding-bottom:30px;">
+    <p style="font-size:21px; font-weight:bold; text-align:center; margin-top:15px;">당신도 League Of Legend를 하세요!</p>
+    <p style="font-size:13px; font-weight:regular; text-align:center;">블랭킷은 좋은 서비스 입니다. 신진 디자이너에게 밥을 사주세요</p>
+    <div class="submit_button"></div>
+
+  </div>
+</div>
+<div class="container">
+  <div class="row" style="margin-top:40px;">
+    <div class="col-md-12">
+    <p class="row_title">ARTIST</p>
+    <p class="row_desc">블랭킷의 디자이너들이다. 봐라</p>
+  </div>
+  </div>
+  <div class="row">
+    <div class="col-md-12">
+      <div class="view_more">view more</div>
+    </div>
+  </div>
+
+
 </div>
