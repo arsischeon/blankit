@@ -71,8 +71,8 @@
     bottom: -100%;
 }
 .preImages {
-	height: 140px;
-	width: 200px;
+	height: 141px;
+	width: 211px;
 	background-color: black;
 }
 /* .preImages {
