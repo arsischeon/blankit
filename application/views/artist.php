@@ -58,8 +58,11 @@
 	border-radius: 15px;
 } */
 .thumbnail {
-    width: 100% !important;
-    height: auto !important;
+    display: block;
+    max-width:211px;
+    max-height:141px;
+    width: auto;
+    height: auto;
 }
 .preImages {
 	padding-left: 10px;
