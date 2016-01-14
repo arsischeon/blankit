@@ -86,6 +86,9 @@
     width: 100%;
     height: 465px;
 }
+.container {
+	margin-right: 0px;
+}
 </style>
 
 <div class="header"></div>
