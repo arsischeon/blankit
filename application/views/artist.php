@@ -50,22 +50,26 @@
 .myButton:active {
 	position:relative;
 	top:1px;
-}
-/*.row{
-	display: block;
-}*/
+}	
+/* .thumbnail {
+	margin: 0;
+	width: 100%;
+	height: auto;
+	border-radius: 15px;
+} */
 .thumbnail {
 	margin: 0;
 	width: 100%;
 	height: auto;
 	border-radius: 15px;
+	    max-width:230px;
+    max-height:95px;
+    width: auto;
+    height: auto;
 }
 .preImages {
 	padding-left: 10px;
 	padding-right: 10px;
-}
-.thumbnail:before{
-	padding-top: 56.25%;
 }
 </style>
 
