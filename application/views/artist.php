@@ -55,13 +55,13 @@
 	margin: 0;
 	width: 100%;
 	height: 100%;
+	border-radius: 15px;
 	background-color: black;
 } 
 .preImages {
 	padding-left: 10px;
 	padding-right: 10px;
 	height: 180px;
-	border-radius: 15px;
 }
 </style>
 
@@ -86,7 +86,7 @@
 			<img src="#" class="thumbnail img img-responsive img-rounded">
 		</div>
 		<div class="preImages col-md-3 col-xs-4">
-			<img src="# class="thumbnail img img-responsive img-rounded">
+			<img src="#" class="thumbnail img img-responsive img-rounded">
 		</div>
 	</div>
 	<hr>
