@@ -58,14 +58,8 @@
 	border-radius: 15px;
 } */
 .thumbnail {
-	margin: 0;
-	width: 100%;
-	height: auto;
-	border-radius: 15px;
-	    max-width:230px;
-    max-height:95px;
-    width: auto;
-    height: auto;
+    width: 100% !important;
+    height: auto !important;
 }
 .preImages {
 	padding-left: 10px;
