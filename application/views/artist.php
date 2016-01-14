@@ -76,7 +76,9 @@
 .preImages:hover:after {
 	opacity: 1;
 }
-
+.hr {
+	height:3px;
+}
 </style>
 
 <div class="container">
