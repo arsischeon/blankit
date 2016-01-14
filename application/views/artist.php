@@ -81,7 +81,8 @@
 .banner {
     background:#ebebeb;
     margin-bottom: 60px;
-    width: 100%;
+    left-width: -100%;
+    right-width: -100%;
     height: 465px;
     position: absolute;
 	white-space:nowrap;
