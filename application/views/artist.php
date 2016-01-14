@@ -63,7 +63,7 @@
 
 </div> <!-- closes container -->
 
-<div class="row" style="margin-top: 20px;">
+<div class="row" style="margin-top: 20px; margin-bottom: 40px;">
 	<div class="row-md-12" style="background: #F5F6F7; padding-top:30px; padding-bottom:30px; height: 500px;"></div>
 </div>
 
