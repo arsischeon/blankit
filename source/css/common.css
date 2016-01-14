@@ -6,6 +6,10 @@ body{
   pointer-events: auto;
   cursor: pointer;
 }
+a, a:hover, a:visited, a:link, a:active{
+  color:inherit;
+  text-decoration: none !important;
+}
 .navbar-default{
   /*pointer-events: none;*/
   background: none !important;
@@ -44,3 +48,7 @@ body{
 .navbar-left:hover{
   color: #5D787A !important;
 }
+.dropdown:hover .dropdown-menu {
+    display: block;
+    margin-top: 0; // remove the gap so it doesn't close
+ }

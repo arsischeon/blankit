@@ -38,13 +38,13 @@
           </button>
 
           <a class="navbar-brand" href="#">
-            <img id="logo" alt="blankit" src="source/image/logo.png">
+            <img id="logo" alt="blankit" src="/source/image/logo.png">
           </a>
         </div>
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
           <ul class="nav navbar-nav">
             <li class="dropdown">
-              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">about us</span></a>
+              <a href="#" id="aboutus_menu" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">about us</span></a>
                 <ul class="dropdown-menu" role="menu">
                   <li><a href="#">서비스 소개</a></li>
                   <li><a href="#">FAQ</a></li>
@@ -53,11 +53,11 @@
             </li>
             <li><a class="navbar-left" href="#">artist</a></li>
             <li class="dropdown">
-              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">store</span></a>
+              <a href="#" id="store_menu" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">store</span></a>
                 <ul class="dropdown-menu" role="menu">
-                  <li><a href="#">의류</a></li>
-                  <li><a href="#">에코백</a></li>
-                  <li><a href="#">파우치</a></li>
+                  <li><a href="/store/cloth">의류</a></li>
+                  <li><a href="/store/ecobag">에코백</a></li>
+                  <li><a href="/store/pouch">파우치</a></li>
                 </ul>
             </li>
           </ul>
@@ -71,4 +71,4 @@
 
       </div>
     </nav>
-    <div class="container">
+    <div id="root_container" class="container">
