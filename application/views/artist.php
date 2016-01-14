@@ -56,13 +56,13 @@
 }*/
 .thumbnail {
 	margin: 0;
-	padding-top: 56.25%;
+	width: 100%;
+	height: auto;
 	border-radius: 15px;
 }
 .preImages {
 	padding-left: 10px;
 	padding-right: 10px;
-	width: 100%;
 }
 </style>
 
