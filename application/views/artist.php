@@ -78,7 +78,7 @@
 .hr {
 	height:3px;
 } */
-.header {
+.banner {
     background:#ebebeb;
     margin-bottom: 60px;
     width: 100%;
@@ -88,7 +88,7 @@
 }
 </style>
 
-<div class="header"></div>
+<div class="banner" align="left">this is banner</div>
 
 <div class="container">
 	<div class="row">
