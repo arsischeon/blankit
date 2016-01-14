@@ -17,6 +17,7 @@
 	font-family:"Noto Sans", "Noto Sans CJK KR", sans-serif;
 	font-size:15px;
 	font-weight: bold;
+	margin: 0;
 }
 .artist-type{
 	text-align: center;
@@ -44,6 +45,7 @@
 .myButton:hover {
 	background-color:#687c87;
 	color: white;
+	text-decoration: none;
 }
 .myButton:active {
 	position:relative;
@@ -52,10 +54,23 @@
 .row{
 	display: block;
 }
-.preImages:hover {
-	color: white;
+.thumbnail {
+	margin: 0;
+	width: 100%;
+	height: auto;
 }
+.banner {
+    background:#ebebeb;
+    margin-bottom: 60px;
+    width:100%
+    height: 465px;
+    position: absolute;
+	white-space:nowrap;
+}
+
 </style>
+
+<div class="banner" align="left">this is banner</div>
 
 <div class="container">
 	<div class="row">
@@ -76,4 +91,44 @@
 		</div>
 	</div>
 	<hr>
+	
+	<div class="row">
+		<div id="artistID" class="artist col-md-3 col-xs-12">
+			<img src="https://mir-s3-cdn-cf.behance.net/user/138/ff443554023.55072219ce354.jpg" class="img-circle">
+			<p class="artist-name">아티스트 D</p>
+			<p class="artist-type">그래픽 디자인</p>
+			<a href="#" class="myButton">더 보기</a>
+		</div>
+		<div class="preImages col-md-3 col-xs-4">
+			<img src="https://mir-s3-cdn-cf.behance.net/projects/202/fab06432280103.Y3JvcCw4NDAsNjU3LDEsMA.jpg" class="thumbnail img img-responsive img-rounded">
+		</div>
+		<div class="preImages col-md-3 col-xs-4">
+			<img src="https://mir-s3-cdn-cf.behance.net/projects/202/fab06432280103.Y3JvcCw4NDAsNjU3LDEsMA.jpg" class="thumbnail img img-responsive img-rounded">
+		</div>
+		<div class="preImages col-md-3 col-xs-4">
+			<img src="https://mir-s3-cdn-cf.behance.net/projects/202/fab06432280103.Y3JvcCw4NDAsNjU3LDEsMA.jpg" class="thumbnail img img-responsive img-rounded">
+		</div>
+	</div>
+	<hr>
+	
+	
+	<div class="row">
+		<div id="artistID" class="artist col-md-3 col-xs-12">
+			<img src="https://mir-s3-cdn-cf.behance.net/user/138/ff443554023.55072219ce354.jpg" class="img-circle">
+			<p class="artist-name">아티스트 D</p>
+			<p class="artist-type">그래픽 디자인</p>
+			<a href="#" class="myButton">더 보기</a>
+		</div>
+		<div class="preImages col-md-3 col-xs-4">
+			<img src="https://mir-s3-cdn-cf.behance.net/projects/202/fab06432280103.Y3JvcCw4NDAsNjU3LDEsMA.jpg" class="thumbnail img img-responsive img-rounded">
+		</div>
+		<div class="preImages col-md-3 col-xs-4">
+			<img src="https://mir-s3-cdn-cf.behance.net/projects/202/fab06432280103.Y3JvcCw4NDAsNjU3LDEsMA.jpg" class="thumbnail img img-responsive img-rounded">
+		</div>
+		<div class="preImages col-md-3 col-xs-4">
+			<img src="https://mir-s3-cdn-cf.behance.net/projects/202/fab06432280103.Y3JvcCw4NDAsNjU3LDEsMA.jpg" class="thumbnail img img-responsive img-rounded">
+		</div>
+	</div>
+	<hr>
+
 </div>
