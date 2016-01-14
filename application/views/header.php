@@ -31,9 +31,13 @@
           </a>
 
         </div>
-        <p class="navbar-text">about us</p>
-        <p class="navbar-text">artist</p>
-        <p class="navbar-text">store</p>
+        <p class="navbar-text navbar-left ">about us</p>
+        <p class="navbar-text navbar-left">artist</p>
+        <p class="navbar-text navbar-left">store</p>
+        <p class="navbar-text navbar-right">submit</p>
+        <p class="navbar-text navbar-right">mypage</p>
+        <p class="navbar-text navbar-right">join</p>
+        <p class="navbar-text navbar-right">login</p>
       </div>
     </nav>
     <div class="container">

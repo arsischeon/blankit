@@ -13,13 +13,21 @@ body{
   z-index: 9000;
   margin-bottom: 0px;
 }
-.navbar-text{
+.navbar-left{
   pointer-events: auto;
   cursor: pointer;
   font-weight: regular;
   letter-spacing: 0.8px;
   color: white !important;
 }
-.navbar-text:hover{
+.navbar-right{
+  float:right;
+  pointer-events: auto;
+  cursor: pointer;
+  font-weight: regular;
+  letter-spacing: 0.8px;
+  color: #868686 !important;
+}
+.navbar-left:hover{
   color: #5D787A !important;
 }

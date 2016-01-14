@@ -6,8 +6,28 @@
     transform-origin: 0% 100%;
     overflow: hidden;
     -webkit-backface-visibility: hidden;
-    background: grey;
+    background: #EAEAEA;
     z-index: 100;
+  }
+  .banner-wrap{
+    position:relative;
+  }
+  .banner-roll{
+    position: absolute;
+    width:100px;
+    height:10px;
+    text-align: center;
+    bottom: 30px;
+    left:50%;
+    margin-left:-50px;
+  }
+  .banner-roll-circle{
+    border-radius:50%;
+    border: 1px solid #EAEAEA;
+    height:100%;
+    width:10px;
+    display:inline-block;
+    cursor: pointer;
   }
   .image-in-banner{
     width:100%;
@@ -17,12 +37,12 @@
   .row_title{
     text-align: center;
     font-weight: bold;
-    font-size: 13px;
+    font-size: 17px;
   }
   .row_desc{
     text-align: center;
     font-weight:normal;
-    font-size: 10px;
+    font-size: 13px;
   }
   .view_more{
     float: right;
@@ -86,6 +106,49 @@
   .box:hover p{
     color: white;
   }
+  .myButton {
+  	background-color:transparent;
+  	-moz-border-radius:20px;
+  	-webkit-border-radius:20px;
+  	border-radius:20px;
+  	border:3px solid #687c87;
+  	display:inline-block;
+  	cursor:pointer;
+  	color:#687c87;
+  	font-family:"Noto Sans", "Noto Sans CJK KR", sans-serif;
+  	font-size:16px;
+  	font-weight:bold;
+  	padding:6px 48px;
+  	text-decoration:none;
+  }
+  .myButton:hover {
+  	background-color:#687c87;
+  	color: white;
+  	text-decoration: none;
+  }
+  .myButton:active {
+  	position:relative;
+  	top:1px;
+  }
+  .submit_button{
+    display: block;
+    text-align: center;
+  }
+  .img_hover_cover{
+     z-index: 100;
+     background: #96AFB5;
+     width:100%;
+  }
+  .img_hover {
+    z-index: 50;
+    width: 100%;
+    opacity: 1;
+  }
+  .img_hover:hover{
+    z-index: 50;
+    width: 100%;
+    opacity: 0.5;
+  }
 </style>
 <script>
 function slanted_banner_generator(){
@@ -113,11 +176,15 @@ $(window).resize(function(){
   slanted_banner_generator();
 });
 </script>
-<div class="banner-wrap  ">
 <div class="banner">
   <!-- <img class="image-in-banner" src="/source/image/banner1.jpg"> -->
 </div>
+<div class="banner-wrap ">
 <div class="banner-roll">
+  <div class="banner-roll-circle"></div>
+  <div class="banner-roll-circle" style="background:#687C87;"></div>
+  <div class="banner-roll-circle"></div>
+  <div class="banner-roll-circle"></div>
 </div>
 </div>
 <div class="row" style="margin-top:20px;">
@@ -233,10 +300,10 @@ $(window).resize(function(){
 </div>
 
 <div class="row" style="margin-top: 20px;">
-  <div class="row-md-12" style="background: #F5F6F7; padding-top:30px; padding-bottom:30px;">
+  <div class="row-md-12" style="background: #F5F6F7; padding-top:50px; padding-bottom:50px;">
     <p style="font-size:21px; font-weight:bold; text-align:center; margin-top:15px;">당신도 League Of Legend를 하세요!</p>
     <p style="font-size:13px; font-weight:regular; text-align:center;">블랭킷은 좋은 서비스 입니다. 신진 디자이너에게 밥을 사주세요</p>
-    <div class="submit_button"></div>
+    <div class="submit_button"><a href="#" class="myButton">submit</a></div>
 
   </div>
 </div>
@@ -253,5 +320,60 @@ $(window).resize(function(){
     </div>
   </div>
 
+  <div class="row">
+    <div class="col-md-five">
+      <div class="img_hover_cover img-circle">
+        <img src="/source/image/profile_placeholder.png" class="img img_hover img-circle">
+      </div>
+      <div style="text-align:center; margin-top:10px;">
+        <p style="margin-bottom:2px;" class="artist_name">아티스트</p>
+        <p class="artist_type">그래픽 디자인</p>
+      </div>
+    </div>
+    <!-- placeholder div 시작 -->
+    <div class="col-md-five">
+      <div class="img_hover_cover img-circle">
+        <img src="/source/image/profile_placeholder.png" class="img img_hover img-circle">
+      </div>
+      <div style="text-align:center; margin-top:10px;">
+        <p style="margin-bottom:2px;" class="artist_name">아티스트</p>
+        <p class="artist_type">그래픽 디자인</p>
+      </div>
+    </div>
+    <div class="col-md-five">
+      <div class="img_hover_cover img-circle">
+        <img src="/source/image/profile_placeholder.png" class="img img_hover img-circle">
+      </div>
+      <div style="text-align:center; margin-top:10px;">
+        <p style="margin-bottom:2px;" class="artist_name">아티스트</p>
+        <p class="artist_type">그래픽 디자인</p>
+      </div>
+    </div>
+    <div class="col-md-five">
+      <div class="img_hover_cover img-circle">
+        <img src="/source/image/profile_placeholder.png" class="img img_hover img-circle">
+      </div>
+      <div style="text-align:center; margin-top:10px;">
+        <p style="margin-bottom:2px;" class="artist_name">아티스트</p>
+        <p class="artist_type">그래픽 디자인</p>
+      </div>
+    </div>
+    <div class="col-md-five">
+      <div class="img_hover_cover img-circle">
+        <img src="/source/image/profile_placeholder.png" class="img img_hover img-circle">
+      </div>
+      <div style="text-align:center; margin-top:10px;">
+        <p style="margin-bottom:2px;" class="artist_name">아티스트</p>
+        <p class="artist_type">그래픽 디자인</p>
+      </div>
+    </div>
 
-</div>
+    <!-- placeholder div 끝 -->
+  </div>
+  </div>
+  <!-- footer 시작 -->
+  <div class="row">
+    <div class="col-md-12" style="margin-top:100px; background: black; height:250px;">
+
+    </div>
+  </div>
