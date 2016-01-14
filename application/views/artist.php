@@ -59,34 +59,15 @@
 	width: 100%;
 	height: auto;
 }
-/* .preImages{
-	display: inline-block;
-}
-.preImages:after {
-    content:'\A';
-    position:absolute;
-    width:100%; height:100%;
-    top:0; left:0;
-    background:rgba(150,175,181,0.6);
-    opacity:0;
-    transition: all 0.3s;
-    -webkit-transition: all 0.3s;
-}
-.preImages:hover:after {
-	opacity: 1;
-}
-.hr {
-	height:3px;
-} */
 .banner {
     background:#ebebeb;
     margin-bottom: 60px;
-    left-width: -100%;
-    right-width: -100%;
+    width:100%
     height: 465px;
     position: absolute;
 	white-space:nowrap;
 }
+
 </style>
 
 <div class="banner" align="left">this is banner</div>
