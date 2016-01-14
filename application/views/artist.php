@@ -58,11 +58,17 @@
 	border-radius: 15px;
 } */
 .thumbnail {
-    display: block;
-    max-width:211px;
-    max-height:141px;
-    width: auto;
-    height: auto;
+    position: absolute;
+    margin: auto; 
+    min-height: 100%;
+    min-width: 100%;
+
+    /* For the following settings we set 100%, but it can be higher if needed 
+    See the answer's update */
+    left: -100%;
+    right: -100%;
+    top: -100%;
+    bottom: -100%;
 }
 .preImages {
 	height: 140px;
