@@ -7,6 +7,7 @@
 	padding: 0px;
 	margin-left: auto;
 	margin-right: auto;
+	display: table-cell;
 }
 #artistID.col-xs-12{
 	display:block;
@@ -26,6 +27,7 @@
 }
 .artist{
 	text-align: center;
+	display: table-row; 
 }
 .myButton {
 	background-color:transparent;
