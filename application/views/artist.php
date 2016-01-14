@@ -1,8 +1,8 @@
 <style>
 .img-circle {
 	border-radius:50%;
-	width: 100px;
-	height: 100px;
+	width: 80px;
+	height: 80px;
 	margin-bottom: 8px;
 	padding: 0px;
 	margin-left: auto;
