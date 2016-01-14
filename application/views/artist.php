@@ -59,6 +59,8 @@
 	width: 100%;
 	height: auto;
 	border-radius: 15px;
+}
+.preImages {
 	padding-left: 6px;
 	padding-right: 6px;
 }
