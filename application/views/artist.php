@@ -56,7 +56,7 @@
 	width: 100%;
 	height: 100%;
 	border-radius: 15px;
-	background-color: black;
+	background-color: #F7F7F7;
 } 
 .preImages {
 	padding-left: 10px;
