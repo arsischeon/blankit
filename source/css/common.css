@@ -7,11 +7,25 @@ body{
   cursor: pointer;
 }
 .navbar-default{
-  pointer-events: none;
-  background: none;
+  /*pointer-events: none;*/
+  background: none !important;
+  background-color: transparent !important;
   border: none;
   z-index: 9000;
   margin-bottom: 0px;
+}
+.dropdown-toggle{
+  color: white !important;
+}
+.dropdown-toggle:hover{
+  color: #687C87 !important;
+}
+.navbar-default .navbar-nav>.open>a, .navbar-default .navbar-nav>.open>a:focus, .navbar-default .navbar-nav>.open>a:hover{
+  background: none !important;
+  background-color: transparent !important;
+}
+.navbar-brand{
+  padding-left: 50px;
 }
 .navbar-left{
   pointer-events: auto;
@@ -21,7 +35,6 @@ body{
   color: white !important;
 }
 .navbar-right{
-  float:right;
   pointer-events: auto;
   cursor: pointer;
   font-weight: regular;
