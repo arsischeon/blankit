@@ -60,6 +60,7 @@
 .preImages {
 	padding-left: 10px;
 	padding-right: 10px;
+	height: 180px;
 }
 </style>
 
