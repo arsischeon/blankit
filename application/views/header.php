@@ -37,7 +37,7 @@
             <span class="icon-bar"></span>
           </button>
 
-          <a class="navbar-brand" href="#">
+          <a class="navbar-brand" href="/">
             <img id="logo" alt="blankit" src="/source/image/logo.png">
           </a>
         </div>
