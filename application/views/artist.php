@@ -85,6 +85,11 @@
     margin-bottom: 60px;
     width: 100%;
     height: 465px;
+    position: absolute;
+height: 100%;
+overflow:scroll;
+overflow-y: hidden;
+white-space:nowrap;   
 }
 </style>
 
