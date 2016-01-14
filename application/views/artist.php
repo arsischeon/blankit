@@ -78,7 +78,12 @@
 .hr {
 	height:3px;
 } */
+.header {
+	background: black url(http://www.electrictoolbox.com/images/rangitoto-3072x200.jpg) center no-repeat;
+}
 </style>
+
+<div class="header"></div>
 
 <div class="container">
 	<div class="row">
