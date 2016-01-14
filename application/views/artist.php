@@ -29,9 +29,9 @@
 }
 .myButton {
 	background-color:transparent;
-	-moz-border-radius:42px;
-	-webkit-border-radius:42px;
-	border-radius:42px;
+	-moz-border-radius:20px;
+	-webkit-border-radius:20px;
+	border-radius:20px;
 	border:3px solid #687c87;
 	display:inline-block;
 	cursor:pointer;
@@ -64,8 +64,8 @@
 
 </div>
 
-<div class="row" style="margin-bottom: 40px; position:absolute; left: 0px; top: 0px; width: 100%">
-	<div class="col-md-12" style="background: #F5F6F7; height: 400px; width: 100%"></div>
+<div class="row" style="margin-bottom: 40px; position:absolute; left: 0px; top: 0px; width: 200%"> <!-- width 나중에 수정 -->
+	<div class="col-md-12" style="background: #F5F6F7; height: 400px;"></div>
 </div>
 
 <div class="container" style="margin: 440px auto;">
