@@ -61,7 +61,6 @@
 	border-radius: 15px;
 } */
 .thumbnail {
-	position:  absolute;
 	top: 0;
 	left: 0;
 	bottom: 0;
@@ -71,7 +70,6 @@
 .preImages {
 	padding-left: 10px;
 	padding-right: 10px;
-	position: relative;
 	width: 50%
 }
 .preImages:before{
