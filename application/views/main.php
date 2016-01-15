@@ -174,7 +174,10 @@ $(function(){
     // $(".banner").css("background","red");
     //배너에 마우스 오버시 배너 바꾸는 화살표 필요
   });
-   $('.bxslider').bxSlider();
+   $('.bxslider').bxSlider({
+     slideMargin:100,
+     adaptiveHeight:true
+   });
 });
 $(window).resize(function(){
   slanted_banner_generator();

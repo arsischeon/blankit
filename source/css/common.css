@@ -52,3 +52,8 @@ a, a:hover, a:visited, a:link, a:active{
     display: block;
     margin-top: 0; // remove the gap so it doesn't close
  }
+ .bx-viewport{
+   left:0px !important;
+   /*height:100% !important;*/
+   border-radius: 20px;
+ }
