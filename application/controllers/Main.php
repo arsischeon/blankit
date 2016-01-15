@@ -5,8 +5,11 @@ class Main extends CI_Controller {
 
 	public function index()
 	{
+		$this->load->model('main');
+		$data['recent']=$this->main->recent();
+		$data['artist']=$this->main->artist();
 		$this->load->view('header');
-		$this->load->view('main');
+		$this->load->view('main',$data);
 		$this->load->view('footer');
 	}
 }
