@@ -39,7 +39,8 @@
   height:400px;*/
 }
 .box{
-  border: 1.5px solid #868686;
+  border: 1.5px solid #D3D3D3;
+  opacity: 0.5;
 }
 .radius-4{
   border-radius: 15px;
