@@ -58,6 +58,9 @@
     /*background: black;
     height:400px;*/
   }
+  .col-xs-6{
+    padding: 5px 5px !important;
+  }
   .box{
     border: 1.5px solid #868686;
   }
