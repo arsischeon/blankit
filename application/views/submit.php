@@ -23,6 +23,21 @@
   padding: 0 30px 0 30px;
   margin:0 auto; display:block;
 }
+.download_cover{
+  background-image: url("/source/image/download_hover.png");
+  z-index: 100;
+background-size: contain;
+ background-position:15px;
+ background-repeat: no-repeat;
+}
+ .download_img{
+     z-index: 50;
+   opacity:1;
+ }
+.download_cover:hover .download_img{
+     z-index: 50;
+  opacity:0.5;
+}
 </style>
 <script>
 $(function(){
@@ -39,23 +54,44 @@ $(function(){
 </div>
 <div class="container" >
   <div class="row">
-    <div class="col-xs-12">
+      <div class="col-xs-1">
+      </div>
+    <div class="col-xs-10">
       <img src="/source/image/submit_guide.png" class="img img-responsive">
     </div>
-    <!-- <div class="col-11-2">
-      <img src="/source/image/submit_guide_1.png" class="img img-responsive">
+    <div class="col-xs-1">
     </div>
-    <div class="col-11-1" style="  display: table-cell;  vertical-align: middle;">
-      <img src="/source/image/arrow.png" class="arrow img img-responsive">
+  </div>
+  <div class="row">
+      <div class="col-xs-12" style="margin-top:30px; border-top: 1px solid #D3D3D3;">
+        <span style="margin-top:30px; text-align:center; display:block; font-size: 25px; color:#655453; font-weight:bold;">
+          작업 파일 다운로드
+        </span>
+      </div>
+  </div>
+  <div class="row" style="margin-top:30px; margin-bottom:30px; ">
+    <div class="col-xs-2">
     </div>
-    <div class="col-11-2">
+    <div class="col-xs-2 download_cover">
+        <img src="/source/image/download_1.png" class="download_img img img-responsive">
     </div>
-    <div class="col-11-1">
+    <div class="col-xs-1">
     </div>
-    <div class="col-11-2">
+    <div class="col-xs-2 download_cover">
+      <img src="/source/image/download_2.png" class="download_img img img-responsive">
     </div>
-    <div class="col-11-1">
+    <div class="col-xs-1">
     </div>
-    <div class="col-11-2">
-    </div> -->
+    <div class="col-xs-2 download_cover">
+      <img src="/source/image/download_3.png" class="download_img img img-responsive">
+    </div>
+    <div class="col-xs-2">
+    </div>
+  </div>
+  <div class="row">
+      <div class="col-xs-12" style="margin-top:30px; border-top: 1px solid #D3D3D3;">
+        <span style="margin-top:30px; text-align:center; display:block; font-size: 25px; color:#655453; font-weight:bold;">
+          제품 파일 업로드
+        </span>
+      </div>
   </div>
