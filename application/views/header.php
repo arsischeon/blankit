@@ -51,7 +51,7 @@
                   <li><a href="#">고객센터</a></li>
                 </ul>
             </li>
-            <li><a class="navbar-left" href="#">artist</a></li>
+            <li><a class="navbar-left" href="/artist">artist</a></li>
             <li class="dropdown">
               <a href="#" id="store_menu" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">store</span></a>
                 <ul class="dropdown-menu" role="menu">
