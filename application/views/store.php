@@ -32,7 +32,7 @@
   border-bottom:2px solid #96AFB5;
 }
 .col-md-five{
-  width:19.7%;
+  width:19.6%;
   padding: 15px 15px;
   display: inline-block;
   /*background: black;
@@ -40,7 +40,7 @@
 }
 .box{
   border: 1.5px solid #D3D3D3;
-  opacity: 0.5;
+
 }
 .radius-4{
   border-radius: 15px;
@@ -98,6 +98,7 @@ $(function(){
 
   </div>
 </div>
+
 <div class="container" >
   <div class="row" style="margin-bottom:40px;">
     <div class="col-md-12" style="position:relative; height:25px; border-bottom: 1.5px solid #D3D3D3;">
@@ -111,8 +112,9 @@ $(function(){
   </div>
 
   <!-- 내용 시작 -->
-  <div class="row">
-    <div class="col-md-five">
+  <!-- xs일경우 -->
+  <div class="row hidden-md hidden-lg hidden-sm">
+    <div class="col-xs-6 padding-xs">
       <div class="box radius-4">
       <div><img src="/source/image/img_placeholder.png" class="img"></div>
       <div class="status_bar"></div>
@@ -133,15 +135,15 @@ $(function(){
   </div>
 
 
-  <div class="col-md-five">
+  <div class="col-xs-6 padding-xs">
     <div class="box radius-4">
     <div><img src="/source/image/img_placeholder.png" class="img"></div>
     <div class="status_bar"></div>
-    <div style="padding-top:7px;">
+    <div class="artist_hover" style="padding-top:7px;">
       <span class="status_percent">70%</span>
       <span class="status_day_word">앞으로 <span class="status_day">7</span>일</span>
     </div>
-    <div style="width: 100%; display: inline-flex;">
+    <div class="artist_hover" style="width: 100%; display: inline-flex;">
       <div style="width:20%; margin-left: 10px; padding-top: 10px; margin-bottom:15px;">
         <img src="/source/image/profile_placeholder.png" class="img img-circle">
       </div>
@@ -151,16 +153,40 @@ $(function(){
       </div>
     </div>
   </div>
+</div>
   </div>
-  <div class="col-md-five">
+  <!-- xs일경우 끝 -->
+  <!-- sm일경우 -->
+  <div class="row hidden-md hidden-lg hidden-xs">
+    <div class="col-sm-4 padding-sm">
+      <div class="box radius-4">
+      <div><img src="/source/image/img_placeholder.png" class="img"></div>
+      <div class="status_bar"></div>
+      <div class="artist_hover" style="padding-top:7px;">
+        <span class="status_percent">70%</span>
+        <span class="status_day_word">앞으로 <span class="status_day">7</span>일</span>
+      </div>
+      <div class="artist_hover" style="width: 100%; display: inline-flex;">
+        <div style="width:20%; margin-left: 10px; padding-top: 10px; margin-bottom:15px;">
+          <img src="/source/image/profile_placeholder.png" class="img img-circle">
+        </div>
+        <div style="width:80%; padding-left:10px; padding-top:10px;">
+          <p class="artist_name">아티스트</p>
+          <p class="artist_type">그래픽 디자인</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="col-sm-4 padding-sm">
     <div class="box radius-4">
     <div><img src="/source/image/img_placeholder.png" class="img"></div>
     <div class="status_bar"></div>
-    <div style="padding-top:7px;">
+    <div class="artist_hover" style="padding-top:7px;">
       <span class="status_percent">70%</span>
       <span class="status_day_word">앞으로 <span class="status_day">7</span>일</span>
     </div>
-    <div style="width: 100%; display: inline-flex;">
+    <div class="artist_hover" style="width: 100%; display: inline-flex;">
       <div style="width:20%; margin-left: 10px; padding-top: 10px; margin-bottom:15px;">
         <img src="/source/image/profile_placeholder.png" class="img img-circle">
       </div>
@@ -170,16 +196,62 @@ $(function(){
       </div>
     </div>
   </div>
+</div>
+
+<div class="col-sm-4 padding-sm">
+  <div class="box radius-4">
+  <div><img src="/source/image/img_placeholder.png" class="img"></div>
+  <div class="status_bar"></div>
+  <div class="artist_hover" style="padding-top:7px;">
+    <span class="status_percent">70%</span>
+    <span class="status_day_word">앞으로 <span class="status_day">7</span>일</span>
   </div>
-  <div class="col-md-five">
+  <div class="artist_hover" style="width: 100%; display: inline-flex;">
+    <div style="width:20%; margin-left: 10px; padding-top: 10px; margin-bottom:15px;">
+      <img src="/source/image/profile_placeholder.png" class="img img-circle">
+    </div>
+    <div style="width:80%; padding-left:10px; padding-top:10px;">
+      <p class="artist_name">아티스트</p>
+      <p class="artist_type">그래픽 디자인</p>
+    </div>
+  </div>
+</div>
+</div>
+
+  </div>
+
+
+  <!-- sm일경우 끝 -->
+  <!-- md일 경우 -->
+  <div class="row hidden-lg hidden-sm hidden-xs">
+    <div class="col-md-3">
+      <div class="box radius-4">
+      <div><img src="/source/image/img_placeholder.png" class="img"></div>
+      <div class="status_bar"></div>
+      <div class="artist_hover" style="padding-top:7px;">
+        <span class="status_percent">70%</span>
+        <span class="status_day_word">앞으로 <span class="status_day">7</span>일</span>
+      </div>
+      <div class="artist_hover" style="width: 100%; display: inline-flex;">
+        <div style="width:20%; margin-left: 10px; padding-top: 10px; margin-bottom:15px;">
+          <img src="/source/image/profile_placeholder.png" class="img img-circle">
+        </div>
+        <div style="width:80%; padding-left:10px; padding-top:10px;">
+          <p class="artist_name">아티스트</p>
+          <p class="artist_type">그래픽 디자인</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="col-md-3">
     <div class="box radius-4">
     <div><img src="/source/image/img_placeholder.png" class="img"></div>
     <div class="status_bar"></div>
-    <div style="padding-top:7px;">
+    <div class="artist_hover" style="padding-top:7px;">
       <span class="status_percent">70%</span>
       <span class="status_day_word">앞으로 <span class="status_day">7</span>일</span>
     </div>
-    <div style="width: 100%; display: inline-flex;">
+    <div class="artist_hover" style="width: 100%; display: inline-flex;">
       <div style="width:20%; margin-left: 10px; padding-top: 10px; margin-bottom:15px;">
         <img src="/source/image/profile_placeholder.png" class="img img-circle">
       </div>
@@ -189,28 +261,50 @@ $(function(){
       </div>
     </div>
   </div>
+</div>
+<div class="col-md-3">
+  <div class="box radius-4">
+  <div><img src="/source/image/img_placeholder.png" class="img"></div>
+  <div class="status_bar"></div>
+  <div class="artist_hover" style="padding-top:7px;">
+    <span class="status_percent">70%</span>
+    <span class="status_day_word">앞으로 <span class="status_day">7</span>일</span>
   </div>
-  <div class="col-md-five">
-    <div class="box radius-4">
-    <div><img src="/source/image/img_placeholder.png" class="img"></div>
-    <div class="status_bar"></div>
-    <div style="padding-top:7px;">
-      <span class="status_percent">70%</span>
-      <span class="status_day_word">앞으로 <span class="status_day">7</span>일</span>
+  <div class="artist_hover" style="width: 100%; display: inline-flex;">
+    <div style="width:20%; margin-left: 10px; padding-top: 10px; margin-bottom:15px;">
+      <img src="/source/image/profile_placeholder.png" class="img img-circle">
     </div>
-    <div style="width: 100%; display: inline-flex;">
-      <div style="width:20%; margin-left: 10px; padding-top: 10px; margin-bottom:15px;">
-        <img src="/source/image/profile_placeholder.png" class="img img-circle">
-      </div>
-      <div style="width:80%; padding-left:10px; padding-top:10px;">
-        <p class="artist_name">아티스트</p>
-        <p class="artist_type">그래픽 디자인</p>
-      </div>
+    <div style="width:80%; padding-left:10px; padding-top:10px;">
+      <p class="artist_name">아티스트</p>
+      <p class="artist_type">그래픽 디자인</p>
     </div>
   </div>
+</div>
+</div>
+<div class="col-md-3">
+  <div class="box radius-4">
+  <div><img src="/source/image/img_placeholder.png" class="img"></div>
+  <div class="status_bar"></div>
+  <div class="artist_hover" style="padding-top:7px;">
+    <span class="status_percent">70%</span>
+    <span class="status_day_word">앞으로 <span class="status_day">7</span>일</span>
   </div>
+  <div class="artist_hover" style="width: 100%; display: inline-flex;">
+    <div style="width:20%; margin-left: 10px; padding-top: 10px; margin-bottom:15px;">
+      <img src="/source/image/profile_placeholder.png" class="img img-circle">
+    </div>
+    <div style="width:80%; padding-left:10px; padding-top:10px;">
+      <p class="artist_name">아티스트</p>
+      <p class="artist_type">그래픽 디자인</p>
+    </div>
   </div>
-  <div class="row">
+</div>
+</div>
+
+  </div>
+<!-- md일경우 끝 -->
+  <!-- lg일 경우 -->
+  <div class="row hidden-md hidden-sm hidden-xs">
     <div class="col-md-five">
       <div class="box radius-4">
       <div><img src="/source/image/img_placeholder.png" class="img"></div>
@@ -231,84 +325,6 @@ $(function(){
     </div>
   </div>
 
-
-  <div class="col-md-five">
-    <div class="box radius-4">
-    <div><img src="/source/image/img_placeholder.png" class="img"></div>
-    <div class="status_bar"></div>
-    <div style="padding-top:7px;">
-      <span class="status_percent">70%</span>
-      <span class="status_day_word">앞으로 <span class="status_day">7</span>일</span>
-    </div>
-    <div style="width: 100%; display: inline-flex;">
-      <div style="width:20%; margin-left: 10px; padding-top: 10px; margin-bottom:15px;">
-        <img src="/source/image/profile_placeholder.png" class="img img-circle">
-      </div>
-      <div style="width:80%; padding-left:10px; padding-top:10px;">
-        <p class="artist_name">아티스트</p>
-        <p class="artist_type">그래픽 디자인</p>
-      </div>
-    </div>
   </div>
-  </div>
-  <div class="col-md-five">
-    <div class="box radius-4">
-    <div><img src="/source/image/img_placeholder.png" class="img"></div>
-    <div class="status_bar"></div>
-    <div style="padding-top:7px;">
-      <span class="status_percent">70%</span>
-      <span class="status_day_word">앞으로 <span class="status_day">7</span>일</span>
-    </div>
-    <div style="width: 100%; display: inline-flex;">
-      <div style="width:20%; margin-left: 10px; padding-top: 10px; margin-bottom:15px;">
-        <img src="/source/image/profile_placeholder.png" class="img img-circle">
-      </div>
-      <div style="width:80%; padding-left:10px; padding-top:10px;">
-        <p class="artist_name">아티스트</p>
-        <p class="artist_type">그래픽 디자인</p>
-      </div>
-    </div>
-  </div>
-  </div>
-  <div class="col-md-five">
-    <div class="box radius-4">
-    <div><img src="/source/image/img_placeholder.png" class="img"></div>
-    <div class="status_bar"></div>
-    <div style="padding-top:7px;">
-      <span class="status_percent">70%</span>
-      <span class="status_day_word">앞으로 <span class="status_day">7</span>일</span>
-    </div>
-    <div style="width: 100%; display: inline-flex;">
-      <div style="width:20%; margin-left: 10px; padding-top: 10px; margin-bottom:15px;">
-        <img src="/source/image/profile_placeholder.png" class="img img-circle">
-      </div>
-      <div style="width:80%; padding-left:10px; padding-top:10px;">
-        <p class="artist_name">아티스트</p>
-        <p class="artist_type">그래픽 디자인</p>
-      </div>
-    </div>
-  </div>
-  </div>
-  <div class="col-md-five">
-    <div class="box radius-4">
-    <div><img src="/source/image/img_placeholder.png" class="img"></div>
-    <div class="status_bar"></div>
-    <div style="padding-top:7px;">
-      <span class="status_percent">70%</span>
-      <span class="status_day_word">앞으로 <span class="status_day">7</span>일</span>
-    </div>
-    <div style="width: 100%; display: inline-flex;">
-      <div style="width:20%; margin-left: 10px; padding-top: 10px; margin-bottom:15px;">
-        <img src="/source/image/profile_placeholder.png" class="img img-circle">
-      </div>
-      <div style="width:80%; padding-left:10px; padding-top:10px;">
-        <p class="artist_name">아티스트</p>
-        <p class="artist_type">그래픽 디자인</p>
-      </div>
-    </div>
-  </div>
-  </div>
-  <!-- 내용 끝 -->
-  </div>
-
+<!-- lg일 경우 끝 -->
 </div>
