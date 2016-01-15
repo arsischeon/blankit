@@ -205,7 +205,7 @@ $(window).resize(function(){
 </div>
 <div class="row">
   <div class="col-md-12">
-    <div class="view_more">view more</div>
+    <div class="view_more"><a href="/store">view more</a></div>
   </div>
 </div>
 <!-- 모바일 시작 -->
