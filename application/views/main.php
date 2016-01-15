@@ -175,7 +175,7 @@ $(function(){
     //배너에 마우스 오버시 배너 바꾸는 화살표 필요
   });
    $('.bxslider').bxSlider({
-     slideMargin:100,
+     slideMargin:50,
      adaptiveHeight:true,
      infiniteLoop:false
    });
