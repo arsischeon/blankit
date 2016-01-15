@@ -174,7 +174,7 @@ $(function(){
     // $(".banner").css("background","red");
     //배너에 마우스 오버시 배너 바꾸는 화살표 필요
   });
-
+   $('.bxslider').bxSlider();
 });
 $(window).resize(function(){
   slanted_banner_generator();
@@ -207,6 +207,8 @@ $(window).resize(function(){
 <!-- 모바일 시작 -->
 <div class="row hidden-md hidden-lg">
   <div class="col-xs-12" style="margin-top:20px;">
+    <ul class="bxslider">
+      <li>
     <div class="box radius-4">
     <div><img src="/source/image/img_placeholder.png" class="img"></div>
     <div class="status_bar"></div>
@@ -224,6 +226,50 @@ $(window).resize(function(){
       </div>
     </div>
   </div>
+</li>
+
+<li>
+<div class="box radius-4">
+<div><img src="/source/image/img_placeholder.png" class="img"></div>
+<div class="status_bar"></div>
+<div class="artist_hover" style="padding-top:7px;">
+<span class="status_percent">70%</span>
+<span class="status_day_word">앞으로 <span class="status_day">7</span>일</span>
+</div>
+<div class="artist_hover" style="width: 100%; display: inline-flex;">
+<div style="width:20%; margin-left: 10px; padding-top: 10px; margin-bottom:15px;">
+  <img src="/source/image/profile_placeholder.png" class="img img-circle">
+</div>
+<div style="width:80%; padding-left:10px; padding-top:15px;">
+  <p class="artist_name">아티스트</p>
+  <p class="artist_type">그래픽 디자인</p>
+</div>
+</div>
+</div>
+</li>
+
+<li>
+<div class="box radius-4">
+<div><img src="/source/image/img_placeholder.png" class="img"></div>
+<div class="status_bar"></div>
+<div class="artist_hover" style="padding-top:7px;">
+<span class="status_percent">70%</span>
+<span class="status_day_word">앞으로 <span class="status_day">7</span>일</span>
+</div>
+<div class="artist_hover" style="width: 100%; display: inline-flex;">
+<div style="width:20%; margin-left: 10px; padding-top: 10px; margin-bottom:15px;">
+  <img src="/source/image/profile_placeholder.png" class="img img-circle">
+</div>
+<div style="width:80%; padding-left:10px; padding-top:15px;">
+  <p class="artist_name">아티스트</p>
+  <p class="artist_type">그래픽 디자인</p>
+</div>
+</div>
+</div>
+</li>
+
+
+</ul>
 </div>
 </div>
 
