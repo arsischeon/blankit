@@ -52,7 +52,7 @@
     margin-right: -50px;
   }
   .col-md-five{
-    width:19.7%;
+    width:19.6%;
     padding: 15px 15px;
     display: inline-block;
     /*background: black;
@@ -222,6 +222,7 @@ $(window).resize(function(){
 </div>
 
 <!-- 모바일 종료 -->
+<!-- 데스크탑 시작 -->
 <div class="row hidden-sm hidden-xs">
   <div class="col-md-five">
     <div class="box radius-4">
@@ -322,7 +323,7 @@ $(window).resize(function(){
 </div>
 </div>
 </div>
-
+<!-- 데스크탑 종료 -->
 <div class="row" style="margin-top: 20px;">
   <div class="row-md-12" style="background: #F5F6F7; padding-top:50px; padding-bottom:50px;">
     <p style="font-size:21px; font-weight:bold; text-align:center; margin-top:15px;">당신도 League Of Legend를 하세요!</p>
