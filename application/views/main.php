@@ -30,7 +30,7 @@
     cursor: pointer;
   }
   .image-in-banner{
-    width:100%;
+    /*width:100%;*/
     transform: rotate(7deg);
     -webkit-backface-visibility: hidden;
   }
@@ -165,6 +165,7 @@ function slanted_banner_generator(){
 
   $("#banner_cut").css("width",width+"px");
   $("#banner_cut").css("height",$(window).height()*0.8+"px");
+  $(".image-in-banner").css("min-height",$(window).height()+"px");
 }
 $(function(){
   $(".banner").css("display","none");
@@ -179,6 +180,7 @@ $(function(){
      adaptiveHeight:true,
      infiniteLoop:false
    });
+
 });
 $(window).resize(function(){
   slanted_banner_generator();
@@ -186,7 +188,7 @@ $(window).resize(function(){
 </script>
 <div id="banner_cut" style="left:0;top:0;position:absolute;  overflow:hidden;">
 <div class="banner">
-  <!-- <img class="image-in-banner" src="/source/image/banner1.jpg"> -->
+  <img class="image-in-banner" src="/source/image/banner1.jpg">
 </div>
 </div>
 <div class="banner-wrap ">

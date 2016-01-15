@@ -69,21 +69,30 @@ $(function(){
         </span>
       </div>
   </div>
-  <div class="row" style="margin-top:30px; margin-bottom:30px; ">
+  <div class="row hidden-sm hidden-md hidden-lg" style="margin-top:30px; margin-bottom:30px; ">
+    <span style="display:block; text-align:center;">작업 파일 다운로드는 PC에서만 제공합니다.</span>
+  </div>
+  <div class="row hidden-xs" style="margin-top:30px; margin-bottom:30px; ">
     <div class="col-xs-2">
     </div>
     <div class="col-xs-2 download_cover">
+      <a href="">
         <img src="/source/image/download_1.png" class="download_img img img-responsive">
+      </a>
     </div>
     <div class="col-xs-1">
     </div>
     <div class="col-xs-2 download_cover">
+      <a href="">
       <img src="/source/image/download_2.png" class="download_img img img-responsive">
+    </a>
     </div>
     <div class="col-xs-1">
     </div>
     <div class="col-xs-2 download_cover">
+      <a href="">
       <img src="/source/image/download_3.png" class="download_img img img-responsive">
+    </a>
     </div>
     <div class="col-xs-2">
     </div>
