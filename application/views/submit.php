@@ -19,6 +19,10 @@
   display:block;
   margin:0 auto;
 }
+.arrow{
+  padding: 0 30px 0 30px;
+  margin:0 auto; display:block;
+}
 </style>
 <script>
 $(function(){
@@ -34,3 +38,24 @@ $(function(){
   </div>
 </div>
 <div class="container" >
+  <div class="row">
+    <div class="col-xs-12">
+      <img src="/source/image/submit_guide.png" class="img img-responsive">
+    </div>
+    <!-- <div class="col-11-2">
+      <img src="/source/image/submit_guide_1.png" class="img img-responsive">
+    </div>
+    <div class="col-11-1" style="  display: table-cell;  vertical-align: middle;">
+      <img src="/source/image/arrow.png" class="arrow img img-responsive">
+    </div>
+    <div class="col-11-2">
+    </div>
+    <div class="col-11-1">
+    </div>
+    <div class="col-11-2">
+    </div>
+    <div class="col-11-1">
+    </div>
+    <div class="col-11-2">
+    </div> -->
+  </div>

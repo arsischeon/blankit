@@ -64,3 +64,15 @@ a, a:hover, a:visited, a:link, a:active{
   .padding-sm{
 
   }
+  .box{
+    border: 1.5px solid #D3D3D3;
+
+  }
+  .col-11-1{
+    width:9.09%;
+    display:inline-block;
+  }
+  .col-11-2{
+    width:18.18%;
+    display:inline-block;
+  }
