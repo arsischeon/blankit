@@ -218,7 +218,7 @@ $(window).resize(function(){
       <div style="width:20%; margin-left: 10px; padding-top: 10px; margin-bottom:15px;">
         <img src="/source/image/profile_placeholder.png" class="img img-circle">
       </div>
-      <div style="width:80%; padding-left:10px; padding-top:10px;">
+      <div style="width:80%; padding-left:10px; padding-top:15px;">
         <p class="artist_name">아티스트</p>
         <p class="artist_type">그래픽 디자인</p>
       </div>
