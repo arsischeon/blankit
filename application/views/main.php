@@ -1,6 +1,6 @@
 <style>
   .banner{
-    position: absolute;
+    position: relative;
     -webkit-transform: rotate(-7deg);
     transform: rotate(-7deg);
     transform-origin: 0% 100%;
@@ -152,6 +152,7 @@
 </style>
 <script>
 function slanted_banner_generator(){
+  var width = document.documentElement.clientWidth;
   var height=$(window).height()*0.8;
   var angle=7*Math.PI/180;
   var banner_height=height*Math.cos(angle);
@@ -161,6 +162,9 @@ function slanted_banner_generator(){
   $(".banner").css("width",banner_width+"px");
   $(".banner").css("height",banner_height+"px");
   $(".banner-wrap").css("height",banner_height-50+"px");
+
+  $("#banner_cut").css("width",width+"px");
+  $("#banner_cut").css("height",$(window).height()*0.8+"px");
 }
 $(function(){
   $(".banner").css("display","none");
@@ -176,8 +180,10 @@ $(window).resize(function(){
   slanted_banner_generator();
 });
 </script>
+<div id="banner_cut" style="left:0;top:0;position:absolute;  overflow:hidden;">
 <div class="banner">
   <!-- <img class="image-in-banner" src="/source/image/banner1.jpg"> -->
+</div>
 </div>
 <div class="banner-wrap ">
 <div class="banner-roll">
@@ -324,6 +330,7 @@ $(window).resize(function(){
 </div>
 </div>
 <!-- 데스크탑 종료 -->
+<div class="container-fluid">
 <div class="row" style="margin-top: 20px;">
   <div class="row-md-12" style="background: #F5F6F7; padding-top:50px; padding-bottom:50px;">
     <p style="font-size:21px; font-weight:bold; text-align:center; margin-top:15px;">당신도 League Of Legend를 하세요!</p>
@@ -331,6 +338,7 @@ $(window).resize(function(){
     <div class="submit_button"><a href="#" class="myButton">submit</a></div>
 
   </div>
+</div>
 </div>
 <div class="container">
   <div class="row" style="margin-top:40px;">
@@ -397,8 +405,10 @@ $(window).resize(function(){
   </div>
   </div>
   <!-- footer 시작 -->
+  <div class="container-fluid">
   <div class="row">
     <div class="col-md-12" style="margin-top:100px; background: black; height:250px;">
 
     </div>
   </div>
+</div>
