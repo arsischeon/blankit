@@ -1,9 +1,9 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
 
-class Main extends CI_Models{
+class Main_model extends CI_Models{
 	function recent(){
 		return mysql_query("");
 	}
-	
+
 }
