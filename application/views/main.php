@@ -176,7 +176,8 @@ $(function(){
   });
    $('.bxslider').bxSlider({
      slideMargin:100,
-     adaptiveHeight:true
+     adaptiveHeight:true,
+     infiniteLoop:false
    });
 });
 $(window).resize(function(){
@@ -212,7 +213,7 @@ $(window).resize(function(){
   <div class="col-xs-12" style="margin-top:20px;">
     <ul class="bxslider">
       <li>
-    <div class="box radius-4">
+    <div class=" radius-4">
     <div><img src="/source/image/img_placeholder.png" class="img"></div>
     <div class="status_bar"></div>
     <div class="artist_hover" style="padding-top:7px;">
@@ -232,7 +233,7 @@ $(window).resize(function(){
 </li>
 
 <li>
-<div class="box radius-4">
+<div class=" radius-4">
 <div><img src="/source/image/img_placeholder.png" class="img"></div>
 <div class="status_bar"></div>
 <div class="artist_hover" style="padding-top:7px;">
@@ -252,7 +253,7 @@ $(window).resize(function(){
 </li>
 
 <li>
-<div class="box radius-4">
+<div class="radius-4">
 <div><img src="/source/image/img_placeholder.png" class="img"></div>
 <div class="status_bar"></div>
 <div class="artist_hover" style="padding-top:7px;">
