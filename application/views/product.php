@@ -103,6 +103,8 @@ $(function(){
 			$storeType = $row->store_type;
 			$storeStatus = $row->store_status;
 			$storeId = $row->store_id;
+			$storeName = $row->store_name;
+			$storePrice = $row->store_price;
 			break;
 		}
 	}
@@ -117,12 +119,14 @@ $(function(){
 	$remainSecs = $dueDateNum - $curDateNum;
 	$remainDays = $remainSecs / 86400;
 	//여기까지 "앞으로 # 일 계산"
+	
+	$PRICE =  number_format($storePrice, 0, '.', ',');
 
 ?>
 
 <div class="container" >
   <div class="row" style="padding-bottom:30px; border-bottom: 1px solid  #D3D3D3;">
-    <p style="display:block; text-align:center; font-weight:bold; font-size:40px;">상품의 이름</p>
+    <p style="display:block; text-align:center; font-weight:bold; font-size:40px;"><?php echo $storeName;?></p>
     <p style="display:block; text-align:center; font-weight:regular; font-size:20px;"><?php echo $userName;?></p>
 
   </div>
@@ -176,7 +180,7 @@ $(function(){
         <div class="col-xs-12">
           <div class="options">
             <span class="options_left">가격</span>
-            <span class="options_right" style="margin-top:5px;height:25px;">15,000원</span>
+            <span class="options_right" style="margin-top:5px;height:25px;"><?php echo $PRICE;?>원</span>
             <div style="clear: both;"></div>
           </div>
         </div>
