@@ -86,6 +86,20 @@ $(function(){
   </div>
 </div>
 
+<?php
+	$url = "http://$_SERVER[HTTP_HOST]$_SERVER[REQUEST_URI]";
+	echo $url;
+	
+	$url2 = "$_SERVER[REQUEST_URI]";
+	echo $url2;
+
+	//foreach ($details->result() as $row)
+	//{
+		
+	//}
+
+?>
+
 <div class="container" >
   <div class="row" style="padding-bottom:30px; border-bottom: 1px solid  #D3D3D3;">
     <p style="display:block; text-align:center; font-weight:bold; font-size:40px;">상품의 이름</p>

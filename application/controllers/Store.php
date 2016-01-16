@@ -45,8 +45,11 @@ class Store extends CI_Controller {
 	}
 	public function product()
 	{
+		$this->load->model('store_model');
+		$data['details']=$this->store_model->details();
+		
 		$this->load->view('header');
-		$this->load->view('product');
+		$this->load->view('product', $data);
 		$this->load->view('footer');
 	}
 
