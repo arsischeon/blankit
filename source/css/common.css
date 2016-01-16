@@ -105,3 +105,13 @@ a, a:hover, a:visited, a:link, a:active{
    .ui-selectmenu-text{
      font-size:13px;
    }
+   .row_title{
+     text-align: center;
+     font-weight: bold;
+     font-size: 25px;
+   }
+   .row_desc{
+     text-align: center;
+     font-weight:normal;
+     font-size: 16px;
+   }

@@ -34,16 +34,7 @@
     transform: rotate(7deg);
     -webkit-backface-visibility: hidden;
   }
-  .row_title{
-    text-align: center;
-    font-weight: bold;
-    font-size: 17px;
-  }
-  .row_desc{
-    text-align: center;
-    font-weight:normal;
-    font-size: 13px;
-  }
+
   .view_more{
     float: right;
     border-bottom: 2px solid black;
