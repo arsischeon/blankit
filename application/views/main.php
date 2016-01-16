@@ -344,7 +344,7 @@ $(window).resize(function(){
     foreach ($artist_list->result() as $row)
     {
       $num++;
-      if($num<7){
+      if($num<4){
     ?>
     <div class="col-xs-6 col-sm-4 col-md-3 col-lg-15">
       <div class="img_hover_cover img-circle">
@@ -355,7 +355,44 @@ $(window).resize(function(){
         <p class="artist_type"><? echo $row->artist_type;?></p>
       </div>
     </div>
-    <? }} ?>
+    <? }
+    if($num==4){
+  ?>
+  <div class="col-xs-6 col-sm-4 col-md-3 col-lg-15">
+    <div class="img_hover_cover img-circle">
+      <img src="<?echo $row->artist_profile;?>" class="img img_hover img-circle">
+    </div>
+    <div style="text-align:center; margin-top:10px;">
+      <p style="margin-bottom:2px;" class="artist_name"><?  echo $row->user_name;?></p>
+      <p class="artist_type"><? echo $row->artist_type;?></p>
+    </div>
+  </div>
+  <? }
+  if($num==5){
+?>
+<div class="col-xs-6 col-sm-4 hidden-md col-lg-15">
+  <div class="img_hover_cover img-circle">
+    <img src="<?echo $row->artist_profile;?>" class="img img_hover img-circle">
+  </div>
+  <div style="text-align:center; margin-top:10px;">
+    <p style="margin-bottom:2px;" class="artist_name"><?  echo $row->user_name;?></p>
+    <p class="artist_type"><? echo $row->artist_type;?></p>
+  </div>
+</div>
+<? }
+if($num==6){
+?>
+<div class="col-xs-6 col-sm-4 hidden-md hidden-lg">
+<div class="img_hover_cover img-circle">
+  <img src="<?echo $row->artist_profile;?>" class="img img_hover img-circle">
+</div>
+<div style="text-align:center; margin-top:10px;">
+  <p style="margin-bottom:2px;" class="artist_name"><?  echo $row->user_name;?></p>
+  <p class="artist_type"><? echo $row->artist_type;?></p>
+</div>
+</div>
+<? }
+        } ?>
   </div>
 
   </div>
