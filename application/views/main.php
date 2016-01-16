@@ -401,7 +401,7 @@ $(window).resize(function(){
   </div>
   <div class="row">
     <div class="col-md-12">
-      <div class="view_more">view more</div>
+      <div class="view_more"><a href="/artist">view more</a></div>
     </div>
   </div>
 

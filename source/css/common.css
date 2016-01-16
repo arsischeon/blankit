@@ -58,9 +58,9 @@ a, a:hover, a:visited, a:link, a:active{
    border-radius: 20px;
  }
 
- .padding-xs{
+  .col-xs-6{
    padding: 5px 5px !important;
- }
+   }
   .padding-sm{
 
   }
@@ -75,4 +75,9 @@ a, a:hover, a:visited, a:link, a:active{
   .col-11-2{
     width:18.18%;
     display:inline-block;
+  }
+  .col-lg-15{
+    width:19.6% ;
+    padding: 15px 15px !important;
+
   }
