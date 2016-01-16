@@ -35,10 +35,10 @@
 .img{
   width:100%;
 }
-.img-circle{
+/*.img-circle{
   border-top-left-radius: 15px;
   border-top-right-radius: 15px;
-}
+}*/
 
 </style>
 <script>
