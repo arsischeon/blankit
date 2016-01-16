@@ -52,7 +52,11 @@ $(function(){
 </div>
 
 <div class="container" >
-
+  <div class="row" style="margin-top:40px;">
+    <div class="col-md-12">
+    <p class="row_title">ARTIST</p>
+    <p class="row_desc">블랭킷의 디자이너들이다. 봐라</p>
+  </div>
     <!-- 컨텐츠 시작-->
   <div class="row">
     <?
