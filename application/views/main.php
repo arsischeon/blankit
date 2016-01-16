@@ -286,16 +286,13 @@ $(window).resize(function(){
 
 	foreach ($mdpick->result() as $row)
 	{
-		echo $row->user_name;
-		echo $row->store_goal_now;
 		
-	}
 ?> 
 
 <div class="row hidden-sm hidden-xs">
   <div class="col-md-five">
     <div class="box radius-4">
-    <div><img src="/source/image/img_placeholder.png" class="img"></div>
+    <div><img src="<?php echo $row->store_image?>" class="img"></div>
     <div class="status_bar"></div>
     <div class="artist_hover" style="padding-top:7px;">
       <span class="status_percent">70%</span>
@@ -303,16 +300,17 @@ $(window).resize(function(){
     </div>
     <div class="artist_hover" style="width: 100%; display: inline-flex;">
       <div style="width:20%; margin-left: 10px; padding-top: 10px; margin-bottom:15px;">
-        <img src="/source/image/profile_placeholder.png" class="img img-circle">
+        <img src="<?php echo $row->artist_profile?>" class="img img-circle">
       </div>
       <div style="width:80%; padding-left:10px; padding-top:10px;">
-        <p class="artist_name">아티스트</p>
-        <p class="artist_type">그래픽 디자인</p>
+        <p class="artist_name"><?php echo $row->user_name?></p>
+        <p class="artist_type"><?php echo $row->artist_type?></p>
       </div>
     </div>
   </div>
 </div>
 
+<?php }?>
 
 <div class="col-md-five">
   <div class="box radius-4">
