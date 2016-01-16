@@ -73,35 +73,32 @@
   <div class="row">
 <!-- 컨텐츠 반복시작 -->
 
-<?php 
+<?php
+	//아래는 현재 URL 확인용 continue
+	$url = 'http://' . $_SERVER['SERVER_NAME'] . $_SERVER['REQUEST_URI'];
+	if (strpos($url,'cloth') !== false) {
+		$urlNum = 1;
+	} else if(strpos($url,'ecobag') !== false) {
+		$urlNum = 2;
+	} else if(strpos($url,'pouch') !== false){
+		$urlNum = 3;
+	} else {
+		$urlNum = 0;
+	}
+	//url 확인 여기까지
+
 	foreach ($contents->result() as $row)
 	{
 	
-	//아래는 현재 URL 확인용 continue
-	$url = 'http://' . $_SERVER['SERVER_NAME'] . $_SERVER['REQUEST_URI'];	
-	if (strpos($url,'cloth') !== false) {
-		$urlNum = 1;
-		echo 'cloth exists.';
-	} else if(strpos($url,'ecobag') !== false) {
-		$urlNum = 2;
-		echo 'ecobag exists.';
-	} else if(strpos($url,'pouch') !== false){
-		$urlNum = 3;
-		echo 'pouch exists.';
-	} else {
-		$urlNum = 0;
-		echo 'index exists.';
-	}
+	$storeType = $row->store_type; 
 	
 	//현재 URL에 맞는 타입이 아니면 패쓰
 	if ($urlNum == 0){
 		echo 'this is index!';
-	} else if ($row->store_type !== $urlNum){
-		echo $row->store_type;
-		echo '&' . $urlNum . ' ';
-		continue;
-	} else{
+	} else if ($storeType == $urlNum){
 		echo 'pass';
+	} else{
+		continue;
 	}
 
 	$totalGoal = $row->store_goal;
