@@ -74,7 +74,7 @@
     <!-- 컨텐츠 반복시작 -->
     <div class="col-xs-6 col-sm-4 col-md-3 col-lg-15">
       <div class="box radius-4">
-      <div><img src="/source/image/img_placeholder.png" class="img"></div>
+      <div><img src="/source/image/img_placeholder.png" class="img_rounded"></div>
       <div class="status_bar"></div>
       <div class="artist_hover" style="padding-top:7px;">
         <span class="status_percent">70%</span>
