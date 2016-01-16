@@ -67,7 +67,6 @@
   }
   .status_bar{
     height:7px;
-    background: linear-gradient(to right, #687C87 70%,#D3D3D3 70% );
   }
   .img{
     width:100%;
@@ -268,7 +267,7 @@ $(window).resize(function(){
   <div class="col-md-five">
     <div class="box radius-4">
     <div><img src="<?php echo $row->store_image;?>" class="img"></div>
-    <div class="status_bar"> </div>
+    <div class="status_bar" style="background: linear-gradient(to right, #687C87 70%,#D3D3D3 70% );"> </div>
     <div class="artist_hover" style="padding-top:7px;">
       <span class="status_percent">
       	<?php
