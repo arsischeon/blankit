@@ -70,6 +70,9 @@
   }
   .img{
     width:100%;
+  }
+  .img_rounded{
+    width:100%;
     border-top-left-radius: 15px;
     border-top-right-radius: 15px;
   }
@@ -230,7 +233,7 @@ $(window).resize(function(){
       ?>
       <li>
     <div class=" radius-4">
-    <div><img src="<?php echo $row->store_image;?>" class="img"></div>
+    <div><img src="<?php echo $row->store_image;?>" class="img_rounded"></div>
     <div class="status_bar" style="background: linear-gradient(to right, #687C87 <?php echo ceil($percGoal)?>%,#D3D3D3 <?php echo ceil($percGoal)?>% );"></div>
     <div class="artist_hover" style="padding-top:7px;">
       <span class="status_percent"><?php echo ceil($percGoal) . "%";?></span>
@@ -282,7 +285,7 @@ $(window).resize(function(){
 
   <div class="col-md-five">
     <div class="box radius-4">
-    <div><img src="<?php echo $row->store_image;?>" class="img"></div>
+    <div><img src="<?php echo $row->store_image;?>" class="img_rounded"></div>
     <div class="status_bar" style="background: linear-gradient(to right, #687C87 <?php echo ceil($percGoal)?>%,#D3D3D3 <?php echo ceil($percGoal)?>% );"> </div>
     <div class="artist_hover" style="padding-top:7px;">
       <span class="status_percent">
