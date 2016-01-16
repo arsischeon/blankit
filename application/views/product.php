@@ -110,7 +110,7 @@ $(function(){
 	}
 
 	$percGoal = $storeGoalNow / $storeGoal * 100;
-	
+
 	//"앞으로 # 일 계산"
 	$curDate = date('Y-m-d H:i:s');
 	$dueDate = $storeDay;
@@ -119,7 +119,7 @@ $(function(){
 	$remainSecs = $dueDateNum - $curDateNum;
 	$remainDays = $remainSecs / 86400;
 	//여기까지 "앞으로 # 일 계산"
-	
+
 	$PRICE =  number_format($storePrice, 0, '.', ','); // 가격 천 단위 콤마 넣어주기
 
 ?>
