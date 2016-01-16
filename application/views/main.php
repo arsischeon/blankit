@@ -306,7 +306,11 @@ $(window).resize(function(){
       		echo ceil($percGoal) . "%";
       	?>
       </span>
-      <span class="status_day_word">앞으로 <span class="status_day">7</span>일</span>
+      <span class="status_day_word">앞으로 <span class="status_day">
+      	<?php 
+      		
+      	?>
+      </span>일</span>
     </div>
     <div class="artist_hover" style="width: 100%; display: inline-flex;">
       <div style="width:20%; margin-left: 10px; padding-top: 10px; margin-bottom:15px;">
