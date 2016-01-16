@@ -226,7 +226,7 @@ $(window).resize(function(){
         $totalGoal = $row->store_goal;
         $nowGoal = $row->store_goal_now;
         $percGoal = $nowGoal / $totalGoal * 100;
-        
+
       ?>
       <li>
     <div class=" radius-4">
@@ -348,53 +348,20 @@ $(window).resize(function(){
   </div>
 
   <div class="row">
-    <div class="col-md-five">
+    <?
+    foreach ($artist_list->result() as $row)
+    {
+    ?>
+    <div class="col-xs-6 col-sm-4 col-md-3 col-lg-15">
       <div class="img_hover_cover img-circle">
-        <img src="/source/image/profile_placeholder.png" class="img img_hover img-circle">
+        <img src="<?echo $row->artist_profile;?>" class="img img_hover img-circle">
       </div>
       <div style="text-align:center; margin-top:10px;">
-        <p style="margin-bottom:2px;" class="artist_name">아티스트</p>
-        <p class="artist_type">그래픽 디자인</p>
+        <p style="margin-bottom:2px;" class="artist_name"><?  echo $row->user_name;?></p>
+        <p class="artist_type"><? echo $row->artist_type;?></p>
       </div>
     </div>
-    <!-- placeholder div 시작 -->
-    <div class="col-md-five">
-      <div class="img_hover_cover img-circle">
-        <img src="/source/image/profile_placeholder.png" class="img img_hover img-circle">
-      </div>
-      <div style="text-align:center; margin-top:10px;">
-        <p style="margin-bottom:2px;" class="artist_name">아티스트</p>
-        <p class="artist_type">그래픽 디자인</p>
-      </div>
-    </div>
-    <div class="col-md-five">
-      <div class="img_hover_cover img-circle">
-        <img src="/source/image/profile_placeholder.png" class="img img_hover img-circle">
-      </div>
-      <div style="text-align:center; margin-top:10px;">
-        <p style="margin-bottom:2px;" class="artist_name">아티스트</p>
-        <p class="artist_type">그래픽 디자인</p>
-      </div>
-    </div>
-    <div class="col-md-five">
-      <div class="img_hover_cover img-circle">
-        <img src="/source/image/profile_placeholder.png" class="img img_hover img-circle">
-      </div>
-      <div style="text-align:center; margin-top:10px;">
-        <p style="margin-bottom:2px;" class="artist_name">아티스트</p>
-        <p class="artist_type">그래픽 디자인</p>
-      </div>
-    </div>
-    <div class="col-md-five">
-      <div class="img_hover_cover img-circle">
-        <img src="/source/image/profile_placeholder.png" class="img img_hover img-circle">
-      </div>
-      <div style="text-align:center; margin-top:10px;">
-        <p style="margin-bottom:2px;" class="artist_name">아티스트</p>
-        <p class="artist_type">그래픽 디자인</p>
-      </div>
-    </div>
-
-    <!-- placeholder div 끝 -->
+    <? } ?>
   </div>
+
   </div>
