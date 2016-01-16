@@ -94,9 +94,9 @@
 	
 	//현재 URL에 맞는 타입이 아니면 패쓰
 	if ($urlNum == 0){
-		echo 'this is index!';
+		
 	} else if ($storeType == $urlNum){
-		echo 'pass';
+		
 	} else{
 		continue;
 	}
