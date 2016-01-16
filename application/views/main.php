@@ -261,20 +261,19 @@ $(window).resize(function(){
 
 	foreach ($mdpick->result() as $row)
 	{
-
+		$totalGoal = $row->store_goal;
+		$nowGoal = $row->store_goal_now;
+		$percGoal = $nowGoal / $totalGoal * 100;
 ?>
 
 
   <div class="col-md-five">
     <div class="box radius-4">
     <div><img src="<?php echo $row->store_image;?>" class="img"></div>
-    <div class="status_bar" style="background: linear-gradient(to right, #687C87 70%,#D3D3D3 70% );"> </div>
+    <div class="status_bar" style="background: linear-gradient(to right, #687C87 <?php echo ceil($percGoal)?>%,#D3D3D3 <?php echo ceil($percGoal)?>% );"> </div>
     <div class="artist_hover" style="padding-top:7px;">
       <span class="status_percent">
       	<?php
-      		$totalGoal = $row->store_goal;
-      		$nowGoal = $row->store_goal_now;
-      		$percGoal = $nowGoal / $totalGoal * 100;
       		echo ceil($percGoal) . "%";
       	?>
       </span>
@@ -283,8 +282,11 @@ $(window).resize(function(){
       		//"앞으로 # 일 계산"
       		$curDate = date('Y-m-d');
       		$dueDate = $row->store_day;
-      		$remainDate = $dueDate - $curDate;
-      		echo $remainDate;
+      		$curDateNum = strtotime($curDate);
+      		$dueDateNum = strtotime($dueDate);
+      		$remainSecs = $dueDateNum - $curDateNum;
+      		$remianDays = $remainSecs / 86400;
+      		//echo $remainDays;
       		//여기까지 "앞으로 # 일 계산"
       	?>
       </span>일</span>
