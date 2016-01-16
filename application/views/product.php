@@ -11,11 +11,57 @@
 .nav-color{
   color: #868686 !important;
 }
+.options_row{
+  /*padding-bottom: 5px;*/
+}
+.options{
+  border-bottom: 1px solid #D3D3D3;
+  padding: 7px 0 7px 0;
+}
+.options_left{
+  float:left;
+}
+.options_right{
+  float:right;
+}
+.status_bar{
+  height:7px;
+}
+.option_title{
+  font-size: 15px;
 
+}
+.myButton {
+  background-color:#687C87;
+  border-radius:26px;
+  border:3px solid #687c87;
+  display:inline-block;
+  cursor:pointer;
+  color:white !important;
+  font-family:"Noto Sans", "Noto Sans CJK KR", sans-serif;
+  font-size:18px;
+  font-weight:400;
+  padding:10px 48px;
+  text-decoration:none;
+}
+.myButton:hover {
+  background-color:white;
+  color: #687c87 !important;
+
+}
+.myButton:active {
+  position:relative;
+  top:1px;
+}
+.submit_button{
+  display: block;
+  text-align: center;
+}
 </style>
 <script>
 $(function(){
   $("#root_container").css("height",$(".banner").height()+"px");
+  $("#type").selectmenu();
 });
 </script>
   <div class="banner">
@@ -32,17 +78,101 @@ $(function(){
 </div>
 <div class="container" style="margin-top:20px;">
   <div class="row" style="height: 500px; padding: 0 50px 0 50px;">
-    <div class="col-md-8" style="height:100%;">
-      <div class="col-xs-7" style="height:100%; background:black;">
+    <div class="col-md-8" style="height:100%;background:black;">
+
+    </div>
+    <div class="col-md-4" style="padding-left:20px; height:100%; ">
+      <div class="row">
+        <div class="col-xs-12">
+          <span class="option_title">남은 일자</span>
+        </div>
+        <div class="col-xs-12">
+          <span style="font-size:50px; font-weight:300; ">29</span>
+          <span>일</span>
+        </div>
       </div>
-      <div class="col-xs-5" style="height:100%;">
-        <div style="height:50%; background:black;">
+      <div class="row">
+        <div class="col-xs-12">
+          <span class="option_title">모인 인원</span>
         </div>
-        <div style="height:50%;  background:blue;">
+        <div class="col-xs-12">
+          <div style="display:inline-block; float:left;">
+            <span style="font-size:50px; font-weight:300; ">5</span>
+            <span>명</span>
+          </div>
+          <div style="position: absolute; bottom: 12px; right: 15px; ">
+            <span style="color:#687C87; font-weight:bold;">50%</span>
+          </div>
         </div>
+      </div>
+      <div class="row">
+        <div class="col-xs-12">
+          <div class="status_bar" style="background: linear-gradient(to right, #687C87 70%,#D3D3D3 70% );">
+          </div>
       </div>
     </div>
-    <div class="col-md-4" style="height:100%; background:black;">
+      <div class="row options_row" style="margin-top:20px;" >
+        <div class="col-xs-12">
+          <div class="options">
+            <span>OPTIONS</span>
+          </div>
+        </div>
+      </div>
+      <div class="row options_row">
+        <div class="col-xs-12">
+          <div class="options">
+            <span class="options_left">가격</span>
+            <span class="options_right">15,000원</span>
+            <div style="clear: both;"></div>
+          </div>
+        </div>
+      </div>
+      <div class="row options_row">
+        <div class="col-xs-12">
+          <div class="options">
+            <span class="options_left">타입</span>
+            <div class="options_right">
+              <select  id="type">
+                <option value="1">100</option>
+              </select>
+            </div>
+            <div style="clear: both;"></div>
+          </div>
+        </div>
+      </div>
+      <div class="row options_row">
+        <div class="col-xs-12">
+          <div class="options">
+            <span class="options_left">컬러</span>
+            <span class="options_right">15,000원</span>
+            <div style="clear: both;"></div>
+          </div>
+        </div>
+      </div>
+      <div class="row options_row">
+        <div class="col-xs-12">
+          <div class="options">
+            <span class="options_left">사이즈</span>
+            <span class="options_right">15,000원</span>
+            <div style="clear: both;"></div>
+          </div>
+        </div>
+      </div>
+      <div class="row options_row">
+        <div class="col-xs-12">
+          <div class="options">
+            <span class="options_left">수량</span>
+            <span class="options_right">15,000원</span>
+            <div style="clear: both;"></div>
+          </div>
+        </div>
+      </div>
+      <div class="row options_row" style="margin-top:20px;">
+        <div class="col-xs-12">
+          <div class="submit_button"><a href="#" class="myButton">펀딩하기</a></div>
+        </div>
+      </div>
+
     </div>
   </div>
 </div>
