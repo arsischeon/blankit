@@ -90,12 +90,12 @@ $(function(){
 	$urlPath = "$_SERVER[REQUEST_URI]";
 	$explodePath = explode('/', $urlPath);
 	$numPath = $explodePath[3];
-	
+
 	echo $numPath;
 
 	//foreach ($details->result() as $row)
 	//{
-		
+
 	//}
 
 ?>
@@ -108,7 +108,7 @@ $(function(){
   </div>
 </div>
 <div class="container" style="margin-top:20px;">
-  <div class="row" style="padding: 0 50px 0 50px;">
+  <div class="row row_padding-xs">
     <div class="col-md-8" style="height:562px; background:black;">
 
     </div>
@@ -225,7 +225,7 @@ $(function(){
     </div>
   </div>
 
-  <div class="row" style="padding: 0 50px 0 50px; margin-top:20px;;">
+  <div class="row row_padding-xs" style="margin-top:20px;">
     <div class="col-xs-12" style=" padding-left:0;  padding-right:0; padding-bottom:30px;border-bottom:1px solid #D3D3D3;">
       <span>share</span>
       <div></div>
