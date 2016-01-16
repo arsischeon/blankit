@@ -89,14 +89,14 @@
 
 	foreach ($contents->result() as $row)
 	{
-	
-	$storeType = $row->store_type; 
-	
+
+	$storeType = $row->store_type;
+
 	//현재 URL에 맞는 타입이 아니면 패쓰
 	if ($urlNum == 0){
-		
+
 	} else if ($storeType == $urlNum){
-		
+
 	} else{
 		continue;
 	}
@@ -104,7 +104,7 @@
 	$totalGoal = $row->store_goal;
 	$nowGoal = $row->store_goal_now;
 	$percGoal = $nowGoal / $totalGoal * 100;
-	
+
 	//"앞으로 # 일 계산"
 	$curDate = date('Y-m-d H:i:s');
 	$dueDate = $row->store_day;
@@ -114,8 +114,8 @@
 	$remainDays = $remainSecs / 86400;
 	//여기까지 "앞으로 # 일 계산"
 ?>
-    
-    <div class="col-xs-6 col-sm-4 col-md-3 col-lg-15">
+
+    <div class="clearfix col-xs-6 col-sm-4 col-md-3 col-lg-15">
       <div class="box radius-4">
       <div><img src="<?php echo $row->store_image;?>" class="img_rounded"></div>
       <div class="status_bar" style="background: linear-gradient(to right, #687C87 <?php echo ceil($percGoal)?>%,#D3D3D3 <?php echo ceil($percGoal)?>% );"></div>
