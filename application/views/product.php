@@ -89,7 +89,7 @@ $(function(){
 <?php
 	$urlPath = "$_SERVER[REQUEST_URI]";
 	$explodePath = explode('/', $urlPath);
-	$numPath = $explodePath[2];
+	$numPath = $explodePath[3];
 	
 	echo $numPath;
 
