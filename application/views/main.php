@@ -286,7 +286,7 @@ $(window).resize(function(){
       		$curDateNum = strtotime($curDate);
       		$dueDateNum = strtotime($dueDate);
       		$remainSecs = $dueDateNum - $curDateNum;
-      		$remianDays = $remainSecs / 86400;
+      		$remainDays = $remainSecs / 86400;
       		echo $remainDays;
       		//여기까지 "앞으로 # 일 계산"
       	?>
