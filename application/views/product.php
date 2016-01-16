@@ -120,7 +120,7 @@ $(function(){
 	$remainDays = $remainSecs / 86400;
 	//여기까지 "앞으로 # 일 계산"
 	
-	$PRICE =  number_format($storePrice, 0, '.', ',');
+	$PRICE =  number_format($storePrice, 0, '.', ','); // 가격 천 단위 콤마 넣어주기
 
 ?>
 
@@ -134,7 +134,7 @@ $(function(){
 <div class="container" style="margin-top:20px;">
   <div class="row row_padding-xs">
     <div class="col-md-8" style="height:562px; background:black;">
-
+		<img src="<?php echo $storeImage;?>" class="img">
     </div>
     <div class="col-md-4" style="padding-left:20px; height:100%; ">
     <div class="row">
