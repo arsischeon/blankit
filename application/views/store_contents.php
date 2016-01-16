@@ -134,7 +134,7 @@
       </div>
     </div>
   </div>
-  <div class="clearfix visible-xs-block visible-sm-block visible-md-block"></div>
+  <!-- <div class="clearfix visible-xs-block visible-sm-block visible-md-block"></div> -->
 <?php }?>
 
 <!-- 컨텐츠 반복 끝 -->
