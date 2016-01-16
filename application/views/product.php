@@ -133,8 +133,8 @@ $(function(){
 </div>
 <div class="container" style="margin-top:20px;">
   <div class="row row_padding-xs">
-    <div class="col-md-8" style="height:562px; background:black;">
-		<img src="<?php echo $storeImage;?>" class="img">  <!-- 우현 여기 고쳐줘 -->
+    <div class="col-md-8" style="">
+		<img style="width:100%;" src="<?php echo $storeImage;?>" class="img img-responsive">  <!-- 우현 여기 고쳐줘 -->
     </div>
     <div class="col-md-4" style="padding-left:20px; height:100%; ">
     <div class="row">
