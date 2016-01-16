@@ -31,11 +31,7 @@
   color: #96AFB5;
   border-bottom:2px solid #96AFB5;
 }
-.col-md-five{
-  width:19.6%;
-  padding: 15px 15px;
-  display: inline-block;
-}
+
 .radius-4{
   border-radius: 15px;
 }
