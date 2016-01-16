@@ -229,7 +229,7 @@ $(window).resize(function(){
       ?>
       <li>
     <div class=" radius-4">
-    <div><img src="/source/image/img_placeholder.png" class="img"></div>
+    <div><img src="<?php echo $row->store_image;?>" class="img"></div>
     <div class="status_bar"></div>
     <div class="artist_hover" style="padding-top:7px;">
       <span class="status_percent">70%</span>
