@@ -100,7 +100,7 @@ $(function(){
 			$storeGoal = $row->store_goal;
 			$storeGoalNow = $row->store_goal_now;
 			$userName = $row->user_name;
-			$storeType = $row->storeType;
+			$storeType = $row->store_type;
 			$storeStatus = $row->store_status;
 			$storeId = $row->store_id;
 			break;
@@ -123,7 +123,7 @@ $(function(){
 <div class="container" >
   <div class="row" style="padding-bottom:30px; border-bottom: 1px solid  #D3D3D3;">
     <p style="display:block; text-align:center; font-weight:bold; font-size:40px;">상품의 이름</p>
-    <p style="display:block; text-align:center; font-weight:regular; font-size:20px;"><?php echo userName;?></p>
+    <p style="display:block; text-align:center; font-weight:regular; font-size:20px;"><?php echo $userName;?></p>
 
   </div>
 </div>
