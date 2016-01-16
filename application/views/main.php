@@ -60,6 +60,7 @@
   }
   .box{
     border: 1.5px solid #868686;
+    overflow: hidden;
   }
   .radius-4{
     border-radius: 15px;
@@ -285,12 +286,12 @@ $(window).resize(function(){
 
 <div class="row hidden-sm hidden-xs">
 
-<?php 
+<?php
 
 	foreach ($mdpick->result() as $row)
 	{
-		
-?> 
+
+?>
 
 
   <div class="col-md-five">
@@ -299,7 +300,7 @@ $(window).resize(function(){
     <div class="status_bar"></div>
     <div class="artist_hover" style="padding-top:7px;">
       <span class="status_percent">
-      	<?php 
+      	<?php
       		$totalGoal = $row->store_goal;
       		$nowGoal = $row->store_goal_now;
       		$percGoal = $nowGoal / $totalGoal * 100;
