@@ -97,7 +97,8 @@
 	if ($urlNum == 0){
 		echo 'this is index!';
 	} else if ($row->store_type !== $urlNum){
-		echo 'this is' . $urlNum;
+		echo $row->store_type;
+		echo '&' . $urlNum . ' ';
 		continue;
 	} else{
 		echo 'pass';
