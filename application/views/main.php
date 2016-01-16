@@ -216,6 +216,12 @@ $(window).resize(function(){
   <div class="col-xs-12" style="margin-top:20px;">
     <ul class="bxslider">
       <?php
+
+      	foreach ($mdpick->result() as $row)
+      	{
+
+      ?>
+      <?php
         $totalGoal = $row->store_goal;
         $nowGoal = $row->store_goal_now;
         $percGoal = $nowGoal / $totalGoal * 100;
