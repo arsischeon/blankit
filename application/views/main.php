@@ -184,7 +184,7 @@ $(function(){
      slideMargin:50,
      adaptiveHeight:true,
      infiniteLoop:false,
-     control:false
+     controls:false
    });
 
 });
