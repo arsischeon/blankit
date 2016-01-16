@@ -183,7 +183,8 @@ $(function(){
    $('.bxslider').bxSlider({
      slideMargin:50,
      adaptiveHeight:true,
-     infiniteLoop:false
+     infiniteLoop:false,
+     control:false
    });
 
 });
