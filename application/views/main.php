@@ -235,7 +235,7 @@ $(window).resize(function(){
       </div>
       <div style="width:80%; padding-left:10px; padding-top:15px;">
         <p class="artist_name"><?php echo $row->user_name;?></p>
-        <p class="artist_type"><?php echo $row->artist_type;?</p>
+        <p class="artist_type"><?php echo $row->artist_type;?></p>
       </div>
     </div>
   </div>
@@ -273,7 +273,7 @@ $(window).resize(function(){
       	?>
       </span>
       <span class="status_day_word">앞으로 <span class="status_day">
-      	<?php 
+      	<?php
       		//"앞으로 # 일 계산"
       		$curDate = date('Y-m-d');
       		echo $curDate;
