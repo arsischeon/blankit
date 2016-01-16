@@ -340,8 +340,11 @@ $(window).resize(function(){
 
   <div class="row" style="margin-top:30px;">
     <?
+    $num=0;
     foreach ($artist_list->result() as $row)
     {
+      $num++;
+      if($num<7){
     ?>
     <div class="col-xs-6 col-sm-4 col-md-3 col-lg-15">
       <div class="img_hover_cover img-circle">
@@ -352,7 +355,7 @@ $(window).resize(function(){
         <p class="artist_type"><? echo $row->artist_type;?></p>
       </div>
     </div>
-    <? } ?>
+    <? }} ?>
   </div>
 
   </div>
