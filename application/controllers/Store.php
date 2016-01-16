@@ -28,8 +28,14 @@ class Store extends CI_Controller {
 	{
 		$this->load->view('header');
 		$this->load->view('store_pouch');
+		$this->load->view('store_contents');
 		$this->load->view('footer');
 	}
-
+	public function product()
+	{
+		$this->load->view('header');
+		$this->load->view('product');
+		$this->load->view('footer');
+	}
 
 }
