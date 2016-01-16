@@ -134,7 +134,7 @@ $(function(){
 <div class="container" style="margin-top:20px;">
   <div class="row row_padding-xs">
     <div class="col-md-8" style="height:562px; background:black;">
-		<img src="<?php echo $storeImage;?>" class="img">
+		<img src="<?php echo $storeImage;?>" class="img" style="width: 100%;">
     </div>
     <div class="col-md-4" style="padding-left:20px; height:100%; ">
     <div class="row">
