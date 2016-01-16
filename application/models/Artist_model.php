@@ -6,7 +6,7 @@ class Artist_model extends CI_Model{
 		$this->load->database();
 	}
 
-	public function list(){
+	public function artist_list(){
 	return $this->db->query("
 				select user_name, artist_profile, artist_type
 				from USER u

@@ -52,7 +52,7 @@ $(function(){
     <!-- 컨텐츠 시작-->
   <div class="row">
     <?
-    foreach ($mdpick->result() as $row)
+    foreach ($artist_list->result() as $row)
   	{
     ?>
     <div class="col-xs-6 col-sm-4 col-md-3 col-lg-15">
