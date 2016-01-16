@@ -76,16 +76,23 @@
 <?php 
 	//foreach ($store_contents->results() as $row){
 	
+	//아래는 현재 URL 확인용 continue
 	$url = 'http://' . $_SERVER['SERVER_NAME'] . $_SERVER['REQUEST_URI'];	
 	if (strpos($url,'cloth') !== false) {
+		$urlNum = 1;
 		echo 'cloth exists.';
 	} else if(strpos($url,'ecobag') !== false) {
+		$urlNum = 2;
 		echo 'ecobag exists.';
 	} else if(strpos($url,'pouch') !== false){
+		$urlNum = 3;
 		echo 'pouch exists.';
 	} else {
+		$urlNum = 0;
 		echo 'index exists.';
 	}
+	
+	//if ($row->)
 
 ?>
     
@@ -113,4 +120,3 @@
 <!-- 컨텐츠 반복 끝 -->
 </div>
 </div>
-<!-- div 여기 하나 지움 (필요여부 미확인) -->
