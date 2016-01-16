@@ -87,11 +87,11 @@ $(function(){
 </div>
 
 <?php
-	$url = "http://$_SERVER[HTTP_HOST]$_SERVER[REQUEST_URI]";
-	echo $url;
+	$urlPath = "$_SERVER[REQUEST_URI]";
+	$explodePath = explode('/', $urlPath);
+	$numPath = $explodePath[2];
 	
-	$url2 = "$_SERVER[REQUEST_URI]";
-	echo $url2;
+	echo $numPath;
 
 	//foreach ($details->result() as $row)
 	//{
