@@ -274,7 +274,11 @@ $(window).resize(function(){
       </span>
       <span class="status_day_word">앞으로 <span class="status_day">
       	<?php 
-      		
+      		//"앞으로 # 일 계산"
+      		$curDate = date('Y-m-d');
+      		echo $curDate;
+      		echo $row->store_day;
+      		//여기까지 "앞으로 # 일 계산"
       	?>
       </span>일</span>
     </div>
