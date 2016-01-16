@@ -94,8 +94,8 @@ $(function(){
   </div>
 </div>
 <div class="container" style="margin-top:20px;">
-  <div class="row" style="height: 500px; padding: 0 50px 0 50px;">
-    <div class="col-md-8" style="height:100%;background:black;">
+  <div class="row" style="padding: 0 50px 0 50px;">
+    <div class="col-md-8" style="height:562px; background:black;">
 
     </div>
     <div class="col-md-4" style="padding-left:20px; height:100%; ">
@@ -208,7 +208,20 @@ $(function(){
           <div class="submit_button"><a href="#" class="myButton">펀딩하기</a></div>
         </div>
       </div>
+    </div>
+  </div>
 
+  <div class="row" style="padding: 0 50px 0 50px; margin-top:20px;;">
+    <div class="col-xs-12" style=" padding-left:0;  padding-right:0; padding-bottom:30px;border-bottom:1px solid #D3D3D3;">
+      <span>share</span>
+      <div></div>
+    </div>
+    <div class="col-xs-12" style=" padding-left:0;  padding-right:0; margin-top:30px;">
+      <div style="width:100%; background:#F7F7F7; height:700px;">
+        <span style="padding-top: 350px;display:block; text-align:center;">
+          (제품 상세 이미지)
+        </span>
+      </div>
     </div>
   </div>
 </div>
