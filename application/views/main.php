@@ -324,6 +324,7 @@ $(window).resize(function(){
 <?php }?>
 
 </div>
+</div>
 <!-- 데스크탑 종료 -->
 
 
