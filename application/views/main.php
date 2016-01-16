@@ -282,11 +282,11 @@ $(window).resize(function(){
 <!-- 모바일 종료 -->
 <!-- 데스크탑 시작 -->
 
-<?php 
+<?php /*
 	$getMD = mysql_fetch_object($mdpick); 
 		echo $getMD->user_name;
 		echo $getMD->store_goal_now;
-		
+		*/
 	
 ?>
 
