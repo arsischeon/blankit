@@ -282,13 +282,11 @@ $(window).resize(function(){
 <!-- 모바일 종료 -->
 <!-- 데스크탑 시작 -->
 
-<?php /*
-	$getMD = mysql_fetch_object($mdpick); 
-		echo $getMD->user_name;
-		echo $getMD->store_goal_now;
-		*/
-	
-?>
+<?php 
+	//$getMD = mysql_fetch_object($mdpick); 
+		//echo $getMD->user_name;
+		//echo $getMD->store_goal_now;
+?> 
 
 <div class="row hidden-sm hidden-xs">
   <div class="col-md-five">
