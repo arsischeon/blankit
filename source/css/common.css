@@ -83,3 +83,7 @@ a, a:hover, a:visited, a:link, a:active{
         padding: 15px 15px !important;
       }
      }
+     .navbar-collapse .in{
+       background: rebeccapurple;
+        opacity: 0.7;
+     }
