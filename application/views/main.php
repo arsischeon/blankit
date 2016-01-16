@@ -279,13 +279,13 @@ $(window).resize(function(){
       <span class="status_day_word">앞으로 <span class="status_day">
       	<?php
       		//"앞으로 # 일 계산"
-      		$curDate = date('Y-m-d');
+      		$curDate = date('Y-m-d H:i:s');
       		$dueDate = $row->store_day;
       		$curDateNum = strtotime($curDate);
       		$dueDateNum = strtotime($dueDate);
       		$remainSecs = $dueDateNum - $curDateNum;
       		$remianDays = $remainSecs / 86400;
-      		//echo $remainDays;
+      		echo $remainDays;
       		//여기까지 "앞으로 # 일 계산"
       	?>
       </span>일</span>
