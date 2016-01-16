@@ -70,7 +70,8 @@
   }
   .img{
     width:100%;
-    border-radius: 20px;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
   }
   .status_percent{
     font-weight: bold;
