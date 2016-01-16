@@ -6,7 +6,7 @@ class Store extends CI_Controller {
 	public function index()
 	{
 		$this->load->model('store_model');
-		$data['store_contents']=$this->store_model->store_contents();
+		$data['contents']=$this->store_model->contents();
 		
 		$this->load->view('header');
 		$this->load->view('store');
@@ -16,7 +16,7 @@ class Store extends CI_Controller {
 	public function cloth()
 	{
 		$this->load->model('store_model');
-		$data['store_contents']=$this->store_model->store_contents();
+		$data['contents']=$this->store_model->contents();
 		
 		$this->load->view('header');
 		$this->load->view('store_cloth');
@@ -26,7 +26,7 @@ class Store extends CI_Controller {
 	public function ecobag()
 	{
 		$this->load->model('store_model');
-		$data['store_contents']=$this->store_model->store_contents();
+		$data['contents']=$this->store_model->contents();
 		
 		$this->load->view('header');
 		$this->load->view('store_ecobag');
@@ -36,7 +36,7 @@ class Store extends CI_Controller {
 	public function pouch()
 	{
 		$this->load->model('store_model');
-		$data['store_contents']=$this->store_model->store_contents();
+		$data['contents']=$this->store_model->contents();
 		
 		$this->load->view('header');
 		$this->load->view('store_pouch');

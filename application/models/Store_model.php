@@ -6,7 +6,7 @@ class Store_model extends CI_Model{
 		$this->load->database();
 	}
 	
-	public function store_contents(){
+	public function contents(){
 	return $this->db->query("
 		select store_image, store_day, store_goal, store_goal_now, artist_type, user_name, artist_profile, store_type, store_status
 		from MDPICK m, STORE s, USER u

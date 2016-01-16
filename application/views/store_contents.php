@@ -74,7 +74,7 @@
 <!-- 컨텐츠 반복시작 -->
 
 <?php 
-	foreach ($store_contents->result() as $row){
+	foreach ($contents->result() as $row){
 	
 	//아래는 현재 URL 확인용 continue
 	$url = 'http://' . $_SERVER['SERVER_NAME'] . $_SERVER['REQUEST_URI'];	
