@@ -89,21 +89,41 @@ $(function(){
 <?php
 	$urlPath = "$_SERVER[REQUEST_URI]";
 	$explodePath = explode('/', $urlPath);
-	$numPath = $explodePath[3];
 
-	echo $numPath;
+	$numPath = $explodePath[3]; // 현재 URL 상품번호
 
-	//foreach ($details->result() as $row)
-	//{
+	foreach ($details->result() as $row)
+	{
+		if($row->store_id == $numPath){
+			$storeImage = $row->store_image;
+			$storeDay = $row->store_day;
+			$storeGoal = $row->store_goal;
+			$storeGoalNow = $row->store_goal_now;
+			$userName = $row->user_name;
+			$storeType = $row->store_type;
+			$storeStatus = $row->store_status;
+			$storeId = $row->store_id;
+			break;
+		}
+	}
 
-	//}
+	$percGoal = $storeGoalNow / $storeGoal * 100;
+	
+	//"앞으로 # 일 계산"
+	$curDate = date('Y-m-d H:i:s');
+	$dueDate = $storeDay;
+	$curDateNum = strtotime($curDate);
+	$dueDateNum = strtotime($dueDate);
+	$remainSecs = $dueDateNum - $curDateNum;
+	$remainDays = $remainSecs / 86400;
+	//여기까지 "앞으로 # 일 계산"
 
 ?>
 
 <div class="container" >
   <div class="row" style="padding-bottom:30px; border-bottom: 1px solid  #D3D3D3;">
     <p style="display:block; text-align:center; font-weight:bold; font-size:40px;">상품의 이름</p>
-    <p style="display:block; text-align:center; font-weight:regular; font-size:20px;">artistName</p>
+    <p style="display:block; text-align:center; font-weight:regular; font-size:20px;"><?php echo $userName;?></p>
 
   </div>
 </div>
@@ -119,7 +139,7 @@ $(function(){
           <span class="option_title">남은 일자</span>
         </div>
         <div class="col-xs-12">
-          <span style="font-size:50px; font-weight:300; ">29</span>
+          <span style="font-size:50px; font-weight:300; "><?php echo floor($remainDays);?></span>
           <span>일</span>
         </div>
       </div>
@@ -130,18 +150,18 @@ $(function(){
         </div>
         <div class="col-xs-12">
           <div style="display:inline-block; float:left;">
-            <span style="font-size:50px; font-weight:300; ">5</span>
+            <span style="font-size:50px; font-weight:300; "><?php echo $storeGoalNow;?></span>
             <span>명</span>
           </div>
           <div style="position: absolute; bottom: 12px; right: 15px; ">
-            <span style="color:#687C87; font-weight:bold;">50%</span>
+            <span style="color:#687C87; font-weight:bold;"><?php echo ceil($percGoal);?>%</span>
           </div>
         </div>
     </div>
   </div>
       <div class="row">
         <div class="col-xs-12">
-          <div class="status_bar" style="background: linear-gradient(to right, #687C87 70%,#D3D3D3 70% );">
+          <div class="status_bar" style="background: linear-gradient(to right, #687C87 <?php echo ceil($percGoal)?>%,#D3D3D3 <?php echo ceil($percGoal)?>% );">
           </div>
       </div>
     </div>
