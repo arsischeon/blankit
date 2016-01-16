@@ -194,7 +194,7 @@ $(window).resize(function(){
 </script>
 <div id="banner_cut" style="left:0;top:0;position:absolute;  overflow:hidden;">
 <div class="banner">
-  <img class="image-in-banner" src="/source/image/banner1.jpg">
+  <!-- <img class="image-in-banner" src="/source/image/banner1.jpg"> -->
 </div>
 </div>
 <div class="banner-wrap ">
@@ -351,7 +351,7 @@ $(window).resize(function(){
     </div>
   </div>
 
-  <div class="row">
+  <div class="row" style="margin-top:30px;">
     <?
     foreach ($artist_list->result() as $row)
     {
