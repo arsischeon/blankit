@@ -283,9 +283,13 @@ $(window).resize(function(){
 <!-- 데스크탑 시작 -->
 
 <?php 
-	$getMD = mysql_fetch_object($mdpick); 
-	echo $getMD->user_name;
-	echo $getMD->store_goal_now;
+
+	foreach ($mdpick->result() as $row)
+	{
+		echo $row->user_name;
+		echo $row->store_goal_now;
+		
+	}
 ?> 
 
 <div class="row hidden-sm hidden-xs">
