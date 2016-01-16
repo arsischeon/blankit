@@ -99,6 +99,8 @@
 	} else if ($row->store_type !== $urlNum){
 		echo 'this is' . $urlNum;
 		continue;
+	} else{
+		echo 'pass';
 	}
 
 	$totalGoal = $row->store_goal;
