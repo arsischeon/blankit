@@ -75,7 +75,24 @@
 
 </style>
   <div class="row">
-    <!-- 컨텐츠 반복시작 -->
+<!-- 컨텐츠 반복시작 -->
+
+<?php 
+	//foreach ($store_contents->results() as $row){
+	
+	$url = 'http://' . $_SERVER['SERVER_NAME'] . $_SERVER['REQUEST_URI'];	
+	if (strpos($url,'cloth') !== false) {
+		echo 'cloth exists.';
+	} else if(strpos($url,'ecobag') !== false) {
+		echo 'ecobag exists.';
+	} else if(strpos($url,'pouch') !== false){
+		echo 'pouch exists.';
+	} else {
+		echo 'index exists.';
+	}
+
+?>
+    
     <div class="col-xs-6 col-sm-4 col-md-3 col-lg-15">
       <div class="box radius-4">
       <div><img src="/source/image/img_placeholder.png" class="img"></div>
@@ -95,7 +112,9 @@
       </div>
     </div>
   </div>
+<?php //}?>
+
 <!-- 컨텐츠 반복 끝 -->
 </div>
-<!-- lg일 경우 끝 -->
-</div>
+
+<!-- div 여기 하나 지움 (필요여부 미확인) -->

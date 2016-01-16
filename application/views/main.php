@@ -224,13 +224,9 @@ $(window).resize(function(){
 
       	foreach ($mdpick->result() as $row)
       	{
-
-      ?>
-      <?php
         $totalGoal = $row->store_goal;
         $nowGoal = $row->store_goal_now;
         $percGoal = $nowGoal / $totalGoal * 100;
-
       ?>
       <li>
     <div class=" radius-4">

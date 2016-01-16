@@ -5,6 +5,9 @@ class Store extends CI_Controller {
 
 	public function index()
 	{
+		$this->load->model('store_model');
+		$data['store_contents']=$this->store_model->store_contents();
+		
 		$this->load->view('header');
 		$this->load->view('store');
 		$this->load->view('store_contents');
