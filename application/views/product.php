@@ -78,6 +78,7 @@ $(function(){
     height:50
   });
   $("#amount").spinner();
+  $("#amount").css("width","30px")
 });
 </script>
   <div class="banner">
@@ -98,7 +99,8 @@ $(function(){
 
     </div>
     <div class="col-md-4" style="padding-left:20px; height:100%; ">
-      <div class="row">
+    <div class="row">
+      <div class="col-xs-6 col-sm-12">
         <div class="col-xs-12">
           <span class="option_title">남은 일자</span>
         </div>
@@ -107,7 +109,8 @@ $(function(){
           <span>일</span>
         </div>
       </div>
-      <div class="row">
+
+      <div class="col-xs-6 col-sm-12">
         <div class="col-xs-12">
           <span class="option_title">모인 인원</span>
         </div>
@@ -120,7 +123,8 @@ $(function(){
             <span style="color:#687C87; font-weight:bold;">50%</span>
           </div>
         </div>
-      </div>
+    </div>
+  </div>
       <div class="row">
         <div class="col-xs-12">
           <div class="status_bar" style="background: linear-gradient(to right, #687C87 70%,#D3D3D3 70% );">
@@ -193,8 +197,7 @@ $(function(){
           <div class="options">
             <span class="options_left">수량</span>
             <span class="options_right">
-              <div id="amount">
-              </div>
+              <input id="amount" name="amount">
             </span>
             <div style="clear: both;"></div>
           </div>
