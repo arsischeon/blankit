@@ -311,8 +311,9 @@ $(window).resize(function(){
       	<?php 
       		//"앞으로 # 일 계산"
       		$curDate = date('Y-m-d');
-      		echo $curDate;
-      		echo $row->store_day;
+      		$dueDate = $row->store_day;
+      		$remainDate = $dueDate - $curDate;
+      		echo $remainDate;
       		//여기까지 "앞으로 # 일 계산"
       	?>
       </span>일</span>
