@@ -117,7 +117,9 @@
     
     <div class="col-xs-6 col-sm-4 col-md-3 col-lg-15">
       <div class="box radius-4">
-      <div><img src="<?php echo $row->store_image;?>" class="img_rounded"></div>
+      <div><a href="/store/product/<?php echo $row->store_id?>">
+      	<img src="<?php echo $row->store_image;?>" class="img_rounded">
+      </a></div>
       <div class="status_bar" style="background: linear-gradient(to right, #687C87 <?php echo ceil($percGoal)?>%,#D3D3D3 <?php echo ceil($percGoal)?>% );"></div>
       <div class="artist_hover" style="padding-top:7px;">
         <span class="status_percent"><?php echo ceil($percGoal);?>%</span>
