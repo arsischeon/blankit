@@ -260,20 +260,19 @@ $(window).resize(function(){
 
 	foreach ($mdpick->result() as $row)
 	{
-
+		$totalGoal = $row->store_goal;
+		$nowGoal = $row->store_goal_now;
+		$percGoal = $nowGoal / $totalGoal * 100;
 ?>
 
 
   <div class="col-md-five">
     <div class="box radius-4">
     <div><img src="<?php echo $row->store_image;?>" class="img"></div>
-    <div class="status_bar" style="background: linear-gradient(to right, #687C87 70%,#D3D3D3 70% );"> </div>
+    <div class="status_bar" style="background: linear-gradient(to right, #687C87 <?php echo ceil($percGoal)?>%,#D3D3D3 <?php echo ceil($percGoal)?>% );"> </div>
     <div class="artist_hover" style="padding-top:7px;">
       <span class="status_percent">
       	<?php
-      		$totalGoal = $row->store_goal;
-      		$nowGoal = $row->store_goal_now;
-      		$percGoal = $nowGoal / $totalGoal * 100;
       		echo ceil($percGoal) . "%";
       	?>
       </span>
