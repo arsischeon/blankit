@@ -6,10 +6,10 @@ class Main extends CI_Controller {
 	public function index()
 	{
 		$this->load->model('main_model');
-		$data['mdpick']=$this->main->mdpick();
+		$data['mdpick']=$this->main_model->mdpick();
 		// $data['mdartist']=$this->main->mdartist();
 		$this->load->view('header');
-		$this->load->view('main');
+		$this->load->view('main',$data);
 		$this->load->view('footer');
 	}
 }
