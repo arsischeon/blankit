@@ -226,15 +226,27 @@ $(window).resize(function(){
         $totalGoal = $row->store_goal;
         $nowGoal = $row->store_goal_now;
         $percGoal = $nowGoal / $totalGoal * 100;
-        echo ceil($percGoal) . "%";
+        
       ?>
       <li>
     <div class=" radius-4">
     <div><img src="<?php echo $row->store_image;?>" class="img"></div>
     <div class="status_bar"></div>
     <div class="artist_hover" style="padding-top:7px;">
-      <span class="status_percent">70%</span>
-      <span class="status_day_word">앞으로 <span class="status_day">7</span>일</span>
+      <span class="status_percent"><?php echo ceil($percGoal) . "%";?></span>
+      <span class="status_day_word">앞으로 <span class="status_day">
+           	<?php
+      		//"앞으로 # 일 계산"
+      		$curDate = date('Y-m-d H:i:s');
+      		$dueDate = $row->store_day;
+      		$curDateNum = strtotime($curDate);
+      		$dueDateNum = strtotime($dueDate);
+      		$remainSecs = $dueDateNum - $curDateNum;
+      		$remainDays = $remainSecs / 86400;
+      		echo floor($remainDays);
+      		//여기까지 "앞으로 # 일 계산"
+      		?>
+      </span>일</span>
     </div>
     <div class="artist_hover" style="width: 100%; display: inline-flex;">
       <div style="width:20%; margin-left: 10px; padding-top: 10px; margin-bottom:15px;">
