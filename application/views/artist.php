@@ -1,167 +1,68 @@
 <style>
-.img-circle {
-	border-radius:50%;
-	width: 80px;
-	height: 80px;
-	margin-bottom: 8px;
-	padding: 0px;
-	margin-left: auto;
-	margin-right: auto;
+.banner{
+  height:300px;
+  width:100%;
+  background: #EAEAEA;
+  position:absolute;
+  left:0;
+  top:0;
 }
-#artistID.col-xs-12{
-	display:block;
-	text-align:center;
+.img_hover_cover{
+   z-index: 100;
+   background: #96AFB5;
+   width:100%;
 }
-.artist-name{
-	text-align: center;
-	font-family:"Noto Sans", "Noto Sans CJK KR", sans-serif;
-	font-size:15px;
-	font-weight: bold;
-	margin: 0;
+.img_hover {
+  z-index: 50;
+  width: 100%;
+  opacity: 1;
 }
-.artist-type{
-	text-align: center;
-	font-family:"Noto Sans", "Noto Sans CJK KR", sans-serif;
-	font-size:15px;
+.img_hover:hover{
+  z-index: 50;
+  width: 100%;
+  opacity: 0.5;
 }
-.artist{
-	text-align: center;
+.artist_name{
+  margin-bottom:5px;
+  font-size: 10px;
+  font-weight:bold;
 }
-.myButton {
-	background-color:transparent;
-	-moz-border-radius:20px;
-	-webkit-border-radius:20px;
-	border-radius:20px;
-	border:3px solid #687c87;
-	display:inline-block;
-	cursor:pointer;
-	color:#687c87;
-	font-family:"Noto Sans", "Noto Sans CJK KR", sans-serif;
-	font-size:16px;
-	font-weight:bold;
-	padding:6px 48px;
-	text-decoration:none;
+.artist_type{
+  margin-bottom:5px;
+  font-size: 10px;
+  font-weight:regular;
 }
-.myButton:hover {
-	background-color:#687c87;
-	color: white;
-	text-decoration: none;
+.img{
+  width:100%;
 }
-.myButton:active {
-	position:relative;
-	top:1px;
-}	
-.thumbnail {
-	margin: 0;
-	width: 100%;
-	height: 100%;
-	border-radius: 15px;
-	background-color: #F7F7F7;
-} 
-.preImages {
-	padding-left: 10px;
-	padding-right: 10px;
-	height: 180px;
-}
+
 </style>
+<script>
+$(function(){
+  $("#root_container").css("height",$(".banner").height()+"px");
+});
+</script>
+  <div class="banner">
 
+  </div>
 </div>
 
-<div class="row" style="margin-bottom: 40px; position:absolute; left: 0px; top: 0px; width: 200%"> <!-- width 나중에 수정 -->
-	<div class="col-md-12" style="background: #F5F6F7; height: 400px;"></div>
-</div>
+<div class="container" >
 
-<div class="container" style="margin: 440px auto;">
-	<div class="row">
-		<div id="artistID" class="artist col-md-3 col-xs-12">
-			<img src="https://mir-s3-cdn-cf.behance.net/user/138/ff443554023.55072219ce354.jpg" class="img-circle">
-			<p class="artist-name">아티스트 D</p>
-			<p class="artist-type">그래픽 디자인</p>
-			<a href="#" class="myButton">더 보기</a>
-		</div>
-		<div class="preImages col-md-3 col-xs-4">
-			<img src="#" class="thumbnail img img-responsive img-rounded">
-		</div>
-		<div class="preImages col-md-3 col-xs-4">
-			<img src="#" class="thumbnail img img-responsive img-rounded">
-		</div>
-		<div class="preImages col-md-3 col-xs-4">
-			<img src="#" class="thumbnail img img-responsive img-rounded">
-		</div>
-	</div>
-	<hr>
-	
-	
-		<div class="row">
-		<div id="artistID" class="artist col-md-3 col-xs-12">
-			<img src="https://mir-s3-cdn-cf.behance.net/user/138/ff443554023.55072219ce354.jpg" class="img-circle">
-			<p class="artist-name">아티스트 D</p>
-			<p class="artist-type">그래픽 디자인</p>
-			<a href="#" class="myButton">더 보기</a>
-		</div>
-		<div class="preImages col-md-3 col-xs-4">
-			<img src="#" class="thumbnail img img-responsive img-rounded">
-		</div>
-		<div class="preImages col-md-3 col-xs-4">
-			<img src="#" class="thumbnail img img-responsive img-rounded">
-		</div>
-		<div class="preImages col-md-3 col-xs-4">
-			<img src="#" class="thumbnail img img-responsive img-rounded">
-		</div>
-	</div>
-	<hr>
-		<div class="row">
-		<div id="artistID" class="artist col-md-3 col-xs-12">
-			<img src="https://mir-s3-cdn-cf.behance.net/user/138/ff443554023.55072219ce354.jpg" class="img-circle">
-			<p class="artist-name">아티스트 D</p>
-			<p class="artist-type">그래픽 디자인</p>
-			<a href="#" class="myButton">더 보기</a>
-		</div>
-		<div class="preImages col-md-3 col-xs-4">
-			<img src="#" class="thumbnail img img-responsive img-rounded">
-		</div>
-		<div class="preImages col-md-3 col-xs-4">
-			<img src="#" class="thumbnail img img-responsive img-rounded">
-		</div>
-		<div class="preImages col-md-3 col-xs-4">
-			<img src="#" class="thumbnail img img-responsive img-rounded">
-		</div>
-	</div>
-	<hr>
-		<div class="row">
-		<div id="artistID" class="artist col-md-3 col-xs-12">
-			<img src="https://mir-s3-cdn-cf.behance.net/user/138/ff443554023.55072219ce354.jpg" class="img-circle">
-			<p class="artist-name">아티스트 D</p>
-			<p class="artist-type">그래픽 디자인</p>
-			<a href="#" class="myButton">더 보기</a>
-		</div>
-		<div class="preImages col-md-3 col-xs-4">
-			<img src="#" class="thumbnail img img-responsive img-rounded">
-		</div>
-		<div class="preImages col-md-3 col-xs-4">
-			<img src="#" class="thumbnail img img-responsive img-rounded">
-		</div>
-		<div class="preImages col-md-3 col-xs-4">
-			<img src="#" class="thumbnail img img-responsive img-rounded">
-		</div>
-	</div>
-	<hr>
-		<div class="row">
-		<div id="artistID" class="artist col-md-3 col-xs-12">
-			<img src="https://mir-s3-cdn-cf.behance.net/user/138/ff443554023.55072219ce354.jpg" class="img-circle">
-			<p class="artist-name">아티스트 D</p>
-			<p class="artist-type">그래픽 디자인</p>
-			<a href="#" class="myButton">더 보기</a>
-		</div>
-		<div class="preImages col-md-3 col-xs-4">
-			<img src="#" class="thumbnail img img-responsive img-rounded">
-		</div>
-		<div class="preImages col-md-3 col-xs-4">
-			<img src="#" class="thumbnail img img-responsive img-rounded">
-		</div>
-		<div class="preImages col-md-3 col-xs-4">
-			<img src="#" class="thumbnail img img-responsive img-rounded">
-		</div>
-	</div>
-	<hr>
+    <!-- 컨텐츠 시작-->
+  <div class="row">
+    <? for($i=0;$i<5;$i++){ ?>
+    <div class="col-xs-6 col-sm-4 col-md-3 col-lg-15">
+      <div class="img_hover_cover img-circle">
+        <img src="/source/image/profile_placeholder.png" class="img img_hover img-circle">
+      </div>
+      <div style="text-align:center; margin-top:10px;">
+        <p style="margin-bottom:2px;" class="artist_name">아티스트</p>
+        <p class="artist_type">그래픽 디자인</p>
+      </div>
+    </div>
+    <? } ?>
+  </div>
+  <!-- 컨텐츠 끝 -->
+
 </div>
