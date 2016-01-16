@@ -31,11 +31,7 @@
   color: #96AFB5;
   border-bottom:2px solid #96AFB5;
 }
-.col-md-five{
-  width:19.6%;
-  padding: 15px 15px;
-  display: inline-block;
-}
+
 .radius-4{
   border-radius: 15px;
 }
@@ -95,7 +91,7 @@
     
     <div class="col-xs-6 col-sm-4 col-md-3 col-lg-15">
       <div class="box radius-4">
-      <div><img src="/source/image/img_placeholder.png" class="img"></div>
+      <div><img src="/source/image/img_placeholder.png" class="img_rounded"></div>
       <div class="status_bar"></div>
       <div class="artist_hover" style="padding-top:7px;">
         <span class="status_percent">70%</span>
