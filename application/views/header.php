@@ -20,8 +20,10 @@
     <script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
     <!-- bxSlider Javascript file -->
     <script src="/source/js/jquery.bxslider.min.js"></script>
+    <script src="/source/js/jquery-ui.min.js"></script>
   <!-- bxSlider CSS file -->
     <link href="/source/css/jquery.bxslider.css" rel="stylesheet" />
+    <link href="/source/css/jquery-ui.min.css" rel="stylesheet" />
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 9]>
