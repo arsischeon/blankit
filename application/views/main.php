@@ -303,7 +303,7 @@ $(window).resize(function(){
       		$totalGoal = $row->store_goal;
       		$nowGoal = $row->store_goal_now;
       		$percGoal = $nowGoal / $totalGoal * 100;
-      		echo $percGoal . "%";
+      		echo ceil($percGoal) . "%";
       	?>
       </span>
       <span class="status_day_word">앞으로 <span class="status_day">7</span>일</span>
