@@ -94,3 +94,6 @@ a, a:hover, a:visited, a:link, a:active{
      border-top-left-radius: 15px;
      border-top-right-radius: 15px;
    }
+   .ui-selectmenu-text{
+     font-size:13px;
+   }

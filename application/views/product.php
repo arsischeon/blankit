@@ -20,9 +20,11 @@
 }
 .options_left{
   float:left;
+  margin-top: 5px;
 }
 .options_right{
   float:right;
+  height:30px;
 }
 .status_bar{
   height:7px;
@@ -57,11 +59,25 @@
   display: block;
   text-align: center;
 }
+.round{
+  border-radius: 50%;
+  margin-top: 5px;
+  height:20px;width:20px;
+  display:inline-block;
+}
 </style>
 <script>
 $(function(){
   $("#root_container").css("height",$(".banner").height()+"px");
-  $("#type").selectmenu();
+  $("#type").selectmenu({
+    width: 100,
+    height:50
+  });
+  $("#size").selectmenu({
+    width: 60,
+    height:50
+  });
+  $("#amount").spinner();
 });
 </script>
   <div class="banner">
@@ -122,7 +138,7 @@ $(function(){
         <div class="col-xs-12">
           <div class="options">
             <span class="options_left">가격</span>
-            <span class="options_right">15,000원</span>
+            <span class="options_right" style="margin-top:5px;height:25px;">15,000원</span>
             <div style="clear: both;"></div>
           </div>
         </div>
@@ -132,8 +148,9 @@ $(function(){
           <div class="options">
             <span class="options_left">타입</span>
             <div class="options_right">
-              <select  id="type">
-                <option value="1">100</option>
+              <select id="type">
+                <option value="1">후드</option>
+                <option value="2">맨투맨</option>
               </select>
             </div>
             <div style="clear: both;"></div>
@@ -144,7 +161,12 @@ $(function(){
         <div class="col-xs-12">
           <div class="options">
             <span class="options_left">컬러</span>
-            <span class="options_right">15,000원</span>
+            <div class="options_right">
+              <div class="round" style="background:red; "></div>
+              <div class="round" style="background:green; "></div>
+              <div class="round" style="background:yellow; "></div>
+              <div class="round" style="background:grey; "></div>
+            </div>
             <div style="clear: both;"></div>
           </div>
         </div>
@@ -153,7 +175,15 @@ $(function(){
         <div class="col-xs-12">
           <div class="options">
             <span class="options_left">사이즈</span>
-            <span class="options_right">15,000원</span>
+            <div class="options_right">
+              <select id="size">
+                <option value="1">xs</option>
+                <option value="2">sm</option>
+                <option value="2">m</option>
+                <option value="2">l</option>
+                <option value="2">xl</option>
+              </select>
+            </div>
             <div style="clear: both;"></div>
           </div>
         </div>
@@ -162,7 +192,10 @@ $(function(){
         <div class="col-xs-12">
           <div class="options">
             <span class="options_left">수량</span>
-            <span class="options_right">15,000원</span>
+            <span class="options_right">
+              <div id="amount">
+              </div>
+            </span>
             <div style="clear: both;"></div>
           </div>
         </div>
