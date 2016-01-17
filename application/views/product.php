@@ -81,7 +81,7 @@ $(function(){
   $("#amount").css("width","30px");
   $("div[name='color']").on("click",function(event){
     console.log(event);
-  };
+  });
 
 });
 </script>
