@@ -14,7 +14,7 @@
   position: absolute;
   left:50%;
   bottom:0;
-  margin-left: -125px;
+  margin-left: -160px;
 
   background: white;
 }
