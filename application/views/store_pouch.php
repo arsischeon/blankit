@@ -8,29 +8,7 @@
   top:0;
 }
 
-.menu{
-  width:250px;
-  height:100%;
-  position: absolute;
-  left:50%;
-  bottom:0;
-  margin-left: -125px;
 
-  background: white;
-}
-.menu_item{
-  font-weight: bold;
-  color: #868686;
-  text-align: center;
-  display: inline-block;
-  width:23%;
-  height:100%;
-  cursor: pointer;
-}
-.menu_item:hover{
-  color: #96AFB5;
-  border-bottom:2px solid #96AFB5;
-}
 .col-md-five{
   width:19.7%;
   padding: 15px 15px;

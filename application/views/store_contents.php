@@ -8,7 +8,29 @@
   top:0;
 }
 
+.menu{
+  width:320px;
+  height:100%;
+  position: absolute;
+  left:50%;
+  bottom:0;
+  margin-left: -160px;
 
+  background: white;
+}
+.menu_item{
+  font-weight: bold;
+  color: #868686;
+  text-align: center;
+  display: inline-block;
+  width:18%;
+  height:100%;
+  cursor: pointer;
+}
+.menu_item:hover{
+  color: #96AFB5;
+  border-bottom:2px solid #96AFB5;
+}
 
 .radius-4{
   border-radius: 15px;
