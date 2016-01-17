@@ -211,7 +211,7 @@ $(function(){
           <div class="options">
             <span class="options_left">컬러</span>
             <div class="options_right">
-              <div class="round" style="background:red; "></div>
+              <div class="round" style="background:2f2f2f; "></div>
               <div class="round" style="background:green; "></div>
               <div class="round" style="background:yellow; "></div>
               <div class="round" style="background:grey; "></div>
@@ -283,8 +283,6 @@ $(function(){
       	echo 'Error';
       }
       ?>
-      <?php $selectOption = $_POST['type'];
-            echo $selectOption;?>
       <!-- 옵션 3가지를 상품군 따라 다르게 표시 // 여기까지 -->
       
       <div class="row options_row">
