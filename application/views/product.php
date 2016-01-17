@@ -91,7 +91,8 @@ $(function(){
 	$explodePath = explode('/', $urlPath);
 
 	$numPath = $explodePath[3]; // 현재 URL 상품번호
-
+  $GlobalStoreName;
+  $GlobalUserName;
 	foreach ($details->result() as $row)
 	{
 		if($row->store_id == $numPath){
@@ -100,10 +101,12 @@ $(function(){
 			$storeGoal = $row->store_goal;
 			$storeGoalNow = $row->store_goal_now;
 			$userName = $row->user_name;
+      $GlobalUserName=$userName;
 			$storeType = $row->store_type;
 			$storeStatus = $row->store_status;
 			$storeId = $row->store_id;
 			$storeName = $row->store_name;
+      $GlobalStoreName=$storeName;
 			$storePrice = $row->store_price;
 			break;
 		}
@@ -329,6 +332,7 @@ $(function(){
 var disqus_config = function () {
 this.page.url = '<?echo "http://blankit.kr/".$explodePath[1].$explodePath[2].$explodePath[3];?>'; // Replace PAGE_URL with your page's canonical URL variable
 this.page.identifier = '<? echo $numPath;?>'; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+this.page.title='<? echo $GlobalStoreName." by.".$GlobalUserName;?>';
 };
 
 (function() { // DON'T EDIT BELOW THIS LINE
