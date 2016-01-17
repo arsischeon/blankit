@@ -79,13 +79,10 @@ $(function(){
   });
   $("#amount").spinner();
   $("#amount").css("width","30px");
-  for(var i=1;i<7;i++){
-    var id="#color"+i;
-    $(id).on("click",function(){
-      alert(id);
-       $(id).css("border","3px solid red !important");
-    });
+  $("div[name='color']").on("click",function(event){
+    console.log(event);
   };
+
 });
 </script>
   <div class="banner">
@@ -220,12 +217,12 @@ $(function(){
           <div class="options">
             <span class="options_left">컬러</span>
             <div class="options_right">
-              <div id="color1" class="round" style="background:#2f2f2f; "></div>
-              <div id="color2" class="round" style="background:#7b1719; "></div>
-              <div id="color3" class="round" style="background:#efeee9; "></div>
-              <div id="color4" class="round" style="background:#14130f; "></div>
-  			      <div id="color5" class="round" style="background:#bfc0c5; "></div>
-  			      <div id="color6" class="round" style="background:#1f233c; "></div>
+              <div id="1" class="round" style="background:#2f2f2f; "></div>
+              <div id="2" class="round" style="background:#7b1719; "></div>
+              <div id="3" class="round" style="background:#efeee9; "></div>
+              <div id="4" class="round" style="background:#14130f; "></div>
+  			      <div id="5" class="round" style="background:#bfc0c5; "></div>
+  			      <div id="6" class="round" style="background:#1f233c; "></div>
             </div>
             <div style="clear: both;"></div>
           </div>
