@@ -327,7 +327,7 @@ $(function(){
 */
 
 var disqus_config = function () {
-this.page.url = '<?echo "http://blankit.kr/".$urlPath;?>'; // Replace PAGE_URL with your page's canonical URL variable
+this.page.url = '<?echo "http://blankit.kr/".$explodePath[1].$explodePath[2];?>'; // Replace PAGE_URL with your page's canonical URL variable
 this.page.identifier = '<? echo $numPath;?>'; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
 };
 
