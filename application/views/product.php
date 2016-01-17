@@ -81,7 +81,8 @@ $(function(){
   $("#amount").css("width","30px");
   for(var i=1;i<7;i++){
     $("#color"+i).on("click",function(){
-      $("#color"+i).css("border","3px solid red !important");
+      alert("#color"+i);
+      // $("#color"+i).css("border","3px solid red !important");
     });
   };
 });
