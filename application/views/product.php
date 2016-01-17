@@ -64,6 +64,7 @@
   margin-top: 5px;
   height:20px;width:20px;
   display:inline-block;
+    cursor:pointer;
 }
 </style>
 <script>
@@ -81,10 +82,9 @@ $(function(){
   $("#amount").css("width","30px");
   $("div[name='color']").on("click",function(event){
     for(var i=1;i<7;i++){
-      $("div[name='color',id='"+i+"']").css("border","none");
+    $("div[id='"+i+"']").css("border","none");
     }
-    $("div[name='color',id='"+event.target.id+"']").css("border","3px solid red");
-
+    $("div[id='"+event.target.id+"']").css("border","3px solid red");
   });
 
 });
