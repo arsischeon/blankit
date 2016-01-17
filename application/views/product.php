@@ -229,8 +229,8 @@ $(function(){
             <span class="options_left">사이즈</span>
             <div class="options_right">
               <select id="size">
-                <option value="1">여성</option>
-                <option value="2">남성</option>
+                <option value="11">여성</option>
+                <option value="12">남성</option>
               </select>
             </div>
             <div style="clear: both;"></div>
