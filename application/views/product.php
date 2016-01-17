@@ -79,10 +79,9 @@ $(function(){
   });
   $("#amount").spinner();
   $("#amount").css("width","30px");
-  for(var i=1;i<7;i++){
+  for(var i=1;i<6;i++){
     $("#color"+i).on("click",function(){
-      alert("#color"+i);
-      // $("#color"+i).css("border","3px solid red !important");
+       $("#color"+i).css("border","3px solid red !important");
     });
   };
 });
