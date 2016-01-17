@@ -69,7 +69,7 @@
   color: white;
 }
 .col-xs-6{
-  padding-top:0 5px 0 5px;
+  padding-top:5px 0 5px 0;
 }
 </style>
   <div class="row">
