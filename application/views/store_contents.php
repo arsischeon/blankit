@@ -82,7 +82,10 @@
 		$urlNum = 2;
 	} else if(strpos($url,'pouch') !== false){
 		$urlNum = 3;
-	} else {
+	} else if(strpos($url,'done') !== false){
+		$urlNum = 4;
+	}
+	  else {
 		$urlNum = 0;
 	}
 	//url 확인 여기까지
