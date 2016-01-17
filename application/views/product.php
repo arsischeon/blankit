@@ -181,8 +181,6 @@ $(function(){
           <div class="options">
             <span class="options_left">가격</span>
             <span class="options_right" style="margin-top:5px;height:25px;"><?php echo $PRICE;?>원</span>
-            <?php $selectOption = $_POST['type'];
-            echo $selectOption;?>
             <div style="clear: both;"></div>
           </div>
         </div>
@@ -285,6 +283,8 @@ $(function(){
       	echo 'Error';
       }
       ?>
+      <?php $selectOption = $_POST['type'];
+            echo $selectOption;?>
       <!-- 옵션 3가지를 상품군 따라 다르게 표시 // 여기까지 -->
       
       <div class="row options_row">
