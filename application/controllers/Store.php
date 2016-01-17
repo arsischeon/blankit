@@ -43,7 +43,7 @@ class Store extends CI_Controller {
 		$this->load->view('store_contents', $data);
 		$this->load->view('footer');
 	}
-	public function pouch()
+	public function done()
 	{
 		$this->load->model('store_model');
 		$data['contents']=$this->store_model->contents();
