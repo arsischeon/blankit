@@ -111,11 +111,11 @@ $(function(){
           <div class="col-xs-4" style="padding-top:4px;">
           </div>
           <div class="col-xs-8">
-            <div class="col-xs-4 padding-left-0 ">
-              <a href="" style=""><div style="border-radius:5px; width:100%; height:25px; line-height:25px; border: 1px solid #B7B7B7; font-size:12px; text-align:center;"><span style="vertical-align:middle;">회원가입</span></div></a>
+            <div class="col-xs-4 padding-left-0 padding-right-5">
+              <a href="" style=""><div style="border-radius:5px; width:100%; height:25px; line-height:25px; border: 1px solid #B7B7B7; font-size:11px; text-align:center;"><span style="vertical-align:middle;">회원가입</span></div></a>
             </div>
             <div class="col-xs-8 padding-left-0 padding-right-0">
-                <a href="" style=""><div style="border-radius:5px; width:100%; height:25px; line-height:25px; border: 1px solid #B7B7B7; font-size:12px; text-align:center;"><span style="vertical-align:middle;">아이디/비밀번호 찾기</span></div></a>
+                <a href="" style=""><div style="border-radius:5px; width:100%; height:25px; line-height:25px; border: 1px solid #B7B7B7; font-size:11px; text-align:center;"><span style="vertical-align:middle;">아이디/비밀번호 찾기</span></div></a>
             </div>
           </div>
         </div>
@@ -130,16 +130,16 @@ $(function(){
 
 
     </div>
-    <div class="col-xs-12 col-sm-6 padding-left-0">
+    <div class="col-xs-12 col-sm-6 padding-left-0 margin-xs-top-20">
       <div class="col-xs-12 grey padding-left-0">
         <span style="font-size:20px;">비회원 로그인</span>
       </div>
       <div class="col-xs-10 padding-left-0">
         <div class="row" style="margin-top:20px; height: 25px;">
-          <div class="col-xs-4 gal" style="padding-top:4px;">
+          <div class="col-xs-5 col-sm-4 gal" style="padding-top:4px;">
             <span style="font-size:15px;">주문 고객 성명</span>
           </div>
-          <div class="col-xs-8 gal">
+          <div class="col-xs-7 col-sm-8 gal">
             <input type="text" style="width:100%;">
           </div>
         </div>
@@ -152,7 +152,7 @@ $(function(){
           </div>
         </div>
       </div>
-      <div class="col-xs-2" style="margin-top:20px;">
+      <div class="col-xs-2" style=" padding-left: 5px; margin-top:20px;">
         <div style="width:60px; height:60px; border-radius:10px; background:#687C87;display:table; ">
           <div style="vertical-align:middle; text-align:center; display:table-cell;">
           <span style="font-size:12px; color:white;">비회원<br>로그인</span>
