@@ -120,8 +120,11 @@ $(function(){
 	$remainDays = $remainSecs / 86400;
 	//여기까지 "앞으로 # 일 계산"
 
+	//가격 계산
+	$typePost = $_POST['type'];
+	echo $typePost;
 	$PRICE =  number_format($storePrice, 0, '.', ','); // 가격 천 단위 콤마 넣어주기
-
+	//여기까지 가격 계산
 ?>
 
 <div class="container" >
@@ -229,8 +232,8 @@ $(function(){
             <span class="options_left">사이즈</span>
             <div class="options_right">
               <select id="size">
-                <option value="11">여성</option>
-                <option value="12">남성</option>
+                <option value="1">여성</option>
+                <option value="2">남성</option>
               </select>
             </div>
             <div style="clear: both;"></div>
