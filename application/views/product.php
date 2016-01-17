@@ -189,7 +189,7 @@ $(function(){
       <!-- 옵션 3가지를 상품군 따라 다르게 표시 -->
       <?php
       // 여긴 의류
-      if (storeType == 1){
+      if ($storeType == 1){
       echo '
       <div class="row options_row">
         <div class="col-xs-12">
@@ -238,7 +238,7 @@ $(function(){
       ';}
       
       // 여긴 에코백
-      else if (storeType == 2){
+      else if ($storeType == 2){
       	echo '
       <div class="row options_row">
         <div class="col-xs-12">
@@ -261,7 +261,7 @@ $(function(){
       ';}
       	
       // 여긴 파우치
-      else if (storeType == 3){
+      else if ($storeType == 3){
       	echo '
       <div class="row options_row">
         <div class="col-xs-12">
