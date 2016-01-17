@@ -199,6 +199,8 @@ $(function(){
           </div>
         </div>
       </div>
+      
+      <?php /*
       <div class="row options_row">
         <div class="col-xs-12">
           <div class="options">
@@ -213,7 +215,7 @@ $(function(){
           </div>
         </div>
       </div>
-      <?php /*
+      
       <div class="row options_row">
         <div class="col-xs-12">
           <div class="options">
