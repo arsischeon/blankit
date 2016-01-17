@@ -68,7 +68,9 @@
 .box:hover p{
   color: white;
 }
-
+.col-xs-6{
+  padding-top:5px;
+}
 </style>
   <div class="row">
 <!-- 컨텐츠 반복시작 -->
