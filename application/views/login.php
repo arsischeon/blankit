@@ -16,9 +16,9 @@
   cursor:pointer;
   color:#687c87 !important;
   font-family:"Noto Sans", "Noto Sans CJK KR", sans-serif;
-  font-size:13px;
+  font-size:12px;
   font-weight:regular;
-  padding:3px 48px;
+  padding:3px 12px;
 }
 .myButton:hover {
   background-color:#687c87;
@@ -93,24 +93,24 @@ $(function(){
           </div>
         </div>
         <div class="row" style="margin-top:10px; height: 25px;">
-          <div class="col-xs-3" style="padding-top:4px;">
+          <div class="col-xs-4" style="padding-top:4px;">
           </div>
-          <div class="col-xs-9">
+          <div class="col-xs-8">
             <input type="checkbox" style="">
             <span style="margin-left:6px;">아이디 저장</span>
           </div>
         </div>
         <div class="row" style="margin-top:10px; height: 25px;">
-          <div class="col-xs-3" style="padding-top:4px;">
+          <div class="col-xs-4" style="padding-top:4px;">
           </div>
-          <div class="col-xs-9">
-              <div class="submit_button"><a href="#" class="myButton">페이스북으로 로그인</a></div>
+          <div class="col-xs-8">
+              <div class="submit_button"><a href="#" class="myButton" style="width: 100%;">페이스북으로 로그인</a></div>
           </div>
         </div>
         <div class="row" style="margin-top:15px; height: 25px;">
-          <div class="col-xs-3" style="padding-top:4px;">
+          <div class="col-xs-4" style="padding-top:4px;">
           </div>
-          <div class="col-xs-9">
+          <div class="col-xs-8">
             <div class="col-xs-4 padding-left-0 ">
               <a href="" style=""><div style="border-radius:5px; width:100%; height:25px; line-height:25px; border: 1px solid #B7B7B7; font-size:12px; text-align:center;"><span style="vertical-align:middle;">회원가입</span></div></a>
             </div>
