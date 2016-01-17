@@ -185,14 +185,20 @@ $(function(){
           </div>
         </div>
       </div>
+      
+      <!-- 옵션 3가지를 상품군 따라 다르게 표시 -->
+      <?php
+      // 여긴 의류
+      if (storeType == 1){
+      echo '
       <div class="row options_row">
         <div class="col-xs-12">
           <div class="options">
             <span class="options_left">타입</span>
             <div class="options_right">
               <select id="type">
-                <option value="1">후드</option>
-                <option value="2">맨투맨</option>
+                <option value="1">맨투맨</option>
+                <option value="2">후드</option>
               </select>
             </div>
             <div style="clear: both;"></div>
@@ -200,14 +206,6 @@ $(function(){
         </div>
       </div>
       
-      <div class="col-xs-12"></div>
-      <div class="col-xs-12"></div>
-      
-      <?php 
-      
-      
-      
-      /*
       <div class="row options_row">
         <div class="col-xs-12">
           <div class="options">
@@ -229,18 +227,64 @@ $(function(){
             <span class="options_left">사이즈</span>
             <div class="options_right">
               <select id="size">
-                <option value="1">xs</option>
-                <option value="2">sm</option>
-                <option value="2">m</option>
-                <option value="2">l</option>
-                <option value="2">xl</option>
+                <option value="F">여성</option>
+                <option value="M">남성</option>
               </select>
             </div>
             <div style="clear: both;"></div>
           </div>
         </div>
-      </div> */
+      </div>
+      ';}
+      
+      // 여긴 에코백
+      else if (storeType == 2){
+      	echo '
+      <div class="row options_row">
+        <div class="col-xs-12">
+          <div class="options">
+            <span class="options_left">타입</span>
+            <div class="options_right">
+              <select id="type">
+                <option value="1">토트&크로스</option>
+                <option value="2">크로스</option>
+				<option value="3">토트(아이보리)</option>
+				<option value="4">토트(카키)</option>
+				<option value="5">토트(네이비)</option>
+				<option value="6">토트(쁠랙)</option>
+              </select>
+            </div>
+            <div style="clear: both;"></div>
+          </div>
+        </div>
+      </div>
+      ';}
+      	
+      // 여긴 파우치
+      else if (storeType == 3){
+      	echo '
+      <div class="row options_row">
+        <div class="col-xs-12">
+          <div class="options">
+            <span class="options_left">타입</span>
+            <div class="options_right">
+              <select id="type">
+                <option value="1">중형</option>
+                <option value="2">대형</option>
+              </select>
+            </div>
+            <div style="clear: both;"></div>
+          </div>
+        </div>
+      </div>
+      ';}
+      
+      else {
+      	echo 'Error';
+      }
       ?>
+      <!-- 옵션 3가지를 상품군 따라 다르게 표시 // 여기까지 -->
+      
       <div class="row options_row">
         <div class="col-xs-12">
           <div class="options">
