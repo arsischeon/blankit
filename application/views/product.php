@@ -181,6 +181,8 @@ $(function(){
           <div class="options">
             <span class="options_left">가격</span>
             <span class="options_right" style="margin-top:5px;height:25px;"><?php echo $PRICE;?>원</span>
+            <?php $selectOption = $_POST['type'];
+            echo selectOption;?>
             <div style="clear: both;"></div>
           </div>
         </div>
@@ -227,8 +229,8 @@ $(function(){
             <span class="options_left">사이즈</span>
             <div class="options_right">
               <select id="size">
-                <option value="F">여성</option>
-                <option value="M">남성</option>
+                <option value="1">여성</option>
+                <option value="2">남성</option>
               </select>
             </div>
             <div style="clear: both;"></div>
