@@ -77,18 +77,18 @@ $(function(){
       </div>
       <div class="col-xs-10 padding-left-0">
         <div class="row" style="margin-top:20px; height: 25px;">
-          <div class="col-xs-3 gal" style="padding-top:4px;">
+          <div class="col-xs-4 gal" style="padding-top:4px;">
             <span style="font-size:15px;">아이디</span>
           </div>
-          <div class="col-xs-9 gal">
+          <div class="col-xs-8 gal">
             <input type="text" style="width:100%;">
           </div>
         </div>
         <div class="row" style="margin-top:10px; height: 25px;">
-          <div class="col-xs-3" style="padding-top:4px;">
+          <div class="col-xs-4" style="padding-top:4px;">
             <span style="font-size:15px;">비밀번호</span>
           </div>
-          <div class="col-xs-9">
+          <div class="col-xs-8">
             <input type="text" style="width:100%;">
           </div>
         </div>
@@ -120,7 +120,7 @@ $(function(){
           </div>
         </div>
       </div>
-      <div class="col-xs-2" style="margin-top:20px;">
+      <div class="col-xs-2" style="padding-left: 5px; margin-top:20px;">
         <div style="width:60px; height:60px; border-radius:10px; background:#687C87; display:table; ">
           <div style="vertical-align:middle; text-align:center; display:table-cell;">
           <span style="font-size:12px; color:white;">회원<br>로그인</span>
