@@ -79,9 +79,11 @@ $(function(){
   });
   $("#amount").spinner();
   $("#amount").css("width","30px");
-  for(var i=1;i<6;i++){
-    $("#color"+i).on("click",function(){
-       $("#color"+i).css("border","3px solid red !important");
+  for(var i=1;i<7;i++){
+    var id="#color"+i;
+    $(id).on("click",function(){
+      alert(id);
+       $(id).css("border","3px solid red !important");
     });
   };
 });
