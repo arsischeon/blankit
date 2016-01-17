@@ -102,6 +102,7 @@ $(function(){
         <div class="menu_item"><a href="/store/cloth">의류</a></div>
         <div class="menu_item" style="border-bottom:2px solid #96AFB5; color:#96AFB5;"><a href="/store/ecobag">에코백</a></div>
         <div class="menu_item"><a href="/store/pouch">파우치</a></div>
+        <div class="menu_item"><a href="/store/done">마감</a></div>
       </div>
     </div>
   </div>
