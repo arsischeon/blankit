@@ -211,10 +211,12 @@ $(function(){
           <div class="options">
             <span class="options_left">컬러</span>
             <div class="options_right">
-              <div class="round" style="background:2f2f2f; "></div>
-              <div class="round" style="background:green; "></div>
-              <div class="round" style="background:yellow; "></div>
-              <div class="round" style="background:grey; "></div>
+              <div class="round" style="background:#2f2f2f; "></div>
+              <div class="round" style="background:#7b1719; "></div>
+              <div class="round" style="background:#efeee9; "></div>
+              <div class="round" style="background:#14130f; "></div>
+  			  <div class="round" style="background:#bfc0c5; "></div>
+  			  <div class="round" style="background:#1f233c; "></div>
             </div>
             <div style="clear: both;"></div>
           </div>
