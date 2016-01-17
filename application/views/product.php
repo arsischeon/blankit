@@ -322,29 +322,24 @@ $(function(){
     </div>
   </div>
 <div class="row row_padding-xs" style="margin-top:20px;">
-  <div id="disqus_thread"></div>
-<script>
-/**
-* RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
-* LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables
-*/
+  <!-- 라이브리 시티 설치 코드 -->
+<div id="lv-container" data-id="city" data-uid="MTAyMC8yNTA4OS8xNzM1">
+	<script type="text/javascript">
+   (function(d, s) {
+       var j, e = d.getElementsByTagName(s)[0];
 
-var disqus_config = function () {
-this.page.url = '<?echo "http://blankit.kr/".$explodePath[1].$explodePath[2].$explodePath[3];?>'; // Replace PAGE_URL with your page's canonical URL variable
-this.page.identifier = '<? echo $numPath;?>'; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
-this.page.title='<? echo $GlobalStoreName." by.".$GlobalUserName;?>';
-};
+       if (typeof LivereTower === 'function') { return; }
 
-(function() { // DON'T EDIT BELOW THIS LINE
-var d = document, s = d.createElement('script');
+       j = d.createElement(s);
+       j.src = 'https://cdn-city.livere.com/js/embed.dist.js';
+       j.async = true;
 
-s.src = '//blankit.disqus.com/embed.js';
-
-s.setAttribute('data-timestamp', +new Date());
-(d.head || d.body).appendChild(s);
-})();
-</script>
-<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
+       e.parentNode.insertBefore(j, e);
+   })(document, 'script');
+	</script>
+<noscript> 라이브리 댓글 작성을 위해 JavaScript를 활성화 해주세요</noscript>
+</div>
+<!-- 시티 설치 코드 끝 -->
 
   </div>
 
