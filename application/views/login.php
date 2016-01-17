@@ -65,8 +65,8 @@ $(function(){
 </div>
 </div>
 <div class="container" >
-  <div class="row row-padding-xs-100" style="margin-top:30px;">
-    <div class="col-xs-12 gal" style="border-bottom:1px solid #D3D3D3; padding-bottom:5px;padding-left:0px;">
+  <div class="row row-padding-xs-100 " style="margin-top:30px;">
+    <div class="col-xs-12 gal padding-sm-left-0 row_padding-xs" style="border-bottom:1px solid #D3D3D3; padding-bottom:5px;">
       <span style="font-size:25px; font-weight:500;">Log in</span>
     </div>
   </div>

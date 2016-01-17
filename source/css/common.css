@@ -97,6 +97,9 @@ a, a:hover, a:visited, a:link, a:active{
       .padding-xs-right-100{
         padding-right:100px;
       }
+      .padding-sm-left-0{
+        padding-left:0px;
+      }
     }
     @media (max-width: 768px) {
      .navbar-collapse .in{
