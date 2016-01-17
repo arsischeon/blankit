@@ -111,7 +111,9 @@ a, a:hover, a:visited, a:link, a:active{
      .margin-xs-top-20{
        margin-top:20px;
      }
-
+     .row-padding-xs-100{
+       padding:0 10px 0 10px;
+     }
      .navbar-brand{
        padding-left: 15px;
      }
