@@ -78,7 +78,12 @@ $(function(){
     height:50
   });
   $("#amount").spinner();
-  $("#amount").css("width","30px")
+  $("#amount").css("width","30px");
+  for(var i=1;i<7;i++){
+    $("#color"+i).on("click",function(){
+      $("#color"+i).css("border","1.5px solid red;");
+    });
+  };
 });
 </script>
   <div class="banner">
@@ -213,12 +218,12 @@ $(function(){
           <div class="options">
             <span class="options_left">컬러</span>
             <div class="options_right">
-              <div class="round" style="background:#2f2f2f; "></div>
-              <div class="round" style="background:#7b1719; "></div>
-              <div class="round" style="background:#efeee9; "></div>
-              <div class="round" style="background:#14130f; "></div>
-  			  <div class="round" style="background:#bfc0c5; "></div>
-  			  <div class="round" style="background:#1f233c; "></div>
+              <div id="color1" class="round" style="background:#2f2f2f; "></div>
+              <div id="color2" class="round" style="background:#7b1719; "></div>
+              <div id="color3" class="round" style="background:#efeee9; "></div>
+              <div id="color4" class="round" style="background:#14130f; "></div>
+  			      <div id="color5" class="round" style="background:#bfc0c5; "></div>
+  			      <div id="color6" class="round" style="background:#1f233c; "></div>
             </div>
             <div style="clear: both;"></div>
           </div>
@@ -252,10 +257,10 @@ $(function(){
               <select id="type">
                 <option value="1">토트&크로스</option>
                 <option value="2">크로스</option>
-				<option value="3">토트(아이보리)</option>
-				<option value="4">토트(카키)</option>
-				<option value="5">토트(네이비)</option>
-				<option value="6">토트(쁠랙)</option>
+				        <option value="3">토트(아이보리)</option>
+				        <option value="4">토트(카키)</option>
+				        <option value="5">토트(네이비)</option>
+				        <option value="6">토트(쁠랙)</option>
               </select>
             </div>
             <div style="clear: both;"></div>
