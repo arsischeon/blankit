@@ -200,7 +200,12 @@ $(function(){
         </div>
       </div>
       
-      <?php /*
+      <?php 
+      <div class="col-xs-12"></div>
+      <div class="col-xs-12"></div>
+      
+      
+      /*
       <div class="row options_row">
         <div class="col-xs-12">
           <div class="options">
