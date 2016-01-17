@@ -71,7 +71,7 @@ $(function(){
     </div>
   </div>
   <div class="row row-padding-xs-100 row_padding-xs" style="margin-top:50px;">
-    <div class="col-xs-12 col-sm-6 padding-left-0 padding-xs-right-100 " style="">
+    <div class="col-sm-12 col-md-6 padding-left-0 padding-xs-right-100 " style="">
       <div class="col-xs-12 grey padding-left-0">
         <span style="font-size:20px;">회원 로그인</span>
       </div>
@@ -81,7 +81,7 @@ $(function(){
             <span style="font-size:15px;">아이디</span>
           </div>
           <div class="col-xs-8 gal">
-            <input type="text" style="width:100%;">
+            <input type="text" name="id" style="width:100%;">
           </div>
         </div>
         <div class="row" style="margin-top:10px; height: 25px;">
@@ -96,7 +96,7 @@ $(function(){
           <div class="col-xs-4" style="padding-top:4px;">
           </div>
           <div class="col-xs-8">
-            <input type="checkbox" style="">
+            <input type="checkbox" id="idSaveCheck" style="">
             <span style="margin-left:6px;">아이디 저장</span>
           </div>
         </div>
@@ -130,16 +130,16 @@ $(function(){
 
 
     </div>
-    <div class="col-xs-12 col-sm-6 padding-left-0 margin-xs-top-20">
+    <div class="col-sm-12 col-md-6 padding-left-0 margin-xs-top-20 padding-xs-right-100">
       <div class="col-xs-12 grey padding-left-0">
         <span style="font-size:20px;">비회원 로그인</span>
       </div>
       <div class="col-xs-10 padding-left-0">
         <div class="row" style="margin-top:20px; height: 25px;">
-          <div class="col-xs-5 col-sm-4 gal" style="padding-top:4px;">
+          <div class="col-xs-5 col-sm-5 gal" style="padding-top:4px;">
             <span style="font-size:15px;">주문 고객 성명</span>
           </div>
-          <div class="col-xs-7 col-sm-8 gal">
+          <div class="col-xs-7 col-sm-7 gal">
             <input type="text" style="width:100%;">
           </div>
         </div>
