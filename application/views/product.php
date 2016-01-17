@@ -81,6 +81,7 @@ $(function(){
   $("#amount").css("width","30px");
   for(var i=1;i<7;i++){
     $("#color"+i).on("click",function(){
+      alert('dd');
       $("#color"+i).css("border","1.5px solid red;");
     });
   };
