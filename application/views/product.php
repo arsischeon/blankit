@@ -80,7 +80,11 @@ $(function(){
   $("#amount").spinner();
   $("#amount").css("width","30px");
   $("div[name='color']").on("click",function(event){
-    console.log(event);
+    for(var i=1;i<7;i++){
+      $("div[name='color',id='"+i+"']").css("border","none");
+    }
+    $("div[name='color',id='"+event.target.id+"']").css("border","3px solid red");
+
   });
 
 });
