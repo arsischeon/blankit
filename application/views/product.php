@@ -120,11 +120,7 @@ $(function(){
 	$remainDays = $remainSecs / 86400;
 	//여기까지 "앞으로 # 일 계산"
 
-	//가격 계산
-	$typePost = $_POST['type'];
-	echo $typePost;
 	$PRICE =  number_format($storePrice, 0, '.', ','); // 가격 천 단위 콤마 넣어주기
-	//여기까지 가격 계산
 ?>
 
 <div class="container" >
