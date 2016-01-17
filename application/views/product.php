@@ -182,7 +182,7 @@ $(function(){
             <span class="options_left">가격</span>
             <span class="options_right" style="margin-top:5px;height:25px;"><?php echo $PRICE;?>원</span>
             <?php $selectOption = $_POST['type'];
-            echo selectOption;?>
+            echo $selectOption;?>
             <div style="clear: both;"></div>
           </div>
         </div>
