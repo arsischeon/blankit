@@ -50,6 +50,7 @@
     width:19.6%;
     padding: 15px 15px;
     display: inline-block;
+    vertical-align: top;
     /*background: black;
     height:400px;*/
   }
