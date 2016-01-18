@@ -31,7 +31,8 @@
   }
   .image-in-banner{
     /*width:100%;*/
-    transform: rotate(7deg);
+    /*transform: rotate(7deg);*/
+    height:100%;
     -webkit-backface-visibility: hidden;
   }
 
@@ -158,6 +159,7 @@ function slanted_banner_generator(){
   $("#banner_cut").css("width",width+"px");
   $("#banner_cut").css("height",$(window).height()*0.8+"px");
   $(".image-in-banner").css("min-height",$(window).height()+"px");
+  $("#banner_1").css("margin-left","-"+($("#banner_1").width()-banner_width)/2+"px");
 }
 $(function(){
   $(".banner").css("display","none");
@@ -181,7 +183,7 @@ $(window).resize(function(){
 </script>
 <div id="banner_cut" style="left:0;top:0;position:absolute;  overflow:hidden;">
 <div class="banner">
-  <img class="image-in-banner" src="/source/image/main-banner-image1.gif">
+  <img id="banner_1" class="image-in-banner" src="/source/image/main-banner-image1.gif">
 </div>
 </div>
 <div class="banner-wrap ">
