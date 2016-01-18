@@ -229,8 +229,8 @@ $(window).resize(function(){
 <div class="banner-wrap ">
 <div class="banner-roll">
   <div id="banner-roll-circle-1"  class="banner-roll-circle"></div>
-  <div id="banner-roll-circle-2" class="banner-roll-circle" style="background:#687C87;"></div>
-  <div id="banner-roll-circle-3" class="banner-roll-circle"></div>
+  <div id="banner-roll-circle-2"  class="banner-roll-circle" style="background:#687C87;"></div>
+  <div id="banner-roll-circle-3"  class="banner-roll-circle"></div>
 </div>
 </div>
 <div class="row" style="margin-top:20px;">
