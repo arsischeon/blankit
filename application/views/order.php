@@ -98,7 +98,26 @@ input[type="radio"] + label{
 </style>
 <script>
 $(function(){
-
+  $("input[name='same_info']").on("change",function(event){
+    if(event.target.defaultValue=='1'){
+        $("#name2").val($("#name1").val());
+        $("#email2").val($("#email1").val());
+        $("#phone2_1").val($("#phone1_1").val());
+        $("#phone2_2").val($("#phone1_2").val());
+        $("#phone2_3").val($("#phone1_3").val());
+        $("#location2_1").val($("#location1_1").val());
+        $("#location2_2").val($("#location1_2").val());
+        $("#location2_3").val($("#location1_3").val());
+    }else{
+      $("#name2").val("");
+      $("#email2").val("");
+      $("#phone2_2").val("");
+      $("#phone2_3").val("");
+      $("#location2_1").val("");
+      $("#location2_2").val("");
+      $("#location2_3").val("");
+    }
+  });
 });
 </script>
 <div class="banner">
@@ -178,26 +197,26 @@ $(function(){
       </div>
     </div>
     <div class="row row-padding-xs-100 " style="margin-top:10px;">
-      <div class="menu">보내시는 분</div>
-      <input class="menu_input" type="text">
+      <div class="menu" >보내시는 분</div>
+      <input id="name1" class="menu_input" type="text">
     </div>
     <div class="row row-padding-xs-100 " style="margin-top:10px;">
       <div class="menu title2">이메일</div>
-      <input class="menu_input" style="width:200px;" type="text">
+      <input id="email1" class="menu_input" style="width:200px;" type="text">
     </div>
     <div class="row row-padding-xs-100 " style="margin-top:10px;">
       <div class="menu title2">휴대전화</div>
-      <input class="menu_input_phone_1" type="text" value="010">-
-      <input class="menu_input_phone_2" type="text">-
-      <input class="menu_input_phone_2" type="text">
+      <input id="phone1_1" class="menu_input_phone_1" type="text" value="010">-
+      <input id="phone1_2" class="menu_input_phone_2" type="text">-
+      <input id="phone1_3" class="menu_input_phone_2" type="text">
     </div>
     <div class="row row-padding-xs-100 " style="margin-top:10px;">
       <div class="menu title2" style="  vertical-align: top;line-height: 100%;padding-top: 5px;">배송지</div>
       <div style="display:inline-block;width:210px;">
         <!-- 주소와 우편번호를 입력할 <input>들을 생성하고 적당한 name과 class를 부여한다 -->
-        <input type="text" name="" class="margin-bottom-5 menu_input" placeholder="우편번호" value="" /><br />
-        <input type="text" name="" class="margin-bottom-5 menu_input"  placeholder="기본주소" value="" /><br />
-        <input type="text" name="" class="margin-bottom-5 menu_input" placeholder="상세주소" value="" /><br />
+        <input type="text" name="" class="margin-bottom-5 menu_input" placeholder="우편번호" id="location1_1" value="" /><br />
+        <input type="text" name="" class="margin-bottom-5 menu_input"  placeholder="기본주소" id="location1_2" value="" /><br />
+        <input type="text" name="" class="margin-bottom-5 menu_input" placeholder="상세주소" id="location1_3" value="" /><br />
 
         <!-- jQuery와 Postcodify를 로딩한다 -->
 
@@ -212,36 +231,39 @@ $(function(){
   <div class="row row-padding-xs-100 " style="margin-top:30px; ">
     <div style="border-top: 1px solid #D3D3D3;padding-top:25px;">
       <span id="locInfo" class="title1">배송지 정보</span>
-      <div style="margin-left:10px;" class="menu_input_radio">
-        <input type="radio" name="same_info" id="same_info_1" ><label for="same_info_1" >주문고객 정보와 동일</label>
-      </div>
-      <div class="menu_input_radio" style="width:80px;">
-        <input type="radio" name="same_info" id="same_info_2" ><label for="same_info_2" >새로운 주소</label>
-      </div>
     </div>
   </div>
+
+  <div class="row row-padding-xs-100 " style="margin-top:10px;">
+  <div style="" class="menu_input_radio">
+    <input type="radio" name="same_info" id="same_info_1" value="1"><label for="same_info_1" >주문고객 정보와 동일</label>
+  </div>
+  <div class="menu_input_radio" style="width:80px;">
+    <input type="radio" name="same_info" id="same_info_2" value="2" ><label for="same_info_2" >새로운 주소</label>
+  </div>
+</div>
   <div class="row row-padding-xs-100 " style="margin-top:10px;">
     <div class="menu">받으시는 분</div>
-    <input class="menu_input" type="text">
+    <input id="name2" class="menu_input" type="text">
   </div>
   <div class="row row-padding-xs-100 " style="margin-top:10px;">
     <div class="menu title2">이메일</div>
-    <input class="menu_input" style="width:200px;" type="text">
+    <input id="email2" class="menu_input" style="width:200px;" type="text">
   </div>
   <div class="row row-padding-xs-100 " style="margin-top:10px;">
     <div class="menu title2">휴대전화</div>
-    <input class="menu_input_phone_1" type="text" value="010">-
-    <input class="menu_input_phone_2" type="text">-
-    <input class="menu_input_phone_2" type="text">
+    <input id="phone2_1" class="menu_input_phone_1" type="text" value="010">-
+    <input id="phone2_2" class="menu_input_phone_2" type="text">-
+    <input id="phone2_3" class="menu_input_phone_2" type="text">
   </div>
   <div class="row row-padding-xs-100 " style="margin-top:10px;">
     <div class="menu title2" style="  vertical-align: top;line-height: 100%;padding-top: 5px;">배송지</div>
     <div style="display:inline-block;width:210px;">
       <!-- 주소와 우편번호를 입력할 <input>들을 생성하고 적당한 name과 class를 부여한다 -->
-      <input type="text" name="" class="margin-bottom-5 menu_input postcodify_postcode5" placeholder="우편번호" value="" />
+      <input type="text" name="" class="margin-bottom-5 menu_input postcodify_postcode5" id="location2_1" placeholder="우편번호" value="" />
       <a href="#"><button id="postcodify_search_button" class=" myButton">찾기</button></a><br />
-      <input type="text" name="" class="margin-bottom-5 menu_input postcodify_address"  placeholder="기본주소" value="" /><br />
-      <input type="text" name="" class="margin-bottom-5 menu_input postcodify_details" placeholder="상세주소" value="" /><br />
+      <input  id="location2_2" type="text" name="" class="margin-bottom-5 menu_input postcodify_address"  placeholder="기본주소" value="" /><br />
+      <input id="location2_3" type="text" name="" class="margin-bottom-5 menu_input postcodify_details" placeholder="상세주소" value="" /><br />
 
       <!-- jQuery와 Postcodify를 로딩한다 -->
       <script src="//ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
