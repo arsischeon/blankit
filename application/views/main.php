@@ -179,9 +179,28 @@ $(function(){
      infiniteLoop:false,
      controls:false
    });
-
+   bannerAnimation();
 
 });
+var bannerNum=0;
+var bannerMax=2;
+function bannerAnimation(){
+bannerSelector().animate({
+  opacity:0
+},{duration:5000,specialEasing: {
+   width: "linear",
+   height: "easeOutBounce"
+ },
+ complete: function() {
+   bannerAnimation();
+ }
+});
+}
+function bannerSelector(){
+  bannerNum++;
+  if(bannerNum>bannerMax)bannerNum=1;
+  return $("#banner_"+bannerNum);
+}
 $(window).resize(function(){
   slanted_banner_generator();
 });
@@ -189,7 +208,7 @@ $(window).resize(function(){
 <div id="banner_cut" style="left:0;top:0;position:absolute;  overflow:hidden;">
 <div class="banner">
 
-   <img id="banner_1" class="image-in-banner" src="/source/image/main-banner-image1.gif">
+   <img id="banner_1" style="opacity:1;" class="image-in-banner" src="/source/image/main-banner-image1.gif">
   <img id="banner_2" class="image-in-banner" src="/source/image/main-banner-image2.gif">
 
 </div>
