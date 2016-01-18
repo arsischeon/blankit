@@ -188,11 +188,11 @@ var zindex=1;
 function bannerAnimation(){
 bannerBeforeSelector().animate({
   opacity:0
-},{duration:3000});
+},{duration:10000});
 console.log(bannerNum+" - "+zindex);
 bannerSelector().css("z-index",++zindex).animate({
   opacity:1
-},{duration:3000,
+},{duration:10000,
  complete: function() {
    bannerAnimation();
  }
