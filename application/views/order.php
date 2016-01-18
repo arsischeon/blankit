@@ -116,7 +116,7 @@ $(function(){
   </div>
   <div class="row row-padding-xs-100 " style="margin-top:10px;">
    <!-- 주문 목록 반복되는 블럭 시작 -->
-   <? for($i=0;$i<8;$i++){?>
+   <? for($i=0;$i<2;$i++){?>
 
     <div style="padding: 10px 5px 0px 5px;" class=" col-xs-12 col-sm-6 col-md-4 col-lg-3">
       <div class="order_border">
