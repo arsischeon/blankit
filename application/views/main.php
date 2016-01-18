@@ -186,16 +186,16 @@ $(function(){
 
 });
 var bannerNum=0;
-var bannerMax=2;
+var bannerMax=3;
 var zindex=1;
 function bannerAnimation(){
 bannerBeforeSelector().animate({
   opacity:0
-},{duration:10000});
+},{duration:3000});
 console.log(bannerNum+" - "+zindex);
 bannerSelector().css("z-index",++zindex).animate({
   opacity:1
-},{duration:10000,
+},{duration:3000,
  complete: function() {
    bannerAnimation();
  }
@@ -219,6 +219,7 @@ $(window).resize(function(){
   <div id="banner_0"></div>
    <img id="banner_1" style="z-index:0; opacity:0;" class="image-in-banner" src="/source/image/main-banner-image1.gif">
   <img id="banner_2" style="z-index:0; opacity:0;" class="image-in-banner" src="/source/image/main-banner-image2.gif">
+    <img id="banner_3" style="z-index:0; opacity:0;" class="image-in-banner" src="/source/image/main-banner-image3.gif">
 
 </div>
 </div>
