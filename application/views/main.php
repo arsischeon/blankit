@@ -199,7 +199,7 @@ bannerSelector().css("z-index",++zindex).animate({
 },{duration:4000,
  complete: function() {
    $(".banner-roll-circle").css("background","none");
-   $("#banner-roll-circle-"+bannerNum).css("background","#687C87");
+   $("#banner-roll-circle-"+bannerNum-1).css("background","#687C87");
    bannerAnimation();
  }
 });
