@@ -164,6 +164,9 @@ function slanted_banner_generator(){
 $(function(){
   $(".banner").css("display","none");
   slanted_banner_generator();
+  $( "#banner_1" ).load(function() {
+    slanted_banner_generator();
+  });
   $(".banner").css("display","");
   $(".banner").hover(function(){
     // $(".banner").css("background","red");
