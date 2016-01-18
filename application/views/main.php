@@ -189,7 +189,7 @@ $(window).resize(function(){
 <div id="banner_cut" style="left:0;top:0;position:absolute;  overflow:hidden;">
 <div class="banner">
 
-  <!-- <img id="banner_1" class="image-in-banner" src="/source/image/main-banner-image1.gif"> -->
+   <img id="banner_1" class="image-in-banner" src="/source/image/main-banner-image1.gif">
   <img id="banner_2" class="image-in-banner" src="/source/image/main-banner-image2.gif">
 
 </div>
