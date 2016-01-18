@@ -32,6 +32,9 @@
   .image-in-banner{
     /*width:100%;*/
     /*transform: rotate(7deg);*/
+    position: absolute;
+    left:0px;
+    top:0px;
     height:100%;
     -webkit-backface-visibility: hidden;
   }
