@@ -160,11 +160,12 @@ function slanted_banner_generator(){
   $("#banner_cut").css("height",$(window).height()*0.8+"px");
   $(".image-in-banner").css("min-height",$(window).height()+"px");
   $("#banner_1").css("margin-left","-"+($("#banner_1").width()-banner_width)/2+"px");
+  $("#banner_2").css("margin-left","-"+($("#banner_1").width()-banner_width)/2+"px");
 }
 $(function(){
   $(".banner").css("display","none");
   slanted_banner_generator();
-  $( "#banner_1" ).load(function() {
+  $( "#banner_2" ).load(function() {
     slanted_banner_generator();
   });
   $(".banner").css("display","");
@@ -186,7 +187,10 @@ $(window).resize(function(){
 </script>
 <div id="banner_cut" style="left:0;top:0;position:absolute;  overflow:hidden;">
 <div class="banner">
-  <img id="banner_1" class="image-in-banner" src="/source/image/main-banner-image1.gif">
+  <ul class="bxslider">
+  <li><img id="banner_1" class="image-in-banner" src="/source/image/main-banner-image1.gif"></li>
+  <li><img id="banner_2" class="image-in-banner" src="/source/image/main-banner-image2.gif"></li>
+</ul>
 </div>
 </div>
 <div class="banner-wrap ">
