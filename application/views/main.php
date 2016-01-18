@@ -194,11 +194,12 @@ function bannerAnimation(){
 bannerBeforeSelector().animate({
   opacity:0
 },{duration:4000});
-console.log(bannerNum+" - "+zindex);
 bannerSelector().css("z-index",++zindex).animate({
   opacity:1
 },{duration:4000,
  complete: function() {
+   $(".banner-roll-circle").css("background","none");
+   $("#banner-roll-circle-"+bannerNum).css("background","#687C87");
    bannerAnimation();
  }
 });
@@ -227,10 +228,9 @@ $(window).resize(function(){
 </div>
 <div class="banner-wrap ">
 <div class="banner-roll">
-  <div class="banner-roll-circle"></div>
-  <div class="banner-roll-circle" style="background:#687C87;"></div>
-  <div class="banner-roll-circle"></div>
-  <div class="banner-roll-circle"></div>
+  <div id="banner-roll-circle-1" class="banner-roll-circle"></div>
+  <div id="banner-roll-circle-2" class="banner-roll-circle" style="background:#687C87;"></div>
+  <div id="banner-roll-circle-3" class="banner-roll-circle"></div>
 </div>
 </div>
 <div class="row" style="margin-top:20px;">
