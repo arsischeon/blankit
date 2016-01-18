@@ -185,6 +185,14 @@ $(function(){
 var bannerNum=0;
 var bannerMax=2;
 function bannerAnimation(){
+bannerBeforeSelector().animate({
+  opacity:0
+},{duration:5000,specialEasing: {
+   width: "linear",
+   height: "easeOutBounce"
+ }
+});
+
 bannerSelector().animate({
   opacity:1
 },{duration:5000,specialEasing: {
@@ -195,10 +203,14 @@ bannerSelector().animate({
    bannerAnimation();
  }
 });
+
 }
 function bannerSelector(){
   bannerNum++;
   if(bannerNum>bannerMax)bannerNum=1;
+  return $("#banner_"+bannerNum);
+}
+function bannerBeforeSelector(){
   return $("#banner_"+bannerNum);
 }
 $(window).resize(function(){
@@ -207,9 +219,9 @@ $(window).resize(function(){
 </script>
 <div id="banner_cut" style="left:0;top:0;position:absolute;  overflow:hidden;">
 <div class="banner">
-
+  <div id="banner_0"></div>
    <img id="banner_1" style="opacity:0;" class="image-in-banner" src="/source/image/main-banner-image1.gif">
-  <img id="banner_2" class="image-in-banner" src="/source/image/main-banner-image2.gif">
+  <img id="banner_2" style="opacity:0;" class="image-in-banner" src="/source/image/main-banner-image2.gif">
 
 </div>
 </div>
