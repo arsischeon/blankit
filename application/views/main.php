@@ -220,7 +220,7 @@ $(window).resize(function(){
 <div id="banner_cut" style="left:0;top:0;position:absolute;  overflow:hidden;">
 <div class="banner">
   <div id="banner_0"></div>
-   <img id="banner_1" style="z-index:0; opacity:0;" class="image-in-banner" src="/source/image/main-banner-image1.gif">
+   <img id="banner_1" style="z-index:0; opacity:1;" class="image-in-banner" src="/source/image/main-banner-image1.gif">
   <img id="banner_2" style="z-index:0; opacity:0;" class="image-in-banner" src="/source/image/main-banner-image2.gif">
     <img id="banner_3" style="z-index:0; opacity:0;" class="image-in-banner" src="/source/image/main-banner-image3.gif">
 
