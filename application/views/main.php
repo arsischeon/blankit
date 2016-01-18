@@ -164,11 +164,12 @@ function slanted_banner_generator(){
   $(".image-in-banner").css("min-height",$(window).height()+"px");
   $("#banner_1").css("margin-left","-"+($("#banner_1").width()-banner_width)/2+"px");
   $("#banner_2").css("margin-left","-"+($("#banner_1").width()-banner_width)/2+"px");
+  $("#banner_3").css("margin-left","-"+($("#banner_1").width()-banner_width)/2+"px");
 }
 $(function(){
   $(".banner").css("display","none");
   slanted_banner_generator();
-  $( "#banner_2" ).load(function() {
+  $( "#banner_3" ).load(function() {
     slanted_banner_generator();
   });
   $(".banner").css("display","");
@@ -191,11 +192,11 @@ var zindex=1;
 function bannerAnimation(){
 bannerBeforeSelector().animate({
   opacity:0
-},{duration:3000});
+},{duration:4000});
 console.log(bannerNum+" - "+zindex);
 bannerSelector().css("z-index",++zindex).animate({
   opacity:1
-},{duration:3000,
+},{duration:4000,
  complete: function() {
    bannerAnimation();
  }
