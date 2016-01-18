@@ -179,6 +179,9 @@ $(function(){
      infiniteLoop:false,
      controls:false
    });
+   $('.bxslider2').bxSlider({
+     controls:false
+   });
 
 });
 $(window).resize(function(){
@@ -187,7 +190,7 @@ $(window).resize(function(){
 </script>
 <div id="banner_cut" style="left:0;top:0;position:absolute;  overflow:hidden;">
 <div class="banner">
-  <ul class="bxslider">
+  <ul class="bxslider2">
   <li><img id="banner_1" class="image-in-banner" src="/source/image/main-banner-image1.gif"></li>
   <li><img id="banner_2" class="image-in-banner" src="/source/image/main-banner-image2.gif"></li>
 </ul>
