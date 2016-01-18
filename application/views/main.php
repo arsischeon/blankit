@@ -193,8 +193,8 @@ bannerBeforeSelector().animate({
    height: "easeOutBounce"
  }
 });
-
-bannerSelector().css("z-index",zindex++).animate({
+console.log(bannerNum+" - "+zindex);
+bannerSelector().css("z-index",++zindex).animate({
   opacity:1
 },{duration:3000,specialEasing: {
    width: "linear",
