@@ -137,45 +137,46 @@ $(function(){
    <!-- 주문 목록 반복되는 블럭 시작 -->
    <? for($i=0;$i<2;$i++){?>
 
-    <div style="padding: 10px 5px 0px 5px;" class=" col-xs-12 col-sm-6 col-md-4 col-lg-3">
+    <div style="padding: 10px 5px 0px 5px;" class=" col-xs-12 col-sm-6 col-md-6 col-lg-6">
       <div class="order_border">
       <div class="row">
-        <div class="col-xs-5">
+
+        <div class="col-xs-3">
           <span class="order_title">제품코드</span>
         </div>
-        <div class="col-xs-7">
+        <div class="col-xs-9">
           <span class="order_content">0000000</span>
         </div>
       </div>
       <div class="row">
-        <div class="col-xs-5">
+        <div class="col-xs-3">
           <span class="order_title">제품정보</span>
         </div>
-        <div class="col-xs-7">
+        <div class="col-xs-9">
           <span class="order_content">[이윤지 아티스트] 개와고양이를 그리는 사람들이다요다요</span>
         </div>
       </div>
       <div class="row">
-        <div class="col-xs-5">
+        <div class="col-xs-3">
           <span class="order_title">판매가격</span>
         </div>
-        <div class="col-xs-7">
+        <div class="col-xs-9">
           <span class="order_content">20,000원</span>
         </div>
       </div>
       <div class="row">
-        <div class="col-xs-5">
+        <div class="col-xs-3">
           <span class="order_title">배송비</span>
         </div>
-        <div class="col-xs-7">
+        <div class="col-xs-9">
           <span class="order_content">2,500원</span>
         </div>
       </div>
       <div class="row">
-        <div class="col-xs-5">
+        <div class="col-xs-3">
           <span class="order_title">수량</span>
         </div>
-        <div class="col-xs-7">
+        <div class="col-xs-9">
           <span class="order_content">1</span>
         </div>
       </div>
