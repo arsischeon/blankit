@@ -196,7 +196,7 @@ $(function(){
       <div style="display:inline-block;width:210px;">
         <!-- 주소와 우편번호를 입력할 <input>들을 생성하고 적당한 name과 class를 부여한다 -->
         <input type="text" name="" class="margin-bottom-5 menu_input postcodify_postcode5" placeholder="우편번호" value="" />
-        <button id="postcodify_search_button" class=" myButton">찾기</button><br />
+        <a href="#"><button id="postcodify_search_button" class=" myButton">찾기</button></a><br />
         <input type="text" name="" class="margin-bottom-5 menu_input postcodify_address"  placeholder="기본주소" value="" /><br />
         <input type="text" name="" class="margin-bottom-5 menu_input postcodify_details" placeholder="상세주소" value="" /><br />
 
