@@ -159,7 +159,7 @@ function slanted_banner_generator(){
   $("#banner_cut").css("width",width+"px");
   $("#banner_cut").css("height",$(window).height()*0.8+"px");
   $(".image-in-banner").css("min-height",$(window).height()+"px");
-  $("#banner_1").css("margin-left","-"+($("#banner_1").width()-banner_width)/2+"px");
+  $("#banner_1").css("margin-left","-"+(2664-banner_width)/2+"px");
 }
 $(function(){
   $(".banner").css("display","none");
