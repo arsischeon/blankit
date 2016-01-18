@@ -178,7 +178,7 @@ $(function(){
       </div>
     </div>
     <div class="row row-padding-xs-100 " style="margin-top:10px;">
-      <div class="menu">받으시는 분</div>
+      <div class="menu">보내시는 분</div>
       <input class="menu_input" type="text">
     </div>
     <div class="row row-padding-xs-100 " style="margin-top:10px;">
@@ -195,17 +195,14 @@ $(function(){
       <div class="menu title2" style="  vertical-align: top;line-height: 100%;padding-top: 5px;">배송지</div>
       <div style="display:inline-block;width:210px;">
         <!-- 주소와 우편번호를 입력할 <input>들을 생성하고 적당한 name과 class를 부여한다 -->
-        <input type="text" name="" class="margin-bottom-5 menu_input postcodify_postcode5" placeholder="우편번호" value="" />
-        <a href="#"><button id="postcodify_search_button" class=" myButton">찾기</button></a><br />
-        <input type="text" name="" class="margin-bottom-5 menu_input postcodify_address"  placeholder="기본주소" value="" /><br />
-        <input type="text" name="" class="margin-bottom-5 menu_input postcodify_details" placeholder="상세주소" value="" /><br />
+        <input type="text" name="" class="margin-bottom-5 menu_input" placeholder="우편번호" value="" /><br />
+        <input type="text" name="" class="margin-bottom-5 menu_input"  placeholder="기본주소" value="" /><br />
+        <input type="text" name="" class="margin-bottom-5 menu_input" placeholder="상세주소" value="" /><br />
 
         <!-- jQuery와 Postcodify를 로딩한다 -->
-        <script src="//ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
-        <script src="//cdn.poesis.kr/post/search.min.js"></script>
+
 
         <!-- "검색" 단추를 누르면 팝업 레이어가 열리도록 설정한다 -->
-        <script> $(function() { $("#postcodify_search_button").postcodifyPopUp(); }); </script>
       </div>
     </div>
 
@@ -214,11 +211,11 @@ $(function(){
 
   <div class="row row-padding-xs-100 " style="margin-top:30px; ">
     <div style="border-top: 1px solid #D3D3D3;padding-top:25px;">
-      <span class="title1">배송지 정보</span>
+      <span id="locInfo" class="title1">배송지 정보</span>
       <div style="margin-left:10px;" class="menu_input_radio">
         <input type="radio" name="same_info" id="same_info_1" ><label for="same_info_1" >주문고객 정보와 동일</label>
       </div>
-      <div class="menu_input_radio">
+      <div class="menu_input_radio" style="width:80px;">
         <input type="radio" name="same_info" id="same_info_2" ><label for="same_info_2" >새로운 주소</label>
       </div>
     </div>
@@ -242,7 +239,7 @@ $(function(){
     <div style="display:inline-block;width:210px;">
       <!-- 주소와 우편번호를 입력할 <input>들을 생성하고 적당한 name과 class를 부여한다 -->
       <input type="text" name="" class="margin-bottom-5 menu_input postcodify_postcode5" placeholder="우편번호" value="" />
-      <button id="postcodify_search_button" class=" myButton">찾기</button><br />
+      <a href="#locInfo"><button id="postcodify_search_button" class=" myButton">찾기</button></a><br />
       <input type="text" name="" class="margin-bottom-5 menu_input postcodify_address"  placeholder="기본주소" value="" /><br />
       <input type="text" name="" class="margin-bottom-5 menu_input postcodify_details" placeholder="상세주소" value="" /><br />
 
