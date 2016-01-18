@@ -199,7 +199,7 @@ bannerSelector().css("z-index",++zindex).animate({
 },{duration:4000,
  complete: function() {
    $(".banner-roll-circle").css("background","none");
-   $("#banner-roll-circle-"+bannerNum-1).css("background","#687C87");
+   $("#banner-roll-circle-"+bannerNum).css("background","#687C87");
    bannerAnimation();
  }
 });
@@ -228,7 +228,7 @@ $(window).resize(function(){
 </div>
 <div class="banner-wrap ">
 <div class="banner-roll">
-  <div id="banner-roll-circle-1" class="banner-roll-circle"></div>
+  <div id="banner-roll-circle-1"  class="banner-roll-circle"></div>
   <div id="banner-roll-circle-2" class="banner-roll-circle" style="background:#687C87;"></div>
   <div id="banner-roll-circle-3" class="banner-roll-circle"></div>
 </div>
