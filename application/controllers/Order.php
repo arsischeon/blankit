@@ -9,4 +9,10 @@ class Order extends CI_Controller {
 		$this->load->view('order');
 		$this->load->view('footer');
 	}
+	public function complete()
+	{
+		$this->load->view('header');
+		$this->load->view('order_complete');
+		$this->load->view('footer');
+	}
 }
