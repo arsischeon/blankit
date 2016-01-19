@@ -22,10 +22,10 @@ class Store_model extends CI_Model{
 		");
 	}
 	
-	public function toCart(){
-		return $this->db->query("
-		INSERT INTO Customers (CustomerName, ContactName, Address, City, PostalCode, Country)
-		VALUES ('Cardinal','Tom B. Erichsen','Skagen 21','Stavanger','4006','Norway');	
+	public function toCart($type, $color, $size, $amount, $storeId, $storeType){
+		$this->db->query("
+		INSERT INTO CART (user_id, store_id, cart_type, cart_color, cart_size, cart_num, cart_price, cart_status)
+		VALUES ('1','$storeId','$type','$color','$size','$amount','1234','1');	
 		");
 	}
 }

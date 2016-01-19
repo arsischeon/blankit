@@ -65,6 +65,7 @@ class Store extends CI_Controller {
 		$storeId = $this->input->post('storeId');
 		$storeType = $this->input->post('storeType');
 		
+		$this->load->model('store_model');
 		$this->store_model->toCart($type, $color, $size, $amount, $storeId, $storeType);
 	}
 
