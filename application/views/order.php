@@ -307,8 +307,12 @@ $(function(){
       <input class="menu_input" type="text">
     </div>
     <div class="row row-padding-xs-100 " style="margin-top:10px;">
-      <div class="menu title2">입금할 계좌</div>
-      <input class="menu_input" placeholder="은행-계좌번호" style="width:200px;" type="text">
+      <div class="menu title2">입금 은행</div>
+      <input class="menu_input" placeholder="입금할 은행" style="width:200px;" type="text">
+    </div>
+    <div class="row row-padding-xs-100 " style="margin-top:10px;">
+      <div class="menu title2">입금 계좌번호</div>
+      <input class="menu_input" placeholder="입금할 계좌번호" style="width:200px;" type="text">
     </div>
 
 
