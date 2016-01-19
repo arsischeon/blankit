@@ -15,7 +15,7 @@ class Order_model extends CI_Model{
 		");
 	}
 	
-	public function order(){
+	public function order($receiver, $email, $phone1, $phone2, $phone3, $home1, $home2, $home3, $payer, $bank, $account, $notice){
 		$home = $home1 . "/" . $home2 . "/" . $home3;
 		$phone = $phone1 . "/" . $phone2 . "/" . $phone3;
 		
