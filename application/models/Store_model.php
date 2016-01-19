@@ -24,8 +24,8 @@ class Store_model extends CI_Model{
 	
 	public function toCart($type, $color, $size, $amount, $storeId, $storeType){
 		$this->db->query("
-		INSERT INTO CART (user_id, store_id, cart_type, cart_color, cart_size, cart_num, cart_price, cart_status)
-		VALUES ('1','$storeId','$type','$color','$size','$amount','1234','1');	
+		INSERT INTO CART (user_id, store_id, cart_type, cart_color, cart_size, cart_num, cart_price)
+		VALUES ('1','$storeId','$type','$color','$size','$amount','1234');
 		");
 	}
 }
