@@ -114,7 +114,12 @@ $(function(){
 	$account = explode('=', $explodeBackPath[2]);
 	
 	echo $codeNum[0];
+	echo "//////";
 	echo $codeNum[1];
+	echo "//////";
+	echo $bank[0];
+	echo "//////";
+	echo $bank[1];
 ?>
 
 </div>
