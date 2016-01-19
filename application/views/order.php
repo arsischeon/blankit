@@ -122,8 +122,17 @@ $(function(){
 });
 
 function submitCheck(){
+  if($("input[name='receiver']").val()=='')return;
+  if($("input[name='email']").val()=='')return;
+  if($("input[name='phone1']").val()=='')return;
+  if($("input[name='phone2']").val()=='')return;
+  if($("input[name='phone3']").val()=='')return;
+  if($("input[name='home1']").val()=='')return;
+  if($("input[name='home2']").val()=='')return;
+  if($("input[name='home3']").val()=='')return;
+  if($("input[name='payer']").val()=='')return;
   if($("input[name='bank']").val()=='')return;
-//  if($("input[name='bank']").val()=='')return;
+  if($("input[name='account']").val()=='')return;
 
   $("#formform").submit();
 }
@@ -271,26 +280,26 @@ function submitCheck(){
 <form action="/order/func_order_ok" method="post" id="formform">
   <div class="row row-padding-xs-100 " style="margin-top:10px;">
     <div class="menu">받으시는 분</div>
-    <input id="name2" class="menu_input" type="text">
+    <input id="name2" class="menu_input" type="text" name="receiver">
   </div>
   <div class="row row-padding-xs-100 " style="margin-top:10px;">
     <div class="menu title2">이메일</div>
-    <input id="email2" class="menu_input" style="width:200px;" type="text">
+    <input id="email2" class="menu_input" style="width:200px;" type="text" name="email">
   </div>
   <div class="row row-padding-xs-100 " style="margin-top:10px;">
     <div class="menu title2">휴대전화</div>
-    <input id="phone2_1" class="menu_input_phone_1" type="text" value="010">-
-    <input id="phone2_2" class="menu_input_phone_2" type="text">-
-    <input id="phone2_3" class="menu_input_phone_2" type="text">
+    <input id="phone2_1" class="menu_input_phone_1" type="text" value="010" name="phone1"> -
+    <input id="phone2_2" class="menu_input_phone_2" type="text" name="phone2"> -
+    <input id="phone2_3" class="menu_input_phone_2" type="text" name="phone3">
   </div>
   <div class="row row-padding-xs-100 " style="margin-top:10px;">
     <div class="menu title2" style="  vertical-align: top;line-height: 100%;padding-top: 5px;">배송지</div>
     <div style="display:inline-block;width:210px;">
       <!-- 주소와 우편번호를 입력할 <input>들을 생성하고 적당한 name과 class를 부여한다 -->
-      <input type="text" name="" class="margin-bottom-5 menu_input postcodify_postcode5" id="location2_1" placeholder="우편번호" value="" />
+      <input type="text" name="" class="margin-bottom-5 menu_input postcodify_postcode5" id="location2_1" placeholder="우편번호" value="" name="home1"/>
       <a href="#"><button id="postcodify_search_button" class=" myButton">찾기</button></a><br />
-      <input  id="location2_2" type="text" name="" class="margin-bottom-5 menu_input postcodify_address"  placeholder="기본주소" value="" /><br />
-      <input id="location2_3" type="text" name="" class="margin-bottom-5 menu_input postcodify_details" placeholder="상세주소" value="" /><br />
+      <input  id="location2_2" type="text" name="" class="margin-bottom-5 menu_input postcodify_address"  placeholder="기본주소" value="" name="home2"/><br />
+      <input id="location2_3" type="text" name="" class="margin-bottom-5 menu_input postcodify_details" placeholder="상세주소" value="" name="home3"/><br />
 
       <!-- jQuery와 Postcodify를 로딩한다 -->
       <script src="//ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
@@ -303,7 +312,7 @@ function submitCheck(){
 
   <div class="row row-padding-xs-100 " style="margin-top:10px;">
     <div class="menu title2">배송 유의사항</div>
-    <input class="menu_input" style="width:200px;" type="text">
+    <input class="menu_input" style="width:200px;" type="text" name="notice">
   </div>
 
   <div class="row row-padding-xs-100 " style="margin-top:30px; ">
@@ -313,7 +322,7 @@ function submitCheck(){
   </div>
     <div class="row row-padding-xs-100 " style="margin-top:10px;">
       <div class="menu title2">입금자 명</div>
-      <input class="menu_input" type="text">
+      <input class="menu_input" type="text" name="payer">
     </div>
     <div class="row row-padding-xs-100 " style="margin-top:10px;">
       <div class="menu title2">입금 은행</div>
@@ -321,7 +330,7 @@ function submitCheck(){
     </div>
     <div class="row row-padding-xs-100 " style="margin-top:10px;">
       <div class="menu title2">입금 계좌번호</div>
-      <input class="menu_input" placeholder="입금할 계좌번호" style="width:200px;" type="text">
+      <input class="menu_input" placeholder="입금할 계좌번호" style="width:200px;" type="text" name="account">
     </div>
 </form>
 

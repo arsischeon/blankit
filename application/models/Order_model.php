@@ -14,4 +14,15 @@ class Order_model extends CI_Model{
 		where u.user_id = c.user_id and s.store_id = c.store_id and cart_status = 1;
 		");
 	}
+	
+	public function order(){
+		$home = $home1 . "/" . $home2 . "/" . $home3;
+		$phone = $phone1 . "/" . $phone2 . "/" . $phone3;
+		
+		return $this->db->query("
+		INSERT INTO ORDER(order_date, order_price, order_status, order_home, order_receiver, order_phone, order_email, order_name, order_bank, order_account, order_notice)
+		VALUES ('', '', '0', '$home', '$receiver', '$phone', '$email', '$payer', '$bank', '$account', '$notice');
+		");
+	}
+	
 }
