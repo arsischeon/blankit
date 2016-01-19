@@ -118,7 +118,9 @@ $(function(){
       $("#location2_3").val("");
     }
   });
+
 });
+
 </script>
 <div class="banner">
 
