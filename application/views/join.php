@@ -118,7 +118,7 @@ $(function(){
   <div class="row row-padding-xs-100 " style="margin-top:10px;">
     <div style="float:right">
       <input type="checkbox" id="info_checkbox">
-      <label for="info_checkbox" style="margin-left:5px;">약관에 동의합니다</label>
+      <label for="info_checkbox" style="margin-left:5px;">(필수)약관에 동의합니다</label>
     </div>
   </div>
   <div class="row row-padding-xs-100 " style="margin-top:10px;">
@@ -140,7 +140,7 @@ $(function(){
   <div class="row row-padding-xs-100 " style="margin-top:10px;">
     <div style="float:right">
       <input type="checkbox" id="usage_checkbox">
-      <label for="usage_checkbox" style="margin-left:5px;">약관에 동의합니다</label>
+      <label for="usage_checkbox" style="margin-left:5px;">(필수)약관에 동의합니다</label>
     </div>
   </div>
   <div class="row row-padding-xs-100 " style="margin-top:30px;">
