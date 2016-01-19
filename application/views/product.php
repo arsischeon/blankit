@@ -327,7 +327,7 @@ function moveInfo(dataType,data){
       </div>
       <div class="row options_row" style="margin-top:20px;">
         <div class="col-xs-12">
-          <div class="submit_button"><a href="/toCart" class="myButton">펀딩하기</a></div>
+          <div class="submit_button"><a href="/store/toCart" class="myButton">펀딩하기</a></div>
         </div>
       </div>
     </div>
