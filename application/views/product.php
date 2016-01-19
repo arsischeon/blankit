@@ -118,7 +118,7 @@ function checkSubmit(){
       return false;
     }
   }
-  $("formHidden").submit();
+  $("#formHidden").submit();
 }
 </script>
   <div class="banner">
@@ -253,7 +253,7 @@ function checkSubmit(){
         <div class="col-xs-12">
           <div class="options">
             <span class="options_left">컬러</span>
-            <div class="options_right">
+            <div id="color" class="options_right">
               <div name="color" id="1" class="round" style="background:#2f2f2f; "></div>
               <div name="color" id="2" class="round" style="background:#7b1719; "></div>
               <div name="color" id="3" class="round" style="background:#efeee9; "></div>
