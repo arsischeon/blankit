@@ -103,6 +103,15 @@ $(function(){
 </script>
 <div class="banner">
 
+<?php 
+	$urlPath = "$_SERVER[REQUEST_URI]";
+	echo $urlPath;
+	//$explodePath = explode('/', $urlPath);
+
+	//$numPath = $explodePath[3]; // 현재 URL 상품번호
+
+?>
+
 </div>
 </div>
 <div class="container" >
