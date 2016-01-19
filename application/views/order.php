@@ -120,9 +120,10 @@ $(function(){
   });
 
 });
+
 function submitCheck(){
-  if($("input[name='bank']").val()=='')return ;
-  if()
+  if($("input[name='bank']").val()=='')return;
+//  if($("input[name='bank']").val()=='')return;
 
   $("#formform").submit();
 }
