@@ -22,9 +22,10 @@ class Store_model extends CI_Model{
 		");
 	}
 	
-	//public function postProducts(){
-		//return $this->db->query("
-		
-		//");
-	//}
+	public function toCart(){
+		return $this->db->query("
+		INSERT INTO Customers (CustomerName, ContactName, Address, City, PostalCode, Country)
+		VALUES ('Cardinal','Tom B. Erichsen','Skagen 21','Stavanger','4006','Norway');	
+		");
+	}
 }
