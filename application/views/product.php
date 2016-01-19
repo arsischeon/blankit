@@ -112,8 +112,8 @@ function moveInfo(dataType,data){
 	$explodePath = explode('/', $urlPath);
 
 	$numPath = $explodePath[3]; // 현재 URL 상품번호
-  $GlobalStoreName;
-  $GlobalUserName;
+  	$GlobalStoreName;
+  	$GlobalUserName;
 	foreach ($details->result() as $row)
 	{
 		if($row->store_id == $numPath){
