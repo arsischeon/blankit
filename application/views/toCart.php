@@ -1,3 +1,4 @@
+<p>test</p>
 <?php
 echo $type;
 //echo $color ."<br>";
