@@ -140,6 +140,8 @@ $(function(){
   
    <!-- 주문 목록 반복되는 블럭 시작 -->
    <?php
+   $addPRICE = 0;
+   
    foreach ($cart->result() as $row){
    	
    	$PRICE =  number_format($row->cart_price, 0, '.', ','); // 가격 포맷
