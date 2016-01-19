@@ -119,6 +119,7 @@ function checkSubmit(){
       return false;
     }
   }
+  alert('장바구니에 상품이 들어갔습니다.');
   $("#formHidden").submit();
 }
 function makePrice(option){
@@ -128,15 +129,18 @@ function makePrice(option){
     case "1 ":
       init=30000;
       if(option=="2")actual=init+7000;
+      else actual=init;
       $("#priceSpan").text(actual+"원");
     break;
     case "2 ":
       init=21000;
+      actual=init;
       $("#priceSpan").text(actual+"원");
     break;
     case "3 ":
       init=19000;
       if(option=="2")actual=init+1000;
+      else actual=init;
       $("#priceSpan").text(actual+"원");
     break;
   }
@@ -188,7 +192,7 @@ function makePrice(option){
 
 	$PRICE =  number_format($storePrice, 0, '.', ','); // 가격 천 단위 콤마 넣어주기
 ?>
-<input style="hidden" type="text" id="storeType" value="<?echo $storeType?> ">
+<input style="display:none;" type="text" id="storeType" value="<?echo $storeType?> ">
 <div class="container" >
   <div class="row" style="padding-bottom:30px; border-bottom: 1px solid  #D3D3D3;">
     <p style="display:block; text-align:center; font-weight:bold; font-size:40px;"><?php echo $storeName;?></p>
