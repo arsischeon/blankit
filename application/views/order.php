@@ -121,6 +121,26 @@ $(function(){
 
 });
 
+/* function checkSubmit(){
+	  if($("input[name='type']").val()=="default"){
+	    alert("타입을 선택해주세요");
+	    return false;
+	  }
+	  if($("#color").length!=0){
+	    if($("input[name='color']").val()=="default"){
+	      alert('컬러를 선택해주세요');
+	      return false;
+	    }
+	  }
+	  if($("#size").length!=0){
+	    if($("input[name='size']").val()=="default"){
+	      alert("사이즈를 선택해주세요");
+	      return false;
+	    }
+	  }
+	  alert('장바구니에 상품이 들어갔습니다.');
+	  $("#formHidden").submit();
+	} */
 </script>
 <div class="banner">
 
@@ -133,11 +153,33 @@ $(function(){
     </div>
   </div>
   <div class="row row-padding-xs-100 " style="margin-top:30px;">
-    <span class="title1">주문리스트 확인</span>
+    <span class="title1">주문 리스트 확인</span>
   </div>
   <div class="row row-padding-xs-100 " style="margin-top:10px;">
+  
+  
    <!-- 주문 목록 반복되는 블럭 시작 -->
-   <? for($i=0;$i<2;$i++){?>
+   <?php
+   $addPRICE = 0;
+   $checker = 0;
+   
+   foreach ($cart->result() as $row){
+   	
+   	if($checker == 0){ // 한 번만 주소를 저장해두기
+   		$userName = $row->user_name;
+   		$userEmail = $row->user_email;
+   		$userPhone = $row->user_phone;
+   		$userHome = $row->user_home;
+   		$userHome2 = $row->user_home2;
+   		$userHome3 = $row->user_home3;
+   		
+   		$userPhone1 = str_split($userPhone,3);
+   		$userPhone2 = str_split($userPhone1[1].$userPhone1[2].$userPhone1[3],4);
+   	}
+   	
+   	$PRICE =  number_format($row->cart_price, 0, '.', ','); // 가격 포맷
+   	$addPRICE += $row->cart_price * $row->cart_num;
+   ?>
 
     <div style="padding: 10px 5px 0px 5px;" class=" col-xs-12 col-sm-6 col-md-6 col-lg-6">
       <div class="order_border">
@@ -155,7 +197,7 @@ $(function(){
           <span class="order_title">제품정보</span>
         </div>
         <div class="col-xs-9">
-          <span class="order_content">[이윤지 아티스트] 개와고양이를 그리는 사람들이다요다요</span>
+          <span class="order_content">[아티스트 <?php echo $row->artist;?>] <?php echo $row->store_name;?></span>
         </div>
       </div>
       <div class="row">
@@ -163,15 +205,7 @@ $(function(){
           <span class="order_title">판매가격</span>
         </div>
         <div class="col-xs-9">
-          <span class="order_content">20,000원</span>
-        </div>
-      </div>
-      <div class="row">
-        <div class="col-xs-3">
-          <span class="order_title">배송비</span>
-        </div>
-        <div class="col-xs-9">
-          <span class="order_content">2,500원</span>
+          <span class="order_content"><?php echo $PRICE;?>원</span>
         </div>
       </div>
       <div class="row">
@@ -179,17 +213,18 @@ $(function(){
           <span class="order_title">수량</span>
         </div>
         <div class="col-xs-9">
-          <span class="order_content">1</span>
+          <span class="order_content"><?php echo $row->cart_num;?></span>
         </div>
       </div>
     </div>
   </div>
     <? }?>
     <!-- 주문목록 반복되는 부분 끝 -->
+    
   </div>
   <div class="row row-padding-xs-100 " style="margin-top:10px;">
-    <span class="order_result_2">총 주문금액 00,000원</span>
-    <span class="order_result_1">상품 총 금액 00,000원 + 배송비 0,000원</span>
+    <span class="order_result_2">총 주문금액 <?php echo number_format($addPRICE + 2500, 0, '.', ',');?>원</span>
+    <span class="order_result_1">상품 총 금액 <?php echo number_format($addPRICE, 0, '.', ',');?>원 + 배송비 2,500원</span>
   </div>
 
   <!-- 페이지 로딩시 자동으로 채워지는 부분 *시작* -->
@@ -201,25 +236,25 @@ $(function(){
     </div>
     <div class="row row-padding-xs-100 " style="margin-top:10px;">
       <div class="menu" >보내시는 분</div>
-      <input id="name1" class="menu_input" type="text">
+      <input id="name1" class="menu_input" type="text" value=<?php echo '"' . $userName . '"';?>>
     </div>
     <div class="row row-padding-xs-100 " style="margin-top:10px;">
       <div class="menu title2">이메일</div>
-      <input id="email1" class="menu_input" style="width:200px;" type="text">
+      <input id="email1" class="menu_input" style="width:200px;" type="text" value=<?php echo '"' . $userEmail . '"';?>>
     </div>
     <div class="row row-padding-xs-100 " style="margin-top:10px;">
       <div class="menu title2">휴대전화</div>
       <input id="phone1_1" class="menu_input_phone_1" type="text" value="010">-
-      <input id="phone1_2" class="menu_input_phone_2" type="text">-
-      <input id="phone1_3" class="menu_input_phone_2" type="text">
+      <input id="phone1_2" class="menu_input_phone_2" type="text" value=<?php echo '"' . $userPhone2[0] . '"';?>>-
+      <input id="phone1_3" class="menu_input_phone_2" type="text" value=<?php echo '"' . $userPhone2[1] . '"';?>>
     </div>
     <div class="row row-padding-xs-100 " style="margin-top:10px;">
       <div class="menu title2" style="  vertical-align: top;line-height: 100%;padding-top: 5px;">배송지</div>
       <div style="display:inline-block;width:210px;">
         <!-- 주소와 우편번호를 입력할 <input>들을 생성하고 적당한 name과 class를 부여한다 -->
-        <input type="text" name="" class="margin-bottom-5 menu_input" placeholder="우편번호" id="location1_1" value="" /><br />
-        <input type="text" name="" class="margin-bottom-5 menu_input"  placeholder="기본주소" id="location1_2" value="" /><br />
-        <input type="text" name="" class="margin-bottom-5 menu_input" placeholder="상세주소" id="location1_3" value="" /><br />
+        <input type="text" name="" class="margin-bottom-5 menu_input" placeholder="우편번호" id="location1_1" value=<?php echo '"' . $userHome . '"';?> /><br />
+        <input type="text" name="" class="margin-bottom-5 menu_input"  placeholder="기본주소" id="location1_2" value=<?php echo '"' . $userHome2 . '"';?> /><br />
+        <input type="text" name="" class="margin-bottom-5 menu_input" placeholder="상세주소" id="location1_3" value=<?php echo '"' . $userHome3 . '"';?> /><br />
 
         <!-- jQuery와 Postcodify를 로딩한다 -->
 
@@ -245,6 +280,8 @@ $(function(){
     <input type="radio" name="same_info" id="same_info_2" value="2" ><label for="same_info_2" >새로운 주소</label>
   </div>
 </div>
+
+
   <div class="row row-padding-xs-100 " style="margin-top:10px;">
     <div class="menu">받으시는 분</div>
     <input id="name2" class="menu_input" type="text">
@@ -292,14 +329,19 @@ $(function(){
       <input class="menu_input" type="text">
     </div>
     <div class="row row-padding-xs-100 " style="margin-top:10px;">
-      <div class="menu title2">입금할 계좌</div>
-      <input class="menu_input" placeholder="은행-계좌번호" style="width:200px;" type="text">
+      <div class="menu title2">입금 은행</div>
+      <input class="menu_input" placeholder="입금할 은행" style="width:200px;" type="text" name="bank">
     </div>
+    <div class="row row-padding-xs-100 " style="margin-top:10px;">
+      <div class="menu title2">입금 계좌번호</div>
+      <input class="menu_input" placeholder="입금할 계좌번호" style="width:200px;" type="text">
+    </div>
+
 
 
   <div class="row row-padding-xs-100 " style="margin-top:30px; ">
     <div style="border-top: 1px solid #D3D3D3;padding-top:25px; display:block;  text-align:center;">
-      <a href="#"><div style="padding:7px 15px; border-radius:15px; width:150px;" class="myButton">주문하기</div></a>
+      <a href="/order/func_order_ok"><div style="padding:7px 15px; border-radius:15px; width:150px;" class="myButton">주문하기</div></a>
     </div>
 
   </div>

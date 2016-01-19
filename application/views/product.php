@@ -167,13 +167,13 @@ function makePrice(option){
 			$storeGoal = $row->store_goal;
 			$storeGoalNow = $row->store_goal_now;
 			$userName = $row->user_name;
-      $GlobalUserName=$userName;
+      		$GlobalUserName=$userName;
 			$storeType = $row->store_type;
-      $GlobalStoreType=$storeType;
+      		$GlobalStoreType=$storeType;
 			$storeStatus = $row->store_status;
 			$storeId = $row->store_id;
 			$storeName = $row->store_name;
-      $GlobalStoreName=$storeName;
+      		$GlobalStoreName=$storeName;
 			$storePrice = $row->store_price;
 			break;
 		}
@@ -378,7 +378,7 @@ function makePrice(option){
         <div class="col-xs-12">
           <div class="submit_button"><a
             onclick="checkSubmit();"
-  class="myButton">구매하기</a></div>
+  			class="myButton">구매하기</a></div>
         </div>
       </div>
     </div>
