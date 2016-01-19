@@ -21,4 +21,10 @@ class Store_model extends CI_Model{
 		where s.user_id = u.user_id;
 		");
 	}
+	
+	public function xxx(){
+		return $this->db->query("
+		
+		");
+	}
 }
