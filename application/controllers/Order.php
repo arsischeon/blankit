@@ -38,7 +38,7 @@ class Order extends CI_Controller {
 		 $this->order_model->order($receiver, $email, $phone1, $phone2, $phone3, $home1, $home2, $home3, $payer, $bank, $account, $notice, $totalPrice);
 		 
 		 //완료 페이지로 redirect
-		 $completeUrl = "http://blankit.kr/order/complete" . "?codeNum=12345" . "&bank=" . $bank . "&account=" . $account;
+		 $completeUrl = "http://blankit.kr/order/complete" . "?codeNum=12345" . hash('001') . "&bank=" . $bank . "&account=" . $account;
 		 $this->load->helper('url');
 		 redirect($completeUrl);
 		
