@@ -281,7 +281,7 @@ $(function(){
   </div>
 </div>
 
-<form>
+<form method="post">
   <div class="row row-padding-xs-100 " style="margin-top:10px;">
     <div class="menu">받으시는 분</div>
     <input id="name2" class="menu_input" type="text">
