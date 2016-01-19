@@ -74,25 +74,32 @@ $(function(){
     width: 100,
     height:50
   });
-  $("#type").on("selectmenuchange",function(){
-    alert('dd');
+  $("#type").on("selectmenuchange",function(event){
+    moveInfo("type",event.target.value);
   });
   $("#size").selectmenu({
     width: 60,
     height:50
   });
+  $("#size").on("selectmenuchange",function(event){
+    moveInfo("size",event.target.value);
+  });
   $("#amount").spinner();
+  $("#amount").on("spinchange",function(event){
+    moveInfo("amount",event.target.value);
+  });
   $("#amount").css("width","30px");
   $("div[name='color']").on("click",function(event){
     for(var i=1;i<7;i++){
     $("div[id='"+i+"']").css("border","none");
     }
     $("div[id='"+event.target.id+"']").css("border","3px solid red");
+    moveInfo("color",event.target.id);
   });
 
 });
-function moveInfo(){
-  $("input[name='type']").val();
+function moveInfo(dataType,data){
+  $("input[name='"+dataType+"']").val(data);
 }
 </script>
   <div class="banner">
@@ -341,7 +348,8 @@ function moveInfo(){
 
 
 </div>
-<form action="#" method="post" style="display:none">
+<form action="#" method="post" >
+  <!-- style="display:none" -->
   <input type="text" name="type">
   <input type="text" name="color"> //옷만
   <input type="text" name="size"> //옷만
