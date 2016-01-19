@@ -128,6 +128,7 @@ function makePrice(option){
     case "1 ":
       init=30000;
       if(option=="2")actual=init+7000;
+      else actual=init;
       $("#priceSpan").text(actual+"원");
     break;
     case "2 ":
@@ -137,6 +138,7 @@ function makePrice(option){
     case "3 ":
       init=19000;
       if(option=="2")actual=init+1000;
+      else actual=init;
       $("#priceSpan").text(actual+"원");
     break;
   }
