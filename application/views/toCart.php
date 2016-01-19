@@ -1,5 +1,5 @@
 <?php
-echo $type ."<br>";
+echo $type;
 //echo $color ."<br>";
 //echo $size ."<br>";
 //echo $amount ."<br>";
