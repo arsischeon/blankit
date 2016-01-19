@@ -119,7 +119,7 @@ function checkSubmit(){
       return false;
     }
   }
-  alert('천진우 ㅎㅇ');
+  alert('장바구니에 상품이 들어갔습니다.');
   $("#formHidden").submit();
 }
 function makePrice(option){
