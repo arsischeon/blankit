@@ -296,10 +296,10 @@ function submitCheck(){
     <div class="menu title2" style="  vertical-align: top;line-height: 100%;padding-top: 5px;">배송지</div>
     <div style="display:inline-block;width:210px;">
       <!-- 주소와 우편번호를 입력할 <input>들을 생성하고 적당한 name과 class를 부여한다 -->
-      <input type="text" name="" class="margin-bottom-5 menu_input postcodify_postcode5" id="location2_1" placeholder="우편번호" value="" name="home1"/>
+      <input type="text" class="margin-bottom-5 menu_input postcodify_postcode5" id="location2_1" placeholder="우편번호" value="" name="home1"/>
       <a href="#"><button id="postcodify_search_button" class=" myButton">찾기</button></a><br />
-      <input  id="location2_2" type="text" name="" class="margin-bottom-5 menu_input postcodify_address"  placeholder="기본주소" value="" name="home2"/><br />
-      <input id="location2_3" type="text" name="" class="margin-bottom-5 menu_input postcodify_details" placeholder="상세주소" value="" name="home3"/><br />
+      <input  id="location2_2" type="text" class="margin-bottom-5 menu_input postcodify_address"  placeholder="기본주소" value="" name="home2"/><br />
+      <input id="location2_3" type="text" class="margin-bottom-5 menu_input postcodify_details" placeholder="상세주소" value="" name="home3"/><br />
 
       <!-- jQuery와 Postcodify를 로딩한다 -->
       <script src="//ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
