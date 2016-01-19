@@ -75,7 +75,7 @@
           </ul>
           <ul class="nav navbar-nav navbar-right">
             <li><a class="navbar-right" href="/login">login</a></li>
-            <li><a class="navbar-right" href="#">join</a></li>
+            <li><a class="navbar-right" href="/join">join</a></li>
             <li><a class="navbar-right" href="#">mypage</a></li>
             <li><a style="margin-right:40px;" class="navbar-right" href="#">submit</a></li>
           </ul>
