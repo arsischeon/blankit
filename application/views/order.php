@@ -120,7 +120,12 @@ $(function(){
   });
 
 });
+function submitCheck(){
+  if($("input[name='bank']").val()=='')return ;
+  if()
 
+  $("#formform").submit();
+}
 
 </script>
 <div class="banner">
@@ -137,15 +142,15 @@ $(function(){
     <span class="title1">주문 리스트 확인</span>
   </div>
   <div class="row row-padding-xs-100 " style="margin-top:10px;">
-  
-  
+
+
    <!-- 주문 목록 반복되는 블럭 시작 -->
    <?php
    $addPRICE = 0;
    $checker = 0;
-   
+
    foreach ($cart->result() as $row){
-   	
+
    	if($checker == 0){ // 한 번만 주소를 저장해두기
    		$userName = $row->user_name;
    		$userEmail = $row->user_email;
@@ -153,11 +158,11 @@ $(function(){
    		$userHome = $row->user_home;
    		$userHome2 = $row->user_home2;
    		$userHome3 = $row->user_home3;
-   		
+
    		$userPhone1 = str_split($userPhone,3);
    		$userPhone2 = str_split($userPhone1[1].$userPhone1[2].$userPhone1[3],4);
    	}
-   	
+
    	$PRICE =  number_format($row->cart_price, 0, '.', ','); // 가격 포맷
    	$addPRICE += $row->cart_price * $row->cart_num;
    ?>
@@ -201,7 +206,7 @@ $(function(){
   </div>
     <? }?>
     <!-- 주문목록 반복되는 부분 끝 -->
-    
+
   </div>
   <div class="row row-padding-xs-100 " style="margin-top:10px;">
     <span class="order_result_2">총 주문금액 <?php echo number_format($addPRICE + 2500, 0, '.', ',');?>원</span>
@@ -321,7 +326,7 @@ $(function(){
 
   <div class="row row-padding-xs-100 " style="margin-top:30px; ">
     <div style="border-top: 1px solid #D3D3D3;padding-top:25px; display:block;  text-align:center;">
-      <a href="/order/func_order_ok"><div style="padding:7px 15px; border-radius:15px; width:150px;" class="myButton">주문하기</div></a>
+      <a onclick="submitCheck();"><div style="padding:7px 15px; border-radius:15px; width:150px;" class="myButton">주문하기</div></a>
     </div>
 
   </div>
