@@ -141,15 +141,7 @@ $(function(){
    <!-- 주문 목록 반복되는 블럭 시작 -->
    <?php
    foreach ($cart->result() as $row){
-   	if($row->cart_status == 1){
-   		
-   	} else if($row->cart_status !== 1){
-   		continue; // 비움 or 결제 상태일 시
-   	} else{
-   		echo "Error!";
-   	}
-   	
-   	
+   	   	
    	$PRICE =  number_format($row->cart_price, 0, '.', ','); // 가격 포맷
    ?>
 
