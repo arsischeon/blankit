@@ -68,6 +68,11 @@ class Store extends CI_Controller {
 		$this->load->model('store_model');
 		$this->store_model->toCart($type, $color, $size, $amount, $storeId, $storeType);
 		
+		//본래 페이지로 다시 redirect
+		$storeUrl = "http://blankit.kr/store/product/" . $storeId;
+		$this->load->helper('url');
+		redirect($storeUrl);
+		
 	}
 
 }
