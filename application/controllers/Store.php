@@ -63,7 +63,7 @@ class Store extends CI_Controller {
 		//$data['color'] = $this->input->post('color');
 		//$data['size'] = $this->input->post('size');
 		//$data['amount'] = $this->input->post('amount');
-		$this->load->view('toCart',product().$data['type']);
+		$this->load->view('toCart',product.$data['type']);
 	}
 
 }
