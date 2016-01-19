@@ -133,6 +133,7 @@ function checkSubmit(){
 	$numPath = $explodePath[3]; // 현재 URL 상품번호
   	$GlobalStoreName;
   	$GlobalUserName;
+    $GlobalStoreType;
 	foreach ($details->result() as $row)
 	{
 		if($row->store_id == $numPath){
@@ -143,6 +144,7 @@ function checkSubmit(){
 			$userName = $row->user_name;
       $GlobalUserName=$userName;
 			$storeType = $row->store_type;
+      $GlobalStoreType=$storeType;
 			$storeStatus = $row->store_status;
 			$storeId = $row->store_id;
 			$storeName = $row->store_name;
@@ -378,4 +380,6 @@ function checkSubmit(){
   <input type="text" name="color" value="default"> //옷만
   <input type="text" name="size" value="default"> //옷만
   <input type="text" name="amount" value="1">
+  <input type="text" name="storeId" value="<?echo $numPath;?>">
+  <input type="text" name="storeType" value="<?echo $GlobalStoreType;?>">
 </form>
