@@ -91,7 +91,7 @@ $(function(){
   });
 
 });
-function moveInfo{
+function moveInfo(){
   $("input[name='type']").val();
 }
 </script>
