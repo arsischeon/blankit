@@ -65,7 +65,7 @@ class Store extends CI_Controller {
 		$storeId = $this->input->post('storeId');
 		$storeType = $this->input->post('storeType');
 		
-		$storeUrl = "redirect/store/product/" . $storeId;
+		$storeUrl = "http://blankit.kr/store/product/" . $storeId;
 		
 		$this->load->model('store_model');
 		$this->store_model->toCart($type, $color, $size, $amount, $storeId, $storeType);
