@@ -358,7 +358,7 @@ $(window).resize(function(){
 
 
 <div class="container-fluid">
-<div class="row" style="margin-top: 20px;">
+<div class="row" style="margin-top: 40px;">
   <div class="row-md-12" style="background: #F5F6F7; padding-top:30px; padding-bottom:40px;">
     <p class="gal" style="font-size:21px; font-weight:bold; text-align:center; margin-top:15px; margin-bottom:15px;">당신도 함께해주세요!</p>
     <p class="gal" style="font-size:13px; font-weight:regular; text-align:center; margin-bottom:15px; ">포트폴리오에 묵혀둔 작품이 있나요? 제작비용 0원에 당신만의 제품을 선보이세요.<br>
