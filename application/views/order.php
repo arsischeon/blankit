@@ -136,8 +136,18 @@ $(function(){
     <span class="title1">주문리스트 확인</span>
   </div>
   <div class="row row-padding-xs-100 " style="margin-top:10px;">
+  
+  
    <!-- 주문 목록 반복되는 블럭 시작 -->
-   <? for($i=0;$i<2;$i++){?>
+   <?php
+   foreach ($cart->result() as $row){
+   	if($row->cart_status !== 1){
+   		continue; // 비움 or 결제 상태일 시
+   	}
+   	
+   	
+   	$PRICE =  number_format($row->cart_price, 0, '.', ','); // 가격 포맷
+   ?>
 
     <div style="padding: 10px 5px 0px 5px;" class=" col-xs-12 col-sm-6 col-md-6 col-lg-6">
       <div class="order_border">
@@ -163,15 +173,7 @@ $(function(){
           <span class="order_title">판매가격</span>
         </div>
         <div class="col-xs-9">
-          <span class="order_content">20,000원</span>
-        </div>
-      </div>
-      <div class="row">
-        <div class="col-xs-3">
-          <span class="order_title">배송비</span>
-        </div>
-        <div class="col-xs-9">
-          <span class="order_content">2,500원</span>
+          <span class="order_content"><?php echo $PRICE;?>원</span>
         </div>
       </div>
       <div class="row">
@@ -179,13 +181,14 @@ $(function(){
           <span class="order_title">수량</span>
         </div>
         <div class="col-xs-9">
-          <span class="order_content">1</span>
+          <span class="order_content"><?php echo $row->cart_num;?></span>
         </div>
       </div>
     </div>
   </div>
     <? }?>
     <!-- 주문목록 반복되는 부분 끝 -->
+    
   </div>
   <div class="row row-padding-xs-100 " style="margin-top:10px;">
     <span class="order_result_2">총 주문금액 00,000원</span>
