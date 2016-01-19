@@ -1,4 +1,4 @@
 <?php
-	//echo $bank;
+	echo $bank;
 	echo "hi";
 ?>
