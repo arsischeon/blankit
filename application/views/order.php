@@ -121,26 +121,7 @@ $(function(){
 
 });
 
-/* function checkSubmit(){
-	  if($("input[name='type']").val()=="default"){
-	    alert("타입을 선택해주세요");
-	    return false;
-	  }
-	  if($("#color").length!=0){
-	    if($("input[name='color']").val()=="default"){
-	      alert('컬러를 선택해주세요');
-	      return false;
-	    }
-	  }
-	  if($("#size").length!=0){
-	    if($("input[name='size']").val()=="default"){
-	      alert("사이즈를 선택해주세요");
-	      return false;
-	    }
-	  }
-	  alert('장바구니에 상품이 들어갔습니다.');
-	  $("#formHidden").submit();
-	} */
+
 </script>
 <div class="banner">
 
@@ -281,7 +262,7 @@ $(function(){
   </div>
 </div>
 
-
+<form action="/order/func_order_ok" method="post" id="formform">
   <div class="row row-padding-xs-100 " style="margin-top:10px;">
     <div class="menu">받으시는 분</div>
     <input id="name2" class="menu_input" type="text">
@@ -336,8 +317,7 @@ $(function(){
       <div class="menu title2">입금 계좌번호</div>
       <input class="menu_input" placeholder="입금할 계좌번호" style="width:200px;" type="text">
     </div>
-
-
+</form>
 
   <div class="row row-padding-xs-100 " style="margin-top:30px; ">
     <div style="border-top: 1px solid #D3D3D3;padding-top:25px; display:block;  text-align:center;">
