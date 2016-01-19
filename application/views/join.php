@@ -93,7 +93,7 @@ $(function(){
 <div class="container" >
   <div class="row row-padding-xs-100 " style="margin-top:30px;">
     <div class="col-xs-12 gal  row_padding-xs" style="border-bottom:1px solid #D3D3D3; padding-bottom:5px; padding-left:0px;">
-      <span style="font-size:25px; font-weight:500;">Sign in</span>
+      <span style="font-size:25px; font-weight:500;">Join</span>
     </div>
   </div>
   <div class="row row-padding-xs-100 " style="margin-top:30px;">
