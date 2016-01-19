@@ -119,6 +119,7 @@ function checkSubmit(){
       return false;
     }
   }
+  alert('천진우 ㅎㅇ');
   $("#formHidden").submit();
 }
 function makePrice(option){
