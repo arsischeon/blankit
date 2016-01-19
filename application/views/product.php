@@ -76,6 +76,7 @@ $(function(){
   });
   $("#type").on("selectmenuchange",function(event){
     moveInfo("type",event.target.value);
+    makePrice(event.target.value);
   });
   $("#size").selectmenu({
     width: 80,
@@ -96,7 +97,7 @@ $(function(){
     $("div[id='"+event.target.id+"']").css("border","3px solid red");
     moveInfo("color",event.target.id);
   });
-
+  makePrice("default");
 });
 function moveInfo(dataType,data){
   $("input[name='"+dataType+"']").val(data);
@@ -119,6 +120,26 @@ function checkSubmit(){
     }
   }
   $("#formHidden").submit();
+}
+function makePrice(option){
+  var init;
+  var actual;
+  switch($("#storeType").val()){
+    case "1 ":
+      init=30000;
+      if(option=="2")actual=init+7000;
+      $("#priceSpan").text(actual+"원");
+    break;
+    case "2 ":
+      init=21000;
+      $("#priceSpan").text(actual+"원");
+    break;
+    case "3 ":
+      init=19000;
+      if(option=="2")actual=init+1000;
+      $("#priceSpan").text(actual+"원");
+    break;
+  }
 }
 </script>
   <div class="banner">
@@ -167,7 +188,7 @@ function checkSubmit(){
 
 	$PRICE =  number_format($storePrice, 0, '.', ','); // 가격 천 단위 콤마 넣어주기
 ?>
-
+<input style="hidden" type="text" id="storeType" value="<?echo $storeType?> ">
 <div class="container" >
   <div class="row" style="padding-bottom:30px; border-bottom: 1px solid  #D3D3D3;">
     <p style="display:block; text-align:center; font-weight:bold; font-size:40px;"><?php echo $storeName;?></p>
@@ -224,7 +245,7 @@ function checkSubmit(){
         <div class="col-xs-12">
           <div class="options">
             <span class="options_left">가격</span>
-            <span class="options_right" style="margin-top:5px;height:25px;"><?php echo $PRICE;?>원</span>
+            <span class="options_right" style="margin-top:5px;height:25px;" id="priceSpan"></span>
             <div style="clear: both;"></div>
           </div>
         </div>
