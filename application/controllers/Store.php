@@ -69,7 +69,7 @@ class Store extends CI_Controller {
 		$this->store_model->toCart($type, $color, $size, $amount, $storeId, $storeType);
 		
 		$this->load->helper('url');
-		redirect('/main');
+		redirect('/store/product');
 	}
 
 }
