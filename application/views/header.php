@@ -77,7 +77,7 @@
             <li><a class="navbar-right" href="/login">login</a></li>
             <li><a class="navbar-right" href="/join">join</a></li>
             <li><a class="navbar-right" href="#">mypage</a></li>
-            <li><a style="margin-right:40px;" class="navbar-right" href="#">submit</a></li>
+            <li><a style="margin-right:40px;" class="navbar-right" href="/submit">submit</a></li>
           </ul>
     </div>
 
