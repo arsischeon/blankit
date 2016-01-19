@@ -15,13 +15,14 @@ class Order_model extends CI_Model{
 		");
 	}
 	
-	public function order($receiver, $email, $phone1, $phone2, $phone3, $home1, $home2, $home3, $payer, $bank, $account, $notice){
+	public function order($receiver, $email, $phone1, $phone2, $phone3, $home1, $home2, $home3, $payer, $bank, $account, $notice, $totalPrice){
 		$home = $home1 . "/" . $home2 . "/" . $home3;
-		$phone = $phone1 . "/" . $phone2 . "/" . $phone3;
+		$phone = $phone1 . $phone2 . $phone3;
+		$date = date();
 		
 		return $this->db->query("
 		INSERT INTO ORDER(order_date, order_price, order_status, order_home, order_receiver, order_phone, order_email, order_name, order_bank, order_account, order_notice)
-		VALUES ('', '', '0', '$home', '$receiver', '$phone', '$email', '$payer', '$bank', '$account', '$notice');
+		VALUES ('$date', '$totalPrice', '0', '$home', '$receiver', '$phone', '$email', '$payer', '$bank', '$account', '$notice');
 		");
 	}
 	

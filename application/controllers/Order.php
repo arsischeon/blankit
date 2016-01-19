@@ -32,9 +32,10 @@ class Order extends CI_Controller {
 		 $bank = $this->input->post('bank');
 		 $account = $this->input->post('account');
 		 $notice = $this->input->post('notice');
+		 $totalPrice = $this->input->post('totalPrice');
 		
 		 $this->load->model('order_model');
-		 $this->order_model->order($receiver, $email, $phone1, $phone2, $phone3, $home1, $home2, $home3, $payer, $bank, $account, $notice);
+		 $this->order_model->order($receiver, $email, $phone1, $phone2, $phone3, $home1, $home2, $home3, $payer, $bank, $account, $notice, $totalPrice);
 		 
 		 //본래 페이지로 다시 redirect
 		 $completeUrl = "http://blankit.kr/order/complete";
