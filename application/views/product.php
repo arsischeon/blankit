@@ -84,7 +84,7 @@ $(function(){
   $("#size").on("selectmenuchange",function(event){
     moveInfo("size",event.target.value);
   });
-  $("#amount").spinner({min: 1}).spinner("value",1);
+  $("#amount").spinner({min: 1}).spinner("value",1).spinner({start:moveInfo("amount",event.target.value);});
   $("#amount").on("spinchange",function(event){
     moveInfo("amount",event.target.value);
   });
