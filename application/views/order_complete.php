@@ -105,11 +105,13 @@ $(function(){
 
 <?php 
 	$urlPath = "$_SERVER[REQUEST_URI]";
-	echo $urlPath;
 	$explodePath = explode('/', $urlPath);
-	$numPath = $explodePath[2];
-	echo $numPath;
-
+	$backPath = $explodePath[2];
+	
+	$explodeBackPath =  explode('&', $backPath);
+	$codeNum = explode('=', $explodeBackPath[0]);
+	$bank = explode('=', $explodeBackPath[1]);
+	$account = explode('=', $explodeBackPath[2]);
 ?>
 
 </div>
@@ -125,8 +127,8 @@ $(function(){
   </div>
 </div>
 <div class="container-fluid" style="background:#F5F6F7; padding:40px 0px; text-align:center;  display:block;">
-  <p class="title2">주문번호: 00000000</p>
-  <p class="title2">입금계좌: 우리은행 1002-740-0000</p>
+  <p class="title2">주문번호: <?php echo codeNum[1];?></p>
+  <p class="title2">입금계좌: <?php echo bank[1];?> <?php echo account[1];?></p>
 </div>
 <div class="container" >
   <div class="row row-padding-xs-100 " style="margin-top:30px; text-align:center;  display:block;">
