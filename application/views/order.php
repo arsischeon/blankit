@@ -341,7 +341,7 @@ $(function(){
 
   <div class="row row-padding-xs-100 " style="margin-top:30px; ">
     <div style="border-top: 1px solid #D3D3D3;padding-top:25px; display:block;  text-align:center;">
-      <a href="#"><div style="padding:7px 15px; border-radius:15px; width:150px;" class="myButton">주문하기</div></a>
+      <a href="/order/func_order_ok"><div style="padding:7px 15px; border-radius:15px; width:150px;" class="myButton">주문하기</div></a>
     </div>
 
   </div>
