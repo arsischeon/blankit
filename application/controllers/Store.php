@@ -55,15 +55,19 @@ class Store extends CI_Controller {
 		$this->load->view('header');
 		$this->load->view('product',$data);
 		$this->load->view('footer');
-		//$data['type'] = $this->input->post('type');
 	}
 	public function toCart()
 	{
-		$data['type'] = $this->input->post('type');
-		//$data['color'] = $this->input->post('color');
-		//$data['size'] = $this->input->post('size');
-		//$data['amount'] = $this->input->post('amount');
-		$this->load->view('toCart',$data);
+		$type = $this->input->post('type');
+		$color = $this->input->post('color');
+		$size= $this->input->post('size');
+		$amount = $this->input->post('amount');
+		$storeId = $this->input->post('storeId');
+		$storeType = $this->input->post('storeType');
+		
+		$this->load->model('store_model');
+		$this->store_model->toCart($type, $color, $size, $amount, $storeId, $storeType);
+		
 	}
 
 }
