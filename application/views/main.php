@@ -299,7 +299,7 @@ $(window).resize(function(){
 <!-- 데스크탑 시작 -->
 
 
-<div class="row hidden-sm hidden-xs">
+<div class="row hidden-sm hidden-xs" style="margin-top:20px;">
 
 <?php
 
@@ -440,7 +440,7 @@ if($num==6){
   </div>
 
   </div>
-  <div class="container-fluid hidden-xs hidden-sm" style="padding:0px; margin-top:35px;">
+  <div class="container-fluid hidden-xs hidden-sm" style="padding:0px; margin-top:45px;">
     <img src="/source/image/main_guide.png" class="img img-responsive">
   </div>
 
