@@ -350,7 +350,7 @@ function checkSubmit(){
         <div class="col-xs-12">
           <div class="submit_button"><a
             onclick="checkSubmit();"
-  class="myButton">펀딩하기</a></div>
+  class="myButton">구매하기</a></div>
         </div>
       </div>
     </div>
