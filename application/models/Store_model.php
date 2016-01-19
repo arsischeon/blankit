@@ -23,9 +23,31 @@ class Store_model extends CI_Model{
 	}
 	
 	public function toCart($type, $color, $size, $amount, $storeId, $storeType){
+		if($storeType == 1){
+			if($type == 1){
+				$init = 30000;
+			}
+			else if($type ==2){
+				$init = 37000;
+			}
+		}
+		else if($storeType == 2){
+			$init = 21000;
+		}
+		else if($storeType == 3){
+			if($type == 1){
+				$init = 19000;
+			}
+			else if($type ==2){
+				$init = 20000;
+			}	
+		}
+		$price = $amount * $init; // 개당 가격 * 수량
+		
+		
 		$this->db->query("
 		INSERT INTO CART (user_id, store_id, cart_type, cart_color, cart_size, cart_num, cart_price)
-		VALUES ('1','$storeId','$type','$color','$size','$amount','1234');
+		VALUES ('1','$storeId','$type','$color','$size','$amount','$price');
 		");
 	}
 }
