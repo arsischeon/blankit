@@ -55,6 +55,7 @@ class Store extends CI_Controller {
 		$this->load->view('header');
 		$this->load->view('product',$data);
 		$this->load->view('footer');
+		$data['type'] = $this->input->post('type');
 	}
 	public function toCart()
 	{
@@ -62,7 +63,7 @@ class Store extends CI_Controller {
 		//$data['color'] = $this->input->post('color');
 		//$data['size'] = $this->input->post('size');
 		//$data['amount'] = $this->input->post('amount');
-		$this->load->view('toCart',$data['type'] = $this->input->post('type'));
+		$this->load->view('toCart',product().$data['type']);
 	}
 
 }
