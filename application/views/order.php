@@ -281,7 +281,7 @@ $(function(){
   </div>
 </div>
 
-<form action="order/func_order_ok" method="post">
+
   <div class="row row-padding-xs-100 " style="margin-top:10px;">
     <div class="menu">받으시는 분</div>
     <input id="name2" class="menu_input" type="text">
@@ -336,7 +336,7 @@ $(function(){
       <div class="menu title2">입금 계좌번호</div>
       <input class="menu_input" placeholder="입금할 계좌번호" style="width:200px;" type="text">
     </div>
-</form>
+
 
 
   <div class="row row-padding-xs-100 " style="margin-top:30px; ">
