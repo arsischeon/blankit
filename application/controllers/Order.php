@@ -9,7 +9,7 @@ class Order extends CI_Controller {
 		$data['cart']=$this->order_model->cart();
 		
 		$this->load->view('header');
-		$this->load->view('order');
+		$this->load->view('order',$data);
 		$this->load->view('footer');
 	}
 	public function complete()
