@@ -20,8 +20,8 @@ class Order extends CI_Controller {
 	}
 	public function func_order_ok()
 	{
-		//$data['bank'] = $this->input->post('bank');
-		//$this->load->view('func_order_ok', $data);
+		$data['bank'] = $this->input->post('bank');
+		$this->load->view('func_order_ok', $data);
 		
 	}
 }
