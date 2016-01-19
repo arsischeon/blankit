@@ -441,3 +441,15 @@ if($num==6){
   <div class="container-fluid hidden-xs hidden-sm" style="padding:0px; margin-top:35px;">
     <img src="/source/image/main_guide.png" class="img img-responsive">
   </div>
+
+  <!-- footer 시작 -->
+  <div class="container-fluid">
+  <div class="row">
+    <div class="col-md-12" style=" background: black; height:250px;">
+
+    </div>
+  </div>
+  </div>
+  </div>
+  </body>
+  </html>
