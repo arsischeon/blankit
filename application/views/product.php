@@ -399,7 +399,7 @@ function makePrice(option){
   </div>
 <div class="row row_padding-xs" style="margin-top:20px;">
 
-  </div>
+</div>
 
 
 </div>
