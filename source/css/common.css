@@ -129,12 +129,15 @@ a, a:hover, a:visited, a:link, a:active{
    .row_title{
      text-align: center;
      font-weight: bold;
-     font-size: 25px;
+     font-size: 16px;
+     color:#655453;
+     margin-bottom: 11px;
    }
    .row_desc{
      text-align: center;
      font-weight:normal;
-     font-size: 16px;
+     font-size: 12px;
+     color:#655453;
    }
   .grey{
     color: #868686;
