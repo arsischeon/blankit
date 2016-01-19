@@ -359,9 +359,11 @@ $(window).resize(function(){
 <div class="container-fluid">
 <div class="row" style="margin-top: 20px;">
   <div class="row-md-12" style="background: #F5F6F7; padding-top:50px; padding-bottom:50px;">
-    <p style="font-size:21px; font-weight:bold; text-align:center; margin-top:15px;">당신도 League Of Legend를 하세요!</p>
-    <p style="font-size:13px; font-weight:regular; text-align:center;">블랭킷은 좋은 서비스 입니다. 신진 디자이너에게 밥을 사주세요</p>
-    <div class="submit_button"><a href="#" class="myButton">submit</a></div>
+    <p style="font-size:21px; font-weight:bold; text-align:center; margin-top:15px;">당신도 함께해주세요!</p>
+    <p style="font-size:13px; font-weight:regular; text-align:center;">포트폴리오에 묵혀둔 작품이 있나요?<br>
+제작비용 0원에 당신만의 제품을 선보이세요.<br>
+블랭킷은 신진 아티스트를 응원합니다.</p>
+    <div class="submit_button"><a href="#" class="myButton">내 작품 판매하기</a></div>
 
   </div>
 </div>
@@ -436,4 +438,7 @@ if($num==6){
         } ?>
   </div>
 
+  </div>
+  <div class="container-fluid">
+    <img src="/source/image/main_guide.png" class="img img-responsive">
   </div>

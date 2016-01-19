@@ -9,10 +9,10 @@ class Mypage extends CI_Controller {
 		$this->load->view('mypage_order');
 		$this->load->view('footer');
 	}
-	public function complete()
+	public function info()
 	{
 		$this->load->view('header');
-		$this->load->view('order_complete');
+		$this->load->view('mypage_info');
 		$this->load->view('footer');
 	}
 }
