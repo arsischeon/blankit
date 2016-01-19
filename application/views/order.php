@@ -133,7 +133,7 @@ $(function(){
     </div>
   </div>
   <div class="row row-padding-xs-100 " style="margin-top:30px;">
-    <span class="title1">주문리스트 확인</span>
+    <span class="title1">주문 리스트 확인</span>
   </div>
   <div class="row row-padding-xs-100 " style="margin-top:10px;">
   
@@ -141,8 +141,9 @@ $(function(){
    <!-- 주문 목록 반복되는 블럭 시작 -->
    <?php
    foreach ($cart->result() as $row){
-   	   	
+   	
    	$PRICE =  number_format($row->cart_price, 0, '.', ','); // 가격 포맷
+   	$addPRICE += $row->cart_price * $row->cart->num;
    ?>
 
     <div style="padding: 10px 5px 0px 5px;" class=" col-xs-12 col-sm-6 col-md-6 col-lg-6">
@@ -187,8 +188,8 @@ $(function(){
     
   </div>
   <div class="row row-padding-xs-100 " style="margin-top:10px;">
-    <span class="order_result_2">총 주문금액 00,000원</span>
-    <span class="order_result_1">상품 총 금액 00,000원 + 배송비 0,000원</span>
+    <span class="order_result_2">총 주문금액 <?php echo number_format($addPrice + 2500, 0, '.', ',');?>원</span>
+    <span class="order_result_1">상품 총 금액 <?php echo number_format($addPrice, 0, '.', ',');?>원 + 배송비 2,500원</span>
   </div>
 
   <!-- 페이지 로딩시 자동으로 채워지는 부분 *시작* -->
