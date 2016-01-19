@@ -332,7 +332,7 @@ function submitCheck(){
       <div class="menu title2">입금 계좌번호</div>
       <input class="menu_input" placeholder="입금할 계좌번호" style="width:200px;" type="text" name="account">
     </div>
-    <input type="text" name="totalPrice" value="<?echo $addPrice + 2500;?>" style="display:none">
+    <input type="text" name="totalPrice" value="<?echo $addPRICE + 2500;?>" style="display:none">
 </form>
 
   <div class="row row-padding-xs-100 " style="margin-top:30px; ">
