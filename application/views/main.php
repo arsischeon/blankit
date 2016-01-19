@@ -48,7 +48,7 @@
   }
   .col-md-five{
     width:19.6%;
-    padding: 10px 10px;
+    padding: 5px 5px;
     display: inline-block;
     vertical-align: top;
     /*background: black;
