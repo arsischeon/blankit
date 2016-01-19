@@ -192,6 +192,9 @@ function makePrice(option){
 
 	$PRICE =  number_format($storePrice, 0, '.', ','); // 가격 천 단위 콤마 넣어주기
 ?>
+
+
+
 <input style="display:none;" type="text" id="storeType" value="<?echo $storeType?> ">
 <div class="container" >
   <div class="row" style="padding-bottom:30px; border-bottom: 1px solid  #D3D3D3;">
