@@ -71,7 +71,7 @@
 $(function(){
   $("#root_container").css("height",$(".banner").height()+"px");
   $("#type").selectmenu({
-    width: 100,
+    width: 220,
     height:50
   });
   $("#type").on("selectmenuchange",function(event){
