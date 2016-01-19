@@ -143,7 +143,7 @@ $(function(){
    foreach ($cart->result() as $row){
    	
    	$PRICE =  number_format($row->cart_price, 0, '.', ','); // 가격 포맷
-   	$addPRICE += $row->cart_price * $row->cart->num;
+   	$addPRICE += $row->cart_price * $row->cart_num;
    ?>
 
     <div style="padding: 10px 5px 0px 5px;" class=" col-xs-12 col-sm-6 col-md-6 col-lg-6">
