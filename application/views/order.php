@@ -217,7 +217,7 @@ $(function(){
     </div>
     <div class="row row-padding-xs-100 " style="margin-top:10px;">
       <div class="menu title2">이메일</div>
-      <input id="email1" class="menu_input" style="width:200px;" type="text">
+      <input id="email1" class="menu_input" style="width:200px;" type="text" value=<?php echo '"' . $userEmail . '"';?>>
     </div>
     <div class="row row-padding-xs-100 " style="margin-top:10px;">
       <div class="menu title2">휴대전화</div>
@@ -229,9 +229,9 @@ $(function(){
       <div class="menu title2" style="  vertical-align: top;line-height: 100%;padding-top: 5px;">배송지</div>
       <div style="display:inline-block;width:210px;">
         <!-- 주소와 우편번호를 입력할 <input>들을 생성하고 적당한 name과 class를 부여한다 -->
-        <input type="text" name="" class="margin-bottom-5 menu_input" placeholder="우편번호" id="location1_1" value="" /><br />
-        <input type="text" name="" class="margin-bottom-5 menu_input"  placeholder="기본주소" id="location1_2" value="" /><br />
-        <input type="text" name="" class="margin-bottom-5 menu_input" placeholder="상세주소" id="location1_3" value="" /><br />
+        <input type="text" name="" class="margin-bottom-5 menu_input" placeholder="우편번호" id="location1_1" value=<?php echo '"' . $userHome . '"';?> /><br />
+        <input type="text" name="" class="margin-bottom-5 menu_input"  placeholder="기본주소" id="location1_2" value=<?php echo '"' . $userHome2 . '"';?> /><br />
+        <input type="text" name="" class="margin-bottom-5 menu_input" placeholder="상세주소" id="location1_3" value=<?php echo '"' . $userHome3 . '"';?> /><br />
 
         <!-- jQuery와 Postcodify를 로딩한다 -->
 
