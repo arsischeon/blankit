@@ -125,16 +125,16 @@ function makePrice(option){
   var init;
   var actual;
   switch($("#storeType").val()){
-    case "1":
+    case "1 ":
       init=30000;
       if(option=="2")actual=init+7000;
       $("#priceSpan").text(actual+"원");
     break;
-    case "2":
+    case "2 ":
       init=21000;
       $("#priceSpan").text(actual+"원");
     break;
-    case "3":
+    case "3 ":
       init=19000;
       if(option=="2")actual=init+1000;
       $("#priceSpan").text(actual+"원");
