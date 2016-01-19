@@ -169,7 +169,7 @@ $(function(){
           <span class="order_title">제품정보</span>
         </div>
         <div class="col-xs-9">
-          <span class="order_content">[<?php echo $row->artist;?> 아티스트] <?php echo $row->store_name;?></span>
+          <span class="order_content">[아티스트 <?php echo $row->artist;?>] <?php echo $row->store_name;?></span>
         </div>
       </div>
       <div class="row">
