@@ -68,9 +68,9 @@ class Store extends CI_Controller {
 		$this->load->model('store_model');
 		$this->store_model->toCart($type, $color, $size, $amount, $storeId, $storeType);
 		
-		//$this->load->helper('url');
+		$this->load->helper('url');
 		//redirect('/store/product');
-		$this->load->library(‘user_agent’)
+		//$this->load->library(‘user_agent’)
 		redirect($this->agent->referrer());
 	}
 
