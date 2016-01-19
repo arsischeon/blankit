@@ -288,8 +288,8 @@ function makePrice(option){
               <div name="color" id="2" class="round" style="background:#7b1719; "></div>
               <div name="color" id="3" class="round" style="background:#efeee9; "></div>
               <div name="color" id="4" class="round" style="background:#14130f; "></div>
-  			      <div name="color" id="5" class="round" style="background:#bfc0c5; "></div>
-  			      <div name="color" id="6" class="round" style="background:#1f233c; "></div>
+  			  <div name="color" id="5" class="round" style="background:#bfc0c5; "></div>
+  			  <div name="color" id="6" class="round" style="background:#1f233c; "></div>
             </div>
             <div style="clear: both;"></div>
           </div>
@@ -325,10 +325,10 @@ function makePrice(option){
                 <option value="default">선택</option>
                 <option value="1">토트&크로스</option>
                 <option value="2">크로스</option>
-				        <option value="3">토트(아이보리)</option>
-				        <option value="4">토트(카키)</option>
-				        <option value="5">토트(네이비)</option>
-				        <option value="6">토트(쁠랙)</option>
+				<option value="3">토트(아이보리)</option>
+				<option value="4">토트(카키)</option>
+				<option value="5">토트(네이비)</option>
+				<option value="6">토트(쁠랙)</option>
               </select>
             </div>
             <div style="clear: both;"></div>

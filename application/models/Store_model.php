@@ -25,21 +25,69 @@ class Store_model extends CI_Model{
 	public function toCart($type, $color, $size, $amount, $storeId, $storeType){
 		if($storeType == 1){
 			if($type == 1){
+				$type = "맨투맨";
 				$init = 30000;
 			}
-			else if($type ==2){
+			else if($type == 2){
+				$type = "후드";
 				$init = 37000;
+			}
+			//색상
+			if($color == 1){
+				$color = "챠콜";
+			}
+			else if ($color == 2){
+				$color = "자주";
+			}
+			else if ($color == 3){
+				$color = "아이보리";
+			}
+			else if ($color == 4){
+				$color = "블랙";
+			}
+			else if ($color == 5){
+				$color = "그레이";
+			}
+			else if ($color == 6){
+				$color = "네이비";
+			}
+			//사이즈
+			if($size == 1){
+				$size = "여성";
+			}
+			else if($size ==2){
+				$size = "남성";
 			}
 		}
 		else if($storeType == 2){
 			$init = 21000;
+			if($type == 1){
+				$type = "토트&크로스";
+			}
+			else if($type == 2){
+				$type = "크로스";
+			}
+			else if($type == 3){
+				$type = "토트(아이보리)";
+			}
+			else if($type == 4){
+				$type = "토트(카키)";
+			}
+			else if($type == 5){
+				$type = "토트(네이비)";
+			}
+			else if($type == 6){
+				$type = "토트(블랙)";
+			}
 		}
 		else if($storeType == 3){
 			if($type == 1){
 				$init = 19000;
+				$type = "중형";
 			}
 			else if($type ==2){
 				$init = 20000;
+				$type = "대형";
 			}	
 		}
 		$price = $amount * $init; // 개당 가격 * 수량
