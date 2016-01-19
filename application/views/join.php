@@ -83,8 +83,31 @@ $(function(){
       break;
     }
   });
-  // $("#artist_type").selectmenu();
+
+  //  $("#portfolio").dropzone({ url: "/file/post",maxFilesize:1 });
+  // var myDropzone = new Dropzone("div#portfolio", { url: "/main",maxFilesize:1,maxFiles:1});
+
+var myDropzone = new Dropzone("#portfolio", { url: "/main",autoProcessQueue: false});
+ myDropzone.on("addedfile", function(file) {
+   /* Maybe display some more file information on your page */
+   alert('dd');
+ });
+ $("#sibal").on("click",function(){
+   myDropzone.processQueue();
+ });
 });
+Dropzone.autoDiscover = false;
+// Dropzone.options.portfolio = {
+//         url : '/main',
+//         paramName: "file", // The name that will be used to transfer the file
+//         maxFiles:1,
+//         autoProcessQueue: false,
+//         maxFilesize: 5, // MB
+//         acceptedFiles: ".jpg, .png, .jpeg",
+//         createImageThumbnails: true,
+//         maxThumbnailFilesize: 15, // MB,
+//     };
+
 </script>
 <div class="banner">
 
@@ -203,7 +226,9 @@ $(function(){
           </div>
           <div class="row row-padding-xs-100 " style="margin-top:10px;">
             <div class="menu title2">포트폴리오</div>
-            <form id="portfolio" action="/login" class="dropzone"></form>
+            <form id="portfolio" class="dropzone" action="/main"></form>
+            <!-- <div id="portfolio"></div> -->
+            <button id="sibal"></button>
           </div>
         </div>
         <div class="row row-padding-xs-100 " style="margin-top:30px;">
