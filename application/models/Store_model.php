@@ -22,9 +22,9 @@ class Store_model extends CI_Model{
 		");
 	}
 	
-	public function xxx(){
-		return $this->db->query("
+	//public function postProducts(){
+		//return $this->db->query("
 		
-		");
-	}
+		//");
+	//}
 }
