@@ -84,7 +84,7 @@ $(function(){
   $("#size").on("selectmenuchange",function(event){
     moveInfo("size",event.target.value);
   });
-  $("#amount").spinner({min: 1}).spinner("value",1).spinner({start:function(){moveInfo("amount","1");}});
+  $("#amount").spinner({min: 1}).spinner("value",1);
   $("#amount").on("spinchange",function(event){
     moveInfo("amount",event.target.value);
   });
@@ -100,6 +100,10 @@ $(function(){
 });
 function moveInfo(dataType,data){
   $("input[name='"+dataType+"']").val(data);
+}
+function checkSubmit(){
+  if($("input[name='type']").val()=="default")return false;
+  // if($("#type"))
 }
 </script>
   <div class="banner">
@@ -354,8 +358,8 @@ function moveInfo(dataType,data){
 </div>
 <form action="#" method="post" >
   <!-- style="display:none" -->
-  <input type="text" name="type">
+  <input type="text" name="type" value="default">
   <input type="text" name="color"> //옷만
   <input type="text" name="size"> //옷만
-  <input type="text" name="amount">
+  <input type="text" name="amount" value="1">
 </form>
