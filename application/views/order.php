@@ -152,6 +152,9 @@ $(function(){
    		$userHome = $row->user_home;
    		$userHome2 = $row->user_home2;
    		$userHome3 = $row->user_home3;
+   		
+   		$userPhone1 = str_split($userPhone,3);
+   		$userPhone2 = str_split($userPhone,7);
    	}
    	
    	$PRICE =  number_format($row->cart_price, 0, '.', ','); // 가격 포맷
@@ -222,8 +225,8 @@ $(function(){
     <div class="row row-padding-xs-100 " style="margin-top:10px;">
       <div class="menu title2">휴대전화</div>
       <input id="phone1_1" class="menu_input_phone_1" type="text" value="010">-
-      <input id="phone1_2" class="menu_input_phone_2" type="text">-
-      <input id="phone1_3" class="menu_input_phone_2" type="text">
+      <input id="phone1_2" class="menu_input_phone_2" type="text" value=<?php echo '"' . $userPhone1 . '"';?>>-
+      <input id="phone1_3" class="menu_input_phone_2" type="text" value=<?php echo '"' . $userPhone2 . '"';?>>
     </div>
     <div class="row row-padding-xs-100 " style="margin-top:10px;">
       <div class="menu title2" style="  vertical-align: top;line-height: 100%;padding-top: 5px;">배송지</div>
