@@ -102,8 +102,23 @@ function moveInfo(dataType,data){
   $("input[name='"+dataType+"']").val(data);
 }
 function checkSubmit(){
-  if($("input[name='type']").val()=="default")return false;
-  // if($("#type"))
+  if($("input[name='type']").val()=="default"){
+    alert("타입을 선택해주세요");
+    return false;
+  }
+  if($("#color").length!=0){
+    if($("input[name='color']").val()=="default"){
+      alert('컬러를 선택해주세요');
+      return false;
+    }
+  }
+  if($("#size").length!=0){
+    if($("input[name='size']").val()=="default"){
+      alert("사이즈를 선택해주세요");
+      return false;
+    }
+  }
+  $("formHidden").submit();
 }
 </script>
   <div class="banner">
@@ -331,7 +346,9 @@ function checkSubmit(){
       </div>
       <div class="row options_row" style="margin-top:20px;">
         <div class="col-xs-12">
-          <div class="submit_button"><a href="/store/toCart" class="myButton">펀딩하기</a></div>
+          <div class="submit_button"><a
+            onclick="checkSubmit();"
+  class="myButton">펀딩하기</a></div>
         </div>
       </div>
     </div>
@@ -356,10 +373,9 @@ function checkSubmit(){
 
 
 </div>
-<form action="#" method="post" >
-  <!-- style="display:none" -->
+<form id="formHidden" action="/store/toCart" method="post" style="display:none">
   <input type="text" name="type" value="default">
-  <input type="text" name="color"> //옷만
-  <input type="text" name="size"> //옷만
+  <input type="text" name="color" value="default"> //옷만
+  <input type="text" name="size" value="default"> //옷만
   <input type="text" name="amount" value="1">
 </form>
