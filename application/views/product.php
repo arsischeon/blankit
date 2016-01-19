@@ -239,7 +239,7 @@ function checkSubmit(){
             <span class="options_left">타입</span>
             <div class="options_right">
               <select id="type">
-                <option value="">선택</option>
+                <option value="default">선택</option>
                 <option value="1">맨투맨</option>
                 <option value="2">후드</option>
               </select>
@@ -272,7 +272,7 @@ function checkSubmit(){
             <span class="options_left">사이즈</span>
             <div class="options_right">
               <select id="size">
-                <option value="">선택</option>
+                <option value="default">선택</option>
                 <option value="1">여성</option>
                 <option value="2">남성</option>
               </select>
@@ -292,7 +292,7 @@ function checkSubmit(){
             <span class="options_left">타입</span>
             <div class="options_right">
               <select id="type">
-                <option value="">선택</option>
+                <option value="default">선택</option>
                 <option value="1">토트&크로스</option>
                 <option value="2">크로스</option>
 				        <option value="3">토트(아이보리)</option>
@@ -316,7 +316,7 @@ function checkSubmit(){
             <span class="options_left">타입</span>
             <div class="options_right">
               <select id="type">
-                <option value="">선택</option>
+                <option value="default">선택</option>
                 <option value="1">중형</option>
                 <option value="2">대형</option>
               </select>
