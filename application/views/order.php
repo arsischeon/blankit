@@ -330,7 +330,7 @@ $(function(){
     </div>
     <div class="row row-padding-xs-100 " style="margin-top:10px;">
       <div class="menu title2">입금 은행</div>
-      <input class="menu_input" placeholder="입금할 은행" style="width:200px;" type="text">
+      <input class="menu_input" placeholder="입금할 은행" style="width:200px;" type="text" name="bank">
     </div>
     <div class="row row-padding-xs-100 " style="margin-top:10px;">
       <div class="menu title2">입금 계좌번호</div>

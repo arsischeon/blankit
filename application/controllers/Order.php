@@ -18,4 +18,10 @@ class Order extends CI_Controller {
 		$this->load->view('order_complete');
 		$this->load->view('footer');
 	}
+	public function func_order_ok()
+	{
+		$data['bank'] = $this->input->post('bank');
+		$this->load->view('func_order_ok', $data);
+		
+	}
 }
