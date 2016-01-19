@@ -95,6 +95,29 @@ input[type="radio"] + label{
   color:#443333;
   margin: 0px 0px 0px 3px;
 }
+.menu{
+  width:320px;
+  height:100%;
+  position: absolute;
+  left:50%;
+  bottom:0;
+  margin-left: -160px;
+
+  background: white;
+}
+.menu_item{
+  font-weight: bold;
+  color: #868686;
+  text-align: center;
+  display: inline-block;
+  width:32%;
+  height:100%;
+  cursor: pointer;
+}
+.menu_item:hover{
+  color: #96AFB5;
+  border-bottom:2px solid #96AFB5;
+}
 </style>
 <script>
 $(function(){
@@ -106,26 +129,27 @@ $(function(){
 </div>
 </div>
 <div class="container" >
-  <div class="row row-padding-xs-100 " style="margin-top:30px;">
-    <div class="col-xs-12 gal  row_padding-xs" style="border-bottom:1px solid #D3D3D3; padding-bottom:5px; padding-left:0px;">
-      <span style="font-size:25px; font-weight:500;">Order</span>
+  <div class="row row-padding-xs-100 " style="margin:40px 0px;;">
+    <div class="col-xs-12 gal" style="text-align:center;display:block;">
+      <span style="font-size:32px; font-weight:500;">MY BLANKIT</span>
     </div>
   </div>
+</div>
 
 
 
   <div class="container" >
-    <div class="row" style="margin-bottom:40px;">
+    <div class="row row-padding-xs-100" style="margin-bottom:40px;">
       <div class="col-md-12" style="position:relative; height:25px; border-bottom: 1.5px solid #D3D3D3;">
         <div class="menu">
-          <div class="menu_item">
-            <a href="/store">주문배송조회</a>
-          </div>
           <div class="menu_item" style="border-bottom:2px solid #96AFB5; color:#96AFB5;">
-            <a href="/store/cloth">내 정보관리</a>
+            <a href="/mypage">주문배송조회</a>
+          </div>
+          <div class="menu_item" >
+            <a href="/mypage/info">내 정보관리</a>
           </div>
           <div class="menu_item">
-            <a href="/store/ecobag">포트폴리오 관리</a>
+            <a href="#" onclick="alert('준비중 입니다.')">포트폴리오 관리</a>
           </div>
 
 
@@ -147,7 +171,7 @@ $(function(){
       <div class="row">
 
         <div class="col-xs-3">
-          <span class="order_title">제품코드</span>
+          <span class="order_title">주문번호</span>
         </div>
         <div class="col-xs-9">
           <span class="order_content">0000000</span>
@@ -155,15 +179,23 @@ $(function(){
       </div>
       <div class="row">
         <div class="col-xs-3">
-          <span class="order_title">제품정보</span>
+          <span class="order_title">주문일자</span>
         </div>
         <div class="col-xs-9">
-          <span class="order_content">[이윤지 아티스트] 개와고양이를 그리는 사람들이다요다요</span>
+          <span class="order_content">15-01-25</span>
         </div>
       </div>
       <div class="row">
         <div class="col-xs-3">
-          <span class="order_title">판매가격</span>
+          <span class="order_title">주문정보</span>
+        </div>
+        <div class="col-xs-9">
+          <span class="order_content">[이윤지 아티스트] 개와고양이를 그리는 사람들이다요다요 외 3</span>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-xs-3">
+          <span class="order_title">총 금액</span>
         </div>
         <div class="col-xs-9">
           <span class="order_content">20,000원</span>
@@ -171,22 +203,28 @@ $(function(){
       </div>
       <div class="row">
         <div class="col-xs-3">
-          <span class="order_title">배송비</span>
+          <span class="order_title">주문상태</span>
         </div>
         <div class="col-xs-9">
-          <span class="order_content">2,500원</span>
+          <span class="order_content">배송중</span>
         </div>
       </div>
       <div class="row">
         <div class="col-xs-3">
-          <span class="order_title">수량</span>
+          <span class="order_title">배송조회</span>
         </div>
         <div class="col-xs-9">
-          <span class="order_content">1</span>
+          <span class="order_content"><a href="#">조회</a></span>
         </div>
       </div>
     </div>
   </div>
     <? }?>
     <!-- 주문목록 반복되는 부분 끝 -->
+
   </div>
+    <div class="row row-padding-xs-100 " style="margin-top:30px;">
+      <a style="float:right; margin-right:5px;" href="#"><div class="myButton" style="padding-left:30px; padding-right:30px; font-size:15px; ">1:1 문의 바로가기</div></a>
+    </div>
+
+</div>

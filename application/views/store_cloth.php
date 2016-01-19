@@ -62,6 +62,7 @@
 .box:hover p{
   color: white;
 }
+
 </style>
 <script>
 $(function(){
