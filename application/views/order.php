@@ -165,7 +165,7 @@ $(function(){
           <span class="order_title">제품정보</span>
         </div>
         <div class="col-xs-9">
-          <span class="order_content">[이윤지 아티스트] 개와고양이를 그리는 사람들이다요다요</span>
+          <span class="order_content">[<?php echo $row->artist;?> 아티스트] <?php echo $row->store_name;?></span>
         </div>
       </div>
       <div class="row">
