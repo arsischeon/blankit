@@ -106,9 +106,9 @@ $(function(){
 <?php 
 	$urlPath = "$_SERVER[REQUEST_URI]";
 	echo $urlPath;
-	//$explodePath = explode('/', $urlPath);
-
-	//$numPath = $explodePath[3]; // 현재 URL 상품번호
+	$explodePath = explode('/', $urlPath);
+	$numPath = $explodePath[2];
+	echo $numPath;
 
 ?>
 
