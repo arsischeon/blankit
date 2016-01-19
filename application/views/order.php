@@ -141,8 +141,18 @@ $(function(){
    <!-- 주문 목록 반복되는 블럭 시작 -->
    <?php
    $addPRICE = 0;
+   $checker = 0;
    
    foreach ($cart->result() as $row){
+   	
+   	if($checker == 0){ // 한 번만 주소를 저장해두기
+   		$userName = $row->user_name;
+   		$userEmail = $row->user_email;
+   		$userPhone = $row->user_phone;
+   		$userHome = $row->user_home;
+   		$userHome2 = $row->user_home2;
+   		$userHome3 = $row->user_home3;
+   	}
    	
    	$PRICE =  number_format($row->cart_price, 0, '.', ','); // 가격 포맷
    	$addPRICE += $row->cart_price * $row->cart_num;
@@ -203,7 +213,7 @@ $(function(){
     </div>
     <div class="row row-padding-xs-100 " style="margin-top:10px;">
       <div class="menu" >보내시는 분</div>
-      <input id="name1" class="menu_input" type="text">
+      <input id="name1" class="menu_input" type="text" value=<?php echo '"' . $userName . '"';?>>
     </div>
     <div class="row row-padding-xs-100 " style="margin-top:10px;">
       <div class="menu title2">이메일</div>
