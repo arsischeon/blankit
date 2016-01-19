@@ -154,7 +154,7 @@ $(function(){
    		$userHome3 = $row->user_home3;
    		
    		$userPhone1 = str_split($userPhone,3);
-   		$userPhone2 = str_split($userPhone1[1],4);
+   		$userPhone2 = str_split($userPhone1[1].$userPhone1[2].$userPhone1[3],4);
    	}
    	
    	$PRICE =  number_format($row->cart_price, 0, '.', ','); // 가격 포맷
