@@ -74,7 +74,7 @@ $(function(){
     width: 100,
     height:50
   });
-  $("#type").on("change",function(){
+  $("#type").on("selectmenuchange",function(){
     alert('dd');
   });
   $("#size").selectmenu({
