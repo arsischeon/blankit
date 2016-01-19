@@ -133,6 +133,7 @@ function makePrice(option){
     break;
     case "2 ":
       init=21000;
+      actual=init;
       $("#priceSpan").text(actual+"원");
     break;
     case "3 ":
@@ -190,7 +191,7 @@ function makePrice(option){
 
 	$PRICE =  number_format($storePrice, 0, '.', ','); // 가격 천 단위 콤마 넣어주기
 ?>
-<input style="hidden" type="text" id="storeType" value="<?echo $storeType?> ">
+<input style="display:hidden" type="text" id="storeType" value="<?echo $storeType?> ">
 <div class="container" >
   <div class="row" style="padding-bottom:30px; border-bottom: 1px solid  #D3D3D3;">
     <p style="display:block; text-align:center; font-weight:bold; font-size:40px;"><?php echo $storeName;?></p>
