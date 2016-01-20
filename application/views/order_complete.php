@@ -108,12 +108,6 @@ $(function(){
 	$explodePath = explode('/', $urlPath);
 	$backPath = $explodePath[2];
 	
-	if(backPath == "complete"){
-		$homeUrl = "http://blankit.kr/";
-		$this->load->helper('url');
-		redirect($homeUrl);
-	}
-	
 	$explodeBackPath =  explode('&', $backPath);
 	$codeNum = explode('=', $explodeBackPath[0]);
 	$bank = explode('=', $explodeBackPath[1]);
