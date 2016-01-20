@@ -182,6 +182,7 @@ function submitCheck(){
    		$userPhone1 = str_split($userPhone,3);
    		$userPhone2 = str_split($userPhone1[1].$userPhone1[2].$userPhone1[3],4);
    	}
+   }
 
    foreach ($cart->result() as $row){
 
