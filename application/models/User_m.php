@@ -3,10 +3,9 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 class User_m extends CI_Model {
 	
-	$this->load->library('session');
 	public function __construct(){
 		$this->load->database();
-		//$this->load->library('session'); // 임시 추가해봄
+		$CI->load->library('session'); // 임시 추가해봄
 	}
 
 	var $details;
