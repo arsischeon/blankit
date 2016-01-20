@@ -8,9 +8,10 @@ class File extends CI_Controller {
 		if (!empty($_FILES)) {
 		  $tempFile = $_FILES['userfile']['tmp_name'];
 		  $targetPath = "/files/profile/";  //4
-		  $targetFile =  $targetPath. $_FILES['profile']['name'];  //5
+		  $targetFile =  $targetPath. $_FILES['userfile']['name'];  //5
 		  move_uploaded_file($tempFile,$targetFile); //6
 		}
+
 		// $config['upload_path'] = "/files/profile/";
 		//
 		// $this->load->library('upload', $config);
