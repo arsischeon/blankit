@@ -40,7 +40,7 @@
     <nav class="navbar navbar-default">
       <div class="container-fluid">
 
-        <div class="navbar-header">
+        <div class="navbar-header" style="padding-top: 10px;">
 
           <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
             <span class="sr-only"></span>
