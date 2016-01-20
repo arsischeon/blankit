@@ -17,11 +17,14 @@ class Login extends CI_Controller {
 		$this->load->model('login_model');
 		
 		if ($this->login_model->check_login($user_id, $user_pw)){
-			$data['result'] = "login success!";
-			//$data['info'] = $this->login_model->send_info();
+			//$data['result'] = "login success!";
+			//$data['info'] = $this->login_model->send_info(); 테스트 용도임
 		}
 		else {
-			$data['result'] = "login failure!";
+			//$data['result'] = "login failure!";
+			$redirectUrl = "http://blankit.kr/login?fail";
+			$this->load->helper('url');
+			redirect($redirectUrl);
 		}
 		
 		$this->load->view('test_result', $data);
