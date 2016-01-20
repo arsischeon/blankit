@@ -9,5 +9,11 @@ class Login extends CI_Controller {
 		$this->load->view('login');
 		$this->load->view('footer');
 	}
+	
+	public function func_login_check(){
+		$data['user_id'] = $this->input->post('user_id');
+		$data['user_pw'] = $this->input->post('user_pw');
+		$this->load->view('login_success', $data);
+	}
 
 }
