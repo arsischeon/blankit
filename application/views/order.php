@@ -297,7 +297,7 @@ function submitCheck(){
     <div style="display:inline-block;width:210px;">
       <!-- 주소와 우편번호를 입력할 <input>들을 생성하고 적당한 name과 class를 부여한다 -->
       <input type="text" class="margin-bottom-5 menu_input postcodify_postcode5" id="location2_1" placeholder="우편번호" value="" name="home1"/>
-      <a href="#"><button type="text" id="postcodify_search_button" class=" myButton">찾기</button></a><br />
+      <a href="#"><div  id="postcodify_search_button" class=" myButton">찾기</div></a><br />
       <input  id="location2_2" type="text" class="margin-bottom-5 menu_input postcodify_address"  placeholder="기본주소" value="" name="home2"/><br />
       <input id="location2_3" type="text" class="margin-bottom-5 menu_input postcodify_details" placeholder="상세주소" value="" name="home3"/><br />
 
@@ -306,7 +306,11 @@ function submitCheck(){
       <script src="//cdn.poesis.kr/post/search.min.js"></script>
 
       <!-- "검색" 단추를 누르면 팝업 레이어가 열리도록 설정한다 -->
-      <script> $(function() { $("#postcodify_search_button").postcodifyPopUp(); }); </script>
+      <script> $(function() { $("#postcodify_search_button").on("click",function(){postcodifyPopUp();
+      });
+    });
+
+      </script>
     </div>
   </div>
 
