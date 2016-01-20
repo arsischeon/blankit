@@ -168,9 +168,9 @@ function submitCheck(){
    $curDateNum = strtotime($curDate);
    $seed_date = strtoupper(dechex($curDateNum + $seed));
    //여기까지, OrderRandomId 생성
-
-   foreach ($cart->result() as $row){
-
+   
+   foreach ($address->result() as $row2){
+   
    	if($checker == 0){ // 한 번만 주소를 저장해두기
    		$userName = $row->user_name;
    		$userEmail = $row->user_email;
@@ -178,10 +178,12 @@ function submitCheck(){
    		$userHome = $row->user_home;
    		$userHome2 = $row->user_home2;
    		$userHome3 = $row->user_home3;
-
+   
    		$userPhone1 = str_split($userPhone,3);
    		$userPhone2 = str_split($userPhone1[1].$userPhone1[2].$userPhone1[3],4);
    	}
+
+   foreach ($cart->result() as $row){
 
    	$PRICE =  number_format($row->cart_price, 0, '.', ','); // 가격 포맷
    	$addPRICE += $row->cart_price * $row->cart_num;
