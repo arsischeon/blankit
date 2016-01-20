@@ -159,15 +159,17 @@ function submitCheck(){
    $addPRICE = 0;
    $checker = 0;
    
+   //OrderRandomId 생성
    foreach ($generateOrderRandomId->result() as $one){
    	$seed = $one->seed;
    }
    
    $curDate = date('Y-m-d H:i:s');
    $curDateNum = strtotime($curDate);
-   $seed_date = dechex($curDateNum + $seed);
+   $seed_date = strtoupper(dechex($curDateNum + $seed));
    
    echo $seed_date;
+   //여기까지, OrderRandomId 생성
 
    foreach ($cart->result() as $row){
 
