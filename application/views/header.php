@@ -51,18 +51,17 @@
 
           <a class="navbar-brand" href="/">
             <img id="logo" alt="blankit" src="
-<?
-  $actual_link = "http://$_SERVER[HTTP_HOST]$_SERVER[REQUEST_URI]";
-    if($actual_link=="http://blankit.kr/")
-      echo "/source/image/logo_white.png";
-    else
-      echo "/source/image/logo.png";
-
+	<?
+  	$actual_link = "http://$_SERVER[HTTP_HOST]$_SERVER[REQUEST_URI]";
+    	if($actual_link=="http://blankit.kr/")
+      		echo "/source/image/logo_white.png";
+    	else
+      		echo "/source/image/logo.png";
     ?>
 
             ">
           </a>
-          <?php //echo "Welcome" . $this->session->userdata('user_name')?>
+          <?php echo "Welcome" . $this->session->userdata('user_name')?>
         </div>
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1" style="    padding-top: 10px;">
           <ul class="nav navbar-nav">
@@ -86,16 +85,20 @@
           </ul>
           <ul class="nav navbar-nav navbar-right">
           	<?php
-          		/* if ($this->session->userdata('status')){
+          		//로그인 & 로그아웃 변화
+          		if ($this->session->userdata('status') == "1"){
           			echo '<li><a class="navbar-right main-page-navbar-right" href="/login/func_logout">logout</a></li>';
           		}
           		else {
           			echo '<li><a class="navbar-right main-page-navbar-right" href="/login">login/join</a></li>';
-          		} */
-
+          		} 
+				// my blankit & cart 로그인 시에만 뜨기
+          		if ($this->session->userdata('status') == "1"){
+          			echo '<li><a class="navbar-right main-page-navbar-right" href="/mypage">my blankit</a></li>
+            			<li><a class="navbar-right main-page-navbar-right" href="/order">cart</a></li>';
+          		}
           	?>
-            <li><a class="navbar-right main-page-navbar-right" href="/mypage">my blankit</a></li>
-            <li><a class="navbar-right main-page-navbar-right" href="#">cart</a></li>
+            
             <li><a style="" class="navbar-right main-page-navbar-right" href="/submit">help</a></li>
             <li><a style="margin-right:40px;" class="navbar-right" href="/submit"><div class="YourButton" style="margin-top: -5px;">내 작품 판매하기</div></a></li>
           </ul>
