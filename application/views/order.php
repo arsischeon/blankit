@@ -242,7 +242,7 @@ function submitCheck(){
     </div>
     <div class="row row-padding-xs-100 " style="margin-top:10px;">
       <div class="menu" >보내시는 분</div>
-      <input id="name1" class="menu_input" type="text" value=<?php echo '"' . $userName . '"';?>>
+      <input id="name1" class="menu_input" type="text" value=<?php echo '"' . $userName . '"';?> disabled>
     </div>
     <div class="row row-padding-xs-100 " style="margin-top:10px;">
       <div class="menu title2">이메일</div>
