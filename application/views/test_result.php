@@ -1,5 +1,7 @@
 <?php
 echo $result;
 echo "///";
-echo $details;
+echo $info[0];
+echo "///";
+echo $info[1];
 ?>

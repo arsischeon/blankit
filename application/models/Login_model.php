@@ -17,13 +17,21 @@ class Login_model extends CI_Model{
 		
 		if(count($login) == 1){
 			$this->details = $login[0];
-			//$this->set_session();
-			return $details;
+			$this->send_info();
+			return true;
 		}
 		else{
 			return false;
 		}
 	
+	}
+	
+	public function send_info(){
+		return array(
+				'user_name'=>$this->details->user_name,
+				'user_email'=>$this->details->user_email
+				
+		);
 	}
 	
 	public function set_session(){
