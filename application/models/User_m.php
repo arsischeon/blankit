@@ -5,7 +5,7 @@ class User_m extends CI_Model {
 	
 	public function __construct(){
 		$this->load->database();
-		$CI->load->library('session'); // 임시 추가해봄
+		$this->load->library('session'); // 임시 추가해봄
 	}
 
 	var $details;
