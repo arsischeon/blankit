@@ -91,11 +91,11 @@ class Store_model extends CI_Model{
 			}	
 		}
 		$price = $amount * $init; // 개당 가격 * 수량
-		
+		$user_id_SESSION = $this->session->userdata('user_id');
 		
 		$this->db->query("
 		INSERT INTO CART (user_id, store_id, cart_type, cart_color, cart_size, cart_num, cart_price, cart_price_total)
-		VALUES ('jinwoo','$storeId','$type','$color','$size','$amount','$init','$price');
+		VALUES ('$user_id_SESSION','$storeId','$type','$color','$size','$amount','$init','$price');
 		");
 	}
 }
