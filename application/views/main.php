@@ -120,7 +120,7 @@
   }
   .myButton:hover {
   	background-color:#687c87;
-  	color: white;
+  	color: white !important;
   	text-decoration: none;
   }
   .myButton:active {

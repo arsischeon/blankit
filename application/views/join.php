@@ -86,7 +86,7 @@ $(function(){
 
   //  $("#portfolio").dropzone({ url: "/file/post",maxFilesize:1 });
   // var myDropzone = new Dropzone("div#portfolio", { url: "/main",maxFilesize:1,maxFiles:1});
-  var myDropzone = new Dropzone("#profile", { url: "/file/profile", paramName: "userfile",maxFiles:1,addRemoveLinks:true,dictRemoveFile:"파일 삭제",dictMaxFilesExceeded:"1개만 업로드할 수 있습니다."});
+  var myDropzone = new Dropzone("#profile", { url: "/file/profile", paramName: "userfile",maxFiles:1,addRemoveLinks:true,autoProcessQueue: false,dictRemoveFile:"파일 삭제",dictMaxFilesExceeded:"1개만 업로드할 수 있습니다."});
   myDropzone.on("addedfile", function(file) {
   });
 
@@ -108,7 +108,52 @@ Dropzone.autoDiscover = false;
 //         createImageThumbnails: true,
 //         maxThumbnailFilesize: 15, // MB,
 //     };
+function submitCheck(){
+	  if($("input[id='info_checkbox']:checked").length==0){
+	  	alert("개인정보 수집 및 안내에 동의해주세요");
+	  	return;
+    }
+    if($("input[id='usage_checkbox']:checked").length==0){
+      alert("이용약관에 동의해주세요");
+      return;
+    }
+    if($("input[name='id']").val()==''){
+      alert("아이디를 입력해주세요");
+      return;
+    }
+    //진우 // 아이디 중복확인 넣어야함
+    if($("#id_check").val()==''){
+      alert("아이디 중복확인을 해주세요");
+      return;
+    }
+    if($("input[name='pw']").val()==''){
+      alert("비밀번호를 입력해주세요");
+      return;
+    }
+    if($("input[name='pw']").val()!=$("#pw_check").val()){
+      alert("비밀번호 확인이 올바르지 않습니다.");
+      return;
+    }
+    if($("input[name='name']").val()==''){
+      alert("이름을 입력해주세요");
+      return;
+    }
+    if($("input[name='phone2']").val()==''||$("input[name='phone3']").val()==''){
+        alert("휴대전화를 입력해주세요");
+        return;
+    }
+    //진우 // 핸드폰 인증 넣어야함
+    if($("#phone_check").val()==''){
+      alert("핸드폰 인증을 해주세요");
+      return;
+    }
+    if($("input[name='type']:checked").length==0){
+      alert("회원구분을 선택해주세요");
+      return;
+    }
 
+	  $("#formform").submit();
+	}
 </script>
 <div class="banner">
 
@@ -170,34 +215,37 @@ Dropzone.autoDiscover = false;
   <div class="row row-padding-xs-100 " style="margin-top:30px;">
     <span class="title1">회원 정보</span>
   </div>
+  <form action="#" method="post" id="formform">
   <div class="row row-padding-xs-100 " style="margin-top:10px;">
     <div class="menu">아이디</div>
-    <input class="menu_input" type="text">
+    <input class="menu_input" name="id" type="text">
     <a href="#"><div class="menu_button myButton" style="border-radius:5px;">중복확인</div><a>
+      <input type="text" style="display:none;" id="id_check">
     </div>
     <div class="row row-padding-xs-100 " style="margin-top:10px;">
       <div class="menu title2">비밀번호</div>
-      <input class="menu_input" type="text">
+      <input class="menu_input" name="pw" type="text">
     </div>
     <div class="row row-padding-xs-100 " style="margin-top:10px;">
       <div class="menu title2">비밀번호 확인</div>
-      <input class="menu_input" type="text">
+      <input class="menu_input" id="pw_check" type="text">
     </div>
     <div class="row row-padding-xs-100 " style="margin-top:10px;">
       <div class="menu title2">이름</div>
-      <input class="menu_input" type="text">
+      <input class="menu_input" name="name" type="text">
     </div>
     <div class="row row-padding-xs-100 " style="margin-top:10px;">
       <div class="menu title2">휴대전화</div>
-      <input class="menu_input_phone_1" type="text" value="010">-
-      <input class="menu_input_phone_2" type="text">-
-      <input class="menu_input_phone_2" type="text">
+      <input class="menu_input_phone_1" name="phone1" type="text" value="010">-
+      <input class="menu_input_phone_2" name="phone2" type="text">-
+      <input class="menu_input_phone_2" name="phone3" type="text">
       <a href="#"><div class="menu_button myButton" style="border-radius:5px;">인증번호 발송</div><a>
       </div>
       <div class="row row-padding-xs-100 " style="margin-top:10px;">
         <div class="menu"></div>
         <input class="menu_input" type="text">
         <a href="#"><div class="menu_button myButton" style="border-radius:5px;">인증번호 확인</div><a>
+        <input style="display:none" type="text"  id="phone_check">
         </div>
         <div class="row row-padding-xs-100 " style="margin-top:10px;">
           <div class="menu title2">회원구분</div>
@@ -237,6 +285,7 @@ Dropzone.autoDiscover = false;
         </form>
       </div>
     </div>
+    </form>
     <div class="row row-padding-xs-100 " style="margin-top:30px;">
       <div style="text-align:center; display:block;">
         <a href="#"><div class="myButton" style="width:200px; font-size:20px;">가입하기</div></a>
