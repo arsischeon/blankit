@@ -95,7 +95,7 @@
 				// my blankit & cart 로그인 시에만 뜨기
           		if ($this->session->userdata('status') == "1"){
           			echo '<li><a class="navbar-right main-page-navbar-right" href="/mypage">my blankit</a></li>
-            			<li><a class="navbar-right main-page-navbar-right" href="/order">cart</a></li>';
+            			<li><a class="navbar-right main-page-navbar-right" href="/order">order</a></li>';
           		}
           	?>
             
