@@ -6,10 +6,7 @@ class File extends CI_Controller {
 	public function profile()
 	{
 		if (!empty($_FILES)) {
-		  $tempFile = $_FILES['userfile']['tmp_name'];
-		  $targetPath = APPPATH."files/profile/";  //4
-		  $targetFile =  $targetPath. $_FILES['userfile']['name'];  //5
-		  move_uploaded_file($tempFile,$targetFile); //6
+		  move_uploaded_file($_FILES['userfile']['tmp_name'],SITE_ROOT."/files/profile/". $_FILES['userfile']['name']);
 		}
 
 		// $config['upload_path'] = "/files/profile/";
