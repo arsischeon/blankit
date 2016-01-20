@@ -78,10 +78,11 @@ function submitCheck(){
 // 로그인 실패 redirect 시 뜨는 실패 알람
 
 	$urlPath = "$_SERVER[REQUEST_URI]";
-	$explodePath = explode('?', $urlPath);
 	
-	if ($explodePath[1] == "fail"){
-		echo "<script>alert('아이디 혹은 비밀번호를 다시 확인해주세요');</script>";
+	if ($explodePath = explode('?', $urlPath)){
+		if ($explodePath[1] == "fail"){
+			echo "<script>alert('아이디 혹은 비밀번호를 다시 확인해주세요');</script>";
+		}
 	}
 
 ?>
