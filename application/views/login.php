@@ -59,7 +59,19 @@ $(function(){
     }
   });
 });
+
+function submitCheck(){
+	  if($("input[name='user_id']").val()==''
+	  	alert("아이디를 입력해주세요");
+	  	return;
+	  if($("input[name='user_pw']").val()==''
+		alert("비밀번호를 입력해주세요");
+	  	return;
+
+	  $("#formformform").submit();
+	}
 </script>
+
 <div class="banner">
 
 </div>
@@ -76,12 +88,15 @@ $(function(){
         <span style="font-size:20px;">회원 로그인</span>
       </div>
       <div class="col-xs-10 padding-left-0">
+      
+      	<form action="/login/login_user" method="post" id="formformform">
+      
         <div class="row" style="margin-top:20px; height: 25px;">
           <div class="col-xs-4 gal" style="padding-top:4px;">
             <span style="font-size:15px;">아이디</span>
           </div>
           <div class="col-xs-8 gal">
-            <input type="text" name="id" style="width:100%;">
+            <input type="text" name="user_id" style="width:100%;">
           </div>
         </div>
         <div class="row" style="margin-top:10px; height: 25px;">
@@ -89,9 +104,12 @@ $(function(){
             <span style="font-size:15px;">비밀번호</span>
           </div>
           <div class="col-xs-8">
-            <input type="text" style="width:100%;">
+            <input type="text" name="user_pw" style="width:100%;">
           </div>
         </div>
+        
+        </form>
+        
         <div class="row" style="margin-top:10px; height: 25px;">
           <div class="col-xs-4" style="padding-top:4px;">
           </div>
@@ -121,11 +139,11 @@ $(function(){
         </div>
       </div>
       <div class="col-xs-2" style="padding-left: 5px; margin-top:20px;">
-        <div style="width:60px; height:60px; border-radius:10px; background:#687C87; display:table; ">
+        <a onclick="submitCheck();"><div style="width:60px; height:60px; border-radius:10px; background:#687C87; display:table; ">
           <div style="vertical-align:middle; text-align:center; display:table-cell;">
           <span style="font-size:12px; color:white;">회원<br>로그인</span>
           </div>
-        </div>
+        </div></a>
       </div>
 
 
