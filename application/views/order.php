@@ -160,7 +160,7 @@ function submitCheck(){
    $checker = 0;
    
    foreach ($generateOrderRandomId->result() as $one){
-   	$seed = $row->seed;
+   	$seed = $one->seed;
    }
    
    $curDate = date('Y-m-d H:i:s');
