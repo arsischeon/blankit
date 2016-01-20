@@ -17,7 +17,7 @@ class Login_model extends CI_Model{
 		
 		if(count($login) == 1){
 			$this->details = $login[0];
-			$this->send_info();
+			$this->set_session();
 			return true;
 		}
 		else{
