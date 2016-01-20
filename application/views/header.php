@@ -51,13 +51,12 @@
 
           <a class="navbar-brand" href="/">
             <img id="logo" alt="blankit" src="
-<?
-  $actual_link = "http://$_SERVER[HTTP_HOST]$_SERVER[REQUEST_URI]";
-    if($actual_link=="http://blankit.kr/")
-      echo "/source/image/logo_white.png";
-    else
-      echo "/source/image/logo.png";
-
+	<?
+  	$actual_link = "http://$_SERVER[HTTP_HOST]$_SERVER[REQUEST_URI]";
+    	if($actual_link=="http://blankit.kr/")
+      		echo "/source/image/logo_white.png";
+    	else
+      		echo "/source/image/logo.png";
     ?>
 
             ">
@@ -86,12 +85,12 @@
           </ul>
           <ul class="nav navbar-nav navbar-right">
           	<?php
-          		/* if ($this->session->userdata('status')){
+          		 if ($this->session->userdata('status')){
           			echo '<li><a class="navbar-right main-page-navbar-right" href="/login/func_logout">logout</a></li>';
           		}
           		else {
           			echo '<li><a class="navbar-right main-page-navbar-right" href="/login">login/join</a></li>';
-          		} */
+          		}
 
           	?>
             <li><a class="navbar-right main-page-navbar-right" href="/mypage">my blankit</a></li>
