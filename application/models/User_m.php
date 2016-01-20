@@ -12,8 +12,8 @@ class User_m extends CI_Model {
 		// Build a query to retrieve the user's details
 		// based on the received username and password
 		$this->db->from('USER');
-		$this->db->where('user_id',$user_id );
-		$this->db->where( 'user_pw', $user_pw );
+		$this->db->where('user_id', $user_id);
+		$this->db->where('user_pw', $user_pw);
 		$login = $this->db->get()->result();
 	
 		// The results of the query are stored in $login.
