@@ -40,7 +40,7 @@
     <nav class="navbar navbar-default">
       <div class="container-fluid">
 
-        <div class="navbar-header">
+        <div class="navbar-header" style="padding-top: 10px;">
 
           <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
             <span class="sr-only"></span>
@@ -50,7 +50,17 @@
           </button>
 
           <a class="navbar-brand" href="/">
-            <img id="logo" alt="blankit" src="/source/image/logo.png">
+            <img id="logo" alt="blankit" src="
+<? 	$urlPath = "$_SERVER[REQUEST_URI]";
+	$explodePath = explode('/', $urlPath);
+    if(count($explodePath)==1)
+      echo "/source/image/logo_white.png";
+    else
+      echo "/source/image/logo.png";
+
+    ?>
+
+            ">
           </a>
           <?php echo "Welcome" . $this->session->userdata('user_name')?>
         </div>
