@@ -5,7 +5,7 @@ class Main extends CI_Controller {
 
 	public function index()
 	{
-		$this->load->library('session');
+		//$this->load->library('session');
 		
 		$this->load->model('main_model');
 		$data['mdpick']=$this->main_model->mdpick();
