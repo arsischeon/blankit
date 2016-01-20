@@ -1,4 +1,7 @@
 <style>
+  .main-page-navbar-right{
+    color:white !important;
+  }
   .banner{
     position: relative;
     -webkit-transform: rotate(-7deg);

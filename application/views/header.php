@@ -53,7 +53,7 @@
             <img id="logo" alt="blankit" src="/source/image/logo.png">
           </a>
         </div>
-        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1" style="    padding-top: 10px;">
           <ul class="nav navbar-nav">
             <li class="dropdown">
               <a href="#" id="aboutus_menu" class=" nav-color dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">about us</span></a>
@@ -74,11 +74,11 @@
             </li>
           </ul>
           <ul class="nav navbar-nav navbar-right">
-            <li><a class="navbar-right" href="/login">login/join</a></li>
-            <li><a class="navbar-right" href="/mypage">my blankit</a></li>
-            <li><a class="navbar-right" href="#">cart</a></li>
-            <li><a style="" class="navbar-right" href="/submit">help</a></li>
-            <li><a style="margin-right:40px;" class="navbar-right" href="/submit"><div class="YourButton">내 작품 판매하기</div></a></li>
+            <li><a class="navbar-right main-page-navbar-right" href="/login">login/join</a></li>
+            <li><a class="navbar-right main-page-navbar-right" href="/mypage">my blankit</a></li>
+            <li><a class="navbar-right main-page-navbar-right" href="#">cart</a></li>
+            <li><a style="" class="navbar-right main-page-navbar-right" href="/submit">help</a></li>
+            <li><a style="margin-right:40px;" class="navbar-right" href="/submit"><div class="YourButton" style="margin-top: -5px;">내 작품 판매하기</div></a></li>
           </ul>
     </div>
 
