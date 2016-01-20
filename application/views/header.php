@@ -52,8 +52,8 @@
           <a class="navbar-brand" href="/">
             <img id="logo" alt="blankit" src="
 <?
-  $urlPath = $_SERVER["REQUEST_URI"];
-    if($urlPath=="")
+  $actual_link = "http://$_SERVER[HTTP_HOST]$_SERVER[REQUEST_URI]";
+    if($actual_link=="http://blankit.kr/")
       echo "/source/image/logo_white.png";
     else
       echo "/source/image/logo.png";
