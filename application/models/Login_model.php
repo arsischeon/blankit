@@ -28,8 +28,8 @@ class Login_model extends CI_Model{
 	
 	public function send_info(){
 		return array(
-				'user_name'=>user_name,
-				'user_email'=>user_email
+				'user_name'=>"user_name",
+				'user_email'=>"user_email"
 				
 		);
 	}
