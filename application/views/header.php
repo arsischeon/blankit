@@ -50,7 +50,17 @@
           </button>
 
           <a class="navbar-brand" href="/">
-            <img id="logo" alt="blankit" src="/source/image/logo.png">
+            <img id="logo" alt="blankit" src="
+<? 	$urlPath = $_SERVER['REQUEST_URI'];
+	$explodePath = explode('/', $urlPath);
+    if(count($explodePath)==1)
+      echo "/source/image/logo_white.png";
+    else
+      echo "/source/image/logo.png";
+
+    ?>
+
+            ">
           </a>
         </div>
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1" style="    padding-top: 10px;">
