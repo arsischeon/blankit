@@ -15,9 +15,25 @@ class Order extends CI_Controller {
 	}
 	public function complete()
 	{
-		$this->load->view('header');
-		$this->load->view('order_complete');
-		$this->load->view('footer');
+		$urlPath = "$_SERVER[REQUEST_URI]";
+		$explodePath = explode('/', $urlPath);
+		$backPath = $explodePath[2];
+		
+		$explodeBackPath =  explode('&', $backPath);
+		$codeNum = explode('=', $explodeBackPath[0]);
+		$bank = explode('=', $explodeBackPath[1]);
+		$account = explode('=', $explodeBackPath[2]);
+		
+		if ($codeNum[1] !== "" && $bank[1] !== "" && $account[1] !== ""){
+			$this->load->view('header');
+			$this->load->view('order_complete');
+			$this->load->view('footer');
+		}
+		else{
+			$homeUrl = "http://blankit.kr/";
+			$this->load->helper('url');
+			redirect($homeUrl);
+		}
 	}
 	public function func_order_ok()
 	{
