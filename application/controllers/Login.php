@@ -15,6 +15,7 @@ class Login extends CI_Controller {
 		$user_pw = $this->input->post('user_pw');
 		
 		$this->load->model('login_model');
+		
 		if ($this->login_model->check_login($user_id, $user_pw)){
 			$data['result'] = "login success!";
 		}
