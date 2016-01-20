@@ -41,7 +41,7 @@ a, a:hover, a:visited, a:link, a:active{
   cursor: pointer;
   font-weight: regular;
   letter-spacing: 0.8px;
-  margin-right: 5px;
+  margin-right: 2px;
   color: #868686 !important;
   font-size:14px;
 }
