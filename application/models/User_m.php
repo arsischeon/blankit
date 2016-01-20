@@ -4,6 +4,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 class User_m extends CI_Model {
 	public function __construct(){
 		$this->load->database();
+		$this->load->library('session'); // 임시 추가해봄
 	}
 
 	var $details;
@@ -33,7 +34,7 @@ class User_m extends CI_Model {
 		// session->set_userdata is a CodeIgniter function that
 		// stores data in a cookie in the user's browser.  Some of the values are built in
 		// to CodeIgniter, others are added (like the IP address).  See CodeIgniter's documentation for details.
-		$this->load->library('session'); // 임시 추가해봄
+		
 		$this->session->set_userdata( array(
 				'user_id'=>$this->details->user_id,
 				'user_name'=>$this->details->user_name,
