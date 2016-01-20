@@ -172,12 +172,12 @@ function submitCheck(){
    foreach ($address->result() as $row2){
    
    	if($checker == 0){ // 한 번만 주소를 저장해두기
-   		$userName = $row->user_name;
-   		$userEmail = $row->user_email;
-   		$userPhone = $row->user_phone;
-   		$userHome = $row->user_home;
-   		$userHome2 = $row->user_home2;
-   		$userHome3 = $row->user_home3;
+   		$userName = $row2->user_name;
+   		$userEmail = $row2->user_email;
+   		$userPhone = $row2->user_phone;
+   		$userHome = $row2->user_home;
+   		$userHome2 = $row2->user_home2;
+   		$userHome3 = $row2->user_home3;
    
    		$userPhone1 = str_split($userPhone,3);
    		$userPhone2 = str_split($userPhone1[1].$userPhone1[2].$userPhone1[3],4);
