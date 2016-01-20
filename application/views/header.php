@@ -52,9 +52,8 @@
           <a class="navbar-brand" href="/">
             <img id="logo" alt="blankit" src="
 <?
-  $urlPath = $_SERVER["HTTP_HOST"] . $_SERVER["REQUEST_URI"];
-	$explodePath = explode('/', $urlPath);
-    if(count($explodePath)==1)
+  $urlPath = $_SERVER["REQUEST_URI"];
+    if($urlPath=="")
       echo "/source/image/logo_white.png";
     else
       echo "/source/image/logo.png";
