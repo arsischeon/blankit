@@ -5,6 +5,7 @@ class Login extends CI_Controller {
 
 	public function index()
 	{
+		$this->load->library('session');
 		if( $this->session->userdata('isLoggedIn') ) {
         redirect('/main');
     	}	
