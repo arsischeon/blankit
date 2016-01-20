@@ -52,6 +52,7 @@
           <a class="navbar-brand" href="/">
             <img id="logo" alt="blankit" src="/source/image/logo.png">
           </a>
+          <?php echo "Welcome" . $this->session->userdata('user_name')?>
         </div>
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1" style="    padding-top: 10px;">
           <ul class="nav navbar-nav">
