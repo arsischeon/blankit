@@ -306,7 +306,7 @@ function submitCheck(){
       <script src="//cdn.poesis.kr/post/search.min.js"></script>
 
       <!-- "검색" 단추를 누르면 팝업 레이어가 열리도록 설정한다 -->
-      <script> $(function() { $("#postcodify_search_button").on("click",function(){postcodifyPopUp();
+      <script> $(function() { $("#postcodify_search_button").on("click",function(){$("#postcodify_search_button").postcodifyPopUp();
       });
     });
 
