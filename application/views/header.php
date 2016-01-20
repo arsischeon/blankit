@@ -87,12 +87,12 @@
           </ul>
           <ul class="nav navbar-nav navbar-right">
           	<?php
-          		if ($this->session->userdata('status')){
+          		/* if ($this->session->userdata('status')){
           			echo '<li><a class="navbar-right main-page-navbar-right" href="/login/func_logout">logout</a></li>';
           		}
           		else {
           			echo '<li><a class="navbar-right main-page-navbar-right" href="/login">login/join</a></li>';
-          		}
+          		} */
 
           	?>
             <li><a class="navbar-right main-page-navbar-right" href="/mypage">my blankit</a></li>
