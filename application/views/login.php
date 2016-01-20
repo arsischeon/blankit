@@ -143,7 +143,7 @@ function submitCheck(){
           <div style="vertical-align:middle; text-align:center; display:table-cell;">
           <span style="font-size:12px; color:white;">회원<br>로그인</span>
           </div>
-        </div></a>
+        </a></div>
       </div>
 
 
