@@ -140,7 +140,7 @@ function submitCheck(){
         </div>
       </div>
       <div class="col-xs-2" style="padding-left: 5px; margin-top:20px;">
-        <a onclick="submitCheck();"><div style="width:60px; height:60px; border-radius:10px; background:#687C87; display:table; ">
+        <a onclick="submitCheck();"> <div style="width:60px; height:60px; border-radius:10px; background:#687C87; display:table; ">
           <div style="vertical-align:middle; text-align:center; display:table-cell;">
           <span style="font-size:12px; color:white;">회원<br>로그인</span>
           </div>
