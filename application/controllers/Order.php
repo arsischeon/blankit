@@ -15,7 +15,6 @@ class Order extends CI_Controller {
 	}
 	public function complete()
 	{
-		if()
 		$this->load->view('header');
 		$this->load->view('order_complete');
 		$this->load->view('footer');
