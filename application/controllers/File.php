@@ -7,7 +7,7 @@ class File extends CI_Controller {
 	{
 		if (!empty($_FILES)) {
 		  $tempFile = $_FILES['userfile']['tmp_name'];
-		  $targetPath = "/files/profile/";  //4
+		  $targetPath = APPPATH."/files/profile/";  //4
 		  $targetFile =  $targetPath. $_FILES['userfile']['name'];  //5
 		  move_uploaded_file($tempFile,$targetFile); //6
 		}
