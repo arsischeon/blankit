@@ -81,7 +81,7 @@ function submitCheck(){
 	$explodePath = explode('?', $urlPath);
 	
 	if ($explodePath[1] == "fail"){
-		alert("아이디 혹은 비밀번호를 다시 확인해주세요");
+		echo "<script>alert('아이디 혹은 비밀번호를 다시 확인해주세요');</script>";
 	}
 
 ?>
