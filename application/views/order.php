@@ -185,7 +185,7 @@ function submitCheck(){
           <span class="order_title">제품코드</span>
         </div>
         <div class="col-xs-9">
-          <span class="order_content">0000000</span>
+          <span class="order_content"><?php echo $row->store_random_id;?></span>
         </div>
       </div>
       <div class="row">
