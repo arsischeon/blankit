@@ -158,6 +158,16 @@ function submitCheck(){
    <?php
    $addPRICE = 0;
    $checker = 0;
+   
+   //OrderRandomId 생성
+   foreach ($generateOrderRandomId->result() as $one){
+   	$seed = $one->seed;
+   }
+   
+   $curDate = date('Y-m-d H:i:s');
+   $curDateNum = strtotime($curDate);
+   $seed_date = strtoupper(dechex($curDateNum + $seed));
+   //여기까지, OrderRandomId 생성
 
    foreach ($cart->result() as $row){
 
@@ -185,7 +195,7 @@ function submitCheck(){
           <span class="order_title">제품코드</span>
         </div>
         <div class="col-xs-9">
-          <span class="order_content">0000000</span>
+          <span class="order_content"><?php echo $row->store_random_id;?></span>
         </div>
       </div>
       <div class="row">
@@ -333,6 +343,7 @@ function submitCheck(){
       <input class="menu_input" placeholder="입금할 계좌번호" style="width:200px;" type="text" name="account">
     </div>
     <input type="text" name="totalPrice" value="<?echo $addPRICE + 2500;?>" style="display:none">
+    <input type="text" name="orderRandomId" value="<?echo $seed_date;?>" style="display:none">
 </form>
 
   <div class="row row-padding-xs-100 " style="margin-top:30px; ">
