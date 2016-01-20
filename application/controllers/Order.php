@@ -15,50 +15,35 @@ class Order extends CI_Controller {
 	}
 	public function complete()
 	{
-		$urlPath = "$_SERVER[REQUEST_URI]";
-		$explodePath = explode('/', $urlPath);
-		$backPath = $explodePath[2];
-		
-		$explodeBackPath =  explode('&', $backPath);
-		$codeNum = explode('=', $explodeBackPath[0]);
-		$bank = explode('=', $explodeBackPath[1]);
-		$account = explode('=', $explodeBackPath[2]);
-		
-		if ($codeNum[1] !== "" && $bank[1] !== "" && $account[1] !== ""){
-			$this->load->view('header');
-			$this->load->view('order_complete');
-			$this->load->view('footer');
-		}
-		else{
-			$homeUrl = "http://blankit.kr/";
-			$this->load->helper('url');
-			redirect($homeUrl);
-		}
+		if()
+		$this->load->view('header');
+		$this->load->view('order_complete');
+		$this->load->view('footer');
 	}
 	public function func_order_ok()
 	{
-		 $receiver = $this->input->post('receiver');
-		 $email = $this->input->post('email');
-		 $phone1 = $this->input->post('phone1');
-		 $phone2 = $this->input->post('phone2');
-		 $phone3 = $this->input->post('phone3');
-		 $home1 = $this->input->post('home1');
-		 $home2 = $this->input->post('home2');
-		 $home3 = $this->input->post('home3');
-		 $payer = $this->input->post('payer');
-		 $bank = $this->input->post('bank');
-		 $account = $this->input->post('account');
-		 $notice = $this->input->post('notice');
-		 $totalPrice = $this->input->post('totalPrice');
-		 $orderRandomId = $this->input->post('orderRandomId');
+		$receiver = $this->input->post('receiver');
+		$email = $this->input->post('email');
+		$phone1 = $this->input->post('phone1');
+		$phone2 = $this->input->post('phone2');
+		$phone3 = $this->input->post('phone3');
+		$home1 = $this->input->post('home1');
+		$home2 = $this->input->post('home2');
+		$home3 = $this->input->post('home3');
+		$payer = $this->input->post('payer');
+		$bank = $this->input->post('bank');
+		$account = $this->input->post('account');
+		$notice = $this->input->post('notice');
+		$totalPrice = $this->input->post('totalPrice');
+		$orderRandomId = $this->input->post('orderRandomId');
 		
-		 $this->load->model('order_model');
-		 $this->order_model->order($receiver, $email, $phone1, $phone2, $phone3, $home1, $home2, $home3, $payer, $bank, $account, $notice, $totalPrice, $orderRandomId);
+		$this->load->model('order_model');
+		$this->order_model->order($receiver, $email, $phone1, $phone2, $phone3, $home1, $home2, $home3, $payer, $bank, $account, $notice, $totalPrice, $orderRandomId);
 		 
-		 //완료 페이지로 redirect
-		 $completeUrl = "http://blankit.kr/order/complete" . "?codeNum=" . $orderRandomId . "&bank=" . $bank . "&account=" . $account;
-		 $this->load->helper('url');
-		 redirect($completeUrl);
+		//완료 페이지로 redirect
+		$completeUrl = "http://blankit.kr/order/complete" . "?codeNum=" . $orderRandomId . "&bank=" . $bank . "&account=" . $account;
+		$this->load->helper('url');
+		redirect($completeUrl);
 		
 	}
 }
