@@ -85,7 +85,7 @@
           </ul>
           <ul class="nav navbar-nav navbar-right">
           	<?php
-          		 if ($this->session->userdata('status')){
+          		 if ($this->session->userdata('status') == "1"){
           			echo '<li><a class="navbar-right main-page-navbar-right" href="/login/func_logout">logout</a></li>';
           		}
           		else {
