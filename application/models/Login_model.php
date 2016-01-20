@@ -28,9 +28,10 @@ class Login_model extends CI_Model{
 	
 	public function send_info(){
 		return array(
+				'user_id'=>$this->details->user_id,
+				'user_type'=>$this->details->user_type,
 				'user_name'=>$this->details->user_name,
-				'user_email'=>$this->details->user_email
-				
+				'user_nick'=>$this->details->user_nick				
 		);
 	}
 	

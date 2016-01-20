@@ -1,7 +1,5 @@
 <?php
 echo $result;
 echo "///";
-echo $info['user_name'];
-echo "///";
-echo $info['user_email'];
+echo print_r($info);
 ?>
