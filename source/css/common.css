@@ -42,6 +42,7 @@ a, a:hover, a:visited, a:link, a:active{
   font-weight: regular;
   letter-spacing: 0.8px;
   color: #868686 !important;
+  font-size:12pt;
 }
 .navbar-left:hover{
   color: #5D787A !important;
@@ -157,3 +158,11 @@ a, a:hover, a:visited, a:link, a:active{
   .padding-right-5{
     padding-right:5px;
   }
+.YourButton{
+  border: 2px solid white;
+  border-radius:16px;
+  color:white;
+  font-weight:bold;
+  background: transparent;
+  padding:3px 10px;
+}

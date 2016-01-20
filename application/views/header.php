@@ -74,10 +74,11 @@
             </li>
           </ul>
           <ul class="nav navbar-nav navbar-right">
-            <li><a class="navbar-right" href="/login">login</a></li>
-            <li><a class="navbar-right" href="/join">join</a></li>
-            <li><a class="navbar-right" href="#">mypage</a></li>
-            <li><a style="margin-right:40px;" class="navbar-right" href="/submit">submit</a></li>
+            <li><a class="navbar-right" href="/login">login/join</a></li>
+            <li><a class="navbar-right" href="/mypage">my blankit</a></li>
+            <li><a class="navbar-right" href="#">cart</a></li>
+            <li><a style="" class="navbar-right" href="/submit">help</a></li>
+            <li><a style="margin-right:40px;" class="navbar-right" href="/submit"><div class="YourButton">내 작품 판매하기</div></a></li>
           </ul>
     </div>
 
