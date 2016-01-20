@@ -17,7 +17,7 @@ class Login_model extends CI_Model{
 		
 		if(count($login) == 1){
 			$this->details = $login[0];
-			//$this->send_info();
+			$this->send_info();
 			return true;
 		}
 		else{
@@ -26,17 +26,24 @@ class Login_model extends CI_Model{
 	
 	}
 	
-	public function send_info(){
+/* 	public function send_info(){
 		return array(
 				'user_id'=>$this->details->user_id,
 				'user_type'=>$this->details->user_type,
 				'user_name'=>$this->details->user_name,
 				'user_nick'=>$this->details->user_nick				
 		);
-	}
+	} */
 	
 	public function set_session(){
-		
+		$this->load->library('session');
+		$this->session->set_userdata( array(
+			'user_id'=>$this->details->user_id,
+			'user_type'=>$this->details->user_type,
+			'user_name'=>$this->details->user_name,
+			'user_nick'=>$this->details->user_nick
+			)
+		);
 	}
 	
 	public function logout_session(){
