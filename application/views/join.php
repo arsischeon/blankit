@@ -86,15 +86,16 @@ $(function(){
 
   //  $("#portfolio").dropzone({ url: "/file/post",maxFilesize:1 });
   // var myDropzone = new Dropzone("div#portfolio", { url: "/main",maxFilesize:1,maxFiles:1});
+  var myDropzone = new Dropzone("#profile", { url: "/file/profile", paramName: "profile",maxFiles:1,addRemoveLinks:true,dictRemoveFile:"파일 삭제",dictMaxFilesExceeded:"1개만 업로드할 수 있습니다."});
+  myDropzone.on("addedfile", function(file) {
+  });
 
-var myDropzone = new Dropzone("#portfolio", { url: "/main",autoProcessQueue: false});
- myDropzone.on("addedfile", function(file) {
-   /* Maybe display some more file information on your page */
-   alert('dd');
- });
- $("#sibal").on("click",function(){
-   myDropzone.processQueue();
- });
+  var myDropzone = new Dropzone("#portfolio", { url: "/main", paramName: "portfolio",autoProcessQueue: false,maxFiles:0});
+  myDropzone.on("addedfile", function(file) {
+  });
+  // $("#sibal").on("click",function(){
+  //   myDropzone.processQueue();
+  // });
 });
 Dropzone.autoDiscover = false;
 // Dropzone.options.portfolio = {
@@ -217,23 +218,28 @@ Dropzone.autoDiscover = false;
             </select>
           </div>
           <div class="row row-padding-xs-100 " style="margin-top:10px;">
-            <div class="menu title2">프로필사진</div>
-            <form id="profile" action="/login" class="dropzone"></form>
-          </div>
-          <div class="row row-padding-xs-100 " style="margin-top:10px;">
-            <div class="menu title2">소개글</div>
-            <textarea style="width:100%; height:150px;"  ></textarea>
-          </div>
-          <div class="row row-padding-xs-100 " style="margin-top:10px;">
-            <div class="menu title2">포트폴리오</div>
-            <form id="portfolio" class="dropzone" action="/main"></form>
-            <!-- <div id="portfolio"></div> -->
-            <button id="sibal"></button>
-          </div>
+            <div class="menu title2" style="margin-bottom:10px;">프로필사진</div>
+            <form id="profile" class="dropzone" action="/file/profile" style="border-radius:10px;
+            ">
+            <div class="dz-default dz-message"><span>프로필 사진은 한 개만 업로드 할 수 있습니다<br>( 클릭 또는 파일을 드래그 해주세요! )</span></div>
+          </form>
         </div>
-        <div class="row row-padding-xs-100 " style="margin-top:30px;">
-          <div style="text-align:center; display:block;">
-          <a href="#"><div class="myButton" style="width:200px; font-size:20px;">가입하기</div></a>
+        <div class="row row-padding-xs-100 " style="margin-top:10px;">
+          <div class="menu title2" style="margin-bottom:10px;">소개글</div>
+          <textarea style="border-radius:10px;
+          width:100%; height:150px; border:2px solid rgba(0, 0, 0, 0.3);"  ></textarea>
         </div>
-        </div>
+        <div class="row row-padding-xs-100 " style="margin-top:10px;">
+          <div class="menu title2" style="margin-bottom:10px;">포트폴리오</div>
+          <form id="portfolio" class="dropzone" action="/main" style="border-radius:10px;
+          ">
+          <div class="dz-default dz-message"><span>포트폴리오 기능은 아직 지원되지 않습니다.</span></div>
+        </form>
       </div>
+    </div>
+    <div class="row row-padding-xs-100 " style="margin-top:30px;">
+      <div style="text-align:center; display:block;">
+        <a href="#"><div class="myButton" style="width:200px; font-size:20px;">가입하기</div></a>
+      </div>
+    </div>
+  </div>
