@@ -53,6 +53,7 @@
             <img id="logo" alt="blankit" src="
 <?
   $urlPath = $_SERVER["REQUEST_URI"];
+  echo $urlPath;
     if($urlPath=="")
       echo "/source/image/logo_white.png";
     else
@@ -87,12 +88,12 @@
           <ul class="nav navbar-nav navbar-right">
           	<?php
           		if ($this->session->userdata('status')){
-          			echo '<li><a class="navbar-right main-page-navbar-right" href="/login/func_logout">logout</a></li>';		
+          			echo '<li><a class="navbar-right main-page-navbar-right" href="/login/func_logout">logout</a></li>';
           		}
           		else {
           			echo '<li><a class="navbar-right main-page-navbar-right" href="/login">login/join</a></li>';
           		}
-          	
+
           	?>
             <li><a class="navbar-right main-page-navbar-right" href="/mypage">my blankit</a></li>
             <li><a class="navbar-right main-page-navbar-right" href="#">cart</a></li>
