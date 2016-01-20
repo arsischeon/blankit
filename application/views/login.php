@@ -84,12 +84,8 @@ function submitCheck(){
 			if ($explodePath[1] == "fail"){
 				echo "<script>alert('아이디 혹은 비밀번호를 다시 확인해주세요');</script>";
 			}
-		/* if ($explodePath[1] == "success"){
-			echo "<script>alert('아이디 혹은 비밀번호를 다시 확인해주세요');</script>";
-		} */
 		}
 	}
-
 ?>
 
 <div class="banner">

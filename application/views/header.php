@@ -62,6 +62,7 @@
 
             ">
           </a>
+          <?php echo "Welcome" . $this->session->userdata('user_name')?>
         </div>
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1" style="    padding-top: 10px;">
           <ul class="nav navbar-nav">
@@ -84,7 +85,15 @@
             </li>
           </ul>
           <ul class="nav navbar-nav navbar-right">
-            <li><a class="navbar-right main-page-navbar-right" href="/login">login/join</a></li>
+          	<?php
+          		if ($this->session->userdata('status')){
+          			echo '<li><a class="navbar-right main-page-navbar-right" href="/login/func_logout">logout</a></li>';		
+          		}
+          		else {
+          			echo '<li><a class="navbar-right main-page-navbar-right" href="/login">login/join</a></li>';
+          		}
+          	
+          	?>
             <li><a class="navbar-right main-page-navbar-right" href="/mypage">my blankit</a></li>
             <li><a class="navbar-right main-page-navbar-right" href="#">cart</a></li>
             <li><a style="" class="navbar-right main-page-navbar-right" href="/submit">help</a></li>

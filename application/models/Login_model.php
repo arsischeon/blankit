@@ -38,6 +38,7 @@ class Login_model extends CI_Model{
 	public function set_session(){
 		$this->load->library('session');
 		$this->session->set_userdata( array(
+			'status'=>"1",
 			'user_id'=>$this->details->user_id,
 			'user_type'=>$this->details->user_type,
 			'user_name'=>$this->details->user_name,
@@ -45,9 +46,4 @@ class Login_model extends CI_Model{
 			)
 		);
 	}
-	
-	public function logout_session(){
-		
-	}
-	
 }
