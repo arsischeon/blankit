@@ -53,7 +53,6 @@
             <img id="logo" alt="blankit" src="
 <?
   $urlPath = $_SERVER["REQUEST_URI"];
-  echo $urlPath;
     if($urlPath=="")
       echo "/source/image/logo_white.png";
     else
