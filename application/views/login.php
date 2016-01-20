@@ -90,7 +90,7 @@ function submitCheck(){
       </div>
       <div class="col-xs-10 padding-left-0">
 
-      	<form action="/login/login_user" method="post" id="formformform">
+      	<form action="/login/func_login_check" method="post" id="formformform">
 
         <div class="row" style="margin-top:20px; height: 25px;">
           <div class="col-xs-4 gal" style="padding-top:4px;">
