@@ -7,6 +7,7 @@ class Order extends CI_Controller {
 	{
 		$this->load->model('order_model');
 		$data['cart']=$this->order_model->cart();
+		$data['generateOrderRandomId']=$this->order_model->generateOrderRandomId();
 		
 		$this->load->view('header');
 		$this->load->view('order',$data);

@@ -158,6 +158,16 @@ function submitCheck(){
    <?php
    $addPRICE = 0;
    $checker = 0;
+   
+   foreach ($generateOrderRandomId->result() as $one){
+   	$seed = $row->seed;
+   }
+   
+   $curDate = date('Y-m-d H:i:s');
+   $curDateNum = strtotime($curDate);
+   $seed_date = dechex($curDateNum + $seed);
+   
+   echo $seed_date;
 
    foreach ($cart->result() as $row){
 
