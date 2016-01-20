@@ -5,7 +5,7 @@ class User_m extends CI_Controller {
 
 	var $details;
 	
-	function validate_user( $email, $password ) {
+	function validate_user( $user_id, $user_pw ) {
 		// Build a query to retrieve the user's details
 		// based on the received username and password
 		$this->db->from('USER');
