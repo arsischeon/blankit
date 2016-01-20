@@ -35,6 +35,10 @@ class Login extends CI_Controller {
 	
 	public function func_logout(){
 		$this->session->sess_destroy();
+		
+		$redirectUrl = "http://blankit.kr/";
+		$this->load->helper('url');
+		redirect($redirectUrl);
 	}
 
 }
