@@ -112,23 +112,27 @@ function makeResult(id){
   for(var i=0;i<result.length;i++){
     //이미 들어있으면
     if(result[i]==id){
-      $("#"+result[i]).css("background","none");
+      $("#"+result[i]).find(".order_border").css("background","none");
       result.splice(i,1);
       return;
     }
   }
   result.push(id);
-  $("#"+id).css("background","black");
+  $("#"+id).find(".order_border").css("background","black");
 }
 
 function deleteProduct(){
-  $("#delete").val(result);
+  $("#delete").val($("#delete").val().split(",").concat(result));
   for(var i=0;i<result.length;i++){
     $("#"+result[i]).css("display","none");
   }
   result=[];
 }
 function partOrderProduct(){
+  if(result.length==0){
+    alert("주문할 제품을 선택해주세요");
+    return;
+  }
   $("#order").val(result);
   //submit
 }
@@ -139,6 +143,10 @@ function allOrderProduct(){
     if(data[i].style.display!="none"){
       all.push(data[i].id);
     }
+  }
+  if(all.length==0){
+    alert("제품을 장바구니에 넣어주세요");
+    return;
   }
   $("#order").val(all);
   //submit
@@ -211,7 +219,9 @@ function allOrderProduct(){
     </div>
 
     <div class="row row-padding-xs-100 " style="margin-top:10px;">
+      <form action="#">
       delete<input type="text" id="delete"><br>
       order<input type="text" id="order"><br>
+    </form>
     </div>
 </div>
