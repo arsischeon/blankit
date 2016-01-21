@@ -33,7 +33,7 @@ class Order extends CI_Controller {
 		$this->load->view('order_complete');
 		$this->load->view('footer');
 	}
-	public function func_order_ok()
+	function func_order_ok()
 	{
 		$receiver = $this->input->post('receiver');
 		$email = $this->input->post('email');
