@@ -224,14 +224,16 @@ function allOrderProduct(){
 
   </div>
   <div class="row row-padding-xs-100 " style="margin-top:10px;">
-    <span class="order_result_2" id="fpriceTag"></span>
-    <span class="order_result_2">총 주문금액</span>
     <span class="order_result_2">2500원 = </span>
     <span class="order_result_2">+ 택배비</span>
     <span class="order_result_2" id="priceTag"></span>
     <span class="order_result_2">제품가격</span>
 
   </div>
+  <div class="row row-padding-xs-100 " style="margin-top:10px;">
+  <span class="order_result_2" id="fpriceTag"></span>
+  <span class="order_result_2">총 주문금액</span>
+</div>
     <div class="row row-padding-xs-100 " style="margin-top:20px;">
       <div style="text-align:center;">
       <button onclick="deleteProduct()">삭제</button>
