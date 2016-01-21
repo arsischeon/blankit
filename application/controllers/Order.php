@@ -33,7 +33,7 @@ class Order extends CI_Controller {
 		$this->load->view('order_complete');
 		$this->load->view('footer');
 	}
-	function func_order_ok()
+	function func_order_ok() // Order 내용을 받아 DB에 저장함 (구매 프로세스 가장 끝)
 	{
 		/*** POST 값이 없으면 home으로 redirect ***/
 		if ($orderRandomId = $this->input->post('orderRandomId')){
