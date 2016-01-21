@@ -65,14 +65,7 @@
         </div>
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1" style="    padding-top: 10px;">
           <ul class="nav navbar-nav">
-            <li class="dropdown">
-              <a href="#" id="aboutus_menu" class=" nav-color dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">about us</span></a>
-                <ul class="dropdown-menu" role="menu">
-                  <li><a href="/aboutus">서비스 소개</a></li>
-                  <li><a href="/help/faq">FAQ</a></li>
-                  <li><a href="/help/cs">고객센터</a></li>
-                </ul>
-            </li>
+            <li><a class="nav-color navbar-left" href="/aboutus">about us</a></li>
             <li><a class="nav-color navbar-left" href="/artist">artist</a></li>
             <li class="dropdown">
               <a href="#" id="store_menu" class="nav-color dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">store</span></a>
