@@ -75,7 +75,7 @@
 <script>
 function banner_generator(){
   var width = document.documentElement.clientWidth;
-  $(".banner").css("margin-left","-"+(2048-width)/2+"px");
+  $(".banner").css("margin-left","-"+($(".banner>img").width()-width)/2+"px");
 }
 $(function(){
   $("#root_container").css("height",$(".banner").height()+"px");
