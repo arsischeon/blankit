@@ -154,6 +154,15 @@
   color:white;
 
   }
+  .YourButton:hover{
+    border: 2px solid white;
+    font-size: 14px;
+    border-radius:16px;
+    color:black;
+    font-weight:bold;
+    background: white;
+    padding:3px 10px;
+  }
 </style>
 <script>
 function slanted_banner_generator(){
