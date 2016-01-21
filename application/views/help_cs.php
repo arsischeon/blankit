@@ -1,12 +1,15 @@
 <style>
 .banner{
-  height:50px;
+  height:70px;
   width:100%;
   background: white;
   position:absolute;
   left:0;
   top:0;
   border-bottom: 1px solid #D3D3D3;
+}
+.nav-color{
+  color: #868686 !important;
 }
 .ss{
     color:#868686;

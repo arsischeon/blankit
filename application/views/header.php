@@ -68,7 +68,7 @@
             <li class="dropdown">
               <a href="#" id="aboutus_menu" class=" nav-color dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">about us</span></a>
                 <ul class="dropdown-menu" role="menu">
-                  <li><a href="/help">서비스 소개</a></li>
+                  <li><a href="/aboutus">서비스 소개</a></li>
                   <li><a href="/help/faq">FAQ</a></li>
                   <li><a href="/help/cs">고객센터</a></li>
                 </ul>
@@ -99,7 +99,7 @@
           		}
           	?>
 
-            <li><a style="" class="navbar-right main-page-navbar-right" href="/submit">help</a></li>
+            <li><a style="" class="navbar-right main-page-navbar-right" href="/help">help</a></li>
             <li><a style="margin-right:40px;" class="navbar-right" href="/submit"><div class="YourButton" style="margin-top: -5px;">내 작품 판매하기</div></a></li>
           </ul>
     </div>

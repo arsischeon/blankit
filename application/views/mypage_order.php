@@ -1,12 +1,15 @@
 <style>
 .banner{
-  height:50px;
+  height:70px;
   width:100%;
   background: white;
   position:absolute;
   left:0;
   top:0;
   border-bottom: 1px solid #D3D3D3;
+}
+.nav-color{
+  color: #868686 !important;
 }
 .myButton {
   background-color:#687c87;
@@ -160,10 +163,10 @@ $(function(){
     <span class="title1">주문 리스트 확인</span>
   </div>
   <div class="row row-padding-xs-100 " style="margin-top:10px;">
-  
-  
+
+
    <!-- 주문 목록 반복되는 블럭 시작 -->
-   <? 
+   <?
    		foreach($order_list->result() as $row){
    			 $orderRandomId = $row->order_random_id;
    			 $orderDate = $row->order_date;
@@ -172,7 +175,7 @@ $(function(){
    			 $orderPrice = number_format($row->order_price, 0, '.', ',');
    			 $orderStatus = $row->order_status;
    			 $orderLog = $row->order_log;
-   			 
+
    			 switch($orderStatus){
    			 	case 0:
    			 		$textStatus = "입금대기";
@@ -258,7 +261,7 @@ $(function(){
   </div>
     <? }?>
     <!-- 주문목록 반복되는 부분 끝 -->
-    
+
 
   </div>
     <div class="row row-padding-xs-100 " style="margin-top:30px;">
