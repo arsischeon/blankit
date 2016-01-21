@@ -155,12 +155,12 @@
 
   }
   .YourButton:hover{
-    border: 2px solid #687C87;
+    border: 2px solid white;
     font-size: 14px;
     border-radius:16px;
-    color:transparent;
+    color:black;
     font-weight:bold;
-    background: #687C87;
+    background: white;
     padding:3px 10px;
   }
 </style>
