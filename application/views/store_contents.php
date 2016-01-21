@@ -70,6 +70,7 @@
   position:absolute;
   left:0;
   top:0;
+  overflow:hidden;
 }
 .banner>img{
   min-height: 300px;

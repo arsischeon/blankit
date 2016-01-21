@@ -59,7 +59,7 @@
 
 </script>
   <div class="banner">
-    <img src="/source/image/store-page-banner.jpg">
+    <img src="/source/image/store-page-banner.jpg" style="margin-top: -130px;">
   </div>
 </div>
 <div class="container" >
