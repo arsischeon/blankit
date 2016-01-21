@@ -9,9 +9,15 @@ class Order extends CI_Controller {
 		$data['cart']=$this->order_model->cart();
 		$data['address']=$this->order_model->address();
 		$data['generateOrderRandomId']=$this->order_model->generateOrderRandomId();
-		
+
 		$this->load->view('header');
 		$this->load->view('order',$data);
+		$this->load->view('footer');
+	}
+	public function cart()
+	{
+		$this->load->view('header');
+		$this->load->view('cart');
 		$this->load->view('footer');
 	}
 	public function complete()
@@ -36,14 +42,14 @@ class Order extends CI_Controller {
 		$notice = $this->input->post('notice');
 		$totalPrice = $this->input->post('totalPrice');
 		$orderRandomId = $this->input->post('orderRandomId');
-		
+
 		$this->load->model('order_model');
 		$this->order_model->order($receiver, $email, $phone1, $phone2, $phone3, $home1, $home2, $home3, $payer, $bank, $account, $notice, $totalPrice, $orderRandomId);
-		 
+
 		//완료 페이지로 redirect
 		$completeUrl = "http://blankit.kr/order/complete" . "?codeNum=" . $orderRandomId . "&bank=" . $bank . "&account=" . $account;
 		$this->load->helper('url');
 		redirect($completeUrl);
-		
+
 	}
 }
