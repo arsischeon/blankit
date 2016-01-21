@@ -5,8 +5,11 @@ class Mypage extends CI_Controller {
 
 	public function index()
 	{
+		$this->load->model('mypage_model');
+		$data['order_list'] = $this->mypage_model->order_list();
+		
 		$this->load->view('header');
-		$this->load->view('mypage_order');
+		$this->load->view('mypage_order', $data);
 		$this->load->view('footer');
 	}
 	public function info()
