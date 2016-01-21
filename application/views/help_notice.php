@@ -1,6 +1,6 @@
 <style>
 .banner{
-  height:50px;
+  height:70px;
   width:100%;
   background: white;
   position:absolute;
