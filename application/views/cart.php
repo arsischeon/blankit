@@ -100,14 +100,48 @@ input[type="radio"] + label{
 }
 </style>
 <script>
+var result=[];
 $(function(){
-
+  $(".product").on("click",function(event){
+    var id=event.currentTarget.id;
+    makeResult(id);
+    console.log(result);
+  })
 });
-function sibal(){
-
+function makeResult(id){
+  for(var i=0;i<result.length;i++){
+    //이미 들어있으면
+    if(result[i]==id){
+      $("#"+result[i]).css("background","none");
+      result.splice(i,1);
+      return;
+    }
+  }
+  result.push(id);
+  $("#"+id).css("background","black");
 }
-function sisibal(){
 
+function deleteProduct(){
+  $("#delete").val(result);
+  for(var i=0;i<result.length;i++){
+    $("#"+result[i]).css("display","none");
+  }
+  result=[];
+}
+function partOrderProduct(){
+  $("#order").val(result);
+  //submit
+}
+function allOrderProduct(){
+  var data=$(".product");
+  var all=[];
+  for(var i=0;i<data.length;i++){
+    if(data[i].style.display!="none"){
+      all.push(data[i].id);
+    }
+  }
+  $("#order").val(all);
+  //submit
 }
 </script>
 <div class="banner">
@@ -124,45 +158,9 @@ function sisibal(){
     <span class="title1">주문 리스트 확인</span>
   </div>
   <div class="row row-padding-xs-100 " style="margin-top:10px;">
+<? for($i=0;$i<4;$i++ ){?>
 
-
-   <!-- 주문 목록 반복되는 블럭 시작 -->
-   <?php
-   $addPRICE = 0;
-   $checker = 0;
-
-   //OrderRandomId 생성
-   foreach ($generateOrderRandomId->result() as $one){
-   	$seed = $one->seed;
-   }
-
-   $curDate = date('Y-m-d H:i:s');
-   $curDateNum = strtotime($curDate);
-   $seed_date = strtoupper(dechex($curDateNum + $seed));
-   //여기까지, OrderRandomId 생성
-
-   foreach ($address->result() as $row2){
-
-   	if($checker == 0){ // 한 번만 주소를 저장해두기
-   		$userName = $row2->user_name;
-   		$userEmail = $row2->user_email;
-   		$userPhone = $row2->user_phone;
-   		$userHome = $row2->user_home;
-   		$userHome2 = $row2->user_home2;
-   		$userHome3 = $row2->user_home3;
-
-   		$userPhone1 = str_split($userPhone,3);
-   		$userPhone2 = str_split($userPhone1[1].$userPhone1[2].$userPhone1[3],4);
-   	}
-   }
-
-   foreach ($cart->result() as $row){
-
-   	$PRICE =  number_format($row->cart_price, 0, '.', ','); // 가격 포맷
-   	$addPRICE += $row->cart_price * $row->cart_num;
-   ?>
-
-    <div style="padding: 10px 5px 0px 5px;" class=" col-xs-12 col-sm-6 col-md-6 col-lg-6" id="<?php echo $row->cart_id;?>">
+    <div style="padding: 10px 5px 0px 5px;" class="product col-xs-12 col-sm-6 col-md-6 col-lg-6" id="<?echo $i?>">
       <div class="order_border">
       <div class="row">
 
@@ -170,7 +168,7 @@ function sisibal(){
           <span class="order_title">제품코드</span>
         </div>
         <div class="col-xs-9">
-          <span class="order_content"><?php echo $row->store_random_id;?></span>
+          <span class="order_content"></span>
         </div>
       </div>
       <div class="row">
@@ -178,7 +176,7 @@ function sisibal(){
           <span class="order_title">제품정보</span>
         </div>
         <div class="col-xs-9">
-          <span class="order_content">[아티스트 <?php echo $row->artist;?>] <?php echo $row->store_name;?></span>
+          <span class="order_content">[아티스트]</span>
         </div>
       </div>
       <div class="row">
@@ -186,7 +184,7 @@ function sisibal(){
           <span class="order_title">판매가격</span>
         </div>
         <div class="col-xs-9">
-          <span class="order_content"><?php echo $PRICE;?>원</span>
+          <span class="order_content">1</span>
         </div>
       </div>
       <div class="row">
@@ -194,7 +192,7 @@ function sisibal(){
           <span class="order_title">수량</span>
         </div>
         <div class="col-xs-9">
-          <span class="order_content"><?php echo $row->cart_num;?></span>
+          <span class="order_content">1</span>
         </div>
       </div>
     </div>
@@ -204,10 +202,16 @@ function sisibal(){
 
   </div>
   <div class="row row-padding-xs-100 " style="margin-top:10px;">
-    <span class="order_result_2">총 주문금액 <?php
-    										if ($addPRICE == 0) echo "0";
-    										else echo number_format($addPRICE + 2500, 0, '.', ',');?>원</span>
-    <span class="order_result_1">상품 총 금액 <?php echo number_format($addPRICE, 0, '.', ',');?>원 + 배송비 <?php
-    										if ($addPRICE == 0) echo "0";
-    										else echo number_format(2500, 0, '.', ',');?>원</span>
+    <span class="order_result_2">총 주문금액</span>
   </div>
+    <div class="row row-padding-xs-100 " style="margin-top:10px;">
+      <button onclick="deleteProduct()">삭제</button>
+      <button onclick="partOrderProduct()">선택결제</button>
+      <button onclick="allOrderProduct()">전체결제</button>
+    </div>
+
+    <div class="row row-padding-xs-100 " style="margin-top:10px;">
+      delete<input type="text" id="delete"><br>
+      order<input type="text" id="order"><br>
+    </div>
+</div>
