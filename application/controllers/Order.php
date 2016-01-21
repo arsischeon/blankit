@@ -4,7 +4,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 class Order extends CI_Controller {
 
 	public function index()
-	{	/*** 로그인 세션 없으면 home으로 튕김 ***/
+	{	/*** 로그인 세션 없으면 home으로 튕김 -> flash로 고칠 것!***/
 		if ($this->session->userdata('user_id')){
 			$this->load->model('order_model');
 			$data['cart']=$this->order_model->cart();
@@ -23,16 +23,16 @@ class Order extends CI_Controller {
 	}
 	public function cart() // 실제 카트 페이지
 	{
-		/*** 로그인 세션 없으면 home으로 튕김 ***/
+		/*** 로그인 세션 없으면 login으로 튕김 ***/
 		if ($this->session->userdata('user_id')){
 			$this->load->view('header');
 			$this->load->view('cart');
 			$this->load->view('footer');
 		}
 		else {
-			$homeUrl = "http://blankit.kr";
+			$loginUrl = "http://blankit.kr/login";
 			$this->load->helper('url');
-			redirect($homeUrl);
+			redirect($loginUrl);
 		}
 	}
 	public function complete()

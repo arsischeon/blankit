@@ -172,12 +172,12 @@ function submitCheck(){
 
   $("#formform").submit();
 }
-function sibal(){
+/* function sibal(){
 
 }
 function sisibal(){
 
-}
+} */
 </script>
 <div class="banner">
 
