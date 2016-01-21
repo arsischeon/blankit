@@ -1,7 +1,7 @@
 <style>
 .banner{
   width:100%;
-  background: #EAEAEA;
+  
   position:absolute;
   left:0;
   top:0;
@@ -66,6 +66,9 @@
 <script>
 $(function(){
   $("#root_container").css("height",$(".banner").height()+"px");
+  $(window).on("resize",function(){
+      $("#root_container").css("height",$(".banner").height()+"px");
+  });
 });
 </script>
   <div class="banner">
