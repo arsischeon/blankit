@@ -66,11 +66,11 @@
   <div class="row" style="margin-bottom:40px;">
     <div class="col-md-12" style="position:relative; height:25px; border-bottom: 1.5px solid #D3D3D3;">
       <div class="menu">
-        <div class="menu_item"><a href="/store">전체</a></div>
-        <div class="menu_item"><a href="/store/cloth">의류</a></div>
-        <div class="menu_item" style="border-bottom:2px solid #96AFB5; color:#96AFB5;"><a href="/store/ecobag">에코백</a></div>
-        <div class="menu_item"><a href="/store/pouch">파우치</a></div>
-        <div class="menu_item"><a href="/store/done">마감</a></div>
+        <a href="/store"><div class="menu_item">전체</div></a>
+        <a href="/store/cloth"><div class="menu_item">의류</div></a>
+        <a href="/store/ecobag"><div class="menu_item" style="border-bottom:2px solid #96AFB5; color:#96AFB5;">에코백</div></a>
+      <a href="/store/pouch">  <div class="menu_item">파우치</div></a>
+        <a href="/store/done"><div class="menu_item">마감</div></a>
       </div>
     </div>
   </div>
