@@ -66,7 +66,6 @@
 }
 .banner{
   width:100%;
-  height:300px;
   position:absolute;
   left:0;
   top:0;

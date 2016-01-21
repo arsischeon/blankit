@@ -61,7 +61,7 @@
 
 </script>
   <div class="banner">
-    <img src="/source/image/store-page-banner.jpg" >
+    <img src="/source/image/store-page-banner.jpg" style="height:300px;">
   </div>
 </div>
 <div class="container" >
