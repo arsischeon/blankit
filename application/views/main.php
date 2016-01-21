@@ -149,6 +149,11 @@
     width: 100%;
     opacity: 0.5;
   }
+.YourButton{
+  border: 2px solid white;
+  color:white;
+
+  }
 </style>
 <script>
 function slanted_banner_generator(){
