@@ -136,7 +136,12 @@ function submitCheck(){
 
   $("#formform").submit();
 }
+function sibal(){
 
+}
+function sisibal(){
+
+}
 </script>
 <div class="banner">
 
@@ -158,19 +163,19 @@ function submitCheck(){
    <?php
    $addPRICE = 0;
    $checker = 0;
-   
+
    //OrderRandomId 생성
    foreach ($generateOrderRandomId->result() as $one){
    	$seed = $one->seed;
    }
-   
+
    $curDate = date('Y-m-d H:i:s');
    $curDateNum = strtotime($curDate);
    $seed_date = strtoupper(dechex($curDateNum + $seed));
    //여기까지, OrderRandomId 생성
-   
+
    foreach ($address->result() as $row2){
-   
+
    	if($checker == 0){ // 한 번만 주소를 저장해두기
    		$userName = $row2->user_name;
    		$userEmail = $row2->user_email;
@@ -178,7 +183,7 @@ function submitCheck(){
    		$userHome = $row2->user_home;
    		$userHome2 = $row2->user_home2;
    		$userHome3 = $row2->user_home3;
-   
+
    		$userPhone1 = str_split($userPhone,3);
    		$userPhone2 = str_split($userPhone1[1].$userPhone1[2].$userPhone1[3],4);
    	}
