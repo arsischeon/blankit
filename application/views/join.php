@@ -108,10 +108,11 @@ Dropzone.autoDiscover = false;
 //         createImageThumbnails: true,
 //         maxThumbnailFilesize: 15, // MB,
 //     };
+
 function submitCheck(){
-	  if($("input[id='info_checkbox']:checked").length==0){
-	  	alert("개인정보 수집 및 안내에 동의해주세요");
-	  	return;
+	if($("input[id='info_checkbox']:checked").length==0){
+	  alert("개인정보 수집 및 안내에 동의해주세요");
+	  return;
     }
     if($("input[id='usage_checkbox']:checked").length==0){
       alert("이용약관에 동의해주세요");
@@ -122,6 +123,7 @@ function submitCheck(){
       return;
     }
     //진우 // 아이디 중복확인 넣어야함
+    
     if($("#id_check").val()==''){
       alert("아이디 중복확인을 해주세요");
       return;
@@ -152,8 +154,9 @@ function submitCheck(){
       return;
     }
 
-	  $("#formform").submit();
-	}
+	$("#formform").submit();
+}
+
 </script>
 <div class="banner">
 
@@ -288,7 +291,7 @@ function submitCheck(){
     </form>
     <div class="row row-padding-xs-100 " style="margin-top:30px;">
       <div style="text-align:center; display:block;">
-        <a href="#"><div class="myButton" style="width:200px; font-size:20px;">가입하기</div></a>
+        <a onclick="submitCheck();"><div class="myButton" style="width:200px; font-size:20px;">가입하기</div></a>
       </div>
     </div>
   </div>
