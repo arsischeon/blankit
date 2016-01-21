@@ -4,7 +4,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 class Order extends CI_Controller {
 
 	public function index()
-	{
+	{	/*** 로그인 세션 없으면 home으로 튕김 ***/
 		if ($this->session->userdata('user_id')){
 			$this->load->model('order_model');
 			$data['cart']=$this->order_model->cart();
