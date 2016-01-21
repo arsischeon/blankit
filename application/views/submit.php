@@ -1,18 +1,6 @@
 <style>
 
-.banner-text p{
-  text-align: center;
-  color: white;
-  font-weight: bold;
-  font-size: 17px;
-}
-.banner-text{
-  width:100%;
-  top: 40%;
-  position: absolute;
-  display:block;
-  margin:0 auto;
-}
+
 .arrow{
   padding: 0 30px 0 30px;
   margin:0 auto; display:block;

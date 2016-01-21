@@ -41,14 +41,32 @@
 
 </style>
 <script>
+function banner_generator(){
+  var width = document.documentElement.clientWidth;
+  $(".banner>img").css("margin-left","-"+($(".banner>img").width()-width)/2+"px");
+}
 $(function(){
   $("#root_container").css("height",$(".banner").height()+"px");
+  banner_generator();
+  $(window).on("resize",function(){
+      $("#root_container").css("height",$(".banner").height()+"px");
+      banner_generator();
+  });
 });
 </script>
   <div class="banner">
-    <img src="/source/image/artist-page-banner.jpg" class="img img-responsive">
+    <img src="/source/image/artist-page-banner.jpg">
+    <div class="banner-text">
+    <p>포트폴리오에 묵혀둔 작품이 있나요?</p>
+    <p>제작비용 0원에 당신만의 제품을 선보이세요.</p>
+    <p>블랭킷은 신진 아티스트를 응원합니다.</p>
+    </div>
   </div>
 </div>
+
+
+
+
 
 <div class="container" >
   <div class="row" style="margin-top:40px;">
