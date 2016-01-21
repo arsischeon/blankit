@@ -29,7 +29,7 @@ class Order extends CI_Controller {
 	}
 	public function complete()
 	{
-		//func_order_ok에서 바로 직전 페이지에서 ? 주소가 붙어 redirect 되지 않았다면 무조건 redirect
+		/*** func_order_ok에서 바로 직전 페이지에서 ? 주소가 붙어 redirect 되지 않았다면 (flashdata) 무조건 redirect ***/
 		if ($this->session->flashdata('redirect') == "func_order_ok"){
 			$this->load->view('header');
 			$this->load->view('order_complete');

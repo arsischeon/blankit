@@ -125,17 +125,50 @@ $(function(){
 });
 
 function submitCheck(){
-  if($("input[name='receiver']").val()=='')return;
-  if($("input[name='email']").val()=='')return;
-  if($("input[name='phone1']").val()=='')return;
-  if($("input[name='phone2']").val()=='')return;
-  if($("input[name='phone3']").val()=='')return;
-  if($("input[name='home1']").val()=='')return;
-  if($("input[name='home2']").val()=='')return;
-  if($("input[name='home3']").val()=='')return;
-  if($("input[name='payer']").val()=='')return;
-  if($("input[name='bank']").val()=='')return;
-  if($("input[name='account']").val()=='')return;
+  if($("input[name='receiver']").val()==''){
+	  alert("받으시는 분을 입력해주세요");
+	  return;
+  }
+  if($("input[name='email']").val()==''){
+	  alert("이메일을 입력해주세요");
+	  return;
+  }
+  if($("input[name='phone1']").val()==''){
+	  alert("휴대전화를 입력해주세요");
+	  return;
+  }
+  if($("input[name='phone2']").val()==''){
+	  alert("휴대전화를 입력해주세요");
+	  return;
+  }
+  if($("input[name='phone3']").val()==''){
+	  alert("휴대전화를 입력해주세요");
+	  return;
+  }
+  if($("input[name='home1']").val()==''){
+	  alert("배송지를 입력해주세요");
+	  return;
+  }
+  if($("input[name='home2']").val()==''){
+	  alert("배송지를 입력해주세요");
+	  return;
+  }
+  if($("input[name='home3']").val()==''){
+	  alert("배송지를 입력해주세요");
+	  return;
+  }
+  if($("input[name='payer']").val()==''){
+	  alert("입금자명을 입력해주세요");
+	  return;
+  }
+  if($("input[name='bank']").val()==''){
+	  alert("입금 은행을 입력해주세요");
+	  return;
+  }
+  if($("input[name='account']").val()==''){
+	  alert("입금 계좌번호를 입력해주세요");
+	  return;
+  }
 
   $("#formform").submit();
 }
