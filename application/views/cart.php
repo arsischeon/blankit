@@ -180,7 +180,14 @@ function allOrderProduct(){
     <span class="title1">주문 리스트 확인</span>
   </div>
   <div class="row row-padding-xs-100 " style="margin-top:10px;">
-<? for($i=0;$i<4;$i++ ){?>
+  <!-- 주문목록 반복되는 부분 *시작* -->
+<?
+	foreach($realCart->result() as $row){
+		$storeRandomId = $row->store_random_id;
+		$cartPrice = $row->cart_price;
+		$cartNum = $row->cart_num;
+		echo "hey!";
+?>
 
     <div style="padding: 10px 5px 0px 5px;" class="product col-xs-12 col-sm-6 col-md-6 col-lg-6" id="<?echo $i?>">
       <div class="order_border">
@@ -190,7 +197,7 @@ function allOrderProduct(){
           <span class="order_title">제품코드</span>
         </div>
         <div class="col-xs-9">
-          <span class="order_content"></span>
+          <span class="order_content"><?php echo $storeRandomId;?></span>
         </div>
       </div>
       <div class="row">
@@ -206,7 +213,7 @@ function allOrderProduct(){
           <span class="order_title" >판매가격</span>
         </div>
         <div class="col-xs-9">
-          <span class="order_content" id="price"><? echo $i*1000;?></span>
+          <span class="order_content" id="price"><? echo $cartPrice;?></span>
         </div>
       </div>
       <div class="row">
@@ -214,12 +221,12 @@ function allOrderProduct(){
           <span class="order_title">수량</span>
         </div>
         <div class="col-xs-9">
-          <span class="order_content" id="amount" >1</span>
+          <span class="order_content" id="amount" ><?php echo cartNum;?></span>
         </div>
       </div>
     </div>
   </div>
-    <? }?>
+<? }?>
     <!-- 주문목록 반복되는 부분 끝 -->
 
   </div>
