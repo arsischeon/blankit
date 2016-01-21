@@ -65,6 +65,20 @@
   padding:10px 5px 0 5px;
 }
 </style>
+<script>
+function banner_generator(){
+  var width = document.documentElement.clientWidth;
+  $(".banner").css("margin-left","-"+($("#banner_1").width()-width)/2+"px");
+}
+$(function(){
+  $("#root_container").css("height",$(".banner").height()+"px");
+  banner_generator();
+  $(window).on("resize",function(){
+      $("#root_container").css("height",$(".banner").height()+"px");
+      banner_generator();
+  });
+});
+</script>
   <div class="row">
 <!-- 컨텐츠 반복시작 -->
 
