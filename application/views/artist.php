@@ -1,11 +1,5 @@
 <style>
-.banner{
-  width:100%;
-  background: #EAEAEA;
-  position:absolute;
-  left:0;
-  top:0;
-}
+
 .img_hover_cover{
    z-index: 100;
    background: #96AFB5;
@@ -38,7 +32,17 @@
   border-top-left-radius: 15px;
   border-top-right-radius: 15px;
 }*/
-
+.banner{
+  width:100%;
+  height:300px;
+  position:absolute;
+  left:0;
+  top:0;
+  overflow:hidden;
+}
+.banner>img{
+  min-height: 300px;
+}
 </style>
 <script>
 function banner_generator(){
