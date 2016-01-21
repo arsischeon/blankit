@@ -99,4 +99,4 @@
 
       </div>
     </nav>
-    <div id="root_container" class="container" style="overflow-x:hidden;">
+    <div id="root_container" class="container" style="overflow-x:hidden; overflow-y:hidden;">
