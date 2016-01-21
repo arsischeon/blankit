@@ -261,7 +261,7 @@ $(function(){
 
   </div>
     <div class="row row-padding-xs-100 " style="margin-top:30px;">
-      <a style="float:right; margin-right:5px;" href="#"><div class="myButton" style="padding-left:30px; padding-right:30px; font-size:15px; ">1:1 문의 바로가기</div></a>
+      <a style="float:right; margin-right:5px;" href="/help/cs"><div class="myButton" style="padding-left:30px; padding-right:30px; font-size:15px; ">1:1 문의 바로가기</div></a>
     </div>
 
 </div>
