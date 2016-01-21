@@ -190,12 +190,6 @@ $(function(){
   $( "#banner_3" ).load(function() {
     slanted_banner_generator();
   });
-  $( "#banner_2" ).load(function() {
-    slanted_banner_generator();
-  });
-  $( "#banner_1" ).load(function() {
-    slanted_banner_generator();
-  });
   $(".banner").css("display","");
   $(".banner").hover(function(){
     // $(".banner").css("background","red");
@@ -236,6 +230,9 @@ function bannerSelector(){
 function bannerBeforeSelector(){
   return $("#banner_"+bannerNum);
 }
+$(window).on("load",function(){
+  slanted_banner_generator();
+});
 $(window).resize(function(){
   slanted_banner_generator();
 });
