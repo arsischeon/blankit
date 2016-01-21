@@ -48,7 +48,7 @@ class Store extends CI_Controller {
 		$this->load->view('store_contents', $data);
 		$this->load->view('footer');
 	}
-	public function product()
+	public function product() // 제품 상세보기
 	{
 		$this->load->model('store_model');
 		$data['details']=$this->store_model->details();
@@ -56,7 +56,7 @@ class Store extends CI_Controller {
 		$this->load->view('product',$data);
 		$this->load->view('footer');
 	}
-	public function func_toCart()
+	public function func_toCart() // 상품페이지->장바구니
 	{
 		$type = $this->input->post('type');
 		$color = $this->input->post('color');
@@ -69,9 +69,14 @@ class Store extends CI_Controller {
 		$this->store_model->toCart($type, $color, $size, $amount, $storeId, $storeType);
 		
 		//본래 페이지로 다시 redirect
-		$storeUrl = "http://blankit.kr/store/product/" . $storeId;
+		/* $storeUrl = "http://blankit.kr/store/product/" . $storeId;
 		$this->load->helper('url');
-		redirect($storeUrl);
+		redirect($storeUrl); */
+		
+		//cart로 redirect
+		$cartUrl = "http://blankit.kr/order/cart";
+		$this->load->helper('url');
+		redirect($cartUrl);
 		
 	}
 

@@ -409,8 +409,8 @@ function makePrice(option){
 </div>
 <form id="formHidden" action="/store/func_toCart" method="post" style="display:none">
   <input type="text" name="type" value="default">
-  <input type="text" name="color" value="default"> //옷만
-  <input type="text" name="size" value="default"> //옷만
+  <input type="text" name="color" value="default">
+  <input type="text" name="size" value="default"> 
   <input type="text" name="amount" value="1">
   <input type="text" name="storeId" value="<?echo $numPath;?>">
   <input type="text" name="storeType" value="<?echo $GlobalStoreType;?>">
