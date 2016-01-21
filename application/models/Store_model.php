@@ -98,9 +98,11 @@ class Store_model extends CI_Model{
 		$price = $amount * $init; // 개당 가격 * 수량
 		$user_id_SESSION = $this->session->userdata('user_id');
 		
+		$date = date('Y-m-d H:i:s'); // 카드 담은 시간
+		
 		$this->db->query("
-		INSERT INTO CART (user_id, store_id, cart_type, cart_color, cart_size, cart_num, cart_price, cart_price_total)
-		VALUES ('$user_id_SESSION','$storeId','$type','$color','$size','$amount','$init','$price');
+		INSERT INTO CART (user_id, store_id, cart_type, cart_color, cart_size, cart_num, cart_price, cart_price_total, cart_time)
+		VALUES ('$user_id_SESSION','$storeId','$type','$color','$size','$amount','$init','$price', '$date');
 		");
 	}
 }
