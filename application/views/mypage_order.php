@@ -157,7 +157,7 @@ $(function(){
       </div>
     </div>
   <div class="row row-padding-xs-100 " style="margin-top:30px;">
-    <span class="title1">주문리스트 확인</span>
+    <span class="title1">주문 리스트 확인</span>
   </div>
   <div class="row row-padding-xs-100 " style="margin-top:10px;">
   
@@ -167,6 +167,7 @@ $(function(){
    		foreach($order_list->result() as $row){
    			 $orderRandomId = $row->order_random_id;
    			 $orderDate = $row->order_date;
+   			 $realDate = explode(' ', $orderDate);
    			 // 주문정보 [이윤지 아티스트] 개와고양이를 그리는 사람들이다요다요 외 3 해야함
    			 $orderPrice = number_format($row->order_price, 0, '.', ',');
    			 $orderStatus = $row->order_status;
@@ -218,7 +219,7 @@ $(function(){
           <span class="order_title">주문일자</span>
         </div>
         <div class="col-xs-9">
-          <span class="order_content"><?php echo $orderDate;?></span>
+          <span class="order_content"><?php echo $realDate[0];?></span>
         </div>
       </div>
       <div class="row">
@@ -226,7 +227,7 @@ $(function(){
           <span class="order_title">주문정보</span>
         </div>
         <div class="col-xs-9">
-          <span class="order_content">[이윤지 아티스트] 개와고양이를 그리는 사람들이다요다요 외 3</span>
+          <span class="order_content">[이윤지 아티스트] 개와고양이를 외 3</span>
         </div>
       </div>
       <div class="row">
