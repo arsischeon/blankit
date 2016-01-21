@@ -108,6 +108,7 @@ Dropzone.autoDiscover = false;
 //         createImageThumbnails: true,
 //         maxThumbnailFilesize: 15, // MB,
 //     };
+
 function submitCheck(){
 	if($("input[id='info_checkbox']:checked").length==0){
 	  alert("개인정보 수집 및 안내에 동의해주세요");
@@ -122,6 +123,7 @@ function submitCheck(){
       return;
     }
     //진우 // 아이디 중복확인 넣어야함
+    
     if($("#id_check").val()==''){
       alert("아이디 중복확인을 해주세요");
       return;
@@ -221,7 +223,7 @@ function submitCheck(){
     <div class="menu">아이디</div>
     <input class="menu_input" name="id" type="text">
     <a href="#"><div class="menu_button myButton" style="border-radius:5px;">중복확인</div><a>
-      <input type="text" style="display:none;" id="id_check">
+      <input type="text" style="display:none;" id="id_check" value="1">
     </div>
     <div class="row row-padding-xs-100 " style="margin-top:10px;">
       <div class="menu title2">비밀번호</div>
