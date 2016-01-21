@@ -31,17 +31,6 @@ background-size: contain;
      z-index: 50;
   opacity:0.5;
 }
-.banner{
-  width:100%;
-  height:300px;
-  position:absolute;
-  left:0;
-  top:0;
-  overflow:hidden;
-}
-.banner>img{
-  min-height: 300px;
-}
 </style>
 <script>
 function banner_generator(){
@@ -58,7 +47,7 @@ $(function(){
 });
 </script>
   <div class="banner">
-     <img src="/source/image/submit-page-banner.jpg" class="img img-responsive">
+    <img src="/source/image/store-page-banner.jpg">
   </div>
 </div>
 <div class="container" >
