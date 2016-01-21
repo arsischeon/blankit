@@ -31,6 +31,17 @@ background-size: contain;
      z-index: 50;
   opacity:0.5;
 }
+.banner{
+  width:100%;
+  height:300px;
+  position:absolute;
+  left:0;
+  top:0;
+  overflow:hidden;
+}
+.banner>img{
+  min-height: 300px;
+}
 </style>
 <script>
 function banner_generator(){
@@ -47,7 +58,12 @@ $(function(){
 });
 </script>
   <div class="banner">
-    <img src="/source/image/store-page-banner.jpg">
+    <img src="/source/image/submit-page-banner.jpg">
+    <div class="banner-text">
+    <p>포트폴리오에 묵혀둔 작품이 있나요?</p>
+    <p>제작비용 0원에 당신만의 제품을 선보이세요.</p>
+    <p>블랭킷은 신진 아티스트를 응원합니다.</p>
+    </div>
   </div>
 </div>
 <div class="container" >
