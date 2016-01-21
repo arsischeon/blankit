@@ -32,11 +32,16 @@ class Store_model extends CI_Model{
 				$type = "후드";
 				$init = 37000;
 			}
-			//색상
-			if($color == 1){
-				$color = "챠콜";
+			else if($type == 3){
+				$type = "맨투맨(고급형)";
+				$init = 38000;
 			}
-			else if ($color == 2){
+			else if($type == 4){
+				$type = "후드(고급형)";
+				$init = 46000;
+			}
+			//색상
+			if ($color == 2){
 				$color = "자주";
 			}
 			else if ($color == 3){
