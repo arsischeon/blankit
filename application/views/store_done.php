@@ -1,11 +1,4 @@
 <style>
-.banner{
-  width:100%;
-  background: #EAEAEA;
-  position:absolute;
-  left:0;
-  top:0;
-}
 
 .col-md-five{
   width:19.6%;

@@ -64,6 +64,13 @@
 .col-xs-6{
   padding:10px 5px 0 5px;
 }
+.banner{
+  width:100%;
+  height:300px;
+  position:absolute;
+  left:0;
+  top:0;
+}
 </style>
 <script>
 function banner_generator(){
