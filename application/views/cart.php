@@ -187,7 +187,8 @@ function allOrderProduct(){
 		$cartPrice = $row->cart_price;
 		$cartNum = $row->cart_num;
 		
-		$i = 0;
+		$i = 1;
+		$i++;
 		
 ?>
 
@@ -228,7 +229,7 @@ function allOrderProduct(){
       </div>
     </div>
   </div>
-<? $i++;}?>
+<? }?>
     <!-- 주문목록 반복되는 부분 끝 -->
 
   </div>
