@@ -289,7 +289,7 @@ function submitCheck(){
     </form>
     <div class="row row-padding-xs-100 " style="margin-top:30px;">
       <div style="text-align:center; display:block;">
-        <a href="#"><div class="myButton" style="width:200px; font-size:20px;">가입하기</div></a>
+        <a onclick="submitCheck();"><div class="myButton" style="width:200px; font-size:20px;">가입하기</div></a>
       </div>
     </div>
   </div>
