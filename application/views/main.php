@@ -190,6 +190,12 @@ $(function(){
   $( "#banner_3" ).load(function() {
     slanted_banner_generator();
   });
+  $( "#banner_2" ).load(function() {
+    slanted_banner_generator();
+  });
+  $( "#banner_1" ).load(function() {
+    slanted_banner_generator();
+  });
   $(".banner").css("display","");
   $(".banner").hover(function(){
     // $(".banner").css("background","red");
