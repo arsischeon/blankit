@@ -129,6 +129,8 @@ function makePrice(option){
     case "1 ":
       init=30000;
       if(option=="2")actual=init+7000;
+      else if(option=="3")actual=init+8000;
+      else if(option=="4")actual=init+16000;
       else actual=init;
       $("#priceSpan").text(actual+"원");
     break;
@@ -272,6 +274,8 @@ function makePrice(option){
                 <option value="default">선택</option>
                 <option value="1">맨투맨</option>
                 <option value="2">후드</option>
+  				<option value="3">맨투맨 (고급형)</option>
+  				<option value="4">후드 (고급형)</option>
               </select>
             </div>
             <div style="clear: both;"></div>
@@ -284,7 +288,7 @@ function makePrice(option){
           <div class="options">
             <span class="options_left">컬러</span>
             <div id="color" class="options_right">
-              <div name="color" id="1" class="round" style="background:#2f2f2f; "></div>
+              
               <div name="color" id="2" class="round" style="background:#7b1719; "></div>
               <div name="color" id="3" class="round" style="background:#efeee9; "></div>
               <div name="color" id="4" class="round" style="background:#14130f; "></div>
