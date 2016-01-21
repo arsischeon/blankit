@@ -1,6 +1,5 @@
 <style>
 .banner{
-  height:300px;
   width:100%;
   background: #EAEAEA;
   position:absolute;
@@ -47,7 +46,7 @@ $(function(){
 });
 </script>
   <div class="banner">
-
+    <img src="/source/image/artist-page-banner" class="img img-responsive">
   </div>
 </div>
 
