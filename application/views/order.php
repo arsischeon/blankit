@@ -237,7 +237,7 @@ function sisibal(){
 
   </div>
   <div class="row row-padding-xs-100 " style="margin-top:10px;">
-    <span class="order_result_2">총 주문금액 <?php echo number_format($addPRICE + 2500, 0, '.', ',');?>원</span>
+    <span class="order_result_2">총 주문금액 <?php if ($addPRICE == 0) echo "0"; echo number_format($addPRICE + 2500, 0, '.', ',');?>원</span>
     <span class="order_result_1">상품 총 금액 <?php echo number_format($addPRICE, 0, '.', ',');?>원 + 배송비 2,500원</span>
   </div>
 
