@@ -7,8 +7,9 @@
   font-size: 17px;
 }
 .banner-text{
+  width:100%;
   top: 40%;
-  position: relative;
+  position: absolute;
   display:block;
   margin:0 auto;
 }
