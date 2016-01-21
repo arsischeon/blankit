@@ -21,11 +21,19 @@ class Order extends CI_Controller {
 			redirect($homeUrl);
 		}
 	}
-	public function cart()
+	public function cart() // 실제 카트 페이지
 	{
-		$this->load->view('header');
-		$this->load->view('cart');
-		$this->load->view('footer');
+		/*** 로그인 세션 없으면 home으로 튕김 ***/
+		if ($this->session->userdata('user_id')){
+			$this->load->view('header');
+			$this->load->view('cart');
+			$this->load->view('footer');
+		}
+		else {
+			$homeUrl = "http://blankit.kr";
+			$this->load->helper('url');
+			redirect($homeUrl);
+		}
 	}
 	public function complete()
 	{
