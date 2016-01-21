@@ -186,10 +186,12 @@ function allOrderProduct(){
 		$storeRandomId = $row->store_random_id;
 		$cartPrice = $row->cart_price;
 		$cartNum = $row->cart_num;
-		echo "hey!";
+		
+		$i = 0;
+		
 ?>
 
-    <div style="padding: 10px 5px 0px 5px;" class="product col-xs-12 col-sm-6 col-md-6 col-lg-6" id="<?//echo $i?>">
+    <div style="padding: 10px 5px 0px 5px;" class="product col-xs-12 col-sm-6 col-md-6 col-lg-6" id="<? echo $i?>">
       <div class="order_border">
       <div class="row">
 
@@ -226,7 +228,7 @@ function allOrderProduct(){
       </div>
     </div>
   </div>
-<? }?>
+<? $i++;}?>
     <!-- 주문목록 반복되는 부분 끝 -->
 
   </div>
