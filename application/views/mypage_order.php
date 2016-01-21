@@ -156,15 +156,51 @@ $(function(){
         </div>
       </div>
     </div>
-
-
-
   <div class="row row-padding-xs-100 " style="margin-top:30px;">
     <span class="title1">주문리스트 확인</span>
   </div>
   <div class="row row-padding-xs-100 " style="margin-top:10px;">
+  
+  
    <!-- 주문 목록 반복되는 블럭 시작 -->
-   <? for($i=0;$i<2;$i++){?>
+   <? 
+   		foreach($order_list->result() as $row){
+   			 $orderRandomId = $row->order_random_id;
+   			 $orderDate = $row->order_date;
+   			 // 주문정보 [이윤지 아티스트] 개와고양이를 그리는 사람들이다요다요 외 3 해야함
+   			 $orderPrice = number_format($row->order_price, 0, '.', ',');
+   			 $orderStatus = $row->order_status;
+   			 $orderLog = $row->order_log;
+   			 
+   			 switch($orderStatus){
+   			 	case 0:
+   			 		$textStatus = "입금대기";
+   			 		break;
+   			 	case 1:
+   			 		$textStatus = "입금확인";
+   			 		break;
+   			 	case 2:
+   			 		$textStatus = "배송준비";
+   			 		break;
+   			 	case 3:
+   			 		$textStatus = "배송중";
+   			 		break;
+   			 	case 4:
+   			 		$textStatus = "배송완료";
+   			 		break;
+   			 	case 7:
+   			 		$textStatus = "반송대기";
+   			 		break;
+   			 	case 8:
+   			 		$textStatus = "반송중";
+   			 		break;
+   			 	case 9:
+   			 		$textStatus = "반송완료";
+   			 		break;
+   			 	default:
+   			 		$textStatus = "점검중";
+   			 }
+   ?>
 
     <div style="padding: 10px 5px 0px 5px;" class=" col-xs-12 col-sm-6 col-md-6 col-lg-6">
       <div class="order_border">
@@ -174,7 +210,7 @@ $(function(){
           <span class="order_title">주문번호</span>
         </div>
         <div class="col-xs-9">
-          <span class="order_content">0000000</span>
+          <span class="order_content"><?php echo $orderRandomId;?></span>
         </div>
       </div>
       <div class="row">
@@ -182,7 +218,7 @@ $(function(){
           <span class="order_title">주문일자</span>
         </div>
         <div class="col-xs-9">
-          <span class="order_content">15-01-25</span>
+          <span class="order_content"><?php echo $orderDate;?></span>
         </div>
       </div>
       <div class="row">
@@ -198,7 +234,7 @@ $(function(){
           <span class="order_title">총 금액</span>
         </div>
         <div class="col-xs-9">
-          <span class="order_content">20,000원</span>
+          <span class="order_content"><?php echo $orderPrice;?>원</span>
         </div>
       </div>
       <div class="row">
@@ -206,7 +242,7 @@ $(function(){
           <span class="order_title">주문상태</span>
         </div>
         <div class="col-xs-9">
-          <span class="order_content">배송중</span>
+          <span class="order_content"><?php echo $textStatus;?></span>
         </div>
       </div>
       <div class="row">
@@ -221,6 +257,7 @@ $(function(){
   </div>
     <? }?>
     <!-- 주문목록 반복되는 부분 끝 -->
+    
 
   </div>
     <div class="row row-padding-xs-100 " style="margin-top:30px;">
