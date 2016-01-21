@@ -5,14 +5,16 @@ class Order extends CI_Controller {
 
 	public function index()
 	{
-		$this->load->model('order_model');
-		$data['cart']=$this->order_model->cart();
-		$data['address']=$this->order_model->address();
-		$data['generateOrderRandomId']=$this->order_model->generateOrderRandomId();
-		
-		$this->load->view('header');
-		$this->load->view('order',$data);
-		$this->load->view('footer');
+		if ($this->session->userdata('user_id')){
+			$this->load->model('order_model');
+			$data['cart']=$this->order_model->cart();
+			$data['address']=$this->order_model->address();
+			$data['generateOrderRandomId']=$this->order_model->generateOrderRandomId();
+			
+			$this->load->view('header');
+			$this->load->view('order',$data);
+			$this->load->view('footer');
+		}
 	}
 	public function complete()
 	{
