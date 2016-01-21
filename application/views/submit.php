@@ -1,11 +1,5 @@
 <style>
-.banner{
-  width:100%;
-  background: black;
-  position:absolute;
-  left:0;
-  top:0;
-}
+
 .banner-text p{
   text-align: center;
   color: white;
@@ -37,10 +31,30 @@ background-size: contain;
      z-index: 50;
   opacity:0.5;
 }
+.banner{
+  width:100%;
+  height:300px;
+  position:absolute;
+  left:0;
+  top:0;
+  overflow:hidden;
+}
+.banner>img{
+  min-height: 300px;
+}
 </style>
 <script>
+function banner_generator(){
+  var width = document.documentElement.clientWidth;
+  $(".banner>img").css("margin-left","-"+($(".banner>img").width()-width)/2+"px");
+}
 $(function(){
   $("#root_container").css("height",$(".banner").height()+"px");
+  banner_generator();
+  $(window).on("resize",function(){
+      $("#root_container").css("height",$(".banner").height()+"px");
+      banner_generator();
+  });
 });
 </script>
   <div class="banner">
