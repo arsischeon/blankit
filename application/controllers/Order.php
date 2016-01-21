@@ -25,8 +25,11 @@ class Order extends CI_Controller {
 	{
 		/*** 로그인 세션 없으면 login으로 튕김 ***/
 		if ($this->session->userdata('user_id')){
+			$this->load->model('order_model');
+			$data['realCart'] = $this->order_model->realCart();
+			
 			$this->load->view('header');
-			$this->load->view('cart');
+			$this->load->view('cart', $data);
 			$this->load->view('footer');
 		}
 		else {
