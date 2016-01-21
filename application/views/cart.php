@@ -189,7 +189,7 @@ function allOrderProduct(){
 		echo "hey!";
 ?>
 
-    <div style="padding: 10px 5px 0px 5px;" class="product col-xs-12 col-sm-6 col-md-6 col-lg-6" id="<?echo $i?>">
+    <div style="padding: 10px 5px 0px 5px;" class="product col-xs-12 col-sm-6 col-md-6 col-lg-6" id="<?//echo $i?>">
       <div class="order_border">
       <div class="row">
 
@@ -221,7 +221,7 @@ function allOrderProduct(){
           <span class="order_title">수량</span>
         </div>
         <div class="col-xs-9">
-          <span class="order_content" id="amount" ><?php echo cartNum;?></span>
+          <span class="order_content" id="amount" ><?php echo $cartNum;?></span>
         </div>
       </div>
     </div>
