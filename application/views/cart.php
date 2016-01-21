@@ -186,6 +186,7 @@ function allOrderProduct(){
 		$storeRandomId = $row->store_random_id;
 		$cartPrice = $row->cart_price;
 		$cartNum = $row->cart_num;
+		echo "hey!";
 ?>
 
     <div style="padding: 10px 5px 0px 5px;" class="product col-xs-12 col-sm-6 col-md-6 col-lg-6" id="<?echo $i?>">
