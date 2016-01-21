@@ -75,6 +75,7 @@ input[type="radio"] + label{
   border:1px solid #B7B7B7;
   border-radius: 6px;
   padding: 5px;
+
 }
 .order_border:hover{
   background: #D3D3D3;
@@ -86,7 +87,7 @@ input[type="radio"] + label{
 }
 .order_result_2{
   margin-left: 10px;
-  font-size:12px;
+  font-size:20px;
   color:#443333;
   float:right;
 }
@@ -101,11 +102,16 @@ input[type="radio"] + label{
 </style>
 <script>
 var result=[];
+var price=0;
+var fprice=2500;
 $(function(){
+  $("#priceTag").text(price+'원');
+  $("#fpriceTag").text(fprice+'원');
   $(".product").on("click",function(event){
     var id=event.currentTarget.id;
     makeResult(id);
-    console.log(result);
+    $("#priceTag").text(price+'원');
+    $("#fpriceTag").text(fprice+'원');
   })
 });
 function makeResult(id){
@@ -114,19 +120,27 @@ function makeResult(id){
     if(result[i]==id){
       $("#"+result[i]).find(".order_border").css("background","none");
       result.splice(i,1);
+      price-=$("#"+id).find("#price").text()*$("#"+id).find("#amount").text();
+      fprice-=$("#"+id).find("#price").text()*$("#"+id).find("#amount").text();
       return;
     }
   }
   result.push(id);
-  $("#"+id).find(".order_border").css("background","black");
+  price+=$("#"+id).find("#price").text()*$("#"+id).find("#amount").text();
+  fprice+=$("#"+id).find("#price").text()*$("#"+id).find("#amount").text();
+  $("#"+id).find(".order_border").css("background","#D3D3D3");
 }
 
 function deleteProduct(){
   $("#delete").val($("#delete").val().split(",").concat(result));
   for(var i=0;i<result.length;i++){
     $("#"+result[i]).css("display","none");
+    price-=$("#"+result[i]).find("#price").text()*$("#"+result[i]).find("#amount").text();
+    fprice-=$("#"+result[i]).find("#price").text()*$("#"+result[i]).find("#amount").text();
   }
   result=[];
+  $("#priceTag").text(price+'원');
+  $("#fpriceTag").text(fprice+'원');
 }
 function partOrderProduct(){
   if(result.length==0){
@@ -134,7 +148,7 @@ function partOrderProduct(){
     return;
   }
   $("#order").val(result);
-  //submit
+  $("#formfrom").submit();
 }
 function allOrderProduct(){
   var data=$(".product");
@@ -149,7 +163,7 @@ function allOrderProduct(){
     return;
   }
   $("#order").val(all);
-  //submit
+  $("#formfrom").submit();
 }
 </script>
 <div class="banner">
@@ -189,10 +203,10 @@ function allOrderProduct(){
       </div>
       <div class="row">
         <div class="col-xs-3">
-          <span class="order_title">판매가격</span>
+          <span class="order_title" >판매가격</span>
         </div>
         <div class="col-xs-9">
-          <span class="order_content">1</span>
+          <span class="order_content" id="price"><? echo $i*1000;?></span>
         </div>
       </div>
       <div class="row">
@@ -200,7 +214,7 @@ function allOrderProduct(){
           <span class="order_title">수량</span>
         </div>
         <div class="col-xs-9">
-          <span class="order_content">1</span>
+          <span class="order_content" id="amount" >1</span>
         </div>
       </div>
     </div>
@@ -210,18 +224,27 @@ function allOrderProduct(){
 
   </div>
   <div class="row row-padding-xs-100 " style="margin-top:10px;">
+    <span class="order_result_2" id="fpriceTag"></span>
     <span class="order_result_2">총 주문금액</span>
+    <span class="order_result_2">2500원 = </span>
+    <span class="order_result_2">+ 택배비</span>
+    <span class="order_result_2" id="priceTag"></span>
+    <span class="order_result_2">제품가격</span>
+
   </div>
-    <div class="row row-padding-xs-100 " style="margin-top:10px;">
+    <div class="row row-padding-xs-100 " style="margin-top:20px;">
+      <div style="text-align:center;">
       <button onclick="deleteProduct()">삭제</button>
       <button onclick="partOrderProduct()">선택결제</button>
       <button onclick="allOrderProduct()">전체결제</button>
     </div>
+    </div>
 
-    <div class="row row-padding-xs-100 " style="margin-top:10px;">
-      <form action="#">
-      delete<input type="text" id="delete"><br>
-      order<input type="text" id="order"><br>
+    <div class="row row-padding-xs-100 " style="margin-top:10px; display:none;">
+            <!-- 진우 여기만 수정하면대 -->
+      <form action="#" method="post" id="formform">
+      delete<input type="text" name="delete" id="delete"><br>
+      order<input type="text" name="order" id="order"><br>
     </form>
     </div>
 </div>
