@@ -1,7 +1,7 @@
 <style>
 .banner{
   width:100%;
-  background: #EAEAEA;
+  
   position:absolute;
   left:0;
   top:0;

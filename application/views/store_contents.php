@@ -1,12 +1,5 @@
 <style>
-.banner{
-  height:300px;
-  width:100%;
-  background: #EAEAEA;
-  position:absolute;
-  left:0;
-  top:0;
-}
+
 
 .menu{
   width:320px;
