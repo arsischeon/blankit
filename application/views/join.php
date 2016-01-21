@@ -109,9 +109,9 @@ Dropzone.autoDiscover = false;
 //         maxThumbnailFilesize: 15, // MB,
 //     };
 function submitCheck(){
-	  if($("input[id='info_checkbox']:checked").length==0){
-	  	alert("개인정보 수집 및 안내에 동의해주세요");
-	  	return;
+	if($("input[id='info_checkbox']:checked").length==0){
+	  alert("개인정보 수집 및 안내에 동의해주세요");
+	  return;
     }
     if($("input[id='usage_checkbox']:checked").length==0){
       alert("이용약관에 동의해주세요");
@@ -152,8 +152,9 @@ function submitCheck(){
       return;
     }
 
-	  $("#formform").submit();
-	}
+	$("#formform").submit();
+}
+
 </script>
 <div class="banner">
 
