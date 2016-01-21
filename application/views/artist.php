@@ -46,7 +46,7 @@ $(function(){
 });
 </script>
   <div class="banner">
-    <img src="/source/image/artist-page-banner" class="img img-responsive">
+    <img src="/source/image/artist-page-banner.jpg" class="img img-responsive">
   </div>
 </div>
 
