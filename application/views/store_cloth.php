@@ -66,6 +66,9 @@
 <script>
 $(function(){
   $("#root_container").css("height",$(".banner").height()+"px");
+  $(window).on("resize",function(){
+      $("#root_container").css("height",$(".banner").height()+"px");
+  });
 });
 </script>
   <div class="banner">
