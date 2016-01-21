@@ -68,9 +68,9 @@
             <li class="dropdown">
               <a href="#" id="aboutus_menu" class=" nav-color dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">about us</span></a>
                 <ul class="dropdown-menu" role="menu">
-                  <li><a href="#">서비스 소개</a></li>
-                  <li><a href="#">FAQ</a></li>
-                  <li><a href="#">고객센터</a></li>
+                  <li><a href="/help">서비스 소개</a></li>
+                  <li><a href="/help/faq">FAQ</a></li>
+                  <li><a href="/help/cs">고객센터</a></li>
                 </ul>
             </li>
             <li><a class="nav-color navbar-left" href="/artist">artist</a></li>
@@ -91,14 +91,14 @@
           		}
           		else {
           			echo '<li><a class="navbar-right main-page-navbar-right" href="/login">login/join</a></li>';
-          		} 
+          		}
 				// my blankit & cart 로그인 시에만 뜨기
           		if ($this->session->userdata('status') == "1"){
           			echo '<li><a class="navbar-right main-page-navbar-right" href="/mypage">my blankit</a></li>
             			<li><a class="navbar-right main-page-navbar-right" href="/order">order</a></li>';
           		}
           	?>
-            
+
             <li><a style="" class="navbar-right main-page-navbar-right" href="/submit">help</a></li>
             <li><a style="margin-right:40px;" class="navbar-right" href="/submit"><div class="YourButton" style="margin-top: -5px;">내 작품 판매하기</div></a></li>
           </ul>
