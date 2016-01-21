@@ -12,7 +12,7 @@ class Mypage_model extends CI_Model{
 		return $this->db->query("
 			select *
 			from `ORDER` o
-			where o.user_id = $user_id_SESSION;
+			where o.user_id = '$user_id_SESSION';
 		");	
 	}
 }
