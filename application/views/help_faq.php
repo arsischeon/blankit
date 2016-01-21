@@ -1,6 +1,6 @@
 <style>
 .banner{
-  height:50px;
+  height:70px;
   width:100%;
   background: white;
   position:absolute;
@@ -8,7 +8,9 @@
   top:0;
   border-bottom: 1px solid #D3D3D3;
 }
-
+.nav-color{
+  color: #868686 !important;
+}
 .q{
   text-align: left;
   color:#96AFB5;
