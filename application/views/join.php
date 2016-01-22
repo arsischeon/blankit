@@ -83,20 +83,28 @@ success:function(data){
 }
 var pongpong;
 function phone_check(){
+
 $.ajax({
 url: "/join/phone_check?phone="+$("input[name='phone1']").val()+$("input[name='phone2']").val()+$("input[name='phone3']").val(),
 success:function(data){
     pongpong=data;
-      alert('인증번호가 발송되었습니다.');
+    $("#kkll").css("display","none");
+    $("#kkll2").css("display","");
+    alert('인증번호가 발송되었습니다.');
+
 }
 });
 }
 function phone_check2(){
   $('#ddd').append(pongpong);
   console.log($("#kkk").text());
-  if($("input[name='sisisisi']").val()!=$("#kkk").text())alert('sibal');
+  if($("input[name='sisisisi']").val()!=$("#kkk").text())alert('인증번호가 틀렸습니다.');
   else{
-    alert('good');
+    $(".pp").css("display","none");
+    $("input[name='phone1']").attr("disabled",true);
+      $("input[name='phone2']").attr("disabled",true);
+        $("input[name='phone3']").attr("disabled",true);
+    alert('인증되었습니다.');
   }
 }
 
@@ -290,13 +298,13 @@ function submitCheck(){
       <input class="menu_input_phone_1" name="phone1" type="text" value="010">-
       <input class="menu_input_phone_2" name="phone2" type="text">-
       <input class="menu_input_phone_2" name="phone3" type="text">
-      <a onclick="phone_check()"><div class="menu_button myButton" style="border-radius:5px;">인증번호 발송</div><a>
+      <a onclick="phone_check()"><div class="pp menu_button myButton" style="border-radius:5px;" id="kkll">인증번호 발송</div><a>
       </div>
       <div id="ddd" style="display:none"></div>
-      <div class="row row-padding-xs-100 " style="margin-top:10px;">
+      <div class="row row-padding-xs-100 " style="margin-top:10px;display:none;" id="kkll2">
         <div class="menu"></div>
-        <input class="menu_input" type="text" name="sisisisi">
-        <a onclick="phone_check2()"><div class="menu_button myButton" style="border-radius:5px;">인증번호 확인</div><a>
+        <input class="pp menu_input" type="text" name="sisisisi" >
+        <a onclick="phone_check2()"><div class="pp menu_button myButton" style="border-radius:5px;" >인증번호 확인</div><a>
         <input style="display:none" type="text"  id="phone_check">
         </div>
         <div class="row row-padding-xs-100 " style="margin-top:10px;">
