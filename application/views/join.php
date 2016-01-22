@@ -251,7 +251,7 @@ function submitCheck(){
   <div class="row row-padding-xs-100 " style="margin-top:10px;">
     <div class="menu">아이디</div>
     <input class="menu_input" name="id" type="text">
-    <a href="id_check()"><div class="menu_button myButton" style="border-radius:5px;">중복확인</div><a>
+    <a onclick="id_check()"><div class="menu_button myButton" style="border-radius:5px;">중복확인</div><a>
       <input type="text" style="display:none;" id="id_check">
     </div>
     <div class="row row-padding-xs-100 " style="margin-top:10px;">
