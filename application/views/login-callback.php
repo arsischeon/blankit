@@ -1,4 +1,5 @@
 <?
+require_once BASEPATH . '../facebook-sdk-v5/autoload.php';
 $fb = new Facebook\Facebook([
 'app_id' => '214340015575657',
 'app_secret' => 'cad7051613820a8abbd70964efda8a2f',
