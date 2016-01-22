@@ -70,6 +70,7 @@ function id_check(){
 $.ajax({
 url: "/join/id_check?id="+$("input[name='id']").val(),
 success:function(data){
+  console.log(data);
   if(data=='true'){
       $("#id_check").val("true");
       alert('사용할 수 있는 아이디입니다.');
