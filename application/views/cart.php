@@ -141,6 +141,8 @@ function deleteProduct(){
   result=[];
   $("#priceTag").text(price+'원');
   $("#fpriceTag").text(fprice+'원');
+
+  $("#formform").submit(); // 진우 추가
 }
 function partOrderProduct(){
   if(result.length==0){
@@ -148,7 +150,7 @@ function partOrderProduct(){
     return;
   }
   $("#order").val(result);
-  $("#formfrom").submit();
+  $("#formform").submit();
 }
 function allOrderProduct(){
   var data=$(".product");
@@ -163,7 +165,7 @@ function allOrderProduct(){
     return;
   }
   $("#order").val(all);
-  $("#formfrom").submit();
+  $("#formform").submit();
 }
 </script>
 <div class="banner">
@@ -251,7 +253,7 @@ function allOrderProduct(){
 
     <div class="row row-padding-xs-100 " style="margin-top:10px; ">
             <!-- 진우 여기만 수정하면대 -->
-      <form action="#" method="post" id="formform">
+      <form action="/order/func_cart_checker" method="post" id="formform">
       delete<input type="text" name="delete" id="delete"><br>
       order<input type="text" name="order" id="order"><br>
     </form>
