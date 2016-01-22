@@ -92,8 +92,8 @@ success:function(data){
 });
 }
 function phone_check2(){
+  $('#ddd').text(pongpong);
   console.log(pongpong.find("#kkk").text());
-
   if($("input[name='sisisisi']").val()!=pongpong.find("#kkk").text())alert('sibal');
   else{
     alert('good');
@@ -292,6 +292,7 @@ function submitCheck(){
       <input class="menu_input_phone_2" name="phone3" type="text">
       <a onclick="phone_check()"><div class="menu_button myButton" style="border-radius:5px;">인증번호 발송</div><a>
       </div>
+      <div id="ddd" style="display:none"></div>
       <div class="row row-padding-xs-100 " style="margin-top:10px;">
         <div class="menu"></div>
         <input class="menu_input" type="text" name="sisisisi">
