@@ -67,7 +67,7 @@ input[type="radio"] + label{
 </style>
 <script>
 function id_check(){
-var request = $.ajax({
+$.ajax({
 url: "/join/id_check?id="+$("input[name='id']").val(),
 success:function(data){
   if(data=='true'){
