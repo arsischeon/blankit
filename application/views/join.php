@@ -86,7 +86,7 @@ $(function(){
 
   //  $("#portfolio").dropzone({ url: "/file/post",maxFilesize:1 });
   // var myDropzone = new Dropzone("div#portfolio", { url: "/main",maxFilesize:1,maxFiles:1});
-  var myDropzone1 = new Dropzone($("#profile"), { url: "/file/profile", paramName: "userfile",maxFiles:1,addRemoveLinks:true,autoProcessQueue: false,dictRemoveFile:"파일 삭제",dictMaxFilesExceeded:"1개만 업로드할 수 있습니다."});
+  var myDropzone1 = new Dropzone("#profile", { url: "/file/profile", paramName: "userfile",maxFiles:1,addRemoveLinks:true,autoProcessQueue: false,dictRemoveFile:"파일 삭제",dictMaxFilesExceeded:"1개만 업로드할 수 있습니다."});
   myDropzone1.on("addedfile", function(file) {
   });
 
