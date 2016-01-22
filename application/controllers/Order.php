@@ -79,9 +79,13 @@ class Order extends CI_Controller {
 		/*** func_cart_checker에서 받은 flashdata 없으면 cart으로 튕김 ***/
 		if ($this->session->flashdata('redirect') == "func_cart_checker"){
 			$this->load->model('order_model');
-			//$this->order_model->orderCart($orderCart);
-			$data['orderCart'] = $orderCart;
-			$this->load->view('test_result', $data);
+			$this->order_model->orderCart($orderCart);
+			
+			/*** cart_status 3으로 변경되고, order 페이지로 넘어감 ***/
+			$orderUrl = "http://blankit.kr/order";
+			$this->load->helper('url');
+			redirect($orderUrl);
+			// 카트->오더 아니면 못 넘어가도록, flashdata 나중에 추가할 것! << 진우 >>
 		}
 		else {
 			$cartUrl = "http://blankit.kr/order/cart?not_ok";
