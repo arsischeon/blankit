@@ -231,7 +231,7 @@ $fb = new Facebook\Facebook(['app_id' => '214340015575657',
 'default_graph_version' => 'v2.5']);
 $helper = $fb->getRedirectLoginHelper();
 $permissions = ['public_profile','email', 'user_likes']; // optional
-$loginUrl = $helper->getLoginUrl('http://blankit.kr/login/facebook-callback', $permissions);
+$loginUrl = $helper->getLoginUrl('http://blankit.kr/login/facebook_callback', $permissions);
 
 echo "<div class=\"submit_button\"><a href=\"".$loginUrl."\" class=\"myButton\" style=\"width: 100%;\">페이스북으로 로그인</a></div>";
 
