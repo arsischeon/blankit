@@ -43,12 +43,8 @@ class Order extends CI_Controller {
 	public function func_cart_checker() // 카트-> 판별 담당 
 	{
 		/*** cart에서 받은 flashdata 없으면 cart으로 튕김 ***/
-		if ($this->session->flashdata('redirect') == "cart"){ // delete POST 있으면
-			//  && $deleteCart = $this->input->post('delete') !== ""
-			//func_cart_delete($deleteCart);
-			$data['deleteCart'] = $this->input->post('delete');
-			$this->load->view('test_result', $data);
-			
+		if ($this->session->flashdata('redirect') == "cart" && $deleteCart = $this->input->post('delete') !== ""){ // delete POST 있으면 func_cart_delete로
+			func_cart_delete($deleteCart);
 			$this->session->set_flashdata('redirect', 'func_cart_checker');
 		}
 		else{
@@ -63,7 +59,9 @@ class Order extends CI_Controller {
 		if ($this->session->flashdata('redirect') == "func_cart_checker"){
 			$this->load->model('order_model');
 			//$this->order_model->deleteCart($deleteCart);
-			$this->load->view('test_result', $deleteCart);
+			
+			$data['deleteCart'] = $deleteCart; 
+			$this->load->view('test_result', $data);
 		}
 		else{
 			$cartUrl = "http://blankit.kr/order/cart";
