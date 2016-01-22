@@ -60,16 +60,13 @@ class Order extends CI_Controller {
 		/*** func_cart_checker에서 받은 flashdata 없으면 cart으로 튕김 ***/
 		if ($this->session->flashdata('redirect') == "func_cart_checker"){
 			$this->load->model('order_model');
-			//$this->order_model->deleteCart($deleteCart);
-			
-			$data['deleteCart'] = $deleteCart; 
-			$this->load->view('test_result', $data);
+			$this->order_model->deleteCart($deleteCart);
 		}
-		else{
-			$cartUrl = "http://blankit.kr/order/cart";
-			$this->load->helper('url');
-			redirect($cartUrl);
-		}
+		
+		$cartUrl = "http://blankit.kr/order/cart";
+		$this->load->helper('url');
+		redirect($cartUrl);
+		
 	}
 	public function func_cart_ok() // 카트-> 선택/전체 결제 담당
 	{

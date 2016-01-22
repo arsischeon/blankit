@@ -55,11 +55,19 @@ class Order_model extends CI_Model{
 			"); // CART 테이블에서 현재 세션 유저가 '담긴상태(1)'를 불러들임 & 해당 제품의 정보가 진행중이면 그 정보까지 & 그 정보의 디자이너 이름
 	}
 	
-/* 	public function deleteCart($deleteCart){ // cart 삭제를 담당 
-		$this->db->query("
-			update cart_status
-			from `CART`
-			where ;
-		")
-	} */
+ 	public function deleteCart($deleteCart){ // cart 삭제를 담당
+ 		$xxDeleteCart = explode(',', $deleteCart);
+ 		$xxDeleteSize = sizeOf($xxDeleteCart);
+ 		$x=1;
+ 		
+ 		while($x < $xxDeleteSize){
+ 			$cart_id = $xxDeleteCart[$x];
+ 			$this->db->query("
+ 					update `CART`
+ 					set cart_status='2';
+ 					where cart_id='$cart_id';
+ 					");
+ 			$x++;
+ 		}
+	} 
 }
