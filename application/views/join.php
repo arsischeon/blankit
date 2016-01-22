@@ -66,8 +66,9 @@ input[type="radio"] + label{
 }
 </style>
 <script>
+function id_check(){
 var request = $.ajax({
-url: "/join/id_check?"+$("input[name='id']").val(),
+url: "/join/id_check?id="+$("input[name='id']").val(),
 success:function(data){
   if(data=='true'){
       $("#id_check").val("true");
@@ -78,6 +79,7 @@ success:function(data){
 
 }
 });
+}
 
 var myDropzone1;
 $(function(){
@@ -249,7 +251,7 @@ function submitCheck(){
   <div class="row row-padding-xs-100 " style="margin-top:10px;">
     <div class="menu">아이디</div>
     <input class="menu_input" name="id" type="text">
-    <a href="#"><div class="menu_button myButton" style="border-radius:5px;">중복확인</div><a>
+    <a href="id_check()"><div class="menu_button myButton" style="border-radius:5px;">중복확인</div><a>
       <input type="text" style="display:none;" id="id_check">
     </div>
     <div class="row row-padding-xs-100 " style="margin-top:10px;">
