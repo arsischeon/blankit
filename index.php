@@ -292,5 +292,4 @@ switch (ENVIRONMENT)
  * And away we go...
  */
 require_once BASEPATH.'core/CodeIgniter.php';
-define('FACEBOOK_SDK_V4_SRC_DIR', __DIR__ . '/facebook-sdk-v5/');
-require_once __DIR__ . '/facebook-sdk-v5/autoload.php';
+require_once BASEPATH . '../facebook-sdk-v5/autoload.php';
