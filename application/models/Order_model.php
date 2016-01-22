@@ -49,7 +49,7 @@ class Order_model extends CI_Model{
 		$user_id_SESSION = $this->session->userdata('user_id');
 		
 		return $this->db->query("
-			select store_random_id, user_name, store_name, cart_type, cart_color, cart_size, cart_num, cart_price 
+			select store_random_id, user_name, store_name, cart_type, cart_color, cart_size, cart_num, cart_price, c.cart_id as ID
 			from `CART` c, `STORE` s, `USER` u
 			where c.user_id = '$user_id_SESSION' and c.cart_status = '1' and c.store_id = s.store_id and s.store_status = '1' and u.user_id = s.user_id;
 			"); // CART 테이블에서 현재 세션 유저가 '담긴상태(1)'를 불러들임 & 해당 제품의 정보가 진행중이면 그 정보까지 & 그 정보의 디자이너 이름
