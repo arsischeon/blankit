@@ -189,6 +189,21 @@ function allOrderProduct(){
 		$cartPrice = $row->cart_price;
 		$cartNum = $row->cart_num;
 		$cartId = $row->ID;
+		$designer = $row->designer;
+		$storeName = $row->store_name;
+		$cartType = $row->cart_type;
+		$cartSize = $row->cart_size;
+		$cartColor = $row->cart_color;
+		
+		$cartDETAILS = $cartType;
+		
+		if($cartColor !== "default"){
+			$cartDETAILS = $cartDETAILS . "-" . $cartColor;
+		}
+		if($cartSize !== "default"){
+			$cartDETAILS = $cartDETAILS . "-" . $cartSize;
+		}
+		
 ?>
 
     <div style="padding: 10px 5px 0px 5px;" class="product col-xs-12 col-sm-6 col-md-6 col-lg-6" id="<? echo $cartId?>">
@@ -207,7 +222,15 @@ function allOrderProduct(){
           <span class="order_title">제품정보</span>
         </div>
         <div class="col-xs-9">
-          <span class="order_content">[아티스트]</span>
+          <span class="order_content">[<?php echo $designer;?>아티스트] <?php echo $storeName;?></span>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-xs-3">
+          <span class="order_title">상세정보</span>
+        </div>
+        <div class="col-xs-9">
+          <span class="order_content"><?php echo $cartDETAILS?></span>
         </div>
       </div>
       <div class="row">
