@@ -226,14 +226,14 @@ if ($explodePath = explode('?', $urlPath)){
 
 <?php
 
-// $fb = new Facebook\Facebook(['app_id' => '214340015575657',
-// 'app_secret' => 'cad7051613820a8abbd70964efda8a2f',
-// 'default_graph_version' => 'v2.5']);
-// $helper = $fb->getRedirectLoginHelper();
-// $permissions = ['public_profile','email', 'user_likes']; // optional
-// $loginUrl = $helper->getLoginUrl('http://blankit.kr/sources/php/login-callback.php', $permissions);
-//
-// echo "<div class=\"submit_button\"><a href=\"".$loginUrl."\" class=\"myButton\" style=\"width: 100%;\">페이스북으로 로그인</a></div>";
+$fb = new Facebook\Facebook(['app_id' => '214340015575657',
+'app_secret' => 'cad7051613820a8abbd70964efda8a2f',
+'default_graph_version' => 'v2.5']);
+$helper = $fb->getRedirectLoginHelper();
+$permissions = ['public_profile','email', 'user_likes']; // optional
+$loginUrl = $helper->getLoginUrl('http://blankit.kr/sources/php/login-callback.php', $permissions);
+
+echo "<div class=\"submit_button\"><a href=\"".$loginUrl."\" class=\"myButton\" style=\"width: 100%;\">페이스북으로 로그인</a></div>";
 
 ?>
 
