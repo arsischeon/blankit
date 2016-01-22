@@ -73,6 +73,7 @@ success:function(data){
   if(data=='true'){
       $("#id_check").val("true");
       $("input[name='id']").attr("disabled",true);
+      $("#uuu").css("display","none");
       alert('사용할 수 있는 아이디입니다.');
   }else{
       alert('사용할 수 없는 아이디입니다.');
@@ -104,6 +105,7 @@ function phone_check2(){
     $("input[name='phone1']").attr("disabled",true);
       $("input[name='phone2']").attr("disabled",true);
         $("input[name='phone3']").attr("disabled",true);
+    $("#phone_check").val("hello");
     alert('인증되었습니다.');
   }
 }
@@ -278,7 +280,7 @@ function submitCheck(){
   <div class="row row-padding-xs-100 " style="margin-top:10px;">
     <div class="menu">아이디</div>
     <input class="menu_input" name="id" type="text">
-    <a onclick="id_check()"><div class="menu_button myButton" style="border-radius:5px;">중복확인</div><a>
+    <a onclick="id_check()"><div id="uuu" class="menu_button myButton" style="border-radius:5px;">중복확인</div><a>
       <input type="text" style="display:none;" id="id_check">
     </div>
     <div class="row row-padding-xs-100 " style="margin-top:10px;">
