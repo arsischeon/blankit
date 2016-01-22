@@ -141,6 +141,8 @@ function deleteProduct(){
   result=[];
   $("#priceTag").text(price+'원');
   $("#fpriceTag").text(fprice+'원');
+
+  $("#formfrom").submit(); // 진우 추가
 }
 function partOrderProduct(){
   if(result.length==0){
