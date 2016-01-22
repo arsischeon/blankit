@@ -43,8 +43,8 @@ class Order extends CI_Controller {
 	public function func_cart_checker() // 카트-> 판별 담당 
 	{
 		/*** cart에서 받은 flashdata 없으면 cart으로 튕김 ***/
-		if ($this->session->flashdata('redirect') == "cart" && $deleteCart = $this->input->post('delete') !== ""){ // delete POST 있으면
-			
+		if ($this->session->flashdata('redirect') == "cart"){ // delete POST 있으면
+			//  && $deleteCart = $this->input->post('delete') !== ""
 			func_cart_delete($deleteCart);
 			$this->session->set_flashdata('redirect', 'func_cart_checker');
 		}
