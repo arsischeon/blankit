@@ -61,7 +61,11 @@
 
             ">
           </a>
-          <?php echo "Welcome" . $this->session->userdata('user_name')?>
+          <?php echo "Welcome" . $this->session->userdata('user_name');
+          echo $_SESSION['facebook_access_token'];
+
+
+          ?>
         </div>
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1" style="    padding-top: 10px;">
           <ul class="nav navbar-nav">
