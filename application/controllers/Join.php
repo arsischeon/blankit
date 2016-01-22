@@ -7,9 +7,9 @@ class Join extends CI_Controller {
 	{
 		// $this->load->model('join_model');
 		// $data['id_list'] = $this->join_model->id_list(); // id 중복확인
-		$data;
+
 		$this->load->view('header');
-		$this->load->view('join', $data);
+		$this->load->view('join');
 		$this->load->view('footer');
 	}
 

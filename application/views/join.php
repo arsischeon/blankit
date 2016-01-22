@@ -67,10 +67,10 @@ input[type="radio"] + label{
 </style>
 <script>
 function id_check(){
-var request = $.ajax({
+$.ajax({
 url: "/join/id_check?id="+$("input[name='id']").val(),
 success:function(data){
-  if(data=='true'){
+  if(data==''){
       $("#id_check").val("true");
       alert('사용할 수 있는 아이디입니다.');
   }else{
