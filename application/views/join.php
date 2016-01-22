@@ -91,6 +91,9 @@ success:function(data){
     pongpong=data;
     $("#kkll").css("display","none");
     $("#kkll2").css("display","");
+    $("input[name='phone1']").attr("disabled",true);
+      $("input[name='phone2']").attr("disabled",true);
+        $("input[name='phone3']").attr("disabled",true);
     alert('인증번호가 발송되었습니다.');
 
 }
@@ -102,9 +105,7 @@ function phone_check2(){
   if($("input[name='sisisisi']").val()!=$("#kkk").text())alert('인증번호가 틀렸습니다.');
   else{
     $(".pp").css("display","none");
-    $("input[name='phone1']").attr("disabled",true);
-      $("input[name='phone2']").attr("disabled",true);
-        $("input[name='phone3']").attr("disabled",true);
+
     $("#phone_check").val("hello");
     alert('인증되었습니다.');
   }
