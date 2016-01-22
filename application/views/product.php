@@ -392,7 +392,8 @@ function makePrice(option){
         <div class="col-xs-12">
           <div class="submit_button"><a
             onclick="checkSubmit();"
-  			class="myButton">구매하기</a></div>
+  			class="myButton"
+  			<?php if ($dayStatus == 0)echo "disabled";?>>구매하기</a></div>
         </div>
       </div>
     </div>
