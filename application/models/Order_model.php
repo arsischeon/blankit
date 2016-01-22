@@ -33,15 +33,29 @@ class Order_model extends CI_Model{
 		");
 	}
 	
-	public function order($receiver, $email, $phone1, $phone2, $phone3, $home1, $home2, $home3, $payer, $bank, $account, $notice, $totalPrice, $orderRandomId){
+	public function order($receiver, $email, $phone1, $phone2, $phone3, $home1, $home2, $home3, $payer, $bank, $account, $notice, $orderRandomId){
 		$home = $home1 . "/" . $home2 . "/" . $home3;
 		$phone = $phone1 . $phone2 . $phone3;
 		$date = date('Y-m-d H:i:s');
 		$user_id_SESSION = $this->session->userdata('user_id');
 		
+		$procOrder = $this->db->query("
+			select cart_price_total, cart_id
+			from `CART`
+			where user_id='$user_id_SESSION' and cart_status='3';
+			");
+		
+		$totalPrice =0;
+		$concatCartId = "";
+		
+		foreach($procOrder->result() as $row){
+			$totalPrice += $row->cart_price_total;
+			$concatCartId = $concatCartId . "," . $row->cart_id; 
+		}
+		
 		$this->db->query("
-			INSERT INTO `ORDER` (order_date, order_price, order_status, order_home, order_receiver, order_phone, order_email, order_name, order_bank, order_account, order_notice, order_random_id, user_id)
-			VALUES ('$date', '$totalPrice', '0', '$home', '$receiver', '$phone', '$email', '$payer', '$bank', '$account', '$notice', '$orderRandomId', '$user_id_SESSION');
+			INSERT INTO `ORDER` (order_date, order_price, order_status, order_home, order_receiver, order_phone, order_email, order_name, order_bank, order_account, order_notice, order_random_id, user_id, order_cart)
+			VALUES ('$date', '$totalPrice', '0', '$home', '$receiver', '$phone', '$email', '$payer', '$bank', '$account', '$notice', '$orderRandomId', '$user_id_SESSION', '$concatCartId');
 			");
 		
 		$this->db->query("

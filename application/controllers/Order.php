@@ -127,10 +127,9 @@ class Order extends CI_Controller {
 			$bank = $this->input->post('bank');
 			$account = $this->input->post('account');
 			$notice = $this->input->post('notice');
-			$totalPrice = $this->input->post('totalPrice');
 	
 			$this->load->model('order_model');
-			$this->order_model->order($receiver, $email, $phone1, $phone2, $phone3, $home1, $home2, $home3, $payer, $bank, $account, $notice, $totalPrice, $orderRandomId);
+			$this->order_model->order($receiver, $email, $phone1, $phone2, $phone3, $home1, $home2, $home3, $payer, $bank, $account, $notice, $orderRandomId);
 			
 			//flashdate 세팅
 			$this->session->set_flashdata('redirect', 'func_order_ok');

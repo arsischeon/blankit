@@ -385,7 +385,6 @@ function submitCheck(){
       <div class="menu title2">입금 계좌번호</div>
       <input class="menu_input" placeholder="입금할 계좌번호" style="width:200px;" type="text" name="account">
     </div>
-    <input type="text" name="totalPrice" value="<?echo $addPRICE + 2500;?>" style="display:none">
     <input type="text" name="orderRandomId" value="<?echo $seed_date;?>" style="display:none">
 </form>
 
