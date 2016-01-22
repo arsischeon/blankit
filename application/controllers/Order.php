@@ -46,7 +46,7 @@ class Order extends CI_Controller {
 		if ($this->session->flashdata('redirect') == "cart"){ // delete POST 있으면
 			//  && $deleteCart = $this->input->post('delete') !== ""
 			//func_cart_delete($deleteCart);
-			$deleteCart = $this->input->post('delete')
+			$deleteCart = $this->input->post('delete');
 			$this->load->view('test_result', $deleteCart);
 			
 			$this->session->set_flashdata('redirect', 'func_cart_checker');
