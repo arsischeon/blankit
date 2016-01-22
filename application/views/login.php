@@ -225,6 +225,8 @@ if ($explodePath = explode('?', $urlPath)){
           <div class="col-xs-8">
 
 <?php
+define('FACEBOOK_SDK_V4_SRC_DIR', __DIR__ . '/facebook-sdk-v5/');
+require_once __DIR__ . '/facebook-sdk-v5/autoload.php';
 $fb = new Facebook\Facebook([
 'app_id' => '214340015575657',
 'app_secret' => 'cad7051613820a8abbd70964efda8a2f',
