@@ -64,7 +64,7 @@ class Order_model extends CI_Model{
  			$cart_id = $xxDeleteCart[$x];
  			$this->db->query("
  					update `CART`
- 					set cart_status='2';
+ 					set cart_status='2'
  					where cart_id='$cart_id';
  					");
  			$x++;
