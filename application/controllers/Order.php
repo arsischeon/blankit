@@ -44,8 +44,9 @@ class Order extends CI_Controller {
 	{
 		/*** cart에서 받은 flashdata 없으면 cart으로 튕김 ***/
 		if ($this->session->flashdata('redirect') == "cart" && $deleteCart = $this->input->post('delete') !== ""){ // delete POST 있으면 func_cart_delete로
-			$this->func_cart_delete($deleteCart);
 			$this->session->set_flashdata('redirect', 'func_cart_checker');
+			
+			$this->func_cart_delete($deleteCart); // func_cart_delete로 넘기기
 		}
 		else{
 			$cartUrl = "http://blankit.kr/order/cart";
