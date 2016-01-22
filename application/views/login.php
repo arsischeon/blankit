@@ -33,7 +33,7 @@
   text-align: center;
 }
 </style>
-<script>
+<!-- <script>
 // This is called with the results from from FB.getLoginStatus().
 function statusChangeCallback(response) {
   console.log('statusChangeCallback');
@@ -91,6 +91,8 @@ window.fbAsyncInit = function() {
     statusChangeCallback(response);
     if (response.status === 'connected') {
    console.log(response.authResponse.accessToken);
+ }else{
+
  }
   });
 
@@ -115,7 +117,7 @@ function testAPI() {
     'Thanks for logging in, ' + response.name + '!';
   });
 }
-</script>
+</script> -->
 <script>
 $(function(){
   var userInputId = getCookie("userInputId");
@@ -221,12 +223,23 @@ if ($explodePath = explode('?', $urlPath)){
           <div class="col-xs-4" style="padding-top:4px;">
           </div>
           <div class="col-xs-8">
-            <!-- <div class="submit_button"><a href="#" class="myButton" style="width: 100%;">페이스북으로 로그인</a></div> -->
-            <fb:login-button scope="public_profile,email" onlogin="checkLoginState();">
+            <!-- <fb:login-button scope="public_profile,email" onlogin="checkLoginState();">
           </fb:login-button>
+<?php
+$fb = new Facebook\Facebook([
+'app_id' => '214340015575657',
+'app_secret' => 'cad7051613820a8abbd70964efda8a2f',
+'default_graph_version' => 'v2.5',
+]);
+$helper = $fb->getRedirectLoginHelper();
+$permissions = ['public_profile','email', 'user_likes']; // optional
+$loginUrl = $helper->getLoginUrl('http://blankit.kr/sources/php/login-callback.php', $permissions);
 
+echo "<div class=\"submit_button\"><a href=\"".$loginUrl."\" class=\"myButton\" style=\"width: 100%;\">페이스북으로 로그인</a></div>";
+
+?>
           <div id="status">
-          </div>
+          </div> -->
         </div>
       </div>
       <div class="row" style="margin-top:15px; height: 25px;">
