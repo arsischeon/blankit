@@ -89,6 +89,9 @@ window.fbAsyncInit = function() {
 
   FB.getLoginStatus(function(response) {
     statusChangeCallback(response);
+    if (response.status === 'connected') {
+   console.log(response.authResponse.accessToken);
+ }
   });
 
 };
