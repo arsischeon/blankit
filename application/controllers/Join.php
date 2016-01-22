@@ -31,7 +31,7 @@ class Join extends CI_Controller {
 	}
 	public function phone_check()
 	{
-		require_once("/source/php/coolsms.php");
+		require_once(BASEPATH."../source/php/coolsms.php");
 		$secret=mt_rand()%90+10;
 		$phone=$this->input->get("phone");
 		$api_key = 'NCS53C2A831865B7';
