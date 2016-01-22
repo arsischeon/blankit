@@ -57,7 +57,7 @@ class Order extends CI_Controller {
 	public function func_cart_delete($deleteCart) // 카트-> 삭제 담당
 	{  
 		/*** func_cart_checker에서 받은 flashdata 없으면 cart으로 튕김 ***/
-		if ($this->session->flashdata('redirect')){
+		if ($this->session->flashdata('redirect') == "func_cart_checker"){
 			$this->load->model('order_model');
 			//$this->order_model->deleteCart($deleteCart);
 			$this->load->view('test_result', $deleteCart);
