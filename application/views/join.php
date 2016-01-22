@@ -81,17 +81,18 @@ success:function(data){
 }
 });
 }
+var pongpong;
 function phone_check(){
 $.ajax({
 url: "/join/phone_check?phone="+$("input[name='phone1']").val()+$("input[name='phone2']").val()+$("input[name='phone3']").val(),
 success:function(data){
+    pongpong=data;
       alert('인증번호가 발송되었습니다.');
-
 }
 });
 }
 function phone_check2(){
-  if($("input[name='sisisisi']").val()!='<%=Session["phone_check"]%>')alert('sibal');
+  if($("input[name='sisisisi']").val()!=pongpong)alert('sibal');
   else{
     alert('good');
   }
