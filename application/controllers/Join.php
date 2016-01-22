@@ -45,6 +45,6 @@ $options->to = $phone;
 $options->from = "01071097327";
 $options->text = "인증 번호는 ".$secret." 입니다. 올바르게 입력해주세요.";
 $rest->send($options);
-	echo $secret;
+	echo "<div id='kkk' >".$secret."</div>";
 	}
 }

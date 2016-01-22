@@ -92,9 +92,9 @@ success:function(data){
 });
 }
 function phone_check2(){
-  console.log(pongpong);
+  console.log(pongpong.find("#kkk").text());
 
-  if($("input[name='sisisisi']").val()!=pongpong)alert('sibal');
+  if($("input[name='sisisisi']").val()!=pongpong.find("#kkk").text())alert('sibal');
   else{
     alert('good');
   }
