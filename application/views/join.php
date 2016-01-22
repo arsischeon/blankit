@@ -92,6 +92,8 @@ success:function(data){
 });
 }
 function phone_check2(){
+  console.log(pongpong);
+
   if($("input[name='sisisisi']").val()!=pongpong)alert('sibal');
   else{
     alert('good');
