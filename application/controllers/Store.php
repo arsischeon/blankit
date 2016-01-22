@@ -58,16 +58,18 @@ class Store extends CI_Controller {
 	}
 	public function func_toCart() // 상품페이지->장바구니
 	{
-		$type = $this->input->post('type');
-		$color = $this->input->post('color');
-		$size= $this->input->post('size');
-		$amount = $this->input->post('amount');
-		$storeId = $this->input->post('storeId');
-		$storeType = $this->input->post('storeType');
-		
-		$this->load->model('store_model');
-		$this->store_model->toCart($type, $color, $size, $amount, $storeId, $storeType);
-		
+		if ($this->input->post('storeId')){ // POST값이 존재하면 진행
+			$type = $this->input->post('type');
+			$color = $this->input->post('color');
+			$size= $this->input->post('size');
+			$amount = $this->input->post('amount');
+			$storeId = $this->input->post('storeId');
+			$storeType = $this->input->post('storeType');
+			
+			$this->load->model('store_model');
+			$this->store_model->toCart($type, $color, $size, $amount, $storeId, $storeType);
+		}
+			
 		//본래 페이지로 다시 redirect
 		/* $storeUrl = "http://blankit.kr/store/product/" . $storeId;
 		$this->load->helper('url');

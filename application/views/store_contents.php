@@ -135,6 +135,12 @@ $(function(){
 	$dueDateNum = strtotime($dueDate);
 	$remainSecs = $dueDateNum - $curDateNum;
 	$remainDays = $remainSecs / 86400;
+	if($remainDays<=0){
+		$remainDays = "마감";
+	}
+	else{
+		$remainDays=floor($remainDays);
+	}
 	//여기까지 "앞으로 # 일 계산"
 ?>
 
@@ -146,7 +152,7 @@ $(function(){
       <div class="status_bar" style="background: linear-gradient(to right, #687C87 <?php echo ceil($percGoal)?>%,#D3D3D3 <?php echo ceil($percGoal)?>% );"></div>
       <div class="artist_hover" style="padding-top:7px;">
         <span class="status_percent"><?php echo ceil($percGoal);?>%</span>
-        <span class="status_day_word">앞으로 <span class="status_day"><?php echo floor($remainDays);?></span>일</span>
+        <span class="status_day_word">앞으로 <span class="status_day"><?php echo $remainDays;?></span>일</span>
       </div>
       <div class="artist_hover" style="width: 100%; display: inline-flex;">
         <div style="width:20%; margin-left: 10px; padding-top: 10px; margin-bottom:15px;">
