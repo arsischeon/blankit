@@ -192,9 +192,11 @@ function makePrice(option){
 	$remainDays = $remainSecs / 86400;
 	if($remainDays<=0){
 		$remainDays = "마감";
+		$dayStatus = 0;
 	}
 	else{
 		$remainDays=floor($remainDays);
+		$dayStatus = 1;
 	}
 	//여기까지 "앞으로 # 일 계산"
 
@@ -224,7 +226,9 @@ function makePrice(option){
         </div>
         <div class="col-xs-12">
           <span style="font-size:50px; font-weight:300; "><?php echo $remainDays;?></span>
-          <span>일</span>
+          <?php if ($dayStatus == 1){
+          	echo "<span>일</span>";
+          }?>
         </div>
       </div>
 
