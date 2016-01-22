@@ -190,6 +190,12 @@ function makePrice(option){
 	$dueDateNum = strtotime($dueDate);
 	$remainSecs = $dueDateNum - $curDateNum;
 	$remainDays = $remainSecs / 86400;
+	if($remainDays<=0){
+		$remainDays = "마감";
+	}
+	else{
+		$remainDays=floor($remainDays);
+	}
 	//여기까지 "앞으로 # 일 계산"
 
 	$PRICE =  number_format($storePrice, 0, '.', ','); // 가격 천 단위 콤마 넣어주기
@@ -217,7 +223,7 @@ function makePrice(option){
           <span class="option_title">남은 일자</span>
         </div>
         <div class="col-xs-12">
-          <span style="font-size:50px; font-weight:300; "><?php echo floor($remainDays);?></span>
+          <span style="font-size:50px; font-weight:300; "><?php echo $remainDays;?></span>
           <span>일</span>
         </div>
       </div>
