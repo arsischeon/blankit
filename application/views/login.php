@@ -225,7 +225,6 @@ if ($explodePath = explode('?', $urlPath)){
           <div class="col-xs-8">
 
 <?php
-require_once '/facebook-sdk-v5/autoload.php';
 
 $fb = new Facebook\Facebook([
 'app_id' => '214340015575657',

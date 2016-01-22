@@ -55,8 +55,7 @@
  */
 	define('ENVIRONMENT', isset($_SERVER['CI_ENV']) ? $_SERVER['CI_ENV'] : 'development');
 	define ('SITE_ROOT', realpath(dirname(__FILE__)));
-	// define('FACEBOOK_SDK_V4_SRC_DIR', __DIR__ . '/facebook-sdk-v5/');
-	// require_once __DIR__ . '/facebook-sdk-v5/autoload.php';
+
 
 /*
  *---------------------------------------------------------------
@@ -293,3 +292,4 @@ switch (ENVIRONMENT)
  * And away we go...
  */
 require_once BASEPATH.'core/CodeIgniter.php';
+require_once __DIR__ . '/facebook-sdk-v5/autoload.php';
