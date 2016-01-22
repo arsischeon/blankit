@@ -223,8 +223,7 @@ if ($explodePath = explode('?', $urlPath)){
           <div class="col-xs-4" style="padding-top:4px;">
           </div>
           <div class="col-xs-8">
-            <!-- <fb:login-button scope="public_profile,email" onlogin="checkLoginState();">
-          </fb:login-button>
+
 <?php
 $fb = new Facebook\Facebook([
 'app_id' => '214340015575657',
@@ -238,8 +237,7 @@ $loginUrl = $helper->getLoginUrl('http://blankit.kr/sources/php/login-callback.p
 echo "<div class=\"submit_button\"><a href=\"".$loginUrl."\" class=\"myButton\" style=\"width: 100%;\">페이스북으로 로그인</a></div>";
 
 ?>
-          <div id="status">
-          </div> -->
+
         </div>
       </div>
       <div class="row" style="margin-top:15px; height: 25px;">
