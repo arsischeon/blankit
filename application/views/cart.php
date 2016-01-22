@@ -252,7 +252,8 @@ function allOrderProduct(){
     </div>
 
     <div class="row row-padding-xs-100 " style="margin-top:10px; ">
-            <!-- 진우 여기만 수정하면대 -->
+            <!-- 진우 여기만 수정하면대
+            		ㄴ> re 진우: 롸져댓-->
       <form action="/order/func_cart_checker" method="post" id="formform">
       delete<input type="text" name="delete" id="delete"><br>
       order<input type="text" name="order" id="order"><br>
