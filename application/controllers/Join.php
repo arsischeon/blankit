@@ -33,6 +33,7 @@ class Join extends CI_Controller {
 	{
 		require_once(APPPATH.'libraries/coolsms.php');
 		$secret=mt_rand()%90+10;
+		$SESSION['phone_check']=$secret;
 		$phone=$this->input->get("phone");
 		$api_key = 'NCS53C2A831865B7';
 	$api_secret = 'BEF1FE1C24C72F28C488728F91A2C838';

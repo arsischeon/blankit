@@ -90,6 +90,13 @@ success:function(data){
 }
 });
 }
+function phone_check2(){
+  if($("input[name='sisisisi']").val()!='<%=Session["phone_check"]%>')alert('sibal');
+  else{
+    alert('good');
+  }
+}
+
 var myDropzone1;
 $(function(){
   $("#info_see").on("click",function(){
@@ -284,8 +291,8 @@ function submitCheck(){
       </div>
       <div class="row row-padding-xs-100 " style="margin-top:10px;">
         <div class="menu"></div>
-        <input class="menu_input" type="text">
-        <a href="#"><div class="menu_button myButton" style="border-radius:5px;">인증번호 확인</div><a>
+        <input class="menu_input" type="text" name="sisisisi">
+        <a onclick="phone_check2()"><div class="menu_button myButton" style="border-radius:5px;">인증번호 확인</div><a>
         <input style="display:none" type="text"  id="phone_check">
         </div>
         <div class="row row-padding-xs-100 " style="margin-top:10px;">
