@@ -55,7 +55,7 @@ class Order_model extends CI_Model{
 			"); // CART 테이블에서 현재 세션 유저가 '담긴상태(1) or 결제넘김(3)'를 불러들임 & 해당 제품의 정보가 진행중이면 그 정보까지 & 그 정보의 디자이너 이름
 	}
 	
- 	public function deleteCart($deleteCart){ // cart 삭제를 담당
+ 	public function deleteCart($deleteCart){ // cart 삭제 status 변경을 담당
  		$xxDeleteCart = explode(',', $deleteCart);
  		$xxDeleteSize = sizeOf($xxDeleteCart);
  		$x=1;
@@ -71,7 +71,19 @@ class Order_model extends CI_Model{
  		}
 	}
 	
-	public function orderCart($orderCart){
-		
+	public function orderCart($orderCart){ // cart 결제 status 변경을 담당
+		$xxOrderCart = explode(',', $orderCart);
+		$xxOrderSize = sizeOf($xxOrderCart);
+		$x=0;
+			
+		while($x < $xxOrderSize){
+			$cart_id = $xxOrderCart[$x];
+			$this->db->query("
+					update `CART`
+					set cart_status='3'
+					where cart_id='$cart_id';
+					");
+			$x++;
+		}
 	}
 }
