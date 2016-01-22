@@ -4,9 +4,10 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 class Order extends CI_Controller {
 
 	public function index()
-	{	/*** 로그인 세션 없으면 home으로 튕김 -> flash로 고칠 것!***/
-		if ($this->session->userdata('user_id')){
+	{	/*** cart->order 순이 아니면 cart로 튕김! ***/
+		if ($this->session->flashdata('redirect') == "func_cart_ok"){
 			$this->load->model('order_model');
+			
 			$data['cart']=$this->order_model->cart();
 			$data['address']=$this->order_model->address();
 			$data['generateOrderRandomId']=$this->order_model->generateOrderRandomId();
@@ -16,9 +17,9 @@ class Order extends CI_Controller {
 			$this->load->view('footer');
 		}
 		else {
-			$homeUrl = "http://blankit.kr";
+			$cartUrl = "http://blankit.kr/order/cart?order";
 			$this->load->helper('url');
-			redirect($homeUrl);
+			redirect($cartUrl);
 		}
 	}
 	public function cart() // 실제 카트 페이지
@@ -81,11 +82,13 @@ class Order extends CI_Controller {
 			$this->load->model('order_model');
 			$this->order_model->orderCart($orderCart);
 			
+			// 카트->오더 아니면 못 넘어가도록 flashdata 설정
+			$this->session->set_flashdata('redirect', 'func_cart_ok');
+			
 			/*** cart_status 3으로 변경되고, order 페이지로 넘어감 ***/
 			$orderUrl = "http://blankit.kr/order";
 			$this->load->helper('url');
 			redirect($orderUrl);
-			// 카트->오더 아니면 못 넘어가도록, flashdata 나중에 추가할 것! << 진우 >>
 		}
 		else {
 			$cartUrl = "http://blankit.kr/order/cart?not_ok";
@@ -125,7 +128,6 @@ class Order extends CI_Controller {
 			$account = $this->input->post('account');
 			$notice = $this->input->post('notice');
 			$totalPrice = $this->input->post('totalPrice');
-			//$orderRandomId = $this->input->post('orderRandomId');
 	
 			$this->load->model('order_model');
 			$this->order_model->order($receiver, $email, $phone1, $phone2, $phone3, $home1, $home2, $home3, $payer, $bank, $account, $notice, $totalPrice, $orderRandomId);

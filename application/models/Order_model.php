@@ -13,7 +13,7 @@ class Order_model extends CI_Model{
 				select user_name, user_email, user_phone, user_home, user_home2, user_home3, u.user_id as buyer, s.user_id as artist, s.store_id,
 				cart_id, cart_type, cart_color, cart_size, cart_num, cart_price, cart_price_total, cart_status, store_name, store_random_id
 				from USER u, CART c, STORE s
-				where u.user_id = c.user_id and s.store_id = c.store_id and cart_status = 1 and c.user_id = '$user_id_SESSION';
+				where u.user_id = c.user_id and s.store_id = c.store_id and cart_status = 3 and c.user_id = '$user_id_SESSION';
 		");
 	}
 	
@@ -40,9 +40,15 @@ class Order_model extends CI_Model{
 		$user_id_SESSION = $this->session->userdata('user_id');
 		
 		$this->db->query("
-		INSERT INTO `ORDER` (order_date, order_price, order_status, order_home, order_receiver, order_phone, order_email, order_name, order_bank, order_account, order_notice, order_random_id, user_id)
-		VALUES ('$date', '$totalPrice', '0', '$home', '$receiver', '$phone', '$email', '$payer', '$bank', '$account', '$notice', '$orderRandomId', '$user_id_SESSION');
-		");
+			INSERT INTO `ORDER` (order_date, order_price, order_status, order_home, order_receiver, order_phone, order_email, order_name, order_bank, order_account, order_notice, order_random_id, user_id)
+			VALUES ('$date', '$totalPrice', '0', '$home', '$receiver', '$phone', '$email', '$payer', '$bank', '$account', '$notice', '$orderRandomId', '$user_id_SESSION');
+			");
+		
+		$this->db->query("
+			update `CART`
+			set cart_status='4'
+			where cart_status='3' and user_id='$user_id_SESSION';
+			");
 	}
 	
 	public function realCart(){ // /order/cart에서 주문 리스트 확인 밑에 출력 될 것들
@@ -59,13 +65,14 @@ class Order_model extends CI_Model{
  		$xxDeleteCart = explode(',', $deleteCart);
  		$xxDeleteSize = sizeOf($xxDeleteCart);
  		$x=1;
+ 		$user_id_SESSION = $this->session->userdata('user_id');
  		
  		while($x < $xxDeleteSize){
  			$cart_id = $xxDeleteCart[$x];
  			$this->db->query("
  					update `CART`
  					set cart_status='2'
- 					where cart_id='$cart_id';
+ 					where cart_id='$cart_id' and user_id='$user_id_SESSION';
  					");
  			$x++;
  		}
@@ -75,13 +82,14 @@ class Order_model extends CI_Model{
 		$xxOrderCart = explode(',', $orderCart);
 		$xxOrderSize = sizeOf($xxOrderCart);
 		$x=0;
+		$user_id_SESSION = $this->session->userdata('user_id');
 			
 		while($x < $xxOrderSize){
 			$cart_id = $xxOrderCart[$x];
 			$this->db->query("
 					update `CART`
 					set cart_status='3'
-					where cart_id='$cart_id';
+					where cart_id='$cart_id' and user_id='$user_id_SESSION';
 					");
 			$x++;
 		}
