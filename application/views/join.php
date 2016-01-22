@@ -123,7 +123,7 @@ function submitCheck(){
       return;
     }
     //진우 // 아이디 중복확인 넣어야함
-    
+
     if($("#id_check").val()==''){
       alert("아이디 중복확인을 해주세요");
       return;

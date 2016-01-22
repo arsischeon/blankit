@@ -62,7 +62,7 @@
             ">
           </a>
           <?php echo "Welcome" . $this->session->userdata('user_name');
-          echo $_SESSION['facebook_access_token'];
+          // echo $_SESSION['facebook_access_token'];
 
 
           ?>
