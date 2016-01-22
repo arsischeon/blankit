@@ -5,11 +5,12 @@ echo $deleteCart. "///";
 $xxDeleteCart = explode(',', $deleteCart);
 
 $xxDeleteSize = sizeOf($xxDeleteCart);
-$x=1;
+echo $xxDeleteSize;
+$x=2;
 
-for($x=1; x<$xxDeleteSize; $x++){
+while($x < $xxDeleteSize){
 	echo $xxDeleteCart[$x];
-}
- 
+	$x++;
+} 
 
 ?>
