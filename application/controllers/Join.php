@@ -23,7 +23,7 @@ class Join extends CI_Controller {
 	{
 		$this->load->model('join_model');
 		$result=$this->join_model->id_list();
-		if ($result==true) {
+		if ($result->num_rows()==0) {
 			echo "true";
 		}else {
 			echo "";
