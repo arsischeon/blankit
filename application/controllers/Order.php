@@ -50,7 +50,7 @@ class Order extends CI_Controller {
 			$this->func_cart_delete($deleteCart); // func_cart_delete로 넘기기
 		}
 		else{
-			$cartUrl = "http://blankit.kr/order/cart";
+			$cartUrl = "http://blankit.kr/";
 			$this->load->helper('url');
 			redirect($cartUrl); 
 		}
@@ -63,7 +63,7 @@ class Order extends CI_Controller {
 			$this->order_model->deleteCart($deleteCart);
 		}
 		
-		$cartUrl = "http://blankit.kr/order/cart";
+		$cartUrl = "http://blankit.kr/";
 		$this->load->helper('url');
 		redirect($cartUrl);
 		
