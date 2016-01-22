@@ -292,4 +292,4 @@ switch (ENVIRONMENT)
  * And away we go...
  */
 require_once BASEPATH.'core/CodeIgniter.php';
-require_once('facebook-sdk-v5/autoload.php');
+// require_once('facebook-sdk-v5/autoload.php');
