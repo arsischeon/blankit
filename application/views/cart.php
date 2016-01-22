@@ -243,7 +243,7 @@ function allOrderProduct(){
   <span class="order_result_2" id="fpriceTag"></span>
   <span class="order_result_2">총 주문금액</span>
 </div>
-    <div class="row row-padding-xs-100 " style="margin-top:20px; display:none;">
+    <div class="row row-padding-xs-100 " style="margin-top:20px;">
       <div style="text-align:center;">
       <button onclick="deleteProduct()">삭제</button>
       <button onclick="partOrderProduct()">선택결제</button>
@@ -254,7 +254,7 @@ function allOrderProduct(){
     <div class="row row-padding-xs-100 " style="margin-top:10px; ">
             <!-- 진우 여기만 수정하면대
             		ㄴ> re 진우: 롸져댓-->
-      <form action="/order/func_cart_checker" method="post" id="formform">
+      <form action="/order/func_cart_checker" method="post" id="formform" style="display:none;">
       delete<input type="text" name="delete" id="delete"><br>
       order<input type="text" name="order" id="order"><br>
     </form>
