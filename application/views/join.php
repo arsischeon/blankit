@@ -86,12 +86,12 @@ $(function(){
 
   //  $("#portfolio").dropzone({ url: "/file/post",maxFilesize:1 });
   // var myDropzone = new Dropzone("div#portfolio", { url: "/main",maxFilesize:1,maxFiles:1});
-  var myDropzone = new Dropzone("#profile", { url: "/file/profile", paramName: "userfile",maxFiles:1,addRemoveLinks:true,autoProcessQueue: false,dictRemoveFile:"파일 삭제",dictMaxFilesExceeded:"1개만 업로드할 수 있습니다."});
-  myDropzone.on("addedfile", function(file) {
+  var myDropzone1 = new Dropzone($("#profile"), { url: "/file/profile", paramName: "userfile",maxFiles:1,addRemoveLinks:true,autoProcessQueue: false,dictRemoveFile:"파일 삭제",dictMaxFilesExceeded:"1개만 업로드할 수 있습니다."});
+  myDropzone1.on("addedfile", function(file) {
   });
 
-  var myDropzone = new Dropzone("#portfolio", { url: "/main", paramName: "portfolio",autoProcessQueue: false,maxFiles:0});
-  myDropzone.on("addedfile", function(file) {
+  var myDropzone2 = new Dropzone("#portfolio", { url: "/main", paramName: "portfolio",autoProcessQueue: false,maxFiles:0});
+  myDropzone2.on("addedfile", function(file) {
   });
   // $("#sibal").on("click",function(){
   //   myDropzone.processQueue();
@@ -123,7 +123,7 @@ function submitCheck(){
       return;
     }
     //진우 // 아이디 중복확인 넣어야함
-    
+
     if($("#id_check").val()==''){
       alert("아이디 중복확인을 해주세요");
       return;

@@ -219,32 +219,32 @@ if ($explodePath = explode('?', $urlPath)){
             <span style="margin-left:6px;">아이디 저장</span>
           </div>
         </div>
-        <div class="row" style="margin-top:10px; height: 25px;">
+        <!-- <div class="row" style="margin-top:10px; height: 25px;">
           <div class="col-xs-4" style="padding-top:4px;">
           </div>
-          <div class="col-xs-8">
+          <div class="col-xs-8"> -->
 
 <?php
-require_once BASEPATH . '../facebook-sdk-v5/autoload.php';
-$fb = new Facebook\Facebook(['app_id' => '214340015575657',
-'app_secret' => 'cad7051613820a8abbd70964efda8a2f',
-'default_graph_version' => 'v2.5']);
-$helper = $fb->getRedirectLoginHelper();
-$permissions = ['public_profile','email', 'user_likes']; // optional
-$loginUrl = $helper->getLoginUrl('http://blankit.kr/sources/php/login-callback.php', $permissions);
-
-echo "<div class=\"submit_button\"><a href=\"".$loginUrl."\" class=\"myButton\" style=\"width: 100%;\">페이스북으로 로그인</a></div>";
+// require_once BASEPATH . '../facebook-sdk-v5/autoload.php';
+// $fb = new Facebook\Facebook(['app_id' => '214340015575657',
+// 'app_secret' => 'cad7051613820a8abbd70964efda8a2f',
+// 'default_graph_version' => 'v2.5']);
+// $helper = $fb->getRedirectLoginHelper();
+// $permissions = ['public_profile','email', 'user_likes']; // optional
+// $loginUrl = $helper->getLoginUrl('http://blankit.kr/login/facebook_callback', $permissions);
+//
+// echo "<div class=\"submit_button\"><a href=\"".$loginUrl."\" class=\"myButton\" style=\"width: 100%;\">페이스북으로 로그인</a></div>";
 
 ?>
 
-        </div>
-      </div>
+        <!-- </div>
+      </div> -->
       <div class="row" style="margin-top:15px; height: 25px;">
         <div class="col-xs-4" style="padding-top:4px;">
         </div>
         <div class="col-xs-8">
           <div class="col-xs-4 padding-left-0 padding-right-5">
-            <a href="" style=""><div style="border-radius:5px; width:100%; height:25px; line-height:25px; border: 1px solid #B7B7B7; font-size:11px; text-align:center;"><span style="vertical-align:middle;">회원가입</span></div></a>
+            <a href="/join" style=""><div style="border-radius:5px; width:100%; height:25px; line-height:25px; border: 1px solid #B7B7B7; font-size:11px; text-align:center;"><span style="vertical-align:middle;">회원가입</span></div></a>
           </div>
           <div class="col-xs-8 padding-left-0 padding-right-0">
             <a href="" style=""><div style="border-radius:5px; width:100%; height:25px; line-height:25px; border: 1px solid #B7B7B7; font-size:11px; text-align:center;"><span style="vertical-align:middle;">아이디/비밀번호 찾기</span></div></a>
