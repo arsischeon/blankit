@@ -253,7 +253,7 @@ function allOrderProduct(){
     </div>
     </div>
 
-    <div class="row row-padding-xs-100 " style="margin-top:10px; display:none;">
+    <div class="row row-padding-xs-100 " style="margin-top:10px; ">
             <!-- 진우 여기만 수정하면대 -->
       <form action="#" method="post" id="formform">
       delete<input type="text" name="delete" id="delete"><br>
