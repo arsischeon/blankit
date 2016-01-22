@@ -11,7 +11,8 @@ class Join_model extends CI_Model{
 		$id=$this->input->get("id");
 		echo "아이디는 ".$id;
 		echo "select count(*) from `USER` where user_id='".$id."';";
-		echo $this->db->query("select count(*) from `USER` where user_id='".$id."';");
+		$result=$this->db->query("select count(*) from `USER` where user_id='".$id."';");
+		echo $result->num_rows();
 		return $this->db->query("select count(*) from `USER` where user_id='".$id."';");
 
 	}
