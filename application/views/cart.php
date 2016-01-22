@@ -182,18 +182,14 @@ function allOrderProduct(){
   <div class="row row-padding-xs-100 " style="margin-top:10px;">
   <!-- 주문목록 반복되는 부분 *시작* -->
 <?
-	$i = 0;
-	
 	foreach($realCart->result() as $row){
 		$storeRandomId = $row->store_random_id;
 		$cartPrice = $row->cart_price;
 		$cartNum = $row->cart_num;
-		
-		$i++;
-		
+		$cartId = $row->ID;
 ?>
 
-    <div style="padding: 10px 5px 0px 5px;" class="product col-xs-12 col-sm-6 col-md-6 col-lg-6" id="<? echo $i?>">
+    <div style="padding: 10px 5px 0px 5px;" class="product col-xs-12 col-sm-6 col-md-6 col-lg-6" id="<? echo $cartId?>">
       <div class="order_border">
       <div class="row">
 
