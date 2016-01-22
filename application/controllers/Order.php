@@ -128,7 +128,6 @@ class Order extends CI_Controller {
 			$account = $this->input->post('account');
 			$notice = $this->input->post('notice');
 			$totalPrice = $this->input->post('totalPrice');
-			//$orderRandomId = $this->input->post('orderRandomId');
 	
 			$this->load->model('order_model');
 			$this->order_model->order($receiver, $email, $phone1, $phone2, $phone3, $home1, $home2, $home3, $payer, $bank, $account, $notice, $totalPrice, $orderRandomId);
