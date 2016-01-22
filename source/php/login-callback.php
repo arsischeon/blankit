@@ -20,8 +20,7 @@ try {
 if (isset($accessToken)) {
   // Logged in!
   $_SESSION['facebook_access_token'] = (string) $accessToken;
-  header('Location: /');
-  exit;
+  echo "ff";
   // Now you can redirect to another page and use the
   // access token from $_SESSION['facebook_access_token']
 }
