@@ -244,7 +244,7 @@ if ($explodePath = explode('?', $urlPath)){
         </div>
         <div class="col-xs-8">
           <div class="col-xs-4 padding-left-0 padding-right-5">
-            <a href="" style=""><div style="border-radius:5px; width:100%; height:25px; line-height:25px; border: 1px solid #B7B7B7; font-size:11px; text-align:center;"><span style="vertical-align:middle;">회원가입</span></div></a>
+            <a href="/join" style=""><div style="border-radius:5px; width:100%; height:25px; line-height:25px; border: 1px solid #B7B7B7; font-size:11px; text-align:center;"><span style="vertical-align:middle;">회원가입</span></div></a>
           </div>
           <div class="col-xs-8 padding-left-0 padding-right-0">
             <a href="" style=""><div style="border-radius:5px; width:100%; height:25px; line-height:25px; border: 1px solid #B7B7B7; font-size:11px; text-align:center;"><span style="vertical-align:middle;">아이디/비밀번호 찾기</span></div></a>
