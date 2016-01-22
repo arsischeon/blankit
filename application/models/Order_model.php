@@ -47,7 +47,7 @@ class Order_model extends CI_Model{
 		$this->db->query("
 			update `CART`
 			set cart_status='4'
-			where cart_id='3' and user_id='$user_id_SESSION';
+			where cart_status='3' and user_id='$user_id_SESSION';
 			");
 	}
 	
