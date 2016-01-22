@@ -92,7 +92,7 @@ success:function(data){
 });
 }
 function phone_check2(){
-  $('#ddd').text(pongpong);
+  $('#ddd').append(pongpong);
   console.log($("#kkk").text());
   if($("input[name='sisisisi']").val()!=$("#kkk").text())alert('sibal');
   else{
