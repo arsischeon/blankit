@@ -187,7 +187,6 @@ function allOrderProduct(){
 		$cartPrice = $row->cart_price;
 		$cartNum = $row->cart_num;
 		
-		$i = 1;
 		$i++;
 		
 ?>

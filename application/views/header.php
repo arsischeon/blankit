@@ -68,7 +68,7 @@
             <li><a class="nav-color navbar-left" href="/aboutus">about us</a></li>
             <li><a class="nav-color navbar-left" href="/artist">artist</a></li>
             <li class="dropdown">
-              <a href="#" id="store_menu" class="nav-color dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">store</span></a>
+              <a href="#" id="store_menu" class="nav-color dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">funding</span></a>
                 <ul class="dropdown-menu" role="menu">
                   <li><a href="/store/cloth">의류</a></li>
                   <li><a href="/store/ecobag">에코백</a></li>
