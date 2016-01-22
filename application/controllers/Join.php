@@ -19,4 +19,11 @@ class Join extends CI_Controller {
 		$this->load->view('join');
 		$this->load->view('footer');
 	}
+	public function id_check()
+	{
+		$this->load->model('join_model');
+		$result=$this->join_model->id_list();
+		($result==true?echo "true":echo "");
+	}
+
 }

@@ -66,6 +66,20 @@ input[type="radio"] + label{
 }
 </style>
 <script>
+var request = $.ajax({
+url: "/join/id_check?"+$("input[name='id']").val(),
+success:function(data){
+  if(data=='true'){
+      $("#id_check").val("true");
+      alert('사용할 수 있는 아이디입니다.');
+  }else{
+      alert('사용할 수 없는 아이디입니다.');
+  }
+
+}
+});
+
+var myDropzone1;
 $(function(){
   $("#info_see").on("click",function(){
     $("#info_see_content").css("display","");
@@ -90,16 +104,25 @@ $(function(){
   // $("#sibal").on("click",function(){
   //   myDropzone.processQueue();
   // });
-});
-$(window).on("load",function(){
-  var myDropzone1 = new Dropzone("#profile", { url: "/file/profile", paramName: "userfile",maxFiles:1,addRemoveLinks:true,autoProcessQueue: false,dictRemoveFile:"파일 삭제",dictMaxFilesExceeded:"1개만 업로드할 수 있습니다."});
-  myDropzone1.on("addedfile", function(file) {
-  });
 
-  var myDropzone2 = new Dropzone("#portfolio", { url: "/main", paramName: "portfolio",autoProcessQueue: false,maxFiles:0});
-  myDropzone2.on("addedfile", function(file) {
-  });
+
+  if ($('#profile').length) {
+  myDropzone1 = new Dropzone("#profile", { url: "/file/profile", paramName: "userfile",maxFiles:1,addRemoveLinks:true,autoProcessQueue: false,dictRemoveFile:"파일 삭제",dictMaxFilesExceeded:"1개만 업로드할 수 있습니다."});
+
+  };
 });
+$(document).on("load",function(){
+
+});
+// $(window).on("load",function(){
+//   var myDropzone1 = new Dropzone("#profile", { url: "/file/profile", paramName: "userfile",maxFiles:1,addRemoveLinks:true,autoProcessQueue: false,dictRemoveFile:"파일 삭제",dictMaxFilesExceeded:"1개만 업로드할 수 있습니다."});
+//   myDropzone1.on("addedfile", function(file) {
+//   });
+//
+//   var myDropzone2 = new Dropzone("#portfolio", { url: "/main", paramName: "portfolio",autoProcessQueue: false,maxFiles:0});
+//   myDropzone2.on("addedfile", function(file) {
+//   });
+// });
 Dropzone.autoDiscover = false;
 // Dropzone.options.portfolio = {
 //         url : '/main',
@@ -158,6 +181,7 @@ function submitCheck(){
     }
 
 	$("#formform").submit();
+  myDropzone1.processQueue();
 }
 
 </script>
@@ -273,10 +297,9 @@ function submitCheck(){
           </div>
           <div class="row row-padding-xs-100 " style="margin-top:10px;">
             <div class="menu title2" style="margin-bottom:10px;">프로필사진</div>
-            <form id="profile" class="dropzone"  action="/file/profile" style="border-radius:10px;
-            ">
+            <div id="profile" class="dropzone">
             <div class="dz-default dz-message"><span>프로필 사진은 한 개만 업로드 할 수 있습니다<br>( 클릭 또는 파일을 드래그 해주세요! )</span></div>
-          </form>
+          </div>
         </div>
         <div class="row row-padding-xs-100 " style="margin-top:10px;">
           <div class="menu title2" style="margin-bottom:10px;">소개글</div>
