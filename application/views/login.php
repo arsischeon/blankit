@@ -68,7 +68,7 @@ function checkLoginState() {
 
 window.fbAsyncInit = function() {
   FB.init({
-    appId      : '{your-app-id}',
+    appId      : '214340015575657',
     cookie     : true,  // enable cookies to allow the server to access
     // the session
     xfbml      : true,  // parse social plugins on this page
@@ -89,6 +89,9 @@ window.fbAsyncInit = function() {
 
   FB.getLoginStatus(function(response) {
     statusChangeCallback(response);
+    if (response.status === 'connected') {
+   console.log(response.authResponse.accessToken);
+ }
   });
 
 };
