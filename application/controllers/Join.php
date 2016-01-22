@@ -29,5 +29,21 @@ class Join extends CI_Controller {
 			echo "";
 		}
 	}
+	public function phone_check()
+	{
+		require_once("/source/php/coolsms.php");
+		$secret=mt_rand()%90+10;
+		$phone=$this->input->get("phone");
+		$api_key = 'NCS53C2A831865B7';
+	$api_secret = 'BEF1FE1C24C72F28C488728F91A2C838';
 
+	$rest = new coolsms($api_key, $api_secret);
+
+$options->type = "SMS";
+$options->to = $phone;
+$options->from = $phone;
+$options->text = "인증 번호는 ".$secret." 입니다. 올바르게 입력해주세요.";
+$rest->send($options);
+
+	}
 }

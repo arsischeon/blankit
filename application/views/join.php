@@ -81,7 +81,15 @@ success:function(data){
 }
 });
 }
+function phone_check(){
+$.ajax({
+url: "/join/phone_check?phone="+$("input[name='phone1']").val()+$("input[name='phone2']").val()+$("input[name='phone3']").val(),
+success:function(data){
+      alert('인증번호가 발송되었습니다.');
 
+}
+});
+}
 var myDropzone1;
 $(function(){
   $("#info_see").on("click",function(){
@@ -272,7 +280,7 @@ function submitCheck(){
       <input class="menu_input_phone_1" name="phone1" type="text" value="010">-
       <input class="menu_input_phone_2" name="phone2" type="text">-
       <input class="menu_input_phone_2" name="phone3" type="text">
-      <a href="#"><div class="menu_button myButton" style="border-radius:5px;">인증번호 발송</div><a>
+      <a onclick="phone_check()"><div class="menu_button myButton" style="border-radius:5px;">인증번호 발송</div><a>
       </div>
       <div class="row row-padding-xs-100 " style="margin-top:10px;">
         <div class="menu"></div>
