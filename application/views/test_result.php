@@ -1,5 +1,7 @@
 <?php
 //echo print_r($info);
-echo $orderCart. "///";
+//echo $orderCart. "///";
+echo $type;
+
 
 ?>

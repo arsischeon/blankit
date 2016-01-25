@@ -113,37 +113,50 @@ $(function(){
 	foreach ($contents->result() as $row)
 	{
 
-	$storeType = $row->store_type;
-
-	//현재 URL에 맞는 타입이 아니면 패쓰
-	if ($urlNum == 0){
-
-	} else if ($storeType == $urlNum){
-
-	} else{
-		continue;
-	}
-
-	$totalGoal = $row->store_goal;
-	$nowGoal = $row->store_goal_now;
-	$percGoal = $nowGoal / $totalGoal * 100;
-
-	//"앞으로 # 일 계산"
-	$curDate = date('Y-m-d H:i:s');
-	$dueDate = $row->store_day;
-	$curDateNum = strtotime($curDate);
-	$dueDateNum = strtotime($dueDate);
-	$remainSecs = $dueDateNum - $curDateNum;
-	$remainDays = $remainSecs / 86400;
-	if($remainDays<=0){
-		$remainDays = "마감";
-		$dayStatus = 0;
-	}
-	else{
-		$remainDays=floor($remainDays);
-		$dayStatus = 1;
-	}
-	//여기까지 "앞으로 # 일 계산"
+		$storeType = $row->store_type;
+	
+		//현재 URL에 맞는 타입이 아니면 패쓰
+		if ($urlNum == 4){
+			if ($row->store_status == 3){
+				
+			}
+			else{
+				continue;
+			}
+		}
+		
+		if ($urlNum == 0){
+	
+		} else if ($storeType == $urlNum){
+			if ($row->store_status == 3){
+				continue;
+			}
+		} else if ($urlNum == 4 && $row->store_status == 3){
+			
+		} else {
+			continue;
+		}
+	
+		$totalGoal = $row->store_goal;
+		$nowGoal = $row->store_goal_now;
+		$percGoal = $nowGoal / $totalGoal * 100;
+	
+		//"앞으로 # 일 계산"
+		$curDate = date('Y-m-d H:i:s');
+		$dueDate = $row->store_day;
+		$curDateNum = strtotime($curDate);
+		$dueDateNum = strtotime($dueDate);
+		$remainSecs = $dueDateNum - $curDateNum;
+		$remainDays = $remainSecs / 86400;
+		if($remainDays<=0){
+			$remainDays = "마감";
+			$dayStatus = 0;
+		}
+		else{
+			$remainDays=floor($remainDays);
+			$dayStatus = 1;
+		}
+		//여기까지 "앞으로 # 일 계산"
 ?>
 
     <div class="col-xs-6 col-sm-4 col-md-3 col-lg-15">

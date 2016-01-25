@@ -277,7 +277,7 @@ function submitCheck(){
   <div class="row row-padding-xs-100 " style="margin-top:30px;">
     <span class="title1">회원 정보</span>
   </div>
-  <form action="#" method="post" id="formform">
+  <form action="/join/func_join_ok" method="post" id="formform">
   <div class="row row-padding-xs-100 " style="margin-top:10px;">
     <div class="menu">아이디</div>
     <input class="menu_input" name="id" type="text">
@@ -286,11 +286,11 @@ function submitCheck(){
     </div>
     <div class="row row-padding-xs-100 " style="margin-top:10px;">
       <div class="menu title2">비밀번호</div>
-      <input class="menu_input" name="pw" type="text">
+      <input class="menu_input" name="pw" type="password">
     </div>
     <div class="row row-padding-xs-100 " style="margin-top:10px;">
       <div class="menu title2">비밀번호 확인</div>
-      <input class="menu_input" id="pw_check" type="text">
+      <input class="menu_input" id="pw_check" type="password">
     </div>
     <div class="row row-padding-xs-100 " style="margin-top:10px;">
       <div class="menu title2">이름</div>
@@ -321,12 +321,13 @@ function submitCheck(){
         </div>
         <div id="artist_content" style="display:none;">
           <div class="row row-padding-xs-100 " style="margin-top:10px; line-height:35px;">
-            <div class="menu title2" style="vertical-align:middle;">아티스트 분류</div>
-            <select id="artist_type">
+            <div class="menu title2" style="vertical-align:middle;">현재 직업</div>
+            <!-- <select id="artist_type">
               <option value="1">아티스트</option>
               <option value="2">아티스트</option>
               <option value="3">아티스트</option>
-            </select>
+            </select> -->
+            <input class="menu_input" name="job" type="text">
           </div>
           <div class="row row-padding-xs-100 " style="margin-top:10px;">
             <div class="menu title2" style="margin-bottom:10px;">프로필사진</div>
@@ -336,7 +337,7 @@ function submitCheck(){
         </div>
         <div class="row row-padding-xs-100 " style="margin-top:10px;">
           <div class="menu title2" style="margin-bottom:10px;">소개글</div>
-          <textarea style="border-radius:10px;
+          <textarea name = "introduction" style="border-radius:10px;
           width:100%; height:150px; border:2px solid rgba(0, 0, 0, 0.3);"  ></textarea>
         </div>
         <div class="row row-padding-xs-100 " style="margin-top:10px;">

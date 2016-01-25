@@ -52,6 +52,11 @@
           <a class="navbar-brand" href="/">
             <img id="logo" alt="blankit" src="
 	<?
+	/*** 스토어 상품의 시간만료 체크 ***/
+	
+	
+	
+	/*** 여기까지, 스토어 상품의 시간만료 체크 ***/
   	$actual_link = "http://$_SERVER[HTTP_HOST]$_SERVER[REQUEST_URI]";
     	if($actual_link=="http://blankit.kr/")
       		echo "/source/image/logo_white.png";
