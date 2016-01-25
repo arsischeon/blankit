@@ -129,7 +129,9 @@ $(function(){
 	
 		} else if ($storeType == $urlNum){
 	
-		} else{
+		} else if ($urlNum == 4 && $row->store_status == 3){
+			
+		} else {
 			continue;
 		}
 	
