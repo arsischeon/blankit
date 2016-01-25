@@ -128,7 +128,9 @@ $(function(){
 		if ($urlNum == 0){
 	
 		} else if ($storeType == $urlNum){
-	
+			if ($row->store_status == 3){
+				continue;
+			}
 		} else if ($urlNum == 4 && $row->store_status == 3){
 			
 		} else {
