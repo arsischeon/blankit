@@ -43,6 +43,28 @@
   position: absolute;
   z-index:2;
   }
+  .menu{
+    width:320px;
+    height:100%;
+    position: absolute;
+    left:50%;
+    bottom:0;
+    margin-left: -160px;
+    background: white;
+  }
+  .menu_item{
+    font-weight: bold;
+    color: #868686;
+    text-align: center;
+    display: inline-block;
+    width:23%;
+    height:100%;
+    cursor: pointer;
+  }
+  .menu_item:hover{
+    color: #96AFB5;
+    border-bottom:2px solid #96AFB5;
+  }
 </style>
   <?php
   //-----------진우파트 시작--------------
@@ -127,6 +149,30 @@
   </div>
 </div>
 <!-- 제품에 들어간 작품부분 끝 -->
+<!-- 에코백일경우에만 뜨는 메뉴 시작 -->
+<!-- style="border-bottom:2px solid #96AFB5; color:#96AFB5;" -->
+<!-- 진우 시작 -->
+<!-- 이건 에코백일 경우에만 뜨는 메뉴인데, 기본 메뉴는 처음꺼 컬러이고 클릭하면 다른 메뉴로 이동해야함. -->
+<div class="row row_padding-xs" style="margin-top:20px;">
+    <div class="col-md-12" style="position:relative; height:25px; padding-bottom:40px; border-bottom: 1.5px solid #D3D3D3;">
+<div class="menu">
+  <div class="menu_item" >
+    <a href="">컬러</a>
+  </div>
+  <div class="menu_item">
+    <a href="">숄더</a>
+  </div>
+  <div class="menu_item">
+    <a href="">토트/크로스</a>
+  </div>
+  <div class="menu_item">
+    <a href="">크로스</a>
+  </div>
+<!-- 진우 끝 -->
+</div>
+</div>
+</div>
+<!-- 에코백일경우에만 뜨는 메뉴 끝 -->
 <!-- 제품 정보 시작 -->
 <div class="row row_padding-xs" style="margin-top:20px;">
   <div class="col-xs-12" style="padding-bottom:40px; border-bottom:1px solid #D3D3D3;">
