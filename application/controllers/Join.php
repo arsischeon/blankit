@@ -23,10 +23,7 @@ class Join extends CI_Controller {
 			$phone3 = $this->input->post('phone3');
 		$phone = $phone1 . $phone2 . $phone3;
 		
-		//$type1 = $this->input->post('type1');
-		//$type2 = $this->input->post('type2');
-		$data['type1'] = $this->input->post('type1');
-		$data['type2'] = $this->input->post('type2');
+		$data['type'] = $this->input->post('type');
 		
 		$this->load->view('test_result', $data);
 		
