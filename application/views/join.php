@@ -227,6 +227,10 @@ function submitCheck(){
       <span style="font-size:25px; font-weight:500;">Join</span>
     </div>
   </div>
+  <?php 
+  $date = date('Y-m-d H:i:s');
+  echo $date;
+  ?>
   <div class="row row-padding-xs-100 " style="margin-top:30px;">
     <span class="title1">약관 동의</span>
   </div>
