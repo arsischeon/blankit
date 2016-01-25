@@ -34,6 +34,7 @@ class Join extends CI_Controller {
 			$this->join_model->func_join_ok2($id, $pw, $name, $phone, $type, $job, $introduction);
 		}
 		
+		$this->load->view('test_result');
 	}
 	public function id_check()
 	{
