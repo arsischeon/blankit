@@ -15,13 +15,13 @@ class Join_model extends CI_Model{
 	public function func_join_ok1($id, $pw, $name, $phone, $type){
 		$this->db->query("
 				insert into `USER` (user_id, user_pw, user_name, user_phone, user_type)
-				values ($id, $pw, $name, $phone, $type)
+				values ('$id', '$pw', '$name', '$phone', '$type')
 				");
 	}
 	public function func_join_ok2($id, $pw, $name, $phone, $type, $job, $introduction){
 		$this->db->query("
 			insert into `USER` (user_id, user_pw, user_name, user_phone, user_type, artist_type, artist_intro)
-			values ($id, $pw, $name, $phone, $type, $job, $introduction)
+			values ('$id', '$pw', '$name', '$phone', '$type', '$job', '$introduction')
 			");
 	}
 }

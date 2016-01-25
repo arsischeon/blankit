@@ -72,7 +72,7 @@ url: "/join/id_check?id="+$("input[name='id']").val(),
 success:function(data){
   if(data=='true'){
       $("#id_check").val("true");
-      $("input[name='id']").attr("disabled",true);
+      $("input[name='id']").attr("readonly",true);
       $("#uuu").css("display","none");
       alert('사용할 수 있는 아이디입니다.');
   }else{
@@ -91,9 +91,9 @@ success:function(data){
     pongpong=data;
     $("#kkll").css("display","none");
     $("#kkll2").css("display","");
-    $("input[name='phone1']").attr("disabled",true);
-      $("input[name='phone2']").attr("disabled",true);
-        $("input[name='phone3']").attr("disabled",true);
+    $("input[name='phone1']").attr("readonly",true);
+      $("input[name='phone2']").attr("readonly",true);
+        $("input[name='phone3']").attr("readonly",true);
     alert('인증번호가 발송되었습니다.');
 
 }
