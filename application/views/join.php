@@ -277,7 +277,7 @@ function submitCheck(){
   <div class="row row-padding-xs-100 " style="margin-top:30px;">
     <span class="title1">회원 정보</span>
   </div>
-  <form action="#" method="post" id="formform">
+  <form action="/join/func_join_ok" method="post" id="formform">
   <div class="row row-padding-xs-100 " style="margin-top:10px;">
     <div class="menu">아이디</div>
     <input class="menu_input" name="id" type="text">
