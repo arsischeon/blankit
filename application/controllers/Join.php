@@ -22,12 +22,12 @@ class Join extends CI_Controller {
 			$phone2 = $this->input->post('phone2');
 			$phone3 = $this->input->post('phone3');
 		$phone = $phone1 . $phone2 . $phone3;
-		$type = $this->input->post('type');
+		$type = $this->input->post('type'); // 1일반 2아티스트
+		$job = $this->input->post('job');
+		$introduction = $this->input->post('introduction');
 		
-		
-		$this->load->view('test_result', $data);
-		
-		
+		$this->load->model('join_model');
+		$this->join_model->func_join_ok($id, $pw, $name, $phone, $type, $job, $introduction);
 	}
 	public function id_check()
 	{
