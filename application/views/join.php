@@ -229,7 +229,7 @@ function submitCheck(){
   </div>
   <?php 
   $date = date('Y-m-d H:i:s');
-  echo $date;
+  echo '//' . $date . '//';
   ?>
   <div class="row row-padding-xs-100 " style="margin-top:30px;">
     <span class="title1">약관 동의</span>
