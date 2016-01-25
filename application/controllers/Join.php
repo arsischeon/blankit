@@ -26,8 +26,8 @@ class Join extends CI_Controller {
 		$job = $this->input->post('job');
 		$introduction = $this->input->post('introduction');
 		
-		$this->load->model('join_model');
-		/* if ($type == 1){
+		/* $this->load->model('join_model');
+		if ($type == 1){
 			$this->join_model->func_join_ok1($id, $pw, $name, $phone, $type);
 		}
 		else {
