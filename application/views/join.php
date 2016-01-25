@@ -271,10 +271,7 @@ function submitCheck(){
   <div class="row row-padding-xs-100 " style="margin-top:10px;">
     <div style="float:right">
       <input type="checkbox" id="usage_checkbox">
-      <label for="usage_checkbox" style="margin-left:5px;">(필수) 약관에 동의합니다 <?php 
-  $date = date('Y-m-d H:i:s');
-  echo '//' . $date . '//';
-  ?></label>
+      <label for="usage_checkbox" style="margin-left:5px;">(필수) 약관에 동의합니 </label>
     </div>
   </div>
   <div class="row row-padding-xs-100 " style="margin-top:30px;">
