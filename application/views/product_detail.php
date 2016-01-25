@@ -111,7 +111,7 @@
   }
 
   ?>
-<!-- 진우파트 끝 -->
+
 <!-- 제품에 들어간 작품 부분 시작-->
 <div class="row row_padding-xs" style="margin-top:20px;">
   <div class="col-xs-12" style="padding-bottom:40px; border-bottom:1px solid #D3D3D3;">
@@ -143,7 +143,13 @@
     <!-- 반복되는 부분 끝 -->
   </div>
 </div>
-
+<div class="row row_padding-xs" style="margin-top:20px;">
+  <div class="col-xs-12" style="padding-bottom:40px; border-bottom:1px solid #D3D3D3;">
+      <div class="t1-grey">제품 상세이미지</div>
+      <img src="<?echo $itemDetail;?>" class="img img-responsive">
+    </div>
+  </div>
+</div>
 <div class="row row_padding-xs" style="margin-top:20px;">
   <div class="col-xs-12" style="padding-bottom:40px; border-bottom:1px solid #D3D3D3;">
     <div class="t1-grey">제품 사이즈</div>
